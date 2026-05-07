@@ -1,0 +1,359 @@
+# V2.2 — Code authorship (agent vs human)
+
+## Context
+
+Today Singularity Neo answers "which agent + tools produced this work item" at **bundle / packet granularity**:
+
+- `capability_evidence_packets` carries `is_ai_assisted` BOOLEAN, `ai_attribution` JSONB (`{assignedAgentId, stepAgentIds[], toolInvocationIds[]}`), `touched_paths` TEXT[], plus the Ed25519 signature chain.
+- `agent_branch_commits` records every commit the agent runtime makes against the operator's workspace, keyed by `(commit_sha, work_item_id, session_id, artifact_id)`.
+- `touchedPaths` itself is **not derived from git** — it's the union of explicit "I touched this file" declarations from per-tool handlers (`workspace_write`, `workspace_replace_block`, etc., in `server/execution/tools.ts`).
+
+What we **don't** have:
+
+- Per-file breakdown of agent-authored vs human-edited lines for a work item.
+- Hunk-level annotation in a diff viewer.
+- A UI surface to ask "show me what the agent wrote on this work item" or "show me what I edited on top of the agent's draft."
+
+Operators want this for code review (rubber-stamping vs scrutinizing), governance (proof of human oversight on AI-assisted work), and quality (which files have heavy human re-touch — a signal the agent's first pass is poor for that area).
+
+The agent runtime authors commits under a **fixed git identity** — `Singularity Workflow Orchestrator <orchestrator@singularity.local>` (`server/workItemGitWorkspace.ts:497`). That's the canonical "agent" marker. Combined with the `agent_branch_commits` table — which has a row for every commit the agent made — we have two independent signals to classify any commit.
+
+## What's already there to reuse
+
+- **`agent_branch_commits` table** — primary signal. A SHA appears in this table → it was an agent commit.
+- **Fixed agent git identity** at commit time — `orchestrator@singularity.local`. Backstop signal.
+- **`runGitCommand(dir, args)`** at `server/app/executionSupport.ts:28-33` — the sole git wrapper. Reuse for `git log`, `git blame`, `git diff`.
+- **`ArtifactDiffViewer`** at `src/components/ArtifactDiffViewer.tsx` — already renders unified diffs for code-diff artifacts. We extend (or fork) this for the hunk-tinted authorship view.
+- **Cockpit work-item review page** as the natural place to mount the new tab.
+
+What we **need to invent**:
+
+- A classifier function (`'agent' | 'human' | 'unknown'`) for any commit SHA.
+- A `git blame` parser that buckets lines by commit author classification.
+- A small cache table so we don't re-run blame on every page view.
+- A hunk-tinted diff viewer + a Code Authorship tab.
+
+## Goals — three slices, each ships standalone
+
+**Slice 1 (data layer):** Backend can answer "what's the agent/human breakdown for this work item?"
+**Slice 2 (REST + cache):** Renderer can fetch authorship summaries cheaply.
+**Slice 3 (UI):** Code Authorship tab on the work-item review surface — KPIs + per-file table + hunk-tinted diff drill-down.
+
+Each slice compiles + delivers a usable increment.
+
+## Schema (one additive cache table, ALTER TABLE … ADD COLUMN IF NOT EXISTS pattern)
+
+```sql
+-- Cache for work-item authorship analyses. git blame on a 5K-line
+-- file across 50 commits costs ~200ms; a work item with 30 such
+-- files would be 6s on a cold viewing. Cache for 5 minutes; bust
+-- on new commits to the work-item branch (slice 2 watches
+-- agent_branch_commits for this WI's session).
+CREATE TABLE IF NOT EXISTS capability_work_item_authorship_cache (
+  work_item_id      TEXT PRIMARY KEY,
+  capability_id     TEXT NOT NULL,
+  branch_head_sha   TEXT NOT NULL,
+  computed_at       TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  payload           JSONB NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS capability_work_item_authorship_cache_cap_idx
+  ON capability_work_item_authorship_cache (capability_id);
+```
+
+That's the only DDL change. No mutations to `agent_branch_commits`, `evidence_packets`, or work-item tables — we're a read-only consumer.
+
+## Backend — Slice 1
+
+### `server/lib/codeAuthorship.ts` (NEW, ~250 lines)
+
+Pure helpers, no DB writes:
+
+```ts
+export type AuthorshipClass = "agent" | "human" | "unknown";
+
+export interface CommitAuthorship {
+  sha: string;
+  author: string;
+  email: string;
+  date: string;
+  subject: string;
+  classification: AuthorshipClass;
+  touchedFiles: string[];   // from `git log --name-only`
+}
+
+/**
+ * Classify a commit as agent vs human using two independent signals:
+ *   1. The commit's SHA exists in agent_branch_commits → 'agent'.
+ *   2. The commit's author email matches the configured agent
+ *      identity list (default: ['orchestrator@singularity.local'])
+ *      → 'agent'.
+ *   3. Otherwise → 'human'.
+ *
+ * The two-signal approach handles the case where someone rewrites
+ * a commit's author after the fact, or where an agent commit's
+ * author got rebased to a human's identity.
+ */
+export const classifyCommit = (
+  commit: { sha: string; email: string },
+  agentShaSet: Set<string>,
+  agentEmails: readonly string[],
+): AuthorshipClass;
+
+/**
+ * Walk a work item's branch from base → head, return one record
+ * per commit with classification + touched files.
+ */
+export const getWorkItemCommitHistory = async (args: {
+  workItemId: string;
+  workspaceDir: string;
+  baseBranch: string;
+  headBranch: string;
+}): Promise<CommitAuthorship[]>;
+
+/**
+ * Run `git blame --line-porcelain` on every file in the work
+ * item's diff, bucket each line into agent/human/unknown by the
+ * line's originating commit. Returns a per-file summary plus a
+ * grand total.
+ */
+export interface FileAuthorship {
+  path: string;
+  agentLines: number;
+  humanLines: number;
+  unknownLines: number;
+  agentCommits: number;
+  humanCommits: number;
+  totalLines: number;
+}
+
+export interface WorkItemAuthorship {
+  workItemId: string;
+  branchHeadSha: string;
+  computedAt: string;
+  files: FileAuthorship[];
+  summary: {
+    agentLines: number;
+    humanLines: number;
+    unknownLines: number;
+    agentCommits: number;
+    humanCommits: number;
+    filesAgentOnly: number;
+    filesHumanOnly: number;
+    filesMixed: number;
+  };
+}
+
+export const computeWorkItemAuthorship = async (args: {
+  workItemId: string;
+  workspaceDir: string;
+  baseBranch: string;
+  headBranch: string;
+  capabilityId: string;
+}): Promise<WorkItemAuthorship>;
+```
+
+Implementation notes:
+
+- `git log <base>..<head> --pretty=format:%H%x09%aE%x09%aI%x09%s --name-only` gives commit metadata + touched files in one call.
+- For each file in the work item's diff, run `git blame --line-porcelain <head> -- <file>` once. Parse `committer-mail` per line, classify, increment buckets.
+- Files that exist in `head` but not in `base` count entirely as new (their lines are bucketed by their origination commits).
+- Files deleted in the work item are excluded — we report on the *current* state of code.
+- Skip binary files (blame fails) and files > 50K lines (perf cliff). Surface as `unknownLines` in the summary so the UI can show "X files skipped (binary or large)."
+
+### Cache write/read (`server/codeAuthorshipCache.ts`, NEW, ~80 lines)
+
+```ts
+export const getCachedAuthorship = async (workItemId: string)
+  : Promise<WorkItemAuthorship | null>;
+
+export const writeAuthorshipCache = async (entry: WorkItemAuthorship)
+  : Promise<void>;
+
+/**
+ * Bust the cache when new commits land on a WI's branch. Wired in
+ * the same path that inserts into agent_branch_commits, plus
+ * after a human commit is captured (TODO: there's no human-commit
+ * capture today — slice 1 caveat: human commits don't bust the
+ * cache automatically. Operators get up-to-the-minute view by
+ * passing ?refresh=true on the API, or it expires in 5 min).
+ */
+export const invalidateAuthorshipCache = async (workItemId: string)
+  : Promise<void>;
+```
+
+## Backend — Slice 2 (REST endpoint + cache wiring)
+
+### Routes (`server/routes/codeAuthorship.ts`, NEW, ~120 lines)
+
+```
+GET  /api/work-items/:workItemId/code-authorship?refresh=false
+       Returns WorkItemAuthorship. Reads from cache when fresh
+       (computed_at within last 5 min AND branch_head_sha matches
+       current). Otherwise computes, writes cache, returns.
+
+GET  /api/work-items/:workItemId/code-authorship/files/:filePath/blame
+       Returns line-by-line blame for a single file with
+       per-line classification — for the drill-down diff viewer
+       (slice 3).
+```
+
+Both endpoints derive `workspaceDir` + branch info from the work item's existing source-workspace metadata (the same path the artifact diff viewer already walks).
+
+### Cache invalidation hook
+
+In `server/agentGit/session.ts` (or wherever `agent_branch_commits` rows are inserted), call `invalidateAuthorshipCache(workItemId)` right after the INSERT. One-line change. Human-commit invalidation is left as a TODO documented in code; for V1 the 5-minute TTL is the safety net.
+
+## Backend — Slice 1 + 2 schema in `server/db.ts`
+
+Append to `migrationStatements[]` next to the V2.1 statements:
+
+```sql
+CREATE TABLE IF NOT EXISTS capability_work_item_authorship_cache (
+  work_item_id      TEXT PRIMARY KEY,
+  capability_id     TEXT NOT NULL,
+  branch_head_sha   TEXT NOT NULL,
+  computed_at       TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  payload           JSONB NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS capability_work_item_authorship_cache_cap_idx
+  ON capability_work_item_authorship_cache (capability_id);
+```
+
+## API client (`src/lib/api.ts`, additive)
+
+```ts
+export interface FileAuthorshipDto { ... }
+export interface WorkItemAuthorshipDto { ... }
+
+export const fetchWorkItemAuthorship = (
+  workItemId: string,
+  options?: { refresh?: boolean },
+): Promise<WorkItemAuthorshipDto>;
+
+export const fetchWorkItemFileBlame = (
+  workItemId: string,
+  filePath: string,
+): Promise<FileBlameDto>;
+```
+
+## UI — Slice 3
+
+### `src/pages/cockpit/CodeAuthorshipTab.tsx` (NEW, ~350 lines)
+
+Mounted as a tab on the existing Cockpit work-item review surface (find the tab strip and slot in alongside Diff / Evidence / etc.).
+
+Layout:
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│  Code authorship                          [↻] [Show: files ▾]│
+├──────────────────────────────────────────────────────────────┤
+│  ╔═════════════╗  ╔═════════════╗  ╔═════════════╗          │
+│  ║  AGENT      ║  ║  HUMAN      ║  ║  MIXED      ║          │
+│  ║  73%        ║  ║  21%        ║  ║  6%         ║          │
+│  ║  1,234 LOC  ║  ║   354 LOC   ║  ║   97 LOC    ║          │
+│  ╚═════════════╝  ╚═════════════╝  ╚═════════════╝          │
+│                                                              │
+│  18 files · 12 commits (10 agent, 2 human)                   │
+├──────────────────────────────────────────────────────────────┤
+│  Per-file breakdown (sorted by human-touch % desc)           │
+│                                                              │
+│  src/auth/login.ts                  [█████░░░░░] 47% human  │
+│  server/index.ts                    [██░░░░░░░░] 18% human  │
+│  src/components/Header.tsx          [░░░░░░░░░░] 0% human   │
+│  …                                                           │
+└──────────────────────────────────────────────────────────────┘
+```
+
+Per-file row click → drills into a hunk-tinted diff viewer:
+
+### `src/components/AuthorshipDiffViewer.tsx` (NEW, ~250 lines)
+
+Forks `ArtifactDiffViewer` and adds:
+- Each hunk is annotated with the originating commit's classification.
+- Agent hunks render with a soft green left-border + slight bg tint.
+- Human hunks render with a soft blue left-border + tint.
+- Mixed hunks (agent + human lines in the same hunk — possible after a rebase) render with a striped left-border and per-line tinting.
+- Hover a line → tooltip with the originating commit (sha, author, date, subject) + classification.
+
+KPI cards use the same SlaChip / PriorityBadge styling as the rest of the runtime UI for visual consistency.
+
+### Cockpit wiring
+
+`src/pages/Cockpit.tsx` (or whichever component owns the work-item review tab strip):
+- Add `Code authorship` tab.
+- Lazy-load `CodeAuthorshipTab` so the page stays light when the operator doesn't open it.
+
+## Files added
+
+| File | Purpose | LOC |
+|---|---|---|
+| `server/lib/codeAuthorship.ts` | classifier + git blame analyzer | ~250 |
+| `server/codeAuthorshipCache.ts` | cache read/write/invalidate | ~80 |
+| `server/routes/codeAuthorship.ts` | REST endpoints | ~120 |
+| `src/lib/api.ts` (additive) | fetchers | ~40 |
+| `src/contracts/codeAuthorship.ts` | DTOs | ~30 |
+| `src/pages/cockpit/CodeAuthorshipTab.tsx` | KPI + per-file table | ~350 |
+| `src/components/AuthorshipDiffViewer.tsx` | hunk-tinted viewer | ~250 |
+| `server/db.ts` (additive) | one cache table + index | ~10 |
+| `server/app/registerRoutes.ts` (additive) | register new module | ~2 |
+| `src/pages/Cockpit.tsx` (additive) | mount the tab | ~10 |
+
+**Total: ~1,140 lines across 10 files (7 new, 3 modified additively).**
+
+## Verification
+
+1. `npx tsc --noEmit` clean.
+2. Migration: server boots; `\d capability_work_item_authorship_cache` shows the table.
+3. Take a work item with at least 1 agent commit + 1 human commit on the branch:
+   - `curl /api/work-items/<wi>/code-authorship | jq` shows the file breakdown with agent + human totals.
+   - Re-run within 5 min — `computed_at` doesn't change (cache hit).
+   - `?refresh=true` forces recompute.
+4. Cockpit → Code authorship tab → KPIs render, files list renders sorted by human-touch %.
+5. Click a row → diff viewer renders with green/blue hunk tinting. Hover a line → tooltip shows the originating commit.
+6. Add a new agent commit (via the agent runtime) → invalidation hook fires → next page load shows the new commit's contribution.
+7. Existing artifact-diff viewer, evidence-packet viewer, and work-item review continue to work unchanged.
+
+## Risks / gotchas
+
+- **`git blame` perf on large files.** Mitigation: 50K-line cap, files skipped above that surface as `unknownLines` with a UI hint. Cache makes the 2nd view instant.
+- **Mixed-authorship hunks.** When an agent commit and a human commit both touched lines inside what `git diff` renders as a single hunk, we annotate per-line not per-hunk. The UI shows a striped left border.
+- **Rebase / squash cosmetic loss.** If a human squashes an agent's commit into theirs, `git blame` shows the human as author — and the SHA isn't in `agent_branch_commits`. Both signals say "human". Operators who care can avoid squashing agent commits; we document this in the tab's help text. Not perfect but honest.
+- **Branch base detection.** We need the work item's base branch. If the platform doesn't store this explicitly, default to `main` and let the operator override via a query param. (Worth a quick check during slice 1 — if there's a `base_branch` field on work items already, use it.)
+- **Cache invalidation on human commits.** No code path captures human commits today. The 5-min TTL is the only safety net for human-commit drift in V2.2. If operators want instant updates after a human push, V2.3 should add a git-fetch hook or a manual "Refresh" button (the `?refresh=true` flag is the manual escape hatch).
+
+## Estimate
+
+**~1,140 lines, 3–4 commits across 1 PR**:
+
+1. **Schema + backend lib** (slice 1) — ~340 lines. tsc-clean, exercisable via curl.
+2. **REST + cache + API client** (slice 2) — ~240 lines. End-to-end data flow.
+3. **UI: KPI tab + per-file table** (slice 3a) — ~360 lines. Operator can answer "what % is agent" without drilling.
+4. **UI: hunk-tinted diff viewer** (slice 3b) — ~250 lines. The drill-down.
+
+Each slice merges/commits cleanly on its own.
+
+## Critical files
+
+**New (7):**
+- `server/lib/codeAuthorship.ts`
+- `server/codeAuthorshipCache.ts`
+- `server/routes/codeAuthorship.ts`
+- `src/contracts/codeAuthorship.ts`
+- `src/pages/cockpit/CodeAuthorshipTab.tsx`
+- `src/components/AuthorshipDiffViewer.tsx`
+
+**Modified (additive):**
+- `server/db.ts` — one cache table + index
+- `server/app/registerRoutes.ts` — register the new module
+- `server/agentGit/session.ts` — invalidate cache on new agent commit
+- `src/lib/api.ts` — 2 new fetchers
+- `src/pages/Cockpit.tsx` (or wherever the work-item tab strip lives) — mount the tab
+
+**Reference (read for pattern, do NOT change):**
+- `server/workItemGitWorkspace.ts:497` — the canonical agent git identity literal
+- `server/app/executionSupport.ts:28-33` — `runGitCommand` wrapper
+- `src/components/ArtifactDiffViewer.tsx` — diff-rendering pattern to fork
+- `server/db.ts` — `agent_branch_commits` table for the primary classification signal
