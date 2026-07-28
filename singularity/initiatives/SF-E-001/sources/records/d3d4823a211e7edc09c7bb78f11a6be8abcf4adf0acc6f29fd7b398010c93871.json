@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "initiativeId": "SF-E-001",
+  "sourceId": "SRC-41041233113E",
+  "name": "Epic notes",
+  "filename": "note-41041233113e.md",
+  "provider": "git",
+  "providerType": "git-managed-markdown",
+  "objectId": "singularity/initiatives/SF-E-001/sources/text/note-41041233113e.md",
+  "url": null,
+  "version": "41041233113e4f40a708fba5009c2635344acb5e016c7b0e2dce91ac0764839a",
+  "etag": null,
+  "sha256": "41041233113e4f40a708fba5009c2635344acb5e016c7b0e2dce91ac0764839a",
+  "bytes": 1128,
+  "mimeType": "text/markdown",
+  "uploadedAt": "2026-07-28T11:52:04.416Z",
+  "uploadedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011"
+  },
+  "status": "pinned"
+}

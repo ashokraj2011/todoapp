@@ -1031,6 +1031,17 @@
       "event": "initiative_phase_prepared",
       "phase": "epic-requirements",
       "detail": "3 outputs"
+    },
+    {
+      "at": "2026-07-28T11:52:04.416Z",
+      "actor": "88361104+ashokraj2011@users.noreply.github.com",
+      "event": "epic_text_source_registered",
+      "phase": "epic-requirements",
+      "detail": "SRC-41041233113E note"
     }
-  ]
+  ],
+  "sources": {
+    "records": 1,
+    "verifiedAt": null
+  }
 }

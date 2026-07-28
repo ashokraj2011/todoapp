@@ -1,0 +1,12 @@
+version: 1
+initiativeId: SF-E-001
+sources:
+  - sourceId: SRC-41041233113E
+    recordSha256: d3d4823a211e7edc09c7bb78f11a6be8abcf4adf0acc6f29fd7b398010c93871
+    recordPath: singularity/initiatives/SF-E-001/sources/records/d3d4823a211e7edc09c7bb78f11a6be8abcf4adf0acc6f29fd7b398010c93871.json
+    name: Epic notes
+    provider: git
+    sha256: 41041233113e4f40a708fba5009c2635344acb5e016c7b0e2dce91ac0764839a
+    bytes: 1128
+    mimeType: text/markdown
+    status: pinned
