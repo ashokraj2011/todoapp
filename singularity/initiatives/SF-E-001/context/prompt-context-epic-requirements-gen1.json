@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "initiativeId": "SF-E-001",
+  "profile": "epic-planning",
+  "phase": "epic-requirements",
+  "generation": 1,
+  "persona": "product-owner",
+  "phaseResolutionSha256": "e95784614570b5520090bb994101687fb9fd8f10eb6ac618219f14c54d113d92",
+  "personaPrompt": {
+    "path": "singularity/personas/product-owner.md",
+    "sha256": "196833293fa54fec4e7aa9f88d5e68ae2deed0c6c1100c2c88bd91d87d93cee0",
+    "bytes": 971
+  },
+  "worldModel": {
+    "mode": "off",
+    "available": false
+  },
+  "worldModelFiles": [],
+  "inputs": [],
+  "epicSources": [],
+  "remoteAgent": null,
+  "renderedSha256": "a696075f3fc36b0db51208bb49790c03ac4699e8a63dd8a4cc8648be13139bf1",
+  "renderedBytes": 1739,
+  "promptPath": "singularity/initiatives/SF-E-001/context/prompts/epic-requirements-gen1.md",
+  "warnings": [],
+  "recordedAt": "2026-07-28T11:50:54.266Z"
+}

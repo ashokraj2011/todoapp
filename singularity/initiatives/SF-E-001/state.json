@@ -780,12 +780,16 @@
           "kind": "markdown",
           "path": "artifacts/epic-requirements/requirements.md",
           "required": true,
-          "status": "not_generated",
-          "generation": 0,
-          "sha256": null,
-          "bytes": 0,
-          "generatedBy": null,
-          "generatedPersona": null
+          "status": "draft",
+          "generation": 1,
+          "sha256": "2c72e966ff1f422c585d4f33de29947c8462cee6fce800230b4ec0da96c6c9cd",
+          "bytes": 5633,
+          "generatedBy": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011"
+          },
+          "generatedPersona": "product-owner"
         },
         "requirements-traceability": {
           "id": "requirements-traceability",
@@ -793,12 +797,16 @@
           "kind": "yaml",
           "path": "artifacts/epic-requirements/traceability.yml",
           "required": true,
-          "status": "not_generated",
-          "generation": 0,
-          "sha256": null,
-          "bytes": 0,
-          "generatedBy": null,
-          "generatedPersona": null
+          "status": "draft",
+          "generation": 1,
+          "sha256": "450d7894758bf5ff8f5a6e8c839ecbf460878411400fcf7c8472cbe3a0a9c1ca",
+          "bytes": 1216,
+          "generatedBy": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011"
+          },
+          "generatedPersona": "product-owner"
         },
         "impact-analysis": {
           "id": "impact-analysis",
@@ -806,12 +814,16 @@
           "kind": "yaml",
           "path": "artifacts/epic-requirements/impact-analysis.yml",
           "required": true,
-          "status": "not_generated",
-          "generation": 0,
-          "sha256": null,
-          "bytes": 0,
-          "generatedBy": null,
-          "generatedPersona": null
+          "status": "draft",
+          "generation": 1,
+          "sha256": "c8c70b0d167fb76c4cb237387ba3e5bdb8a3dd64f5860bd02eacc42bf434731c",
+          "bytes": 1143,
+          "generatedBy": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011"
+          },
+          "generatedPersona": "product-owner"
         }
       },
       "checklist": {
@@ -1011,6 +1023,14 @@
       "event": "epic_intake_completed",
       "phase": "epic-intake",
       "detail": "Epic identity and pinned source catalog accepted; repository grounding is deferred to Story intake"
+    },
+    {
+      "at": "2026-07-28T11:50:54.902Z",
+      "actor": "88361104+ashokraj2011@users.noreply.github.com",
+      "persona": "product-owner",
+      "event": "initiative_phase_prepared",
+      "phase": "epic-requirements",
+      "detail": "3 outputs"
     }
   ]
 }
