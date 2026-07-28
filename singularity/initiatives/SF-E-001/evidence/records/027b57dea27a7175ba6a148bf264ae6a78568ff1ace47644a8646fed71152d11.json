@@ -1,0 +1,34 @@
+{
+  "assurance": "machine-verified",
+  "check": "epic-identity-verified",
+  "decision": null,
+  "expiresAt": null,
+  "identityAssurance": "configured-local",
+  "initiativeId": "SF-E-001",
+  "observedAt": "2026-07-28T09:16:19.372Z",
+  "persona": "product-owner",
+  "phase": "epic-intake",
+  "reason": null,
+  "registeredBy": {
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "name": "Ashok Raj"
+  },
+  "requirement": "optional",
+  "revalidateAt": [],
+  "schemaVersion": 1,
+  "source": {
+    "externalId": "SF-E-001",
+    "observedState": "Local Epic ID SF-E-001 reserved on its canonical Git branch",
+    "path": null,
+    "type": "manual",
+    "url": null,
+    "version": "115f17e0d12e22be0dced524ac916af1968d3565"
+  },
+  "sourceBytes": 0,
+  "sourceSha256": null,
+  "subject": null,
+  "supersedes": [],
+  "type": "evidence",
+  "verificationMethod": "git-atomic-branch-reservation"
+}

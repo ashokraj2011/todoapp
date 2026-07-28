@@ -1,0 +1,15 @@
+version: 1
+initiativeId: SF-E-001
+repositories:
+  ToDOAPP:
+    url: https://github.com/ashokraj2011/todoapp.git
+    defaultBranch: main
+    required: true
+    metadata:
+      name: repository
+      appId: AP12345
+    jira:
+      projectKey: null
+      boardId: null
+    observedHead: null
+    observedAt: null

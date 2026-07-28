@@ -1,0 +1,1008 @@
+{
+  "schemaVersion": 1,
+  "initiative": {
+    "id": "SF-E-001",
+    "title": "Change the color to blue",
+    "profile": "epic-planning",
+    "profileLabel": "Epic planning",
+    "branch": "SF-E-001",
+    "createdAt": "2026-07-28T09:16:18.399Z",
+    "createdBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011"
+    },
+    "source": {
+      "type": "manual",
+      "id": "SF-E-001",
+      "title": "Change the color to blue",
+      "description": "Change the color to blue",
+      "goal": "Change the color to blue"
+    }
+  },
+  "resolution": {
+    "profile": "epic-planning",
+    "profileLabel": "Epic planning",
+    "lifecycleMode": "planning-only",
+    "portfolioSha256": "f422475165f784aadacff0028cf9acec860ccd81d23cd56df374c42715244b74",
+    "resolutionSha256": "e95784614570b5520090bb994101687fb9fd8f10eb6ac618219f14c54d113d92",
+    "templates": {
+      "epic-requirements/requirements-specification": {
+        "path": "singularity/templates/initiatives/epic/requirements.md",
+        "exists": true,
+        "size": 5635,
+        "sha256": "174d57ca16c5b43a23c6292873c683335f9fb08c6efd6d0a7bf6e6594aa5ec0b"
+      },
+      "epic-requirements/requirements-traceability": {
+        "path": "singularity/templates/initiatives/epic/requirements-traceability.yml",
+        "exists": true,
+        "size": 1220,
+        "sha256": "672a8ccb13f2945e9043e325f7fe0538bddfe8a43d3bf07864bee7937b680b73"
+      },
+      "epic-requirements/impact-analysis": {
+        "path": "singularity/templates/initiatives/epic/impact-analysis.yml",
+        "exists": true,
+        "size": 1147,
+        "sha256": "b8f435bbc0bcab91cc1af9e32966600a8c9ccb84ca7a325baeeb3aadbc14e3f9"
+      },
+      "epic-planning/story-plan": {
+        "path": "singularity/templates/initiatives/epic/story-plan.yml",
+        "exists": true,
+        "size": 3714,
+        "sha256": "9ff2b979d06de8302c36ef0e1898c1c74df6f0dd92df64c1b68accdf360b555f"
+      },
+      "epic-planning/parent-specification": {
+        "path": "singularity/templates/initiatives/epic/parent-spec.md",
+        "exists": true,
+        "size": 1840,
+        "sha256": "4c80b3cb91962fd1b1fe64f01bd7dc4b0ed14ec7fb889750cabf1522eaabfa72"
+      },
+      "epic-planning/story-specification-index": {
+        "path": "singularity/templates/initiatives/epic/story-spec-index.yml",
+        "exists": true,
+        "size": 430,
+        "sha256": "3aeff575724e8b53fd1bf7cb0a01a41280c99ee714920b637c317aaf5cf88526"
+      },
+      "epic-publish/jira-write-plan": {
+        "path": "singularity/templates/initiatives/epic/jira-write-plan.yml",
+        "exists": true,
+        "size": 62,
+        "sha256": "176c8c177d77e61df465472bdb5b9bfb67a9a3183e13e4704aafa1f4931e48e9"
+      },
+      "epic-publish/materialization-report": {
+        "path": "singularity/templates/initiatives/epic/materialization-report.md",
+        "exists": true,
+        "size": 2536,
+        "sha256": "18bdd184358ac5f1f08f4e0edda9e09bab7dab8b8dcbfe7a65a2e4196e99001c"
+      }
+    },
+    "phases": [
+      {
+        "id": "epic-intake",
+        "label": "Intake",
+        "lanes": [
+          "business-product"
+        ],
+        "worldModelViews": [],
+        "outputs": [
+          {
+            "id": "source-catalog",
+            "label": "Source catalog",
+            "kind": "markdown",
+            "path": "source-catalog.md",
+            "template": null,
+            "generator": "source-catalog",
+            "consumes": [],
+            "required": false,
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          }
+        ],
+        "checklist": [
+          {
+            "id": "epic-identity-verified",
+            "label": "Epic identity reserved and verified",
+            "requirement": "optional",
+            "applicability": null,
+            "acceptedAssurance": [
+              "machine-verified",
+              "system-verified"
+            ],
+            "freshness": {
+              "validFor": null,
+              "revalidateAt": []
+            },
+            "gate": "warn",
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "sources-pinned",
+            "label": "Additional source versions are accessible and hash-pinned",
+            "requirement": "optional",
+            "applicability": null,
+            "acceptedAssurance": [
+              "machine-verified",
+              "system-verified"
+            ],
+            "freshness": {
+              "validFor": null,
+              "revalidateAt": []
+            },
+            "gate": "warn",
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          }
+        ],
+        "bundleApproval": {
+          "mode": "none",
+          "authorities": [],
+          "minimum": 0,
+          "allowSelfApproval": true
+        },
+        "order": 0
+      },
+      {
+        "id": "epic-requirements",
+        "label": "Requirements",
+        "lanes": [
+          "business-product",
+          "design-architecture"
+        ],
+        "worldModelViews": [],
+        "outputs": [
+          {
+            "id": "requirements-specification",
+            "label": "Requirements specification",
+            "kind": "markdown",
+            "path": "requirements.md",
+            "template": "initiatives/epic/requirements.md",
+            "generator": null,
+            "consumes": [],
+            "required": true,
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "requirements-traceability",
+            "label": "Requirements traceability",
+            "kind": "yaml",
+            "path": "traceability.yml",
+            "template": "initiatives/epic/requirements-traceability.yml",
+            "generator": null,
+            "consumes": [],
+            "required": true,
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "impact-analysis",
+            "label": "Repository impact analysis",
+            "kind": "yaml",
+            "path": "impact-analysis.yml",
+            "template": "initiatives/epic/impact-analysis.yml",
+            "generator": null,
+            "consumes": [],
+            "required": true,
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          }
+        ],
+        "checklist": [
+          {
+            "id": "requirements-traceable",
+            "label": "Every REQ and AC cites a pinned source",
+            "requirement": "must",
+            "applicability": null,
+            "acceptedAssurance": [
+              "machine-verified",
+              "human-approved"
+            ],
+            "freshness": {
+              "validFor": null,
+              "revalidateAt": []
+            },
+            "gate": "block",
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "material-questions-resolved",
+            "label": "Material scope questions are resolved or explicitly accepted",
+            "requirement": "optional",
+            "applicability": null,
+            "acceptedAssurance": [
+              "human-approved"
+            ],
+            "freshness": {
+              "validFor": null,
+              "revalidateAt": []
+            },
+            "gate": "warn",
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "impact-grounded",
+            "label": "Impact analysis resolves every named repository against workspace configuration",
+            "requirement": "must",
+            "applicability": null,
+            "acceptedAssurance": [
+              "machine-verified"
+            ],
+            "freshness": {
+              "validFor": null,
+              "revalidateAt": []
+            },
+            "gate": "block",
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          }
+        ],
+        "bundleApproval": {
+          "mode": "bundle",
+          "authorities": [
+            "product-approvers"
+          ],
+          "minimum": 1,
+          "allowSelfApproval": true
+        },
+        "order": 1
+      },
+      {
+        "id": "epic-planning",
+        "label": "Planning",
+        "lanes": [
+          "business-product",
+          "design-architecture",
+          "engineering"
+        ],
+        "worldModelViews": [],
+        "outputs": [
+          {
+            "id": "story-plan",
+            "label": "Executable Story plan",
+            "kind": "yaml",
+            "path": "story-plan.yml",
+            "template": "initiatives/epic/story-plan.yml",
+            "generator": null,
+            "consumes": [
+              "epic-requirements/requirements-specification",
+              "epic-requirements/requirements-traceability",
+              "epic-requirements/impact-analysis"
+            ],
+            "required": true,
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "parent-specification",
+            "label": "Parent solution specification",
+            "kind": "markdown",
+            "path": "parent-spec.md",
+            "template": "initiatives/epic/parent-spec.md",
+            "generator": null,
+            "consumes": [
+              "epic-requirements/requirements-specification",
+              "epic-requirements/requirements-traceability",
+              "epic-requirements/impact-analysis"
+            ],
+            "required": true,
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "story-specification-index",
+            "label": "Story specification index",
+            "kind": "yaml",
+            "path": "story-spec-index.yml",
+            "template": "initiatives/epic/story-spec-index.yml",
+            "generator": null,
+            "consumes": [
+              "epic-requirements/requirements-specification",
+              "epic-requirements/requirements-traceability",
+              "epic-requirements/impact-analysis"
+            ],
+            "required": true,
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          }
+        ],
+        "checklist": [
+          {
+            "id": "stories-traceable",
+            "label": "Every Story maps to REQ and AC identifiers",
+            "requirement": "must",
+            "applicability": null,
+            "acceptedAssurance": [
+              "machine-verified",
+              "human-approved"
+            ],
+            "freshness": {
+              "validFor": null,
+              "revalidateAt": []
+            },
+            "gate": "block",
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "repositories-resolved",
+            "label": "Every Story has a configured owning repository",
+            "requirement": "must",
+            "applicability": null,
+            "acceptedAssurance": [
+              "machine-verified"
+            ],
+            "freshness": {
+              "validFor": null,
+              "revalidateAt": []
+            },
+            "gate": "block",
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "dependencies-acyclic",
+            "label": "Story dependencies are valid and acyclic",
+            "requirement": "must",
+            "applicability": null,
+            "acceptedAssurance": [
+              "machine-verified"
+            ],
+            "freshness": {
+              "validFor": null,
+              "revalidateAt": []
+            },
+            "gate": "block",
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "story-specifications-complete",
+            "label": "Every Story has an exact hash-bound specification",
+            "requirement": "must",
+            "applicability": null,
+            "acceptedAssurance": [
+              "machine-verified"
+            ],
+            "freshness": {
+              "validFor": null,
+              "revalidateAt": []
+            },
+            "gate": "block",
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "acceptance-criteria-covered",
+            "label": "Every acceptance criterion is allocated to at least one Story",
+            "requirement": "must",
+            "applicability": null,
+            "acceptedAssurance": [
+              "machine-verified"
+            ],
+            "freshness": {
+              "validFor": null,
+              "revalidateAt": []
+            },
+            "gate": "block",
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          }
+        ],
+        "bundleApproval": {
+          "mode": "bundle",
+          "authorities": [
+            "product-approvers"
+          ],
+          "minimum": 1,
+          "allowSelfApproval": true
+        },
+        "order": 2
+      },
+      {
+        "id": "epic-publish",
+        "label": "Publish Stories",
+        "lanes": [
+          "business-product",
+          "engineering"
+        ],
+        "worldModelViews": [],
+        "outputs": [
+          {
+            "id": "jira-write-plan",
+            "label": "Jira write plan",
+            "kind": "yaml",
+            "path": "jira-write-plan.yml",
+            "template": "initiatives/epic/jira-write-plan.yml",
+            "generator": null,
+            "consumes": [
+              "epic-planning/story-plan",
+              "epic-planning/parent-specification",
+              "epic-planning/story-specification-index"
+            ],
+            "required": true,
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "materialization-report",
+            "label": "Jira and Git materialization report",
+            "kind": "markdown",
+            "path": "materialization-report.md",
+            "template": "initiatives/epic/materialization-report.md",
+            "generator": null,
+            "consumes": [
+              "epic-planning/story-plan",
+              "epic-planning/parent-specification",
+              "epic-planning/story-specification-index"
+            ],
+            "required": true,
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          }
+        ],
+        "checklist": [
+          {
+            "id": "jira-permission-verified",
+            "label": "Selected identity authority can create Story records",
+            "requirement": "must",
+            "applicability": null,
+            "acceptedAssurance": [
+              "machine-verified",
+              "system-verified"
+            ],
+            "freshness": {
+              "validFor": null,
+              "revalidateAt": []
+            },
+            "gate": "block",
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          },
+          {
+            "id": "stories-materialized",
+            "label": "Jira Stories and canonical Git branches have receipts",
+            "requirement": "must",
+            "applicability": null,
+            "acceptedAssurance": [
+              "system-verified",
+              "machine-verified"
+            ],
+            "freshness": {
+              "validFor": null,
+              "revalidateAt": []
+            },
+            "gate": "block",
+            "approval": {
+              "mode": "bundle",
+              "authorities": [],
+              "minimum": 1,
+              "allowSelfApproval": true
+            }
+          }
+        ],
+        "bundleApproval": {
+          "mode": "none",
+          "authorities": [],
+          "minimum": 0,
+          "allowSelfApproval": true
+        },
+        "order": 3
+      }
+    ],
+    "repositories": {
+      "ToDOAPP": {
+        "url": "https://github.com/ashokraj2011/todoapp.git",
+        "defaultBranch": "main",
+        "required": true,
+        "metadata": {
+          "name": "repository",
+          "appId": "AP12345"
+        },
+        "branchCompletionPolicy": "pr",
+        "requiredChecks": [],
+        "jira": {
+          "projectKey": null,
+          "boardId": null
+        }
+      }
+    },
+    "approvalAuthorities": {
+      "initiative-owners": {
+        "members": [
+          {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com"
+          }
+        ]
+      },
+      "product-approvers": {
+        "members": [
+          {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com"
+          }
+        ]
+      },
+      "architecture-reviewers": {
+        "members": [
+          {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com"
+          }
+        ]
+      },
+      "risk-reviewers": {
+        "members": [
+          {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com"
+          }
+        ]
+      },
+      "operations-reviewers": {
+        "members": [
+          {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "authority": "local",
+      "configurablePerEpic": false,
+      "local": {
+        "epicPrefix": "SF-E",
+        "storyPrefix": "SF-S",
+        "pad": 3,
+        "scopeStoriesByEpic": true
+      }
+    },
+    "jira": {
+      "enabled": false,
+      "pinAttachments": true,
+      "connection": "corporate-jira",
+      "deployment": "cloud",
+      "allowedHosts": [],
+      "allowedProjects": [],
+      "authentication": {
+        "permitted": [
+          "user-token",
+          "service-account"
+        ],
+        "tokenExpiryWarningDays": 14
+      },
+      "read": {
+        "epics": true,
+        "stories": true,
+        "attachmentPolicy": "metadata-only",
+        "cacheMinutes": 10
+      },
+      "write": false,
+      "writeMode": "off",
+      "writePolicy": {
+        "mode": "off",
+        "operations": [
+          "create-epic",
+          "create-story",
+          "update-owned-fields"
+        ],
+        "allowedFields": [
+          "summary",
+          "description",
+          "parent",
+          "labels",
+          "components"
+        ],
+        "forbiddenFields": [
+          "status",
+          "assignee",
+          "sprint",
+          "priority",
+          "resolution"
+        ]
+      },
+      "projectKey": "",
+      "epicIssueType": "Epic",
+      "storyIssueType": "Story",
+      "subtaskIssueType": "Sub-task"
+    },
+    "storage": {
+      "defaultProvider": "jira",
+      "maxBytes": 104857600,
+      "allowedMimeTypes": [],
+      "providers": {
+        "jira": {
+          "type": "jira-attachment",
+          "maxBytes": null,
+          "allowedMimeTypes": []
+        }
+      }
+    },
+    "contextPolicy": {
+      "onApproval": "new",
+      "onRejection": "keep",
+      "phaseOverrides": {}
+    },
+    "worldModelTiming": "story-intake",
+    "worldModelGrounding": "off",
+    "worldModelOutputDir": "singularity/world-model"
+  },
+  "lineage": {
+    "idAuthority": "local",
+    "primaryId": "SF-E-001",
+    "aliases": []
+  },
+  "status": "in_progress",
+  "currentPhase": "epic-intake",
+  "phaseOrder": [
+    "epic-intake",
+    "epic-requirements",
+    "epic-planning",
+    "epic-publish"
+  ],
+  "phases": {
+    "epic-intake": {
+      "id": "epic-intake",
+      "label": "Intake",
+      "order": 0,
+      "status": "in_progress",
+      "startedAt": "2026-07-28T09:16:18.399Z",
+      "submittedAt": null,
+      "approvedAt": null,
+      "generation": 0,
+      "outputs": {
+        "source-catalog": {
+          "id": "source-catalog",
+          "label": "Source catalog",
+          "kind": "markdown",
+          "path": "artifacts/epic-intake/source-catalog.md",
+          "required": false,
+          "status": "not_generated",
+          "generation": 0,
+          "sha256": null,
+          "bytes": 0,
+          "generatedBy": null,
+          "generatedPersona": null
+        }
+      },
+      "checklist": {
+        "epic-identity-verified": {
+          "id": "epic-identity-verified",
+          "label": "Epic identity reserved and verified",
+          "requirement": "optional",
+          "status": "optional"
+        },
+        "sources-pinned": {
+          "id": "sources-pinned",
+          "label": "Additional source versions are accessible and hash-pinned",
+          "requirement": "optional",
+          "status": "optional"
+        }
+      }
+    },
+    "epic-requirements": {
+      "id": "epic-requirements",
+      "label": "Requirements",
+      "order": 1,
+      "status": "not_started",
+      "startedAt": null,
+      "submittedAt": null,
+      "approvedAt": null,
+      "generation": 0,
+      "outputs": {
+        "requirements-specification": {
+          "id": "requirements-specification",
+          "label": "Requirements specification",
+          "kind": "markdown",
+          "path": "artifacts/epic-requirements/requirements.md",
+          "required": true,
+          "status": "not_generated",
+          "generation": 0,
+          "sha256": null,
+          "bytes": 0,
+          "generatedBy": null,
+          "generatedPersona": null
+        },
+        "requirements-traceability": {
+          "id": "requirements-traceability",
+          "label": "Requirements traceability",
+          "kind": "yaml",
+          "path": "artifacts/epic-requirements/traceability.yml",
+          "required": true,
+          "status": "not_generated",
+          "generation": 0,
+          "sha256": null,
+          "bytes": 0,
+          "generatedBy": null,
+          "generatedPersona": null
+        },
+        "impact-analysis": {
+          "id": "impact-analysis",
+          "label": "Repository impact analysis",
+          "kind": "yaml",
+          "path": "artifacts/epic-requirements/impact-analysis.yml",
+          "required": true,
+          "status": "not_generated",
+          "generation": 0,
+          "sha256": null,
+          "bytes": 0,
+          "generatedBy": null,
+          "generatedPersona": null
+        }
+      },
+      "checklist": {
+        "requirements-traceable": {
+          "id": "requirements-traceable",
+          "label": "Every REQ and AC cites a pinned source",
+          "requirement": "must",
+          "status": "missing"
+        },
+        "material-questions-resolved": {
+          "id": "material-questions-resolved",
+          "label": "Material scope questions are resolved or explicitly accepted",
+          "requirement": "optional",
+          "status": "optional"
+        },
+        "impact-grounded": {
+          "id": "impact-grounded",
+          "label": "Impact analysis resolves every named repository against workspace configuration",
+          "requirement": "must",
+          "status": "missing"
+        }
+      }
+    },
+    "epic-planning": {
+      "id": "epic-planning",
+      "label": "Planning",
+      "order": 2,
+      "status": "not_started",
+      "startedAt": null,
+      "submittedAt": null,
+      "approvedAt": null,
+      "generation": 0,
+      "outputs": {
+        "story-plan": {
+          "id": "story-plan",
+          "label": "Executable Story plan",
+          "kind": "yaml",
+          "path": "artifacts/epic-planning/story-plan.yml",
+          "required": true,
+          "status": "not_generated",
+          "generation": 0,
+          "sha256": null,
+          "bytes": 0,
+          "generatedBy": null,
+          "generatedPersona": null
+        },
+        "parent-specification": {
+          "id": "parent-specification",
+          "label": "Parent solution specification",
+          "kind": "markdown",
+          "path": "artifacts/epic-planning/parent-spec.md",
+          "required": true,
+          "status": "not_generated",
+          "generation": 0,
+          "sha256": null,
+          "bytes": 0,
+          "generatedBy": null,
+          "generatedPersona": null
+        },
+        "story-specification-index": {
+          "id": "story-specification-index",
+          "label": "Story specification index",
+          "kind": "yaml",
+          "path": "artifacts/epic-planning/story-spec-index.yml",
+          "required": true,
+          "status": "not_generated",
+          "generation": 0,
+          "sha256": null,
+          "bytes": 0,
+          "generatedBy": null,
+          "generatedPersona": null
+        }
+      },
+      "checklist": {
+        "stories-traceable": {
+          "id": "stories-traceable",
+          "label": "Every Story maps to REQ and AC identifiers",
+          "requirement": "must",
+          "status": "missing"
+        },
+        "repositories-resolved": {
+          "id": "repositories-resolved",
+          "label": "Every Story has a configured owning repository",
+          "requirement": "must",
+          "status": "missing"
+        },
+        "dependencies-acyclic": {
+          "id": "dependencies-acyclic",
+          "label": "Story dependencies are valid and acyclic",
+          "requirement": "must",
+          "status": "missing"
+        },
+        "story-specifications-complete": {
+          "id": "story-specifications-complete",
+          "label": "Every Story has an exact hash-bound specification",
+          "requirement": "must",
+          "status": "missing"
+        },
+        "acceptance-criteria-covered": {
+          "id": "acceptance-criteria-covered",
+          "label": "Every acceptance criterion is allocated to at least one Story",
+          "requirement": "must",
+          "status": "missing"
+        }
+      }
+    },
+    "epic-publish": {
+      "id": "epic-publish",
+      "label": "Publish Stories",
+      "order": 3,
+      "status": "not_started",
+      "startedAt": null,
+      "submittedAt": null,
+      "approvedAt": null,
+      "generation": 0,
+      "outputs": {
+        "jira-write-plan": {
+          "id": "jira-write-plan",
+          "label": "Jira write plan",
+          "kind": "yaml",
+          "path": "artifacts/epic-publish/jira-write-plan.yml",
+          "required": true,
+          "status": "not_generated",
+          "generation": 0,
+          "sha256": null,
+          "bytes": 0,
+          "generatedBy": null,
+          "generatedPersona": null
+        },
+        "materialization-report": {
+          "id": "materialization-report",
+          "label": "Jira and Git materialization report",
+          "kind": "markdown",
+          "path": "artifacts/epic-publish/materialization-report.md",
+          "required": true,
+          "status": "not_generated",
+          "generation": 0,
+          "sha256": null,
+          "bytes": 0,
+          "generatedBy": null,
+          "generatedPersona": null
+        }
+      },
+      "checklist": {
+        "jira-permission-verified": {
+          "id": "jira-permission-verified",
+          "label": "Selected identity authority can create Story records",
+          "requirement": "must",
+          "status": "missing"
+        },
+        "stories-materialized": {
+          "id": "stories-materialized",
+          "label": "Jira Stories and canonical Git branches have receipts",
+          "requirement": "must",
+          "status": "missing"
+        }
+      }
+    }
+  },
+  "materialization": {
+    "status": "not_started",
+    "attempts": []
+  },
+  "delivery": {
+    "status": "tracking",
+    "completion": null
+  },
+  "childStories": {},
+  "contracts": {},
+  "telemetry": {
+    "totalTokens": 0,
+    "exactRecords": 0,
+    "unavailableRecords": 0,
+    "providerCost": null
+  },
+  "history": [
+    {
+      "at": "2026-07-28T09:16:18.399Z",
+      "actor": "88361104+ashokraj2011@users.noreply.github.com",
+      "persona": "product-owner",
+      "event": "initiative_started",
+      "phase": "epic-intake",
+      "detail": "Created epic-planning initiative"
+    },
+    {
+      "at": "2026-07-28T09:16:19.372Z",
+      "actor": "88361104+ashokraj2011@users.noreply.github.com",
+      "persona": "product-owner",
+      "event": "initiative_evidence_registered",
+      "phase": "epic-intake",
+      "detail": "epic-identity-verified machine-verified 027b57dea27a"
+    }
+  ]
+}

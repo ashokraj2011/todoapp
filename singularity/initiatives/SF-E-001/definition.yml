@@ -1,0 +1,23 @@
+version: 1
+initiative:
+  id: SF-E-001
+  title: Change the color to blue
+  profile: epic-planning
+  profileLabel: Epic planning
+  branch: SF-E-001
+  createdAt: 2026-07-28T09:16:18.399Z
+  createdBy:
+    name: Ashok Raj
+    email: 88361104+ashokraj2011@users.noreply.github.com
+    login: ashokraj2011
+  source:
+    type: manual
+    id: SF-E-001
+    title: Change the color to blue
+    description: Change the color to blue
+    goal: Change the color to blue
+resolution:
+  profile: epic-planning
+  portfolioSha256: f422475165f784aadacff0028cf9acec860ccd81d23cd56df374c42715244b74
+  resolutionSha256: e95784614570b5520090bb994101687fb9fd8f10eb6ac618219f14c54d113d92
+  idAuthority: local
