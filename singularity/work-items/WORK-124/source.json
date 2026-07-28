@@ -1,0 +1,22 @@
+{
+  "type": "manual",
+  "id": "WORK-124",
+  "key": null,
+  "url": null,
+  "title": "CHange the color red",
+  "user": "",
+  "description": "CHange the color red",
+  "desiredOutcome": "",
+  "scope": {
+    "in": [],
+    "out": []
+  },
+  "stakeholders": [],
+  "urgency": "",
+  "constraints": [],
+  "dependencies": [],
+  "acceptanceCriteria": [],
+  "risks": [],
+  "notes": "",
+  "epicId": null
+}
