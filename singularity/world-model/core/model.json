@@ -1,0 +1,104 @@
+{
+  "schema_version": "2.0",
+  "generated_at": "2026-07-28T13:47:01Z",
+  "generated_date": "28 July 2026",
+  "builder_version": "2.0",
+  "builder_prompt_sha256": "unknown",
+  "analysis_depth": "quick",
+  "repository": {
+    "name": "todoapp",
+    "root": "/private/var/folders/_j/yp8zv9w91rd44ymrzfpd_kcw0000gn/T/singularity-flow-world-model-5M1P7e/repository",
+    "branch": "unknown",
+    "commit": "55476b4941eaa4c4b37140d2e9e3e18231cf123e",
+    "working_tree_clean": false,
+    "repository_kind": "application",
+    "languages": [
+      "JavaScript",
+      "JSX",
+      "CSS",
+      "JSON"
+    ],
+    "package_roots": [
+      "."
+    ]
+  },
+  "purpose": {
+    "summary": "A minimal browser-based todo application built with Vite and React.",
+    "status": "observed",
+    "confidence": "high",
+    "evidence_ids": [
+      "e1"
+    ]
+  },
+  "components": [
+    {
+      "id": "todo-frontend",
+      "name": "Todo frontend",
+      "kind": "frontend",
+      "purpose": "Provide the browser-side todo list experience.",
+      "paths": [
+        "src/App.jsx",
+        "src/main.jsx",
+        "src/App.css",
+        "src/index.css"
+      ],
+      "depends_on": [],
+      "entrypoint_ids": [
+        "main-entry"
+      ],
+      "confidence": "high",
+      "evidence_ids": [
+        "e1",
+        "e3"
+      ]
+    }
+  ],
+  "entrypoints": [
+    {
+      "id": "main-entry",
+      "name": "React application entry",
+      "kind": "frontend",
+      "location": "src/main.jsx:1-10",
+      "invocation": "npm run dev",
+      "component_id": "todo-frontend",
+      "evidence_ids": [
+        "e3"
+      ]
+    }
+  ],
+  "standard_commands": [
+    {
+      "command": "npm ci",
+      "purpose": "install dependencies",
+      "source": "package.json:1-27"
+    },
+    {
+      "command": "npm run dev",
+      "purpose": "start dev server",
+      "source": "package.json:1-27"
+    },
+    {
+      "command": "npm run build",
+      "purpose": "build for production",
+      "source": "package.json:1-27"
+    },
+    {
+      "command": "npm run lint",
+      "purpose": "run lint checks",
+      "source": "package.json:1-27"
+    }
+  ],
+  "risks": [
+    "Todo state is browser-local and not persisted.",
+    "No automated tests are configured.",
+    "The work tree was not clean at inspection time."
+  ],
+  "unknowns": [
+    "No deployment or persistence requirements are documented in the repo snapshot.",
+    "No domain-specific integrations or external services are present."
+  ],
+  "available_views": [
+    "core",
+    "business"
+  ]
+}

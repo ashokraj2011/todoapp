@@ -1,0 +1,385 @@
+{
+  "schema_version": "2.0",
+  "repository_commit": "55476b4941eaa4c4b37140d2e9e3e18231cf123e",
+  "repository_branch": "WORK-124",
+  "working_tree_clean": false,
+  "generated_at": "2026-07-28T13:16:53.973Z",
+  "generated_date": "28 July 2026",
+  "builder_version": "2.0",
+  "builder_prompt_sha256": "4fb77d561330c12bb0277704f7dce067b647ea10e2190cde46d810c41f8aba0e",
+  "analysis_depth": "quick",
+  "core": {
+    "summary": "core/summary.md",
+    "brief": "core/summary.brief.md",
+    "model": "core/model.json",
+    "anchors": [
+      "core.tldr",
+      "core.purpose",
+      "core.type",
+      "core.components",
+      "core.map",
+      "core.entrypoints",
+      "core.tech",
+      "core.commands",
+      "core.risks",
+      "core.unknowns",
+      "core.freshness",
+      "core.routing",
+      "core.brief"
+    ],
+    "bytes": {
+      "summary": 4520,
+      "brief": 1035
+    },
+    "recommended_for_all_agents": true
+  },
+  "views": {
+    "development": {
+      "path": "views/development.md",
+      "brief_path": "views/development.brief.md",
+      "generated": false,
+      "load_when": [
+        "implementation",
+        "debugging",
+        "refactoring",
+        "code review"
+      ],
+      "bytes": {
+        "full": 0,
+        "brief": 0
+      },
+      "anchors": []
+    },
+    "business": {
+      "path": "views/business.md",
+      "brief_path": "views/business.brief.md",
+      "generated": true,
+      "load_when": [
+        "business capability analysis",
+        "product behavior analysis",
+        "business impact assessment"
+      ],
+      "bytes": {
+        "full": 5292,
+        "brief": 1039
+      },
+      "anchors": [
+        "biz.tldr",
+        "biz.facts",
+        "biz.capabilities",
+        "biz.actors",
+        "biz.workflows",
+        "biz.entities",
+        "biz.rules",
+        "biz.failures",
+        "biz.compliance",
+        "biz.impact",
+        "biz.unknowns",
+        "biz.questions",
+        "biz.start",
+        "biz.limits",
+        "biz.brief"
+      ]
+    },
+    "architecture": {
+      "path": "views/architecture.md",
+      "brief_path": "views/architecture.brief.md",
+      "generated": false,
+      "load_when": [
+        "system design",
+        "dependency analysis",
+        "cross-component change"
+      ],
+      "bytes": {
+        "full": 0,
+        "brief": 0
+      },
+      "anchors": []
+    },
+    "testing": {
+      "path": "views/testing.md",
+      "brief_path": "views/testing.brief.md",
+      "generated": false,
+      "load_when": [
+        "test creation",
+        "regression analysis",
+        "quality validation"
+      ],
+      "bytes": {
+        "full": 0,
+        "brief": 0
+      },
+      "anchors": []
+    },
+    "release": {
+      "path": "views/release.md",
+      "brief_path": "views/release.brief.md",
+      "generated": false,
+      "load_when": [
+        "build",
+        "packaging",
+        "deployment",
+        "rollback"
+      ],
+      "bytes": {
+        "full": 0,
+        "brief": 0
+      },
+      "anchors": []
+    },
+    "operations": {
+      "path": "views/operations.md",
+      "brief_path": "views/operations.brief.md",
+      "generated": false,
+      "load_when": [
+        "runtime diagnosis",
+        "monitoring and incident response"
+      ],
+      "bytes": {
+        "full": 0,
+        "brief": 0
+      },
+      "anchors": []
+    },
+    "security": {
+      "path": "views/security.md",
+      "brief_path": "views/security.brief.md",
+      "generated": false,
+      "load_when": [
+        "threat analysis",
+        "authentication or authorization change"
+      ],
+      "bytes": {
+        "full": 0,
+        "brief": 0
+      },
+      "anchors": []
+    }
+  },
+  "phase_map": {
+    "intake": {
+      "views": [
+        "business"
+      ],
+      "tier": "brief"
+    },
+    "requirements": {
+      "views": [
+        "business"
+      ],
+      "tier": "full"
+    },
+    "design": {
+      "views": [
+        "architecture"
+      ],
+      "tier": "full"
+    },
+    "implementation-spec": {
+      "views": [
+        "architecture",
+        "development"
+      ],
+      "tier": "full"
+    },
+    "implementation": {
+      "views": [
+        "development"
+      ],
+      "tier": "full"
+    },
+    "verification": {
+      "views": [
+        "testing"
+      ],
+      "tier": "full"
+    },
+    "conformance": {
+      "views": [
+        "testing",
+        "security"
+      ],
+      "tier": "brief"
+    }
+  },
+  "persona_map": {
+    "product-owner": {
+      "views": [
+        "business"
+      ],
+      "tier": "brief"
+    },
+    "business-analyst": {
+      "views": [
+        "business"
+      ],
+      "tier": "full"
+    },
+    "architect": {
+      "views": [
+        "architecture",
+        "security"
+      ],
+      "tier": "full"
+    },
+    "developer": {
+      "views": [
+        "development"
+      ],
+      "tier": "full"
+    },
+    "qa": {
+      "views": [
+        "testing"
+      ],
+      "tier": "full"
+    },
+    "security": {
+      "views": [
+        "security"
+      ],
+      "tier": "full"
+    },
+    "operations": {
+      "views": [
+        "operations"
+      ],
+      "tier": "full"
+    },
+    "delivery-manager": {
+      "views": [
+        "release"
+      ],
+      "tier": "brief"
+    }
+  },
+  "path_index": {
+    "path": "index/path-map.json"
+  },
+  "domains": [
+    {
+      "id": "todo-management",
+      "path": "domains/todo-management.md",
+      "summary": "Browser-local todo item lifecycle and task management behavior.",
+      "relevant_views": [
+        "business"
+      ],
+      "keywords": [
+        "todo",
+        "task",
+        "list",
+        "state"
+      ],
+      "anchors": [
+        "domain.todo-management.tldr",
+        "domain.todo-management.purpose",
+        "domain.todo-management.terminology",
+        "domain.todo-management.rules",
+        "domain.todo-management.components",
+        "domain.todo-management.workflows",
+        "domain.todo-management.data",
+        "domain.todo-management.invariants",
+        "domain.todo-management.tests",
+        "domain.todo-management.risks",
+        "domain.todo-management.unknowns"
+      ]
+    }
+  ],
+  "task_guides": [
+    {
+      "id": "work-124",
+      "path": "task-guides/work-124.md",
+      "task": "Prepare intake for WORK-124",
+      "required_views": [
+        "business"
+      ],
+      "required_domains": [
+        "todo-management"
+      ],
+      "anchors": [
+        "task.work-124.tldr",
+        "task.work-124.interpretation",
+        "task.work-124.roles",
+        "task.work-124.components",
+        "task.work-124.domains",
+        "task.work-124.paths",
+        "task.work-124.flow",
+        "task.work-124.invariants",
+        "task.work-124.tests",
+        "task.work-124.commands",
+        "task.work-124.risks"
+      ]
+    }
+  ],
+  "evidence": {
+    "path": "evidence/evidence.jsonl",
+    "load_only_when_verification_is_needed": true
+  },
+  "recommended_loading_rules": [
+    {
+      "agent_type": "business",
+      "load": [
+        "core/summary.brief.md",
+        "views/business.md"
+      ]
+    },
+    {
+      "agent_type": "architect",
+      "load": [
+        "core/summary.brief.md",
+        "views/architecture.md"
+      ]
+    },
+    {
+      "agent_type": "developer",
+      "load": [
+        "core/summary.brief.md",
+        "views/development.md"
+      ]
+    },
+    {
+      "agent_type": "tester",
+      "load": [
+        "core/summary.brief.md",
+        "views/testing.md"
+      ]
+    },
+    {
+      "agent_type": "release",
+      "load": [
+        "core/summary.brief.md",
+        "views/release.md"
+      ]
+    }
+  ],
+  "budget_hints": {
+    "orientation_only": [
+      "core/summary.brief.md"
+    ],
+    "single_phase_typical": [
+      "core/summary.brief.md",
+      "views/<view>.md"
+    ],
+    "deep_investigation": [
+      "core/summary.md",
+      "views/<view>.md",
+      "domains/<domain>.md",
+      "evidence/evidence.jsonl"
+    ]
+  },
+  "views_generated": [
+    "business"
+  ],
+  "source_tree_sha256": "sha256:30ae745eae76d3adec6fb913e2e1219144b360fa32b8e4942ccc44a41fd8b57f",
+  "generation": {
+    "parallel": false,
+    "strategy": "view",
+    "max_workers": 1,
+    "discovery_views": [],
+    "degraded_views": []
+  },
+  "generated_for_phase": "intake",
+  "requested_views": [
+    "business"
+  ]
+}
