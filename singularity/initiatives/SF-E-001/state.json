@@ -717,7 +717,7 @@
     "aliases": []
   },
   "status": "in_progress",
-  "currentPhase": "epic-intake",
+  "currentPhase": "epic-requirements",
   "phaseOrder": [
     "epic-intake",
     "epic-requirements",
@@ -729,10 +729,10 @@
       "id": "epic-intake",
       "label": "Intake",
       "order": 0,
-      "status": "in_progress",
+      "status": "approved",
       "startedAt": "2026-07-28T09:16:18.399Z",
       "submittedAt": null,
-      "approvedAt": null,
+      "approvedAt": "2026-07-28T09:16:22.338Z",
       "generation": 0,
       "outputs": {
         "source-catalog": {
@@ -768,8 +768,8 @@
       "id": "epic-requirements",
       "label": "Requirements",
       "order": 1,
-      "status": "not_started",
-      "startedAt": null,
+      "status": "in_progress",
+      "startedAt": "2026-07-28T09:16:22.338Z",
       "submittedAt": null,
       "approvedAt": null,
       "generation": 0,
@@ -1003,6 +1003,14 @@
       "event": "initiative_evidence_registered",
       "phase": "epic-intake",
       "detail": "epic-identity-verified machine-verified 027b57dea27a"
+    },
+    {
+      "at": "2026-07-28T09:16:22.338Z",
+      "actor": "singularity-flow",
+      "persona": "product-owner",
+      "event": "epic_intake_completed",
+      "phase": "epic-intake",
+      "detail": "Epic identity and pinned source catalog accepted; repository grounding is deferred to Story intake"
     }
   ]
 }
