@@ -10,12 +10,15 @@
 | # | Phase | Status | Generation | Outputs | Checklist |
 |---:|---|---|---:|---:|---:|
 | 1 | Intake | **approved** | 0 | 0/1 | 0/2 |
-| 2 | Requirements | **in_progress** | 0 | 3/3 | 0/3 |
+| 2 | Requirements | **awaiting_approval** | 1 | 3/3 | 0/3 |
 | 3 | Planning | **not_started** | 0 | 0/3 | 0/5 |
 | 4 | Publish Stories | **not_started** | 0 | 0/2 | 0/2 |
 
 ## Recent history
 
+- 2026-07-28T11:57:03.038Z — **initiative_evidence_registered** (epic-requirements) by 88361104+ashokraj2011@users.noreply.github.com · working lens product-owner: impact-grounded machine-verified 59f77a61e3a4
+- 2026-07-28T11:57:02.540Z — **initiative_evidence_registered** (epic-requirements) by 88361104+ashokraj2011@users.noreply.github.com · working lens product-owner: requirements-traceable machine-verified 6df866e5aa0e
+- 2026-07-28T11:57:02.011Z — **initiative_phase_published** (epic-requirements) by 88361104+ashokraj2011@users.noreply.github.com · working lens product-owner: generation 1
 - 2026-07-28T11:52:04.416Z — **epic_text_source_registered** (epic-requirements) by 88361104+ashokraj2011@users.noreply.github.com: SRC-41041233113E note
 - 2026-07-28T11:50:54.902Z — **initiative_phase_prepared** (epic-requirements) by 88361104+ashokraj2011@users.noreply.github.com · working lens product-owner: 3 outputs
 - 2026-07-28T09:16:22.338Z — **epic_intake_completed** (epic-intake) by singularity-flow · working lens product-owner: Epic identity and pinned source catalog accepted; repository grounding is deferred to Story intake

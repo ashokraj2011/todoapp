@@ -7,35 +7,61 @@
 
 version: 1
 epicId: "SF-E-001"
-repositories: {}
-# repositories:
-#   mobile:
-#     changeType: modify
-#     requirements: [REQ-001]
-#     components:
-#       - path: src/features/login
-#         responsibility: Mobile sign-in experience
-#     interfaces:
-#       - id: customer-api
-#         direction: consumes
-#         compatibility: backward
-#     data: []
-#     security: []
-#     testing: [unit, integration, accessibility]
-#     operations: []
-#     risks: []
-#     evidence:
-#       - sourceId: SRC-001
-#         locator: "Authentication requirements"
-#         sha256: ""
+
+repositories:
+  ToDOAPP:
+    changeType: modify
+    requirements: [REQ-001, REQ-002, REQ-003, REQ-004]
+    components:
+      - path: src/index.css
+        responsibility: >
+          Global CSS custom properties (design tokens) including --accent,
+          --accent-bg, and --accent-border for light mode (:root) and dark mode
+          (@media prefers-color-scheme: dark). This is the primary and
+          only file that requires modification.
+      - path: src/App.css
+        responsibility: >
+          Component-scoped styles for the todo app layout and list.
+          Must be verified to contain no hardcoded purple/violet colour values
+          that would contradict the token change. No changes expected unless
+          hardcoded values are found.
+    interfaces: []
+    data: []
+    security: []
+    testing:
+      - manual-demonstration
+      - visual-inspection
+      - accessibility-analysis
+    operations: []
+    risks:
+      - id: RSK-001
+        description: >
+          Chosen blue shade may fail WCAG 2.2 AA contrast requirements against
+          existing background colours (--bg: #fff light, --bg: #16171d dark).
+          Must be verified before committing the specific hex value.
+        severity: Medium
+        mitigation: >
+          Use a WCAG contrast checker (e.g. WebAIM) to validate chosen blue
+          against both background values before implementation is finalised.
+      - id: RSK-002
+        description: >
+          Future contributors may add hardcoded colour values bypassing the
+          token architecture, re-introducing inconsistency.
+        severity: Low
+        mitigation: Enforce BR-001 in code review; document in CONTRIBUTING guidelines.
+    evidence:
+      - sourceId: SRC-41041233113E
+        locator: "§Context — src/index.css token architecture (--accent, --accent-bg, --accent-border)"
+      - sourceId: SRC-41041233113E
+        locator: "§Goal — Change the color to blue"
+      - sourceId: SRC-41041233113E
+        locator: "§Context — src/App.css component styles"
 
 unaffected: []
-# unaffected:
-#   - repository: reporting
-#     reason: No contract or data-flow dependency
-#     evidence:
-#       - sourceId: SRC-002
-#         locator: "Reporting boundary"
-#         sha256: ""
+# No other repositories are registered in this workspace for this initiative.
+# The change is confined entirely to the ToDOAPP repository, src/index.css.
 
 externalSystems: []
+# No external systems are consumed or exposed by this Epic.
+# The change is a purely presentational CSS modification with no API,
+# event, database, or integration surface.

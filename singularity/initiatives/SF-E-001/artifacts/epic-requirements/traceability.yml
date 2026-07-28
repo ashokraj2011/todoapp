@@ -1,6 +1,6 @@
 # Requirements Traceability Matrix — SF-E-001
 #
-# The machine-checked half of the requirements phase. Every REQ-nnn and AC-nnn in
+# Machine-checked half of the requirements phase. Every REQ-nnn and AC-nnn in
 # the requirements specification must appear here with at least one pinned source
 # citation, and every citation must name a source that exists in the catalog.
 #
@@ -10,12 +10,6 @@
 #   - A citation must carry BOTH a source ID and a locator (page, frame, section).
 #   - The cited source ID must exist in the pinned Epic source manifest.
 #
-# A citation may be written either way:
-#   sources: ["SRC-1A2B3C4D5E6F#page 12"]
-#   sources:
-#     - sourceId: SRC-1A2B3C4D5E6F
-#       locator: "§4.2 Payment retry"
-#
 # Story planning allocates these exact identifiers to Stories, so they must stay
 # stable. Never renumber an approved identifier; supersede it with a new one.
 
@@ -24,12 +18,68 @@ epicId: "SF-E-001"
 
 requirements:
   - id: REQ-001
-    # Optional but recommended: keeps the matrix readable without opening the SRS.
-    # statement: ""
-    # priority: Must
-    sources: []
+    statement: "The application shall replace the light-mode --accent CSS custom property in src/index.css with a blue colour value, and update --accent-bg and --accent-border to alpha variants of that same blue."
+    priority: Must
+    sources:
+      - sourceId: SRC-41041233113E
+        locator: "§Goal — initiative title: Change the color to blue"
+      - sourceId: SRC-41041233113E
+        locator: "§Light mode context — existing --accent: #aa3bff"
+
+  - id: REQ-002
+    statement: "The application shall replace the dark-mode accent CSS custom properties (--accent, --accent-bg, --accent-border) in the @media (prefers-color-scheme: dark) block of src/index.css with blue equivalents appropriate for dark backgrounds."
+    priority: Must
+    sources:
+      - sourceId: SRC-41041233113E
+        locator: "§Goal — initiative title: Change the color to blue"
+      - sourceId: SRC-41041233113E
+        locator: "§Dark mode context — existing --accent: #c084fc"
+
+  - id: REQ-003
+    statement: "The application shall preserve all existing todo CRUD functionality (add item, toggle-complete, remove item) unchanged after the colour update."
+    priority: Must
+    sources:
+      - sourceId: SRC-41041233113E
+        locator: "§Context — existing feature description (add/toggle/remove todo)"
+
+  - id: REQ-004
+    statement: "The chosen blue accent colour shall meet WCAG 2.2 AA contrast ratio requirements (>=3:1 for non-text UI components) against all backgrounds it is rendered on."
+    priority: Should
+    sources:
+      - sourceId: SRC-41041233113E
+        locator: "§Context — existing token-based architecture and UI description"
 
 acceptanceCriteria:
   - id: AC-001
     requirements: [REQ-001]
-    sources: []
+    sources:
+      - sourceId: SRC-41041233113E
+        locator: "§Goal — initiative title: Change the color to blue"
+      - sourceId: SRC-41041233113E
+        locator: "§Light mode context — existing --accent: #aa3bff"
+
+  - id: AC-002
+    requirements: [REQ-002]
+    sources:
+      - sourceId: SRC-41041233113E
+        locator: "§Goal — initiative title: Change the color to blue"
+      - sourceId: SRC-41041233113E
+        locator: "§Dark mode context — existing --accent: #c084fc"
+
+  - id: AC-003
+    requirements: [REQ-001, REQ-002]
+    sources:
+      - sourceId: SRC-41041233113E
+        locator: "§Context — existing purple/violet colour values in src/index.css"
+
+  - id: AC-004
+    requirements: [REQ-003]
+    sources:
+      - sourceId: SRC-41041233113E
+        locator: "§Context — existing feature description (add/toggle/remove todo)"
+
+  - id: AC-005
+    requirements: [REQ-004]
+    sources:
+      - sourceId: SRC-41041233113E
+        locator: "§Context — existing token-based architecture and background colour values"

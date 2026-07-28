@@ -1,0 +1,34 @@
+{
+  "assurance": "machine-verified",
+  "check": "impact-grounded",
+  "decision": null,
+  "expiresAt": null,
+  "identityAssurance": "configured-local",
+  "initiativeId": "SF-E-001",
+  "observedAt": "2026-07-28T11:57:03.038Z",
+  "persona": "product-owner",
+  "phase": "epic-requirements",
+  "reason": null,
+  "registeredBy": {
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "name": "Ashok Raj"
+  },
+  "requirement": "must",
+  "revalidateAt": [],
+  "schemaVersion": 1,
+  "source": {
+    "externalId": "e95784614570b5520090bb994101687fb9fd8f10eb6ac618219f14c54d113d92",
+    "observedState": "Impact map repository IDs resolved against the pinned workspace portfolio",
+    "path": null,
+    "type": "manual",
+    "url": null,
+    "version": "1"
+  },
+  "sourceBytes": 0,
+  "sourceSha256": null,
+  "subject": null,
+  "supersedes": [],
+  "type": "evidence",
+  "verificationMethod": "singularity-impact-map"
+}
