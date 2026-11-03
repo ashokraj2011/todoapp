@@ -20,6 +20,7 @@
 
 ## Recent history
 
+- 2026-11-03T16:43:00.575Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 requests that implementation re-pin test command .-node-tests (vite.config.js changed) for this Story. SFlow still reports vite.config.js drift after restoring that file to the generation baseline; the jsdom setup is now inline in src/App.test.jsx and the pinned npm test command passes. Please review whether the existing test command pin should be refreshed.
 - 2026-11-03T16:21:17.687Z — **work_interval_started** (implementation) by system: baseline d86a55ff5eec at 5344b77f1b0d
 - 2026-11-03T16:21:17.674Z — **phase_self_approved** (planning) by ashokraj2011 · agent architect: threshold reached; advanced to implementation
 - 2026-11-03T16:16:23.056Z — **phase_submitted** (planning) by ashokraj2011 · agent architect: 1 artifacts
