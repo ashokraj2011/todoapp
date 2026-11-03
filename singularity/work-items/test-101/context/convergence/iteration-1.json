@@ -1,0 +1,99 @@
+{
+  "allowedNext": [
+    "advance-to-verification"
+  ],
+  "bindings": {
+    "clauseIndexSha256": [
+      "53e8c21e4a572595488d0ac57ddfefad2807d1ff888d66699cadcc525cbbcc0b"
+    ],
+    "configurationRevision": "2b2bb89e41a271303d630ace7ef837d312ebbd67",
+    "configurationSha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590",
+    "constitutionSha256": null,
+    "evidenceSha256": [],
+    "iteration": 1,
+    "observedClaimsSha256": [
+      "fa1b93ed6714e46b695ec6b6f304280f8224774f335718871d5498dcafeb3dff"
+    ],
+    "plannedClaimsSha256": [
+      "32377c85efcb339d22cdc8eb92d7bfdea8c079c8696c805856751745007aafea"
+    ],
+    "planning": {
+      "generation": 2,
+      "sha256": "5a99f92876e08c98d0810c7258c6800a581bb6862ef03f767b762f6b2ecd72ef"
+    },
+    "reconciliation": {
+      "intervalId": "INT-implementation-G1-001",
+      "path": "singularity/work-items/test-101/context/work-intervals/reconciliations/8f4f0c7cf3ae374eb797a11d12448be87150bd706a7105044e8f9291dd704b00.json",
+      "sha256": "8f4f0c7cf3ae374eb797a11d12448be87150bd706a7105044e8f9291dd704b00"
+    },
+    "sourceBaseCommit": "5344b77f1b0d2027a0741a93bb98dff27311e00c",
+    "sourceTargetCommit": "8c0f07cb4736fe59728697f53289ac3567b1a060",
+    "specification": {
+      "generation": 1,
+      "sha256": "5eb5f4c5d9b0771bd084c5590a34b6fa87605263790dc77e460d58f5cb08d52d"
+    }
+  },
+  "candidateRecordBindings": [],
+  "candidateRecords": [],
+  "candidateSnapshot": [],
+  "candidates": [],
+  "convergenceSha256": "0ff3d137f1330232747ae84503697f82b3bf53e7cf70da263f58ff1f211d81cb",
+  "facts": [
+    {
+      "clauseIds": [],
+      "detail": "package.json changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-21034d278357",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "package.json"
+      ]
+    },
+    {
+      "clauseIds": [],
+      "detail": "package-lock.json changed and no observed claim cites it; this is missing trace evidence, not a finding that the change was unplanned",
+      "evidence": [],
+      "id": "CF-418b395c70fc",
+      "kind": "unclaimed-changed-path",
+      "paths": [
+        "package-lock.json"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "classification": null,
+      "clauseIds": [],
+      "decision": {
+        "actor": "ashokraj2011",
+        "at": "2026-11-03T18:06:17.536Z",
+        "reason": "nothig.it is good we are fine"
+      },
+      "disposition": "accepted-deviation",
+      "id": "GF-8a3cd62756af",
+      "itemId": "CF-418b395c70fc",
+      "kind": "unclaimed-changed-path",
+      "source": "deterministic"
+    },
+    {
+      "classification": null,
+      "clauseIds": [],
+      "decision": {
+        "actor": "ashokraj2011",
+        "at": "2026-11-03T18:06:15.113Z",
+        "reason": "it is ok checked and we are good"
+      },
+      "disposition": "accepted-deviation",
+      "id": "GF-cf6d3fc60339",
+      "itemId": "CF-21034d278357",
+      "kind": "unclaimed-changed-path",
+      "source": "deterministic"
+    }
+  ],
+  "iteration": 1,
+  "legacyMigration": null,
+  "resultType": "convergence",
+  "schemaVersion": 4,
+  "unresolvedBlockers": [],
+  "workId": "test-101"
+}

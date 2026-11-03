@@ -1,0 +1,51 @@
+{
+  "artifact": {
+    "bytes": 17724,
+    "path": "singularity/work-items/test-101/artifacts/convergence/convergence.md",
+    "role": "document",
+    "sha256": "4aa66673c9e3431ea5f95b360e65902a700b0f2dc992663c9f403b4ac1538e7f"
+  },
+  "configuration": {
+    "revision": "2b2bb89e41a271303d630ace7ef837d312ebbd67",
+    "sha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590"
+  },
+  "generation": 1,
+  "inputs": [
+    {
+      "kind": null,
+      "path": "artifacts/implementation/implementation-summary.md",
+      "sha256": null
+    },
+    {
+      "kind": null,
+      "path": "artifacts/planning/plan.md",
+      "sha256": null
+    },
+    {
+      "kind": null,
+      "path": "artifacts/specification/spec.md",
+      "sha256": null
+    }
+  ],
+  "integritySha256": "ee1335c0044542b72d076723d2e4915b9a0ee85bbb32c81a39c2cc132a0db8d4",
+  "phase": "convergence",
+  "producer": {
+    "actor": "88361104+ashokraj2011@users.noreply.github.com",
+    "agent": null,
+    "kind": "deterministic"
+  },
+  "publication": {
+    "branch": "test-101",
+    "commit": null,
+    "publishedAt": "2026-11-03T18:06:25.635Z"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "id": "test-101",
+    "kind": "story"
+  },
+  "template": {
+    "path": "singularity/work-items/test-101/config/wfa/blobs/sha256/eb257477afca0229ed858875499736c57498015aaee0a527b714356819a9dde2",
+    "sha256": "eb257477afca0229ed858875499736c57498015aaee0a527b714356819a9dde2"
+  }
+}
