@@ -1,0 +1,7 @@
+version: 1
+capabilities:
+  todoapp:
+    name: todoapp
+    kind: delivery
+    parent: null
+    repository: todoapp
