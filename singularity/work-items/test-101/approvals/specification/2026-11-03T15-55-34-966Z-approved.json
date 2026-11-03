@@ -1,0 +1,106 @@
+{
+  "decision": "approved",
+  "phase": "specification",
+  "at": "2026-11-03T15:55:34.966Z",
+  "actor": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "agent": "product-owner",
+  "authorityGroup": "product-approvers",
+  "identityAssurance": "configured-local",
+  "channel": "copilot-selection-receipt",
+  "generation": 1,
+  "artifactSha256": [
+    {
+      "path": "singularity/work-items/test-101/artifacts/specification/spec.md",
+      "sha256": "7b4ac654a9a122186adb48fe237c366c3fce5a1a0d1079569a3a7782c62dab31"
+    }
+  ],
+  "artifactSet": "spec-driven-specification",
+  "bundleSha256": "04747664026282b48b07205322d8df266b37469c792ae987eb7b44b8581596d0",
+  "reviewPacketSha256": "3667d0038aa91f2b8a0176904f8b0da5a184673f6cbdd88cf05a6d97d9e35e12",
+  "evidenceCommit": "5472948a2e575b26ade33dc2795c5c6f7f09979c",
+  "artifactSetSha256": "6fa9d0eac115b560e97f45ce6fc66035060b5af4acfae20d6e7e41c65f08589c",
+  "architectureIntent": null,
+  "architectureDecision": null,
+  "actionContext": {
+    "phase": "specification",
+    "label": "Specification",
+    "generation": 1,
+    "submittedAt": "2026-11-03T15:53:12.943Z",
+    "artifacts": [
+      {
+        "path": "singularity/work-items/test-101/artifacts/specification/spec.md",
+        "sha256": "7b4ac654a9a122186adb48fe237c366c3fce5a1a0d1079569a3a7782c62dab31"
+      }
+    ],
+    "agentBriefs": [
+      {
+        "consumerPhase": "convergence",
+        "status": "ready",
+        "path": "singularity/work-items/test-101/context/briefs/specification-gen1-for-convergence.json",
+        "renderedPath": "singularity/work-items/test-101/context/briefs/specification-gen1-for-convergence.md",
+        "renderedSha256": "cd2dabb70c8fbaf267de45be9c334364833f41395b0c9a38e187732682e16ce2",
+        "integritySha256": "d35c184dc45fb0db0fbb2e257b357988c1d0c5d21726aaeccda0251544e22767",
+        "documentId": "agent-brief-specification-gen1-convergence",
+        "documentPath": "singularity/work-items/test-101/context/briefs/specification-gen1-for-convergence.md",
+        "documentSha256": "cd2dabb70c8fbaf267de45be9c334364833f41395b0c9a38e187732682e16ce2"
+      },
+      {
+        "consumerPhase": "implementation",
+        "status": "ready",
+        "path": "singularity/work-items/test-101/context/briefs/specification-gen1-for-implementation.json",
+        "renderedPath": "singularity/work-items/test-101/context/briefs/specification-gen1-for-implementation.md",
+        "renderedSha256": "03464d3532e593cae6dfe6c28430e5fdd3b59935dde220855afe39c1f242654c",
+        "integritySha256": "65892be3fb3cc8f57a184641f15633bd5945616cbe1ca0b62865b816037ea2ef",
+        "documentId": "agent-brief-specification-gen1-implementation",
+        "documentPath": "singularity/work-items/test-101/context/briefs/specification-gen1-for-implementation.md",
+        "documentSha256": "03464d3532e593cae6dfe6c28430e5fdd3b59935dde220855afe39c1f242654c"
+      },
+      {
+        "consumerPhase": "planning",
+        "status": "ready",
+        "path": "singularity/work-items/test-101/context/briefs/specification-gen1-for-planning.json",
+        "renderedPath": "singularity/work-items/test-101/context/briefs/specification-gen1-for-planning.md",
+        "renderedSha256": "a215cc62bd8762f69847017a44cfc5cd289bdee80388096147f98efbed40d1ef",
+        "integritySha256": "e4c80d1de2eca189fda3dad4b9d78d9c69cc28e35a00e40f6831761f83d834c3",
+        "documentId": "agent-brief-specification-gen1-planning",
+        "documentPath": "singularity/work-items/test-101/context/briefs/specification-gen1-for-planning.md",
+        "documentSha256": "a215cc62bd8762f69847017a44cfc5cd289bdee80388096147f98efbed40d1ef"
+      },
+      {
+        "consumerPhase": "verification",
+        "status": "ready",
+        "path": "singularity/work-items/test-101/context/briefs/specification-gen1-for-verification.json",
+        "renderedPath": "singularity/work-items/test-101/context/briefs/specification-gen1-for-verification.md",
+        "renderedSha256": "e209be45036ed5e587bf87632f3af1e6f8c6dc2e9e499ae8d74d281465603c66",
+        "integritySha256": "52bb829ae367a82099af0f3fceb8e2842b2b63696a5dbed00800ecded02f0772",
+        "documentId": "agent-brief-specification-gen1-verification",
+        "documentPath": "singularity/work-items/test-101/context/briefs/specification-gen1-for-verification.md",
+        "documentSha256": "e209be45036ed5e587bf87632f3af1e6f8c6dc2e9e499ae8d74d281465603c66"
+      }
+    ],
+    "reviewPacketSha256": "3667d0038aa91f2b8a0176904f8b0da5a184673f6cbdd88cf05a6d97d9e35e12",
+    "submittedSourceCommit": "b44bbe3f93ede611d167db6d742ed68d5dc5751c",
+    "planId": "00e901bdb81602c282e65228"
+  },
+  "upstream": {
+    "sha256": "sha256:169cedc30fbae5a7fc862d112da535c1c153261dff209cae106d128145296c66",
+    "refs": [
+      {
+        "kind": "documents",
+        "ref": "specification",
+        "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      {
+        "kind": "decisions",
+        "ref": "story",
+        "sha256": "sha256:ebade4dba52a070bc4615535bc642737abe7d357fbe4a032fce8056876cf63f6"
+      }
+    ]
+  },
+  "selfApproval": true
+}

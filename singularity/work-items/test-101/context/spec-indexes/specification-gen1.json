@@ -9,7 +9,7 @@
       "namespace": "TEST-101",
       "number": 1,
       "source": {
-        "line": 230,
+        "line": 337,
         "path": "singularity/work-items/test-101/artifacts/specification/spec.md"
       },
       "type": "REQ",
@@ -29,7 +29,7 @@
       "namespace": "TEST-101",
       "number": 2,
       "source": {
-        "line": 232,
+        "line": 339,
         "path": "singularity/work-items/test-101/artifacts/specification/spec.md"
       },
       "type": "REQ",
@@ -49,7 +49,7 @@
       "namespace": "TEST-101",
       "number": 3,
       "source": {
-        "line": 234,
+        "line": 341,
         "path": "singularity/work-items/test-101/artifacts/specification/spec.md"
       },
       "type": "REQ",
@@ -69,7 +69,7 @@
       "namespace": "TEST-101",
       "number": 4,
       "source": {
-        "line": 236,
+        "line": 343,
         "path": "singularity/work-items/test-101/artifacts/specification/spec.md"
       },
       "type": "REQ",
@@ -89,7 +89,7 @@
       "namespace": "TEST-101",
       "number": 1,
       "source": {
-        "line": 238,
+        "line": 345,
         "path": "singularity/work-items/test-101/artifacts/specification/spec.md"
       },
       "type": "AC",
@@ -102,13 +102,13 @@
     }
   ],
   "generation": 1,
-  "indexSha256": "ea405a092e77e69d126f7858e1ffbf7a5c03175e5b4946910c394a8bf1d8cdb4",
+  "indexSha256": "53e8c21e4a572595488d0ac57ddfefad2807d1ff888d66699cadcc525cbbcc0b",
   "phase": "specification",
   "schemaVersion": 1,
   "source": {
-    "bytes": 9696,
+    "bytes": 15416,
     "path": "singularity/work-items/test-101/artifacts/specification/spec.md",
-    "sha256": "9c7aec4404212ee0e9fa534576f370c7b2969a43fcbf73ef91ff2449cd88f2a0"
+    "sha256": "5eb5f4c5d9b0771bd084c5590a34b6fa87605263790dc77e460d58f5cb08d52d"
   },
   "workId": "test-101"
 }
