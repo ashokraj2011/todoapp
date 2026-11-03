@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 2,
+  "reportSha256": "9480e2162eee48bef4404d75bdb272cb912af60ba22670f9062fc0dcd139b6d9",
+  "lifecycleEventId": "3b5de10c-6da0-4931-9e6c-499ec8b6b374",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "test-101",
+      "phase": "planning",
+      "generation": 2,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/test-101/USER-STORY.md",
+          "textSha256": "77be6add7d8ef9253bce92565cda0b4cc94e8d62aabb35a090a588d84362148a",
+          "originalSha256": "ba3d41abfff47fe1050d716eda6fb2fcc3c5a9ffe317fb2382d6d92a7e3b5071"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/test-101/context/clarifications-specification-gen1.json",
+          "sha256": "f70d3db94c82063a8fb8415fe12d0489d4694d1db08daeb61e9fa1402274eb19"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/test-101/artifacts/planning/plan.md",
+        "sha256": "2a46cb130ef368aad9eb4bd5b112512146bfb17850332ee79b862295d746f071"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/test-101/artifacts/specification/spec.md",
+        "sha256": "874933cca432ef5b6e32582a1e5c96267b7879949311165b961a1a25d59ac69f"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "TEST-101:REQ-001",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Both Todo tasks and general events are visible in month, week, and day views.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "TEST-101:REQ-002",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "The user can create a Todo task and a general event, and each appears in the calendar.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "TEST-101:REQ-003",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "The user can edit a Todo task and a general event, and each updated item appears in the calendar.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "TEST-101:REQ-004",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx"
+        ],
+        "plannedTests": [
+          "src/App.test.jsx"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "The user can delete a Todo task and a general event, and neither remains displayed.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "TEST-101:AC-001",
+        "expectedPaths": [
+          "singularity/work-items/test-101/evidence/calendar-ui.png"
+        ],
+        "plannedTests": [],
+        "testDisposition": "non-test",
+        "testReason": null,
+        "verificationCriterion": "TEST-101:AC-001",
+        "fulfillment": "evidence",
+        "observableResult": "A retained screenshot shows the completed in-app calendar UI.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-03T16:12:23.645Z",
+  "recordSha256": "36d91623efee9cef1e6822ad3190839ad6d360b234de8fe7fad015ca7ceeb7d6"
+}
