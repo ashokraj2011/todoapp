@@ -5,7 +5,7 @@
 - Capability: **todoapp** (`todoapp`)
 - Capability map: `8b165a854d72b38ffd26f9a79d2e3674f0fa52e5640011fc8f6e7ace10ea4d46`
 - Overall status: **in_progress**
-- Current phase: **verification**
+- Current phase: **release**
 
 | # | Phase | Agent | Status | Generation | Approvals | Tokens |
 |---:|---|---|---|---:|---:|---:|
@@ -17,11 +17,14 @@
 |  | ⚠ self-approval | Ashok Raj via engineering-reviewers; agent developer | **warning** |  |  |  |
 | 4 | Convergence (`convergence`) | architect | **approved** | 1 | 1 | unavailable |
 |  | ⚠ self-approval | Ashok Raj via architecture-reviewers; agent unavailable | **warning** |  |  |  |
-| 5 | Verification (`verification`) | qa | **awaiting_approval** | 1 | 0 | unavailable |
-| 6 | Release (`release`) | qa | **not_started** | 0 | 0 | unavailable |
+| 5 | Verification (`verification`) | qa | **approved** | 1 | 1 | unavailable |
+|  | ⚠ self-approval | Ashok Raj via quality-reviewers; agent qa | **warning** |  |  |  |
+| 6 | Release (`release`) | qa | **in_progress** | 0 | 0 | unavailable |
 
 ## Recent history
 
+- 2026-11-03T18:19:04.452Z — **phase_self_approved** (verification) by ashokraj2011 · agent qa: threshold reached; advanced to release
+- 2026-11-03T18:19:04.452Z — **work_interval_closed** (verification) by ashokraj2011 · agent qa: interval INT-verification-G1-002 closed after phase approval
 - 2026-11-03T18:17:17.668Z — **phase_submitted** (verification) by ashokraj2011 · agent qa: 1 artifacts
 - 2026-11-03T18:17:17.667Z — **work_interval_reconciled** (verification) by system: aligned; 0 changed path(s)
 - 2026-11-03T18:15:54.949Z — **phase_generated** (verification) by ashokraj2011 · agent qa: generation 1
@@ -35,5 +38,3 @@
 - 2026-11-03T17:56:54.146Z — **phase_submitted** (implementation) by ashokraj2011 · agent developer: 6 artifacts
 - 2026-11-03T17:56:54.146Z — **work_interval_reconciled** (implementation) by system: review; 5 changed path(s)
 - 2026-11-03T17:55:20.206Z — **phase_generated** (implementation) by ashokraj2011 · agent developer: generation 1
-- 2026-11-03T16:43:00.575Z — **test_command_decided** (implementation) by ashokraj2011 · agent developer: TCD-001 requests that implementation re-pin test command .-node-tests (vite.config.js changed) for this Story. SFlow still reports vite.config.js drift after restoring that file to the generation baseline; the jsdom setup is now inline in src/App.test.jsx and the pinned npm test command passes. Please review whether the existing test command pin should be refreshed.
-- 2026-11-03T16:21:17.687Z — **work_interval_started** (implementation) by system: baseline d86a55ff5eec at 5344b77f1b0d
