@@ -1,0 +1,28 @@
+{
+  "artifact": {
+    "generation": 1,
+    "mediaType": "text/markdown",
+    "outputId": "document",
+    "path": "singularity/work-items/test-101/artifacts/convergence/convergence.md",
+    "phaseId": "convergence"
+  },
+  "createdAt": "2026-11-03T18:07:32.327Z",
+  "kind": "governed-reference",
+  "repository": {
+    "id": ".w-cd50f65c062e736cf192d17f",
+    "origin": "https://github.com/ashokraj2011/todoapp.git"
+  },
+  "revision": {
+    "bytes": 17724,
+    "commitSha": "cbed2887573a3823162e37fdbabfe0a539d939ff",
+    "sha256": "4aa66673c9e3431ea5f95b360e65902a700b0f2dc992663c9f403b4ac1538e7f"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "branch": "test-101",
+    "id": "test-101",
+    "kind": "story",
+    "subjectRevision": 1
+  },
+  "visibility": "model"
+}
