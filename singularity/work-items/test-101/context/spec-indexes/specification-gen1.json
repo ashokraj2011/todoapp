@@ -1,0 +1,114 @@
+{
+  "clauses": [
+    {
+      "anchor": "[TEST-101:REQ-001]",
+      "body": "The in-app calendar displays both Todo tasks and general calendar events in month, week, and day\nviews. *(S1)*",
+      "bodySha256": "07939039c249f79a7670185ab46ac0ae3f1593725e5aa46429c37ce677062d5a",
+      "dependsOn": [],
+      "id": "TEST-101:REQ-001",
+      "namespace": "TEST-101",
+      "number": 1,
+      "source": {
+        "line": 230,
+        "path": "singularity/work-items/test-101/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[TEST-101:REQ-002]",
+      "body": "The Todo app user can create Todo tasks and general calendar events in the in-app calendar.\n*(S2)*",
+      "bodySha256": "ebbec152debdd1b587b2b665b2a2271379ac05964bd99441a7fa9327c44ee12d",
+      "dependsOn": [],
+      "id": "TEST-101:REQ-002",
+      "namespace": "TEST-101",
+      "number": 2,
+      "source": {
+        "line": 232,
+        "path": "singularity/work-items/test-101/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[TEST-101:REQ-003]",
+      "body": "The Todo app user can edit Todo tasks and general calendar events in the in-app calendar.\n*(S2)*",
+      "bodySha256": "a4a9f7dc3e80f200d29c038fc210eb9c4beb31ec811456ba7aec3234855321b9",
+      "dependsOn": [],
+      "id": "TEST-101:REQ-003",
+      "namespace": "TEST-101",
+      "number": 3,
+      "source": {
+        "line": 234,
+        "path": "singularity/work-items/test-101/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[TEST-101:REQ-004]",
+      "body": "The Todo app user can delete Todo tasks and general calendar events in the in-app calendar.\n*(S2)*",
+      "bodySha256": "44e11daa2af5a49d4cf8e9884e48f23dc4c60c94ef7f6adb0da85fb345f8fc06",
+      "dependsOn": [],
+      "id": "TEST-101:REQ-004",
+      "namespace": "TEST-101",
+      "number": 4,
+      "source": {
+        "line": 236,
+        "path": "singularity/work-items/test-101/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[TEST-101:AC-001]",
+      "body": "A screenshot of the completed calendar UI is delivered as acceptance evidence\n[scope:SRI-35efa5d9d09b]. *(S3)*",
+      "bodySha256": "492b5c0209911982800690e88f93f13f3f5e4486a9014e0a663de5a6676aa1a8",
+      "dependsOn": [],
+      "id": "TEST-101:AC-001",
+      "namespace": "TEST-101",
+      "number": 1,
+      "source": {
+        "line": 238,
+        "path": "singularity/work-items/test-101/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "TEST-101:AC-001",
+        "methods": [
+          "visual"
+        ]
+      }
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "ea405a092e77e69d126f7858e1ffbf7a5c03175e5b4946910c394a8bf1d8cdb4",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 9696,
+    "path": "singularity/work-items/test-101/artifacts/specification/spec.md",
+    "sha256": "9c7aec4404212ee0e9fa534576f370c7b2969a43fcbf73ef91ff2449cd88f2a0"
+  },
+  "workId": "test-101"
+}

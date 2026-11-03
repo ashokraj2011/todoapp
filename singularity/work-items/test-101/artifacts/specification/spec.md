@@ -4,27 +4,51 @@
   "workId": "test-101",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "874933cca432ef5b6e32582a1e5c96267b7879949311165b961a1a25d59ac69f",
+      "bytes": 5644
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-03T13:38:44.078Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "b6086ae919e1f4085e7e085aca7630828af2f19d",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/test-101/context/clarifications-specification-gen1.json",
+    "sha256": "f70d3db94c82063a8fb8415fe12d0489d4694d1db08daeb61e9fa1402274eb19",
+    "promptSha256": "36d6325d1039b1bf012c1596d5f3858f450024e9bde979be0feb8fcb7c02a63e",
+    "responses": 5,
+    "markers": [],
+    "recordedAt": "2026-11-03T13:34:40.545Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/test-101/telemetry/specification-gen1.json",
+      "sha256": "0bd1c40d3242b6216894908dc4a0249fe5a5ec550a98f7ecd66baa47e695f9a7",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 27564,
+        "estimatedTokens": 6891,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 27564,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-03T13:38:44.078Z",
+      "completedAt": "2026-11-03T13:38:44.078Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -54,159 +135,148 @@
 
 # Specification — test-101
 
-<!--
-Scenarios come first, and general requirements come after them `[SPK:REQ-068]`. That ordering is the
-template's opinion: a requirement written before anyone has described the situation it serves tends
-to describe the system instead of the need, and nobody notices until verification.
-
-Where the current Story evidence leaves something material unknown, say so with a marker rather
-than guessing. Use this syntax:
-
-    [NEEDS CLARIFICATION: <one question grounded in the current Story evidence>]
-
-Replace the angle-bracketed placeholder; never copy or ask it as written. The question must be one
-non-empty line and must arise from the pinned sources, approved upstream artifacts, repository world
-model, or a contradiction among them. Markers are extracted the same way clauses are, so a marker
-inside fenced or inline code is ignored `[SPK:REQ-063]`. This phase blocks publication while any
-marker is unresolved, and a marker is only resolved when a later generation removes it *and* records
-the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, not an answer.
--->
-
-Keep every section of this template. When one does not fit this change (for example Permissions
-for a library or command-line tool with no roles), write `Not applicable: <reason>` under it
-rather than deleting it: later steps carry Actors, Failure and empty states, Permissions,
-Boundary conditions and the other sections forward, and stop when one is missing.
-
 ## Agent brief
 
-<!--
-Summarize the approved intent for downstream agents in a compact, standalone form. Include the
-problem, intended outcome, principal actors, most important scenarios, hard constraints, and major
-exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and
-boundary conditions are preserved separately by the governed projection.
--->
-
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Add an in-app calendar to the Todo application with a Google Calendar-like interface. It shows
+Todo tasks and general calendar events in month, week, and day views. A Todo app user can create,
+view, edit, and delete both kinds of items. A screenshot of the completed UI is required.
+Google Calendar synchronization and visual matching to an external reference are not part of the
+confirmed request.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+The Todo app user views and manages Todo tasks and general calendar events in the in-app calendar.
+No other roles or permission distinctions were specified.
 
 ## User scenarios
 
-Prioritized. Each scenario leads with the situation, then its acceptance cases.
-
-<!-- Before drafting, split the pinned request and recorded answers into observable obligations
-for the actual interfaces (UI, API, event/message, batch/job, CLI, library or mixed). Keep the
-source -> REQ/AC -> assertion -> verification mapping in the existing sections. Existing ACs count;
-do not duplicate clauses or invent controls, endpoints, limits, errors or screenshot requirements.
-Self-check whether an implementation could meet this draft yet omit an explicit request. Repair
-clear omissions in this editable draft and recheck within the returned repair policy; preserve
-published inputs and settled answers. These are authoring instructions, not execution evidence. -->
-
-### S1 — <the most important situation, in the user's words>
+### S1 — See tasks and events in the calendar
 
 **Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+**Actor:** Todo app user
+**Context:** The in-app calendar is available and may contain tasks, general events, or no items.
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+- **Given** Todo tasks and general calendar events exist
+  **When** the user opens the month view
+  **Then** the calendar displays both kinds of items in that view.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+- **Given** Todo tasks and general calendar events exist
+  **When** the user opens the week view
+  **Then** the calendar displays both kinds of items in that view.
 
-### S2 — <the next situation>
+- **Given** Todo tasks and general calendar events exist
+  **When** the user opens the day view
+  **Then** the calendar displays both kinds of items in that view.
+
+### S2 — Manage calendar items
 
 **Priority:** P2
+**Actor:** Todo app user
+**Context:** The user is using the in-app calendar.
 
-- **Given** … **When** … **Then** …
+- **Given** the calendar is open
+  **When** the user creates a Todo task or general calendar event
+  **Then** the new item can be viewed in the calendar.
+
+- **Given** a Todo task or general calendar event exists
+  **When** the user edits it in the calendar
+  **Then** the updated item can be viewed in the calendar.
+
+- **Given** a Todo task or general calendar event exists
+  **When** the user deletes it in the calendar
+  **Then** the deleted item is no longer displayed in the calendar.
+
+### S3 — Provide visual evidence
+
+**Priority:** P3
+**Actor:** Todo app user
+**Context:** The in-app calendar UI has been completed.
+
+- **Given** the completed calendar UI
+  **When** acceptance evidence is provided
+  **Then** a screenshot of the completed UI is delivered.
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** No special empty-state behavior or wording was specified; the request does not define
+  what the calendar displays when it has no items.
+- **Failure:** No failure behavior was specified. The confirmed in-app interpretation does not
+  request Google Calendar synchronization or another external calendar dependency.
+- **Partial:** No behavior for partially completed create, edit, or delete operations was specified.
 
 ## Scenario coverage
 
-<!-- One row per behavior/acceptance clause; repeat rows for multiple outcomes. Every referenced
-S-number must have complete Given/When/Then acceptance cases above. Outcome is success, failure,
-boundary, or empty. Rejection/error requirements need distinct failure cases, not only happy-path
-prose. Use the pinned request and clarification answers; do not invent error text or new scope. -->
-
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `TEST-101:REQ-001` | S1 | TODO |
-| `TEST-101:REQ-002` | S2 | TODO |
-| `TEST-101:AC-001` | S1 | TODO |
+| `TEST-101:REQ-001` | S1 | success |
+| `TEST-101:REQ-002` | S2 | success |
+| `TEST-101:REQ-003` | S2 | success |
+| `TEST-101:REQ-004` | S2 | success |
+| `TEST-101:AC-001` | S3 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+The Todo app user can view and manage the two specified item types. The request defines no
+additional roles, access rules, or behavior for users with different permissions.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The required calendar views are month, week, and day. No limits, date-range rules, recurrence,
+timezone behavior, or other boundary conditions were specified.
 
 ## Requirements
 
-Numbered, testable, one obligation each. Cite the scenario each serves.
-
-- <requirement>. *(S1)* [TEST-101:REQ-001]
-- <requirement>. *(S1, S2)* [TEST-101:REQ-002]
-
-Acceptance criteria use the same stable, namespaced form:
-
-- <observable acceptance outcome>. *(S1)* [TEST-101:AC-001]
+- The in-app calendar displays both Todo tasks and general calendar events in month, week, and day
+  views. *(S1)* [TEST-101:REQ-001]
+- The Todo app user can create Todo tasks and general calendar events in the in-app calendar.
+  *(S2)* [TEST-101:REQ-002]
+- The Todo app user can edit Todo tasks and general calendar events in the in-app calendar.
+  *(S2)* [TEST-101:REQ-003]
+- The Todo app user can delete Todo tasks and general calendar events in the in-app calendar.
+  *(S2)* [TEST-101:REQ-004]
+- A screenshot of the completed calendar UI is delivered as acceptance evidence
+  [scope:SRI-35efa5d9d09b]. *(S3)* [TEST-101:AC-001]
 
 ## Verification intent
 
-<!-- One row per declared clause, including non-functional requirements. Methods: test, visual,
-inspection, or a comma-separated combination (all required). AC Criterion is its own ID. A
-visual/inspection requirement names the AC proving it; a test-only requirement may use -. An AC a
-requirement names lists every method that requirement lists: a `test, visual` requirement needs a
-`test, visual` AC. Choose from the pinned source, not from available tools. A screenshot is visual
-proof, not a test exemption.
-Planning must inherit these methods and cannot change them without an approved scope amendment. -->
-
 | Clause | Methods | Criterion |
 |---|---|---|
-| `TEST-101:REQ-001` | TODO | - |
-| `TEST-101:REQ-002` | TODO | - |
-| `TEST-101:AC-001` | TODO | `TEST-101:AC-001` |
+| `TEST-101:REQ-001` | test | - |
+| `TEST-101:REQ-002` | test | - |
+| `TEST-101:REQ-003` | test | - |
+| `TEST-101:REQ-004` | test | - |
+| `TEST-101:AC-001` | visual | `TEST-101:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[TEST-101:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+No non-functional requirements were specified.
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+The confirmed phrase “Google Calendar-like” means an in-app calendar interface, not synchronization
+with Google Calendar. The requested screenshot is a final UI deliverable, not a comparison against a
+reference image. The request does not settle event fields, date/time semantics, recurrence, reminders,
+or persistence behavior; no requirements for those details are inferred here.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+Google Calendar synchronization is outside the confirmed in-app interface request. No additional
+calendar features or implementation-specific visual matching are committed by the available sources.
+
+## Open questions
+
+- The request does not define event fields, date/time or timezone semantics, recurrence, reminders, or
+  persistence expectations. Impact: implementation details beyond displaying and managing the
+  specified item types cannot be inferred. Owner: product owner/human to resolve if needed before
+  those details are implemented.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+- Pinned Story source: `singularity/work-items/test-101/source.json` (SHA-256:
+  `ba3d41abfff47fe1050d716eda6fb2fcc3c5a9ffe317fb2382d6d92a7e3b5071`).
+- Recorded human clarification: specification generation 1, five responses.
+- No supporting documents or reference screenshots were offered to this phase.

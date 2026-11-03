@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "workId": "test-101",
+  "phase": "specification",
+  "generation": 1,
+  "mode": "required",
+  "promptPath": "singularity/work-items/test-101/context/prompts/specification-gen1.md",
+  "promptSha256": "36d6325d1039b1bf012c1596d5f3858f450024e9bde979be0feb8fcb7c02a63e",
+  "groundingRecordPath": "singularity/work-items/test-101/context/specification-gen1.json",
+  "groundingRecordSha256": "532d778a01fe5bd3a45a4571e88b246280d1288dc1f1f7d68343101015ea836c",
+  "responses": [
+    {
+      "id": "Q-001",
+      "question": "Should this be an in-app calendar with a Google Calendar-like interface, Google Calendar synchronization, or something else?",
+      "answer": "An in-app calendar with a Google Calendar-like interface.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-002",
+      "question": "Should it display Todo tasks only, general calendar events, or both?",
+      "answer": "Both Todo tasks and general calendar events.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-003",
+      "question": "Which views and actions are required?",
+      "answer": "Month, week, and day views; view, create, edit, and delete items.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-004",
+      "question": "Does “screenshot” mean visual acceptance against a reference screenshot, a screenshot of the completed result, or both?",
+      "answer": "A screenshot of the completed UI is the required deliverable.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-005",
+      "question": "Are there any must-have or out-of-scope constraints?",
+      "answer": "None known.",
+      "status": "answered",
+      "blocking": false
+    }
+  ],
+  "completed": true,
+  "recordedAt": "2026-11-03T13:34:40.545Z",
+  "recordedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "agent": "product-owner"
+}
