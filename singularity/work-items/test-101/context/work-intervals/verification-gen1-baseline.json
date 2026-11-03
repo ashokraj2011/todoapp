@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-interval-baseline",
+  "intervalId": "INT-verification-G1-002",
+  "workId": "test-101",
+  "workType": "spec-driven-standard",
+  "railId": "spec-driven-standard",
+  "phaseId": "verification",
+  "generation": 1,
+  "branch": "test-101",
+  "sourceBaseCommit": "89014ab6f92a937b98659073ae5a97fbcc7c7a92",
+  "configurationSha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590",
+  "sourceSha256": "ba3d41abfff47fe1050d716eda6fb2fcc3c5a9ffe317fb2382d6d92a7e3b5071",
+  "templateSha256": "fdda5ab9e701142bd6d1f12e90b85b4e24dddffb0f4f5d89c5b534bd9137e4e0",
+  "workflowSubjectRevision": "sha256:3a7834a13a79f079b1105881b048f237a2eed3dcbc493924e27e771c6068607c",
+  "protectedPaths": [
+    ".github/agents",
+    ".github/skills",
+    "plugin/agents",
+    "plugin/skills",
+    "singularity/agent-mappings.yml",
+    "singularity/agents",
+    "singularity/agents.lock.yml",
+    "singularity/impact.yml",
+    "singularity/prompts",
+    "singularity/templates",
+    "singularity/workflow.yml"
+  ],
+  "requiredChecks": [],
+  "requiredChecksSha256": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "policySha256": "sha256:d7c0902f0404eb6996938809a03f5fc5b70c5004a9d4fb4eca83e3cf37d754e0",
+  "escalationLadderSha256": null,
+  "reconciliationPolicy": {
+    "changedPathLimit": 5,
+    "escalationTarget": null,
+    "localProvidersOnly": true
+  },
+  "baselineSha256": "bec05a9e98caa984257fa71f19fe2789c23bd222d5368a2b34d4528f6ff857e6",
+  "createdAt": "2026-11-03T18:12:00.604Z",
+  "path": "singularity/work-items/test-101/context/work-intervals/verification-gen1-baseline.json",
+  "status": "open"
+}

@@ -5,7 +5,7 @@
   "workType": "spec-driven-standard",
   "phase": "convergence",
   "generation": 1,
-  "status": "awaiting_approval",
+  "status": "approved",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -83,8 +83,80 @@
   "remoteOutputs": [],
   "usage": [],
   "sequenceOverrides": [],
-  "approvals": [],
-  "selfApproval": false,
+  "approvals": [
+    {
+      "decision": "approved",
+      "phase": "convergence",
+      "at": "2026-11-03T18:12:00.601Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": null,
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "channel": "terminal",
+      "generation": 1,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/test-101/artifacts/convergence/convergence.md",
+          "sha256": "3ced8b34429f10b7c4e7bc95e970eac8943382f2cecb1eba445a3088a075e981"
+        }
+      ],
+      "reviewPacketSha256": "009b5b2fdfc739446874a0c6fdbb3f0d6232702265f75ecdb8dbf8cc834b4f5a",
+      "evidenceCommit": "f527bec7ab8ac5820b56e129a880e71ac98c8b87",
+      "artifactSetSha256": "5d69ec8b755383f5bcfc37d1a43a42dc6562b0ccde869fd51b187318d43b8744",
+      "architectureIntent": null,
+      "architectureDecision": null,
+      "upstream": {
+        "sha256": "sha256:cbb966a709f19192f7da233cdb994ebfb74198a284f158f6413c7982215f64b8",
+        "refs": [
+          {
+            "kind": "input",
+            "ref": "implementation",
+            "sha256": "sha256:98b8d998e2c1a6e882d6ece651249a294c28010435de9fa57457a785424b3479",
+            "authoredSha256": "sha256:b7b49f504775215ef5e701da4c1cf801f5ea8a5655f292b0cd896f80f632494e"
+          },
+          {
+            "kind": "input",
+            "ref": "planning",
+            "sha256": "sha256:a934dbe0b393260354928210c353978fc91ab1ef6360e8a01c91f5ef5c5596df",
+            "authoredSha256": "sha256:b2670e90c737c4d0c49faa87cee37af51f18a382ab54d769296564ac27dcb13f"
+          },
+          {
+            "kind": "input",
+            "ref": "specification",
+            "sha256": "sha256:1074313b5b76a2177f55d4fb231e14b6abbb6751216b04ab6b813db869325d72",
+            "authoredSha256": "sha256:a5182d5f8945c609f0a476cf36c0660bd875b49460af5aed68bc5a7b184f0fb5"
+          },
+          {
+            "kind": "candidate",
+            "ref": "HEAD",
+            "sha256": "sha256:65c9d687206d3f5817d70bb064f6c09bdd43c094ce0e038ea9a2e23586156b87"
+          },
+          {
+            "kind": "specification",
+            "ref": "records",
+            "sha256": "sha256:8d92458fa5a2736bd7bd1d9457323bf136ce66d054a6f8980db3a43bf96a546d"
+          },
+          {
+            "kind": "documents",
+            "ref": "convergence",
+            "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+          },
+          {
+            "kind": "decisions",
+            "ref": "story",
+            "sha256": "sha256:d8d370e25fa26c445c3d7b5b24b44353a9228d7595811205b65a3ca511eab521"
+          }
+        ]
+      },
+      "selfApproval": true
+    }
+  ],
+  "selfApproval": true,
   "conformanceTree": null
 }
 -->
