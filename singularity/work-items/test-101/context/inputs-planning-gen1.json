@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "workId": "test-101",
+  "workType": "spec-driven-standard",
+  "phase": "planning",
+  "generation": 1,
+  "mode": "enforce",
+  "recordedAt": "2026-11-03T16:00:11.555Z",
+  "renderedSha256": "8e7f0b26e75bd9f3ecec6ce22859b9d01ef513e80622d013956e360ea4a692b6",
+  "warnings": [],
+  "inputs": [
+    {
+      "phase": "specification",
+      "path": "artifacts/specification/spec.md",
+      "repositoryPath": "singularity/work-items/test-101/artifacts/specification/spec.md",
+      "optional": false,
+      "maxBytes": null,
+      "status": "captured",
+      "producerStatus": "approved",
+      "producerGeneration": 1,
+      "approvedAt": "2026-11-03T15:55:34.966Z",
+      "approvedBy": "ashokraj2011",
+      "approvedSha256": "5eb5f4c5d9b0771bd084c5590a34b6fa87605263790dc77e460d58f5cb08d52d",
+      "sha256": "5eb5f4c5d9b0771bd084c5590a34b6fa87605263790dc77e460d58f5cb08d52d",
+      "bytes": 15416,
+      "source": {
+        "path": "singularity/work-items/test-101/artifacts/specification/spec.md",
+        "rawSha256": "sha256:5eb5f4c5d9b0771bd084c5590a34b6fa87605263790dc77e460d58f5cb08d52d"
+      },
+      "representation": {
+        "kind": "summary",
+        "sha256": "sha256:a215cc62bd8762f69847017a44cfc5cd289bdee80388096147f98efbed40d1ef",
+        "bytes": 4844,
+        "complete": false,
+        "expansionHandle": "sfref:v1:story:test-101:b6cf2c1ca0dfbfbcf5cae591d43685bccb122da3b8241efdfea0b47fdd72b5b4"
+      },
+      "injectedBytes": 4844,
+      "truncated": false,
+      "authoredBytes": 5644,
+      "managedBytesExcluded": 9772,
+      "projection": {
+        "kind": "approved-summary",
+        "preserve": [
+          "Actors",
+          "User scenarios",
+          "Failure and empty states",
+          "Permissions",
+          "Boundary conditions",
+          "Requirements",
+          "Non-functional requirements",
+          "Assumptions",
+          "Out of scope"
+        ],
+        "maximumSummaryBytes": 32768,
+        "expansion": "hash-bound-reference",
+        "fallback": "block",
+        "briefPath": "singularity/work-items/test-101/context/briefs/specification-gen1-for-planning.md",
+        "briefSha256": "a215cc62bd8762f69847017a44cfc5cd289bdee80388096147f98efbed40d1ef",
+        "expansionHandle": "sfref:v1:story:test-101:b6cf2c1ca0dfbfbcf5cae591d43685bccb122da3b8241efdfea0b47fdd72b5b4"
+      }
+    }
+  ]
+}
