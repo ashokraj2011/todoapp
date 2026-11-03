@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "return-locator",
+  "workId": "test-101",
+  "capabilityId": "todoapp",
+  "originRepositoryId": "todoapp",
+  "repositories": [
+    {
+      "id": "todoapp",
+      "remote": "origin",
+      "required": true,
+      "url": "https://github.com/ashokraj2011/todoapp.git",
+      "fingerprint": "dfe1f860fcf207163acf18b351405d8ae2d81bccf2168f9b0f625813f49ac984",
+      "portability": "portable"
+    }
+  ],
+  "lifecycleRef": "refs/heads/test-101",
+  "workBranchRef": "refs/heads/test-101",
+  "configuration": {
+    "sha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590",
+    "branch": "sflow/config",
+    "commit": "2b2bb89e41a271303d630ace7ef837d312ebbd67"
+  },
+  "cloneStrategy": "existing-or-clone",
+  "integritySha256": "6aa69914842ae60b37c1bc5f1389e46f2ea671682806e7b273b3567d75f0aea5"
+}
