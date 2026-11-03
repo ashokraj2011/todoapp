@@ -7219,6 +7219,14 @@
       "event": "phase_submitted",
       "phase": "convergence",
       "detail": "1 artifacts"
+    },
+    {
+      "at": "2026-11-03T18:09:31.694Z",
+      "actor": "ashokraj2011",
+      "agent": null,
+      "event": "witness_recorded",
+      "phase": "convergence",
+      "detail": "WIT-001: visual of singularity/work-items/test-101/evidence/calendar-ui.png for TEST-101:AC-001 slot calendar-screen satisfies it. looks good .we should be fine"
     }
   ],
   "measurement": {
@@ -9362,6 +9370,137 @@
         },
         "createdAt": "2026-11-03T18:07:31.143Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "629b2c63-f49a-4820-9145-51162549a0c4",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "test-101",
+          "branch": "test-101"
+        },
+        "phaseId": "convergence",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": null,
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "witness",
+          "reviewPacketSha256": null,
+          "record": "WIT-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-03T18:09:30.843Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "629b2c63-f49a-4820-9145-51162549a0c4",
+        "eventType": "decision-made",
+        "capabilityId": "todoapp",
+        "subject": {
+          "aliases": [
+            "test-101"
+          ],
+          "branch": "test-101",
+          "canonicalBranch": "test-101",
+          "createdAt": "2026-11-03T13:25:44.978Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "convergence",
+          "generation": 1,
+          "phase": "convergence",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 3,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 2,
+              "in_progress": 0,
+              "awaiting_approval": 1,
+              "approved": 3,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "convergence",
+              "status": "awaiting_approval",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "test",
+          "updatedAt": "2026-11-03T18:09:31.694Z",
+          "workId": "test-101",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": null,
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "8b165a854d72b38ffd26f9a79d2e3674f0fa52e5640011fc8f6e7ace10ea4d46",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590",
+          "lifecycleEventId": "629b2c63-f49a-4820-9145-51162549a0c4",
+          "lifecyclePayload": {
+            "decision": "witness",
+            "reviewPacketSha256": null,
+            "record": "WIT-001"
+          },
+          "templateSha256": "eb257477afca0229ed858875499736c57498015aaee0a527b714356819a9dde2",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "629b2c63-f49a-4820-9145-51162549a0c4",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "test-101",
+              "branch": "test-101"
+            },
+            "phaseId": "convergence",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": null,
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "witness",
+              "reviewPacketSha256": null,
+              "record": "WIT-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-03T18:09:30.843Z"
+          }
+        },
+        "createdAt": "2026-11-03T18:09:30.843Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -9575,6 +9714,29 @@
         "attemptId": "TA-faaa653c58a81e3a6af9"
       },
       "at": "2026-11-03T17:55:19.893Z"
+    }
+  ],
+  "witnessRecords": [
+    {
+      "id": "WIT-001",
+      "clauseId": "TEST-101:AC-001",
+      "slot": "calendar-screen",
+      "method": "visual",
+      "file": "singularity/work-items/test-101/evidence/calendar-ui.png",
+      "sha256": "sha256:2745d57a28572a1240df1344cbb747cd8f7b0668b3740cbe6617eeda250bcca1",
+      "contextBinding": "sha256:3aa98b7131a116f908b578d23b48d22b7c8d84acd8a9b3692980564744143c2b",
+      "target": "Completed in-app calendar UI",
+      "checklist": {
+        "states-the-outcome": "yes",
+        "matches-the-criterion": "yes",
+        "current-for-this-change": "yes"
+      },
+      "outcome": "met",
+      "reason": "looks good .we should be fine",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-03T18:09:31.694Z"
     }
   ]
 }
