@@ -4440,24 +4440,183 @@
       "rejectedAt": null,
       "rejectedBy": null,
       "rejectionReason": null,
-      "generation": 0,
-      "generatedBy": null,
-      "generatedAgent": null,
-      "authorship": [],
-      "usage": [],
-      "telemetry": [],
+      "generation": 1,
+      "generatedBy": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "generatedAgent": "developer",
+      "authorship": [
+        {
+          "schemaVersion": 1,
+          "producer": "governed-agent",
+          "channel": "copilot-host",
+          "actor": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "governedAgentContext": {
+            "agentId": "developer"
+          },
+          "kernelModel": {
+            "invoked": false,
+            "status": "exact",
+            "invocationIds": []
+          },
+          "externalAiUse": {
+            "value": "unknown",
+            "status": "unavailable"
+          },
+          "changeOrigins": [
+            "copilot"
+          ],
+          "source": {
+            "kind": "in-place",
+            "filename": "implementation-summary.md",
+            "mediaType": "text/markdown",
+            "sha256": "b2f3b6fa168b22ed972aea6b611b5bf8ab4735c28ae65ad3861d6a5234dff84c",
+            "bytes": 3002
+          },
+          "generation": 1,
+          "publishedAt": "2026-11-03T17:55:20.045Z"
+        }
+      ],
+      "usage": [
+        {
+          "status": "unavailable",
+          "source": "copilot-otel-unavailable",
+          "provider": null,
+          "model": null,
+          "requestedModel": null,
+          "resolvedModel": null,
+          "resolvedModelAssurance": "unavailable",
+          "inputTokens": null,
+          "outputTokens": null,
+          "cachedInputTokens": null,
+          "cacheWriteInputTokens": null,
+          "totalTokens": null,
+          "providerCost": null,
+          "costStatus": "unavailable",
+          "spans": null,
+          "startedAt": "2026-11-03T17:55:20.045Z",
+          "completedAt": "2026-11-03T17:55:20.045Z",
+          "agent": "developer",
+          "generation": 1
+        }
+      ],
+      "telemetry": [
+        {
+          "generation": 1,
+          "path": "singularity/work-items/test-101/telemetry/implementation-gen1.json",
+          "sha256": "d5f3ead7026d98b70fb80e6a4b6603d18d0d54aa2768935002415350f53a8fed",
+          "status": "pending",
+          "models": [],
+          "providerCost": null,
+          "prompt": {
+            "source": "sflow-composition",
+            "bytes": 29791,
+            "estimatedTokens": 7448,
+            "estimation": "UTF-8 bytes divided by four, rounded up",
+            "maximumBytes": 72000,
+            "maximumEstimatedTokens": 18000,
+            "budgetMode": "observe",
+            "originalBytes": 29791,
+            "omittedSections": 0
+          },
+          "captureGap": "no-metered-session"
+        }
+      ],
       "approvals": [],
-      "generationPublications": [],
+      "generationPublications": [
+        {
+          "generation": 1,
+          "publishedAt": "2026-11-03T17:55:20.045Z",
+          "changeSetDigest": "sha256:f25ff8e24cbde3ea997d1738214b5fa43f14ec15fa511b04edd2d849c9ca33d8",
+          "resultDigest": "sha256:e2d5cb9cb3e6ad5bcb168004101459beab704931a2049db391d10366d4b867fd",
+          "resultDigestVersion": 3,
+          "architectureIntent": null,
+          "architectureDecision": null,
+          "record": {
+            "path": "singularity/work-items/test-101/context/generation-publications/implementation-gen1.json",
+            "sha256": "sha256:bdc517ea8b998699ed4fdb0206c666bcfda9f032b990dd49d83ab8334c4c9063"
+          }
+        }
+      ],
       "submissionArchitectureDecision": null,
       "designSourceSets": [],
       "artifactRegistrationRepairs": [],
-      "artifacts": [],
+      "artifacts": [
+        {
+          "path": "package-lock.json",
+          "kind": "configuration",
+          "status": "pending",
+          "exists": true,
+          "size": 123049,
+          "sha256": "f3256b16eeb8ea46b28bf18e1ce7b202bf4b5e3a48b45298db475924738ab87d",
+          "registeredAt": "2026-11-03T17:55:16.011Z",
+          "updatedAt": "2026-11-03T17:55:20.122Z"
+        },
+        {
+          "path": "package.json",
+          "kind": "configuration",
+          "status": "pending",
+          "exists": true,
+          "size": 765,
+          "sha256": "dbd75050aa38cb66886422c49339c0cd0d61507f1f962758343996cc61a9baca",
+          "registeredAt": "2026-11-03T17:55:16.018Z",
+          "updatedAt": "2026-11-03T17:55:20.129Z"
+        },
+        {
+          "path": "singularity/work-items/test-101/artifacts/implementation/implementation-summary.md",
+          "kind": "document",
+          "status": "pending",
+          "exists": true,
+          "size": 16827,
+          "sha256": "e4229052c7e3ef0f40f6d43e07ea8f810134bd2e597f3ba806fdd96aebd111f0",
+          "registeredAt": "2026-11-03T17:55:20.137Z",
+          "updatedAt": "2026-11-03T17:55:20.137Z"
+        },
+        {
+          "path": "src/App.css",
+          "kind": "code",
+          "status": "pending",
+          "exists": true,
+          "size": 10557,
+          "sha256": "02a9e9c0d236be04d8e2ebb28cbf622f1060d3e5c381863f35d07b1b6e2fa872",
+          "registeredAt": "2026-11-03T17:55:16.024Z",
+          "updatedAt": "2026-11-03T17:55:20.143Z"
+        },
+        {
+          "path": "src/App.jsx",
+          "kind": "code",
+          "status": "pending",
+          "exists": true,
+          "size": 12412,
+          "sha256": "aee10f019784fa84157c53430d5c0c46a40d89adab0b39fe5fbc8374a344769a",
+          "registeredAt": "2026-11-03T17:55:16.029Z",
+          "updatedAt": "2026-11-03T17:55:20.150Z"
+        },
+        {
+          "path": "src/App.test.jsx",
+          "kind": "test",
+          "status": "pending",
+          "exists": true,
+          "size": 3633,
+          "sha256": "cd08cd3aaa2932f29a1797f309bd4700deb227dcddc7098a556d5699267121ca",
+          "registeredAt": "2026-11-03T17:55:16.035Z",
+          "updatedAt": "2026-11-03T17:55:20.157Z"
+        }
+      ],
       "checks": [],
       "remoteOutputs": [],
       "generationIntent": {
         "id": "c1b80b0d-30c7-4083-9e5a-f6ecf0572e50",
         "generation": 1,
-        "status": "open",
+        "status": "consumed",
         "path": "singularity/work-items/test-101/context/generation-start/implementation-gen1.json",
         "receiptSha256": "sha256:f660f8c256c017a676e649eb82c2bea8d0ad0f330e1a97aecc2e7533ad186581",
         "baseline": {
@@ -4477,7 +4636,18 @@
           },
           "agent": "developer"
         },
-        "publication": null
+        "publication": {
+          "generation": 1,
+          "changeSetDigest": "sha256:f25ff8e24cbde3ea997d1738214b5fa43f14ec15fa511b04edd2d849c9ca33d8",
+          "resultDigest": "sha256:e2d5cb9cb3e6ad5bcb168004101459beab704931a2049db391d10366d4b867fd",
+          "resultDigestVersion": 3,
+          "generationStartSha256": "sha256:f660f8c256c017a676e649eb82c2bea8d0ad0f330e1a97aecc2e7533ad186581",
+          "record": {
+            "path": "singularity/work-items/test-101/context/generation-publications/implementation-gen1.json",
+            "sha256": "sha256:bdc517ea8b998699ed4fdb0206c666bcfda9f032b990dd49d83ab8334c4c9063"
+          }
+        },
+        "consumedAt": "2026-11-03T17:55:20.045Z"
       },
       "authoringBaseline": {
         "generation": 1,
@@ -4488,10 +4658,1185 @@
       "inputContext": {
         "generation": 1,
         "path": "singularity/work-items/test-101/context/inputs-implementation-gen1.json",
-        "sha256": "34fb9be4e91bfadd0cd0f0657898ad990684a41496ad2c2a3ddf0487d0bfbdc8",
+        "sha256": "9c30121cc5431d7ba21dffd2001622dff7ce64feb6b98d5be7e7920e5901cc7d",
         "renderedSha256": "dd6332064b519802acc02af5203e9421ac1e1f9bdb0ba95f1bb706e235105cb5",
         "mode": "enforce"
-      }
+      },
+      "generationCommit": null,
+      "publicationCommit": null,
+      "deliveryEvidence": {
+        "requirement": "source-and-tests",
+        "baselineCommit": "5344b77f1b0d2027a0741a93bb98dff27311e00c",
+        "generationIntentId": "c1b80b0d-30c7-4083-9e5a-f6ecf0572e50",
+        "changeSet": {
+          "schemaVersion": 1,
+          "kind": "repository-change-set",
+          "subject": {
+            "workId": "test-101",
+            "phase": "implementation",
+            "generation": 1,
+            "generationIntentId": "c1b80b0d-30c7-4083-9e5a-f6ecf0572e50"
+          },
+          "base": {
+            "commit": "5344b77f1b0d2027a0741a93bb98dff27311e00c",
+            "tree": "9b9f2537a22382272597f7193b7c343387d8cfd7"
+          },
+          "target": {
+            "head": "163321e3cf2e6ae141828f35f98ba29d455efbc9",
+            "includesIndex": true,
+            "includesWorktree": true,
+            "includesUntracked": true,
+            "caseInsensitivePaths": true
+          },
+          "entries": [
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": ".sflow/results/node-tests.json",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": null,
+              "untracked": true,
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:fd166fbcf8a1b30c4b159a9d41db1cd0745d9fcdf90ca9e84cce6ae083bd84c2",
+                "bytes": 1760
+              },
+              "changeId": "sha256:fed0d5015391cbd10d6aeb54442d64f66bcede16528ce612651310030774690b"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/approvals/planning.json",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": "c69d84ea7d4e9b2ff2cf88863d4621cf185f2688",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:077c1f2f258f41c31a18b754fb43da5ffc793543ee63f972169c25307ccaf341",
+                "bytes": 5119
+              },
+              "changeId": "sha256:96712664a266a745a2b12fe17c0e5d0e75b145af142ea13827729e0fc93ab89e"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/approvals/planning/2026-11-03T16-21-17-674Z-approved.json",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": "51e6c4b1da6da37efeff061ed96a511125e40c69",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:758756883c97490c16452ae3e4b7a0c6713f100613d23ecea518f167acb85410",
+                "bytes": 4645
+              },
+              "changeId": "sha256:c6a781bd3723f379dccbf7f8c09868425be51b8419abcdb8d5d52775d738fc6e"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/artifacts/implementation/implementation-summary.md",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": "269fe79968c1da5953808bdcd0ca3e2ce5a0ec78",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:f37d632efa721426bacd307937d4c465928f971d0f1bab6445010ceb8e4d6d3a",
+                "bytes": 14798
+              },
+              "changeId": "sha256:c93f234fc628ec8a390f1113f5d341a091cd269cd58fa231b9b3c1a9b029555a"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/context/code-delivery/tests/attempts/implementation/TA-50995dc75a0f149c7e5e.json",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": null,
+              "untracked": true,
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:2f30d652457eae4e8534ca289d7c90855748cacc74f7f39fcd5c95ee765628a5",
+                "bytes": 4291
+              },
+              "changeId": "sha256:8f9cf61c6f60d14f8a223adbc99d04a1a82c803a6a29865d7918c2cfdde4bd81"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/context/code-delivery/tests/attempts/implementation/TA-faaa653c58a81e3a6af9.json",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": null,
+              "untracked": true,
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:4d4756cdebca08f7ce56b68d235feeac69993c1254b77bc530e0099297cb67cd",
+                "bytes": 4172
+              },
+              "changeId": "sha256:a93601de4579272d3b83ff88d9a2908c69a762254e6a56a4d2d336bbc1df3ed4"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/context/code-delivery/tests/raw/3bfa411184ac8f140ac680b69bd4e1869df5138bdaa43995789b0d111e83929a.bin",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": null,
+              "untracked": true,
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:3bfa411184ac8f140ac680b69bd4e1869df5138bdaa43995789b0d111e83929a",
+                "bytes": 1742
+              },
+              "changeId": "sha256:dc5d3282c660b295931a90c0cb1b7265a658621232d4b1f400584b5f6d27886d"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/context/code-delivery/tests/raw/5c074006131d0487fdf7414708da81dfc17633c89a08c54b21f02a72ead84621.bin",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": null,
+              "untracked": true,
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:5c074006131d0487fdf7414708da81dfc17633c89a08c54b21f02a72ead84621",
+                "bytes": 7577
+              },
+              "changeId": "sha256:c0df1d7cc6700d48067c246cbe846a2876f3983eee48c0dd00a834e2e8dcd23c"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/context/generation-start/implementation-gen1.json",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": "7473bf9f7d4718c6895a78a2596b055d74498b47",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:8574e31129b741d56aa25e4832463c2daead6b4ff0a61d0fd50043a892b79740",
+                "bytes": 1243
+              },
+              "changeId": "sha256:ce35cbdaf6c7b025af4f1fc10b4ca062d64b346e690e8344accbde086cf71b1d"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/context/implementation-gen1.json",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": "9b68309d9325ebd32e12f3b4f072561bc4c38c05",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:50ca3835eae78c0f3c3c5a98e585450183d546f58321dda07ef7f63bb3cff135",
+                "bytes": 14043
+              },
+              "changeId": "sha256:282c6e77db37908c24ba9862c98d4ce8521b40bcc771fea105ac363966b7fbb8"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/context/inputs-implementation-gen1.json",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": "53b0dde29508402f32b6d70fa40a17bc42013f11",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:34fb9be4e91bfadd0cd0f0657898ad990684a41496ad2c2a3ddf0487d0bfbdc8",
+                "bytes": 4201
+              },
+              "changeId": "sha256:63cf31c30dd45ab9dcadbc3391edffa497b011bde20bd226d5b5b0b78e00046c"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/context/ledger-intents/41f599ab-d594-4207-925a-60594a81843c.json",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": "ba7349743a3134011bf7170452513cf67e8b7e82",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:e1279c333db654befe5a031481513512a96374c4d301603b05f9e0e63d9522d4",
+                "bytes": 2597
+              },
+              "changeId": "sha256:c8b98266849b6fcb173a0745bebf46cd141ae1b8c52254c40cc70f857181c0fc"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/context/ledger-intents/62b4e6c1-af0e-4c2b-a9b4-085e4d9b3097.json",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": "fd926942f496c60cd61d4fe287964e4ef04de8da",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:319036cb32b775861b86f25ae7a49e3d2c16423be665f27324a4a0777bc51d33",
+                "bytes": 2177
+              },
+              "changeId": "sha256:c4144f09a91017d35f9e6284e540edc08db173218911b236c6e09a4a5e7509f9"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/context/prompts/implementation-gen1.md",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": "5f8ecc69a63ec05e1d140ad654ff3abf77626104",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:37c420558a0e59c61d151bb2ce7a8bec0ead4036d62674e01bc84f76ccf49751",
+                "bytes": 29791
+              },
+              "changeId": "sha256:f05c8dec893c7b992bee2d91211326f08faa8d305e06b4781befc42cf07f4501"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/context/work-intervals/implementation-gen1-baseline.json",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": "b5c257e40d404fa0f3bfaf3d271a85f2b95ed4aa",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:2f276e54357ce9afc9917dd9a296beb1ea409c44c79304f8eb8032e264ef56cb",
+                "bytes": 1670
+              },
+              "changeId": "sha256:1d6bef7ee13b849b5c70e39f829d3db912a0aa62498b91dd09a58184f3050e27"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "singularity/work-items/test-101/evidence/calendar-ui.png",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": "26d02b93d5455648ef6a4daafe924ef8f32a9a12",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:2745d57a28572a1240df1344cbb747cd8f7b0668b3740cbe6617eeda250bcca1",
+                "bytes": 74868
+              },
+              "changeId": "sha256:74e992776aa3e9030a933962392d800a11475c296ac4b2332518ad3cbd05176e"
+            },
+            {
+              "status": "added",
+              "similarity": null,
+              "oldPath": null,
+              "newPath": "src/App.test.jsx",
+              "oldMode": "000000",
+              "newMode": "100644",
+              "oldObject": null,
+              "newObject": null,
+              "untracked": true,
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:cd08cd3aaa2932f29a1797f309bd4700deb227dcddc7098a556d5699267121ca",
+                "bytes": 3633
+              },
+              "changeId": "sha256:10f5e1735efd41d4e4ab8c206fcb90bdf34cb9c8ed6ae6d567a64e43bbe4e8c9"
+            },
+            {
+              "status": "modified",
+              "similarity": null,
+              "oldPath": "package-lock.json",
+              "newPath": "package-lock.json",
+              "oldMode": "100644",
+              "newMode": "100644",
+              "oldObject": "46cfe6107d6f172a2516d8bec06ae3ce0a604eb7",
+              "newObject": null,
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:f3256b16eeb8ea46b28bf18e1ce7b202bf4b5e3a48b45298db475924738ab87d",
+                "bytes": 123049
+              },
+              "changeId": "sha256:f00b6fb28196f936dad001a9b4017c859ad1fbaf5ce9f330816d4cfc45a2a730"
+            },
+            {
+              "status": "modified",
+              "similarity": null,
+              "oldPath": "package.json",
+              "newPath": "package.json",
+              "oldMode": "100644",
+              "newMode": "100644",
+              "oldObject": "7118c5a581b08a80c7762b6c3995e2e2a30e5f3c",
+              "newObject": null,
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:dbd75050aa38cb66886422c49339c0cd0d61507f1f962758343996cc61a9baca",
+                "bytes": 765
+              },
+              "changeId": "sha256:d8599838bc889071cbc2b6a34d4bb140bf72a09fec77ef7071d6ef4f453e4dec"
+            },
+            {
+              "status": "modified",
+              "similarity": null,
+              "oldPath": "singularity/work-items/test-101/STATUS.md",
+              "newPath": "singularity/work-items/test-101/STATUS.md",
+              "oldMode": "100644",
+              "newMode": "100644",
+              "oldObject": "aff110ba9f46a8ed6082510434b5c477b7395979",
+              "newObject": "c1e49acb9be1f9368ad50b200258f3924a3699fa",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:90c45d77f90f2ce1b00fb443e204ed888087219c8ab2c92819d7706f26714d82",
+                "bytes": 3169
+              },
+              "changeId": "sha256:6fa70c8535c862aee4bffc9b20db982b1e3c97bd843b1e640cf0abbc2beafc74"
+            },
+            {
+              "status": "modified",
+              "similarity": null,
+              "oldPath": "singularity/work-items/test-101/artifacts/planning/plan.md",
+              "newPath": "singularity/work-items/test-101/artifacts/planning/plan.md",
+              "oldMode": "100644",
+              "newMode": "100644",
+              "oldObject": "3db8cbf43b5b93bf0736876265e53652ce65bcf1",
+              "newObject": "209d08d2f94ee529e91c0c4185e211600bf3ff9a",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:5a99f92876e08c98d0810c7258c6800a581bb6862ef03f767b762f6b2ecd72ef",
+                "bytes": 24217
+              },
+              "changeId": "sha256:765ddabd783e020f2fbd2fd820d3903c05b663f8dad858d198ac745d48388b2f"
+            },
+            {
+              "status": "modified",
+              "similarity": null,
+              "oldPath": "singularity/work-items/test-101/workflow.json",
+              "newPath": "singularity/work-items/test-101/workflow.json",
+              "oldMode": "100644",
+              "newMode": "100644",
+              "oldObject": "9b7d42bef216f0e036ee1a1fca808eb2f6c82c0c",
+              "newObject": "710b3e28a492a1919992b99267b4387327ddc364",
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:18957244c629262a29c71dc01330f1da80e08755b80095e5c3098f5d4ca2a084",
+                "bytes": 255346
+              },
+              "changeId": "sha256:81e7344d50411ba25d5fa5437190e031e1385d0b703a6769e43f84ad396577b7"
+            },
+            {
+              "status": "modified",
+              "similarity": null,
+              "oldPath": "src/App.css",
+              "newPath": "src/App.css",
+              "oldMode": "100644",
+              "newMode": "100644",
+              "oldObject": "149ec7e8eebb443a8ec35cf6eaba1f1119cd4c1e",
+              "newObject": null,
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:02a9e9c0d236be04d8e2ebb28cbf622f1060d3e5c381863f35d07b1b6e2fa872",
+                "bytes": 10557
+              },
+              "changeId": "sha256:c79d271c769781fd5b53e80981f21e17b26ebdec2d8fe253af12ef8f4494dbda"
+            },
+            {
+              "status": "modified",
+              "similarity": null,
+              "oldPath": "src/App.jsx",
+              "newPath": "src/App.jsx",
+              "oldMode": "100644",
+              "newMode": "100644",
+              "oldObject": "c8baa0d07b1bac12fd3018728adca30ca01e8495",
+              "newObject": null,
+              "newContent": {
+                "kind": "regular-file",
+                "sha256": "sha256:aee10f019784fa84157c53430d5c0c46a40d89adab0b39fe5fbc8374a344769a",
+                "bytes": 12412
+              },
+              "changeId": "sha256:1edef97f96ddf7b432c081cbbe11c956ffafff28828e3ba0da495eb685991f85"
+            }
+          ],
+          "digest": "sha256:f25ff8e24cbde3ea997d1738214b5fa43f14ec15fa511b04edd2d849c9ca33d8"
+        },
+        "changeClassification": {
+          "schemaVersion": 1,
+          "inference": "path-policy",
+          "declaredOrigins": [
+            "copilot"
+          ],
+          "generatedRoots": [],
+          "counts": {
+            "build-configuration": 1,
+            "dependency-lock": 1,
+            "product-source": 2,
+            "test-source": 1
+          },
+          "entries": [
+            {
+              "changeId": "sha256:10f5e1735efd41d4e4ab8c206fcb90bdf34cb9c8ed6ae6d567a64e43bbe4e8c9",
+              "status": "added",
+              "oldPath": null,
+              "newPath": "src/App.test.jsx",
+              "role": "test-source",
+              "generated": false,
+              "likelyOrigin": "authorship-declared",
+              "inference": "path-policy"
+            },
+            {
+              "changeId": "sha256:f00b6fb28196f936dad001a9b4017c859ad1fbaf5ce9f330816d4cfc45a2a730",
+              "status": "modified",
+              "oldPath": "package-lock.json",
+              "newPath": "package-lock.json",
+              "role": "dependency-lock",
+              "generated": false,
+              "likelyOrigin": "authorship-declared",
+              "inference": "path-policy"
+            },
+            {
+              "changeId": "sha256:d8599838bc889071cbc2b6a34d4bb140bf72a09fec77ef7071d6ef4f453e4dec",
+              "status": "modified",
+              "oldPath": "package.json",
+              "newPath": "package.json",
+              "role": "build-configuration",
+              "generated": false,
+              "likelyOrigin": "authorship-declared",
+              "inference": "path-policy"
+            },
+            {
+              "changeId": "sha256:c79d271c769781fd5b53e80981f21e17b26ebdec2d8fe253af12ef8f4494dbda",
+              "status": "modified",
+              "oldPath": "src/App.css",
+              "newPath": "src/App.css",
+              "role": "product-source",
+              "generated": false,
+              "likelyOrigin": "authorship-declared",
+              "inference": "path-policy"
+            },
+            {
+              "changeId": "sha256:1edef97f96ddf7b432c081cbbe11c956ffafff28828e3ba0da495eb685991f85",
+              "status": "modified",
+              "oldPath": "src/App.jsx",
+              "newPath": "src/App.jsx",
+              "role": "product-source",
+              "generated": false,
+              "likelyOrigin": "authorship-declared",
+              "inference": "path-policy"
+            }
+          ]
+        },
+        "paths": [
+          {
+            "path": "package-lock.json",
+            "kind": "configuration",
+            "fileKind": "regular-file",
+            "exists": true,
+            "size": 123049,
+            "sha256": "f3256b16eeb8ea46b28bf18e1ce7b202bf4b5e3a48b45298db475924738ab87d"
+          },
+          {
+            "path": "package.json",
+            "kind": "configuration",
+            "fileKind": "regular-file",
+            "exists": true,
+            "size": 765,
+            "sha256": "dbd75050aa38cb66886422c49339c0cd0d61507f1f962758343996cc61a9baca"
+          },
+          {
+            "path": "src/App.css",
+            "kind": "source",
+            "fileKind": "regular-file",
+            "exists": true,
+            "size": 10557,
+            "sha256": "02a9e9c0d236be04d8e2ebb28cbf622f1060d3e5c381863f35d07b1b6e2fa872"
+          },
+          {
+            "path": "src/App.jsx",
+            "kind": "source",
+            "fileKind": "regular-file",
+            "exists": true,
+            "size": 12412,
+            "sha256": "aee10f019784fa84157c53430d5c0c46a40d89adab0b39fe5fbc8374a344769a"
+          },
+          {
+            "path": "src/App.test.jsx",
+            "kind": "test",
+            "fileKind": "regular-file",
+            "exists": true,
+            "size": 3633,
+            "sha256": "cd08cd3aaa2932f29a1797f309bd4700deb227dcddc7098a556d5699267121ca"
+          }
+        ],
+        "sourcePaths": [
+          "src/App.css",
+          "src/App.jsx"
+        ],
+        "configurationPaths": [
+          "package-lock.json",
+          "package.json"
+        ],
+        "deletedSourcePaths": [],
+        "testPaths": [
+          "src/App.test.jsx"
+        ],
+        "supportingTestPaths": [],
+        "documentationCorrection": null,
+        "intentRevalidation": null,
+        "testingRepair": null,
+        "acceptanceCriteria": {
+          "required": [],
+          "tagged": [],
+          "missing": [],
+          "ambiguous": [],
+          "inferred": [],
+          "bindings": [],
+          "witnesses": [],
+          "unattachedTags": [],
+          "profiles": []
+        },
+        "sourceBindings": {
+          "mode": "enforce",
+          "required": [
+            {
+              "clauseId": "TEST-101:REQ-001",
+              "expectedPaths": [
+                "src/App.css",
+                "src/App.jsx"
+              ]
+            },
+            {
+              "clauseId": "TEST-101:REQ-002",
+              "expectedPaths": [
+                "src/App.css",
+                "src/App.jsx"
+              ]
+            },
+            {
+              "clauseId": "TEST-101:REQ-003",
+              "expectedPaths": [
+                "src/App.css",
+                "src/App.jsx"
+              ]
+            },
+            {
+              "clauseId": "TEST-101:REQ-004",
+              "expectedPaths": [
+                "src/App.css",
+                "src/App.jsx"
+              ]
+            }
+          ],
+          "bindings": [
+            {
+              "clauseId": "TEST-101:REQ-001",
+              "sourcePath": "src/App.css",
+              "line": 279,
+              "tag": "clause"
+            },
+            {
+              "clauseId": "TEST-101:REQ-001",
+              "sourcePath": "src/App.jsx",
+              "line": 72,
+              "tag": "clause"
+            },
+            {
+              "clauseId": "TEST-101:REQ-002",
+              "sourcePath": "src/App.css",
+              "line": 131,
+              "tag": "clause"
+            },
+            {
+              "clauseId": "TEST-101:REQ-002",
+              "sourcePath": "src/App.jsx",
+              "line": 97,
+              "tag": "clause"
+            },
+            {
+              "clauseId": "TEST-101:REQ-003",
+              "sourcePath": "src/App.css",
+              "line": 356,
+              "tag": "clause"
+            },
+            {
+              "clauseId": "TEST-101:REQ-003",
+              "sourcePath": "src/App.jsx",
+              "line": 98,
+              "tag": "clause"
+            },
+            {
+              "clauseId": "TEST-101:REQ-004",
+              "sourcePath": "src/App.css",
+              "line": 357,
+              "tag": "clause"
+            },
+            {
+              "clauseId": "TEST-101:REQ-004",
+              "sourcePath": "src/App.jsx",
+              "line": 142,
+              "tag": "clause"
+            }
+          ],
+          "missing": []
+        },
+        "excludedChanges": [],
+        "fulfillment": [
+          {
+            "clauseId": "TEST-101:AC-001",
+            "fulfillment": "evidence",
+            "paths": [
+              {
+                "path": "singularity/work-items/test-101/evidence/calendar-ui.png",
+                "state": "present",
+                "sha256": "2745d57a28572a1240df1344cbb747cd8f7b0668b3740cbe6617eeda250bcca1"
+              }
+            ]
+          }
+        ],
+        "implementationBindings": {
+          "bindings": [
+            {
+              "clauseId": "TEST-101:REQ-001",
+              "explanation": {
+                "text": "Keep task and event presentation visible in each calendar range.",
+                "path": "src/App.css",
+                "line": 279
+              },
+              "regions": [
+                {
+                  "path": "src/App.css",
+                  "change": "modified",
+                  "hunks": [
+                    {
+                      "beforeStart": 1,
+                      "beforeLines": 1,
+                      "afterStart": 1,
+                      "afterLines": 1
+                    },
+                    {
+                      "beforeStart": 3,
+                      "beforeLines": 1,
+                      "afterStart": 3,
+                      "afterLines": 9
+                    },
+                    {
+                      "beforeStart": 5,
+                      "beforeLines": 1,
+                      "afterStart": 13,
+                      "afterLines": 6
+                    },
+                    {
+                      "beforeStart": 7,
+                      "beforeLines": 3,
+                      "afterStart": 20,
+                      "afterLines": 5
+                    },
+                    {
+                      "beforeStart": 11,
+                      "beforeLines": 4,
+                      "afterStart": 26,
+                      "afterLines": 424
+                    }
+                  ],
+                  "symbols": [],
+                  "symbolAssurance": "unsupported-language"
+                },
+                {
+                  "path": "src/App.jsx",
+                  "change": "modified",
+                  "hunks": [
+                    {
+                      "beforeStart": 1,
+                      "beforeLines": 1,
+                      "afterStart": 1,
+                      "afterLines": 1
+                    },
+                    {
+                      "beforeStart": 3,
+                      "beforeLines": 0,
+                      "afterStart": 4,
+                      "afterLines": 59
+                    },
+                    {
+                      "beforeStart": 5,
+                      "beforeLines": 2,
+                      "afterStart": 64,
+                      "afterLines": 18
+                    },
+                    {
+                      "beforeStart": 8,
+                      "beforeLines": 5,
+                      "afterStart": 83,
+                      "afterLines": 5
+                    },
+                    {
+                      "beforeStart": 15,
+                      "beforeLines": 2,
+                      "afterStart": 90,
+                      "afterLines": 5
+                    },
+                    {
+                      "beforeStart": 19,
+                      "beforeLines": 2,
+                      "afterStart": 97,
+                      "afterLines": 48
+                    },
+                    {
+                      "beforeStart": 22,
+                      "beforeLines": 0,
+                      "afterStart": 147,
+                      "afterLines": 2
+                    },
+                    {
+                      "beforeStart": 24,
+                      "beforeLines": 21,
+                      "afterStart": 150,
+                      "afterLines": 88
+                    },
+                    {
+                      "beforeStart": 46,
+                      "beforeLines": 4,
+                      "afterStart": 239,
+                      "afterLines": 95
+                    }
+                  ],
+                  "symbols": [],
+                  "symbolAssurance": "heuristic"
+                }
+              ]
+            },
+            {
+              "clauseId": "TEST-101:REQ-002",
+              "explanation": {
+                "text": "Make calendar task and event creation available from the UI.",
+                "path": "src/App.css",
+                "line": 131
+              },
+              "regions": [
+                {
+                  "path": "src/App.css",
+                  "change": "modified",
+                  "hunks": [
+                    {
+                      "beforeStart": 1,
+                      "beforeLines": 1,
+                      "afterStart": 1,
+                      "afterLines": 1
+                    },
+                    {
+                      "beforeStart": 3,
+                      "beforeLines": 1,
+                      "afterStart": 3,
+                      "afterLines": 9
+                    },
+                    {
+                      "beforeStart": 5,
+                      "beforeLines": 1,
+                      "afterStart": 13,
+                      "afterLines": 6
+                    },
+                    {
+                      "beforeStart": 7,
+                      "beforeLines": 3,
+                      "afterStart": 20,
+                      "afterLines": 5
+                    },
+                    {
+                      "beforeStart": 11,
+                      "beforeLines": 4,
+                      "afterStart": 26,
+                      "afterLines": 424
+                    }
+                  ],
+                  "symbols": [],
+                  "symbolAssurance": "unsupported-language"
+                },
+                {
+                  "path": "src/App.jsx",
+                  "change": "modified",
+                  "hunks": [
+                    {
+                      "beforeStart": 1,
+                      "beforeLines": 1,
+                      "afterStart": 1,
+                      "afterLines": 1
+                    },
+                    {
+                      "beforeStart": 3,
+                      "beforeLines": 0,
+                      "afterStart": 4,
+                      "afterLines": 59
+                    },
+                    {
+                      "beforeStart": 5,
+                      "beforeLines": 2,
+                      "afterStart": 64,
+                      "afterLines": 18
+                    },
+                    {
+                      "beforeStart": 8,
+                      "beforeLines": 5,
+                      "afterStart": 83,
+                      "afterLines": 5
+                    },
+                    {
+                      "beforeStart": 15,
+                      "beforeLines": 2,
+                      "afterStart": 90,
+                      "afterLines": 5
+                    },
+                    {
+                      "beforeStart": 19,
+                      "beforeLines": 2,
+                      "afterStart": 97,
+                      "afterLines": 48
+                    },
+                    {
+                      "beforeStart": 22,
+                      "beforeLines": 0,
+                      "afterStart": 147,
+                      "afterLines": 2
+                    },
+                    {
+                      "beforeStart": 24,
+                      "beforeLines": 21,
+                      "afterStart": 150,
+                      "afterLines": 88
+                    },
+                    {
+                      "beforeStart": 46,
+                      "beforeLines": 4,
+                      "afterStart": 239,
+                      "afterLines": 95
+                    }
+                  ],
+                  "symbols": [],
+                  "symbolAssurance": "heuristic"
+                }
+              ]
+            },
+            {
+              "clauseId": "TEST-101:REQ-003",
+              "explanation": {
+                "text": "Expose editing controls for both calendar item types.",
+                "path": "src/App.css",
+                "line": 356
+              },
+              "regions": [
+                {
+                  "path": "src/App.css",
+                  "change": "modified",
+                  "hunks": [
+                    {
+                      "beforeStart": 1,
+                      "beforeLines": 1,
+                      "afterStart": 1,
+                      "afterLines": 1
+                    },
+                    {
+                      "beforeStart": 3,
+                      "beforeLines": 1,
+                      "afterStart": 3,
+                      "afterLines": 9
+                    },
+                    {
+                      "beforeStart": 5,
+                      "beforeLines": 1,
+                      "afterStart": 13,
+                      "afterLines": 6
+                    },
+                    {
+                      "beforeStart": 7,
+                      "beforeLines": 3,
+                      "afterStart": 20,
+                      "afterLines": 5
+                    },
+                    {
+                      "beforeStart": 11,
+                      "beforeLines": 4,
+                      "afterStart": 26,
+                      "afterLines": 424
+                    }
+                  ],
+                  "symbols": [],
+                  "symbolAssurance": "unsupported-language"
+                },
+                {
+                  "path": "src/App.jsx",
+                  "change": "modified",
+                  "hunks": [
+                    {
+                      "beforeStart": 1,
+                      "beforeLines": 1,
+                      "afterStart": 1,
+                      "afterLines": 1
+                    },
+                    {
+                      "beforeStart": 3,
+                      "beforeLines": 0,
+                      "afterStart": 4,
+                      "afterLines": 59
+                    },
+                    {
+                      "beforeStart": 5,
+                      "beforeLines": 2,
+                      "afterStart": 64,
+                      "afterLines": 18
+                    },
+                    {
+                      "beforeStart": 8,
+                      "beforeLines": 5,
+                      "afterStart": 83,
+                      "afterLines": 5
+                    },
+                    {
+                      "beforeStart": 15,
+                      "beforeLines": 2,
+                      "afterStart": 90,
+                      "afterLines": 5
+                    },
+                    {
+                      "beforeStart": 19,
+                      "beforeLines": 2,
+                      "afterStart": 97,
+                      "afterLines": 48
+                    },
+                    {
+                      "beforeStart": 22,
+                      "beforeLines": 0,
+                      "afterStart": 147,
+                      "afterLines": 2
+                    },
+                    {
+                      "beforeStart": 24,
+                      "beforeLines": 21,
+                      "afterStart": 150,
+                      "afterLines": 88
+                    },
+                    {
+                      "beforeStart": 46,
+                      "beforeLines": 4,
+                      "afterStart": 239,
+                      "afterLines": 95
+                    }
+                  ],
+                  "symbols": [],
+                  "symbolAssurance": "heuristic"
+                }
+              ]
+            },
+            {
+              "clauseId": "TEST-101:REQ-004",
+              "explanation": {
+                "text": "Expose deletion controls for both calendar item types.",
+                "path": "src/App.css",
+                "line": 357
+              },
+              "regions": [
+                {
+                  "path": "src/App.css",
+                  "change": "modified",
+                  "hunks": [
+                    {
+                      "beforeStart": 1,
+                      "beforeLines": 1,
+                      "afterStart": 1,
+                      "afterLines": 1
+                    },
+                    {
+                      "beforeStart": 3,
+                      "beforeLines": 1,
+                      "afterStart": 3,
+                      "afterLines": 9
+                    },
+                    {
+                      "beforeStart": 5,
+                      "beforeLines": 1,
+                      "afterStart": 13,
+                      "afterLines": 6
+                    },
+                    {
+                      "beforeStart": 7,
+                      "beforeLines": 3,
+                      "afterStart": 20,
+                      "afterLines": 5
+                    },
+                    {
+                      "beforeStart": 11,
+                      "beforeLines": 4,
+                      "afterStart": 26,
+                      "afterLines": 424
+                    }
+                  ],
+                  "symbols": [],
+                  "symbolAssurance": "unsupported-language"
+                },
+                {
+                  "path": "src/App.jsx",
+                  "change": "modified",
+                  "hunks": [
+                    {
+                      "beforeStart": 1,
+                      "beforeLines": 1,
+                      "afterStart": 1,
+                      "afterLines": 1
+                    },
+                    {
+                      "beforeStart": 3,
+                      "beforeLines": 0,
+                      "afterStart": 4,
+                      "afterLines": 59
+                    },
+                    {
+                      "beforeStart": 5,
+                      "beforeLines": 2,
+                      "afterStart": 64,
+                      "afterLines": 18
+                    },
+                    {
+                      "beforeStart": 8,
+                      "beforeLines": 5,
+                      "afterStart": 83,
+                      "afterLines": 5
+                    },
+                    {
+                      "beforeStart": 15,
+                      "beforeLines": 2,
+                      "afterStart": 90,
+                      "afterLines": 5
+                    },
+                    {
+                      "beforeStart": 19,
+                      "beforeLines": 2,
+                      "afterStart": 97,
+                      "afterLines": 48
+                    },
+                    {
+                      "beforeStart": 22,
+                      "beforeLines": 0,
+                      "afterStart": 147,
+                      "afterLines": 2
+                    },
+                    {
+                      "beforeStart": 24,
+                      "beforeLines": 21,
+                      "afterStart": 150,
+                      "afterLines": 88
+                    },
+                    {
+                      "beforeStart": 46,
+                      "beforeLines": 4,
+                      "afterStart": 239,
+                      "afterLines": 95
+                    }
+                  ],
+                  "symbols": [],
+                  "symbolAssurance": "heuristic"
+                }
+              ]
+            }
+          ],
+          "bindingsSha256": "sha256:799e60cf3b6e92a810c1bdb861305a284a11e5fbac78802b7189ed2bef945c72"
+        },
+        "preflightAttempts": [
+          {
+            "commandId": ".-node-tests",
+            "attemptId": "TA-faaa653c58a81e3a6af9",
+            "receiptPath": "singularity/work-items/test-101/context/code-delivery/tests/attempts/implementation/TA-faaa653c58a81e3a6af9.json",
+            "receiptSha256": "abf1b2bc145bc21a5a21f2d3e6f94d6ab93a25f8bc1596de432372f08dff6649",
+            "status": "passed",
+            "affectedRoots": [
+              "."
+            ]
+          }
+        ],
+        "generation": 1,
+        "receiptPath": "singularity/work-items/test-101/context/code-delivery/implementation-gen1.json",
+        "changeSetPath": "singularity/work-items/test-101/context/code-delivery/implementation-gen1-changes.json",
+        "sourceTreeSha256": "sha256:873a7fe2528bae62f029cec7d51dac5e17124dd8ec7bd61fdb3fa49818ae7209",
+        "status": "pending-tests",
+        "capturedAt": "2026-11-03T17:55:20.045Z",
+        "validation": null
+      },
+      "sourceCommit": "163321e3cf2e6ae141828f35f98ba29d455efbc9",
+      "sidecars": [
+        {
+          "path": "singularity/work-items/test-101/context/sidecars/implementation-gen1-package-lock.json.json",
+          "artifact": "package-lock.json",
+          "integritySha256": "c76181d3f4f299356202c6665561f994a2adcfa943aced5ceecb53663ae5c6c2"
+        },
+        {
+          "path": "singularity/work-items/test-101/context/sidecars/implementation-gen1-package.json.json",
+          "artifact": "package.json",
+          "integritySha256": "4bd671e3ad5f2441cb6c8410c94063b81d3fec3a9915943bcd2146fc8863494b"
+        },
+        {
+          "path": "singularity/work-items/test-101/context/sidecars/implementation-gen1-singularity-work-items-test-101-artifacts-implementation-implementation-summary.md.json",
+          "artifact": "singularity/work-items/test-101/artifacts/implementation/implementation-summary.md",
+          "integritySha256": "314b3d09e68a54ef376aab089d1f577866ee6481b258a232878e0bf44fbf4a3b"
+        },
+        {
+          "path": "singularity/work-items/test-101/context/sidecars/implementation-gen1-src-App.css.json",
+          "artifact": "src/App.css",
+          "integritySha256": "d0bb12fe8cafd2c7ed6fc48ff8c4833231d849eb861701e5143e6461c2202699"
+        },
+        {
+          "path": "singularity/work-items/test-101/context/sidecars/implementation-gen1-src-App.jsx.json",
+          "artifact": "src/App.jsx",
+          "integritySha256": "353e44b796b8d50ef4c33055d48f66a5f80617ad7e7e637b9a4fbc4540033c00"
+        },
+        {
+          "path": "singularity/work-items/test-101/context/sidecars/implementation-gen1-src-App.test.jsx.json",
+          "artifact": "src/App.test.jsx",
+          "integritySha256": "96f6bb3b67c3725a156dec85db1064b01bbaf10679a2cf2bdfd53dd6d259db2c"
+        }
+      ],
+      "agentBriefs": [
+        {
+          "generation": 1,
+          "consumerPhase": "convergence",
+          "status": "ready",
+          "path": "singularity/work-items/test-101/context/briefs/implementation-gen1-for-convergence.json",
+          "renderedPath": "singularity/work-items/test-101/context/briefs/implementation-gen1-for-convergence.md",
+          "sourceSha256": "e4229052c7e3ef0f40f6d43e07ea8f810134bd2e597f3ba806fdd96aebd111f0",
+          "sourceBytes": 16827,
+          "renderedSha256": "c1e00d70e78d728bdeb078ba9b54f1c69f55caf9c936b5551cfa6b73f6b40fb9",
+          "integritySha256": "5b7b35068620749037af3c162f41b3df82abffb63953a2d41e8b1c76a31d5b91"
+        },
+        {
+          "generation": 1,
+          "consumerPhase": "verification",
+          "status": "ready",
+          "path": "singularity/work-items/test-101/context/briefs/implementation-gen1-for-verification.json",
+          "renderedPath": "singularity/work-items/test-101/context/briefs/implementation-gen1-for-verification.md",
+          "sourceSha256": "e4229052c7e3ef0f40f6d43e07ea8f810134bd2e597f3ba806fdd96aebd111f0",
+          "sourceBytes": 16827,
+          "renderedSha256": "c50d60590055b416c9e6220b91b5e0bee4d0d7e41d7e036b1b22577d0295b5ba",
+          "integritySha256": "1896404e14eb10bf8f70e4b8dac9c47e6c05ac7e50204b95e9ccc5d13363ab19"
+        }
+      ]
     },
     "convergence": {
       "id": "convergence",
@@ -4857,9 +6202,9 @@
   "usage": {
     "mode": "exact-or-unavailable",
     "totalTokens": 0,
-    "records": 3,
+    "records": 4,
     "exactRecords": 0,
-    "unavailableRecords": 3,
+    "unavailableRecords": 4,
     "byPhase": {
       "specification": {
         "records": 1,
@@ -4871,6 +6216,12 @@
         "records": 2,
         "exactRecords": 0,
         "unavailableRecords": 2,
+        "totalTokens": 0
+      },
+      "implementation": {
+        "records": 1,
+        "exactRecords": 0,
+        "unavailableRecords": 1,
         "totalTokens": 0
       }
     },
@@ -4886,21 +6237,27 @@
         "exactRecords": 0,
         "unavailableRecords": 2,
         "totalTokens": 0
+      },
+      "developer": {
+        "records": 1,
+        "exactRecords": 0,
+        "unavailableRecords": 1,
+        "totalTokens": 0
       }
     },
     "byWorkType": {
       "spec-driven-standard": {
-        "records": 3,
+        "records": 4,
         "exactRecords": 0,
-        "unavailableRecords": 3,
+        "unavailableRecords": 4,
         "totalTokens": 0
       }
     },
     "byWorkItem": {
       "test-101": {
-        "records": 3,
+        "records": 4,
         "exactRecords": 0,
-        "unavailableRecords": 3,
+        "unavailableRecords": 4,
         "totalTokens": 0
       }
     }
@@ -5015,6 +6372,14 @@
       "event": "test_command_decided",
       "phase": "implementation",
       "detail": "TCD-001 requests that implementation re-pin test command .-node-tests (vite.config.js changed) for this Story. SFlow still reports vite.config.js drift after restoring that file to the generation baseline; the jsdom setup is now inline in src/App.test.jsx and the pinned npm test command passes. Please review whether the existing test command pin should be refreshed."
+    },
+    {
+      "at": "2026-11-03T17:55:20.206Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "phase_generated",
+      "phase": "implementation",
+      "detail": "generation 1"
     }
   ],
   "measurement": {
@@ -6488,6 +7853,155 @@
         },
         "createdAt": "2026-11-03T16:43:00.611Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "79f13bbc-0d45-4186-bb7e-3607d4fbd66c",
+        "type": "artifact-generated",
+        "subject": {
+          "kind": "story",
+          "id": "test-101",
+          "branch": "test-101"
+        },
+        "phaseId": "implementation",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "generationIntentId": "c1b80b0d-30c7-4083-9e5a-f6ecf0572e50",
+          "generationStartPath": "singularity/work-items/test-101/context/generation-start/implementation-gen1.json",
+          "generationStartSha256": "sha256:f660f8c256c017a676e649eb82c2bea8d0ad0f330e1a97aecc2e7533ad186581",
+          "baselineCommit": "5344b77f1b0d2027a0741a93bb98dff27311e00c",
+          "baselineTree": "9b9f2537a22382272597f7193b7c343387d8cfd7",
+          "initialChangeSetDigest": "sha256:9df5a2ad67129b746a7befa7d30ff292b7c400482307ccb8ffc87afe504ec6f2",
+          "previousGenerationCommit": null,
+          "decision": null,
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-03T17:55:16.781Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "79f13bbc-0d45-4186-bb7e-3607d4fbd66c",
+        "eventType": "artifact-generated",
+        "capabilityId": "todoapp",
+        "subject": {
+          "aliases": [
+            "test-101"
+          ],
+          "branch": "test-101",
+          "canonicalBranch": "test-101",
+          "createdAt": "2026-11-03T13:25:44.978Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 1,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "test",
+          "updatedAt": "2026-11-03T17:55:20.206Z",
+          "workId": "test-101",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": null,
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "8b165a854d72b38ffd26f9a79d2e3674f0fa52e5640011fc8f6e7ace10ea4d46",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590",
+          "lifecycleEventId": "79f13bbc-0d45-4186-bb7e-3607d4fbd66c",
+          "lifecyclePayload": {
+            "baselineCommit": "5344b77f1b0d2027a0741a93bb98dff27311e00c",
+            "baselineTree": "9b9f2537a22382272597f7193b7c343387d8cfd7",
+            "decision": null,
+            "generationIntentId": "c1b80b0d-30c7-4083-9e5a-f6ecf0572e50",
+            "generationStartPath": "singularity/work-items/test-101/context/generation-start/implementation-gen1.json",
+            "generationStartSha256": "sha256:f660f8c256c017a676e649eb82c2bea8d0ad0f330e1a97aecc2e7533ad186581",
+            "initialChangeSetDigest": "sha256:9df5a2ad67129b746a7befa7d30ff292b7c400482307ccb8ffc87afe504ec6f2",
+            "previousGenerationCommit": null,
+            "reviewPacketSha256": null
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "79f13bbc-0d45-4186-bb7e-3607d4fbd66c",
+            "type": "artifact-generated",
+            "subject": {
+              "kind": "story",
+              "id": "test-101",
+              "branch": "test-101"
+            },
+            "phaseId": "implementation",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": null,
+            "authorityGroup": null,
+            "payload": {
+              "generationIntentId": "c1b80b0d-30c7-4083-9e5a-f6ecf0572e50",
+              "generationStartPath": "singularity/work-items/test-101/context/generation-start/implementation-gen1.json",
+              "generationStartSha256": "sha256:f660f8c256c017a676e649eb82c2bea8d0ad0f330e1a97aecc2e7533ad186581",
+              "baselineCommit": "5344b77f1b0d2027a0741a93bb98dff27311e00c",
+              "baselineTree": "9b9f2537a22382272597f7193b7c343387d8cfd7",
+              "initialChangeSetDigest": "sha256:9df5a2ad67129b746a7befa7d30ff292b7c400482307ccb8ffc87afe504ec6f2",
+              "previousGenerationCommit": null,
+              "decision": null,
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-03T17:55:16.781Z"
+          }
+        },
+        "createdAt": "2026-11-03T17:55:16.795Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -6641,6 +8155,59 @@
       "reason": "SFlow still reports vite.config.js drift after restoring that file to the generation baseline; the jsdom setup is now inline in src/App.test.jsx and the pinned npm test command passes. Please review whether the existing test command pin should be refreshed.",
       "requestedBy": "ashokraj2011",
       "at": "2026-11-03T16:43:00.575Z"
+    }
+  ],
+  "testCommandPins": [
+    {
+      "id": "TCP-001",
+      "phase": "implementation",
+      "commandId": ".-node-tests",
+      "source": {
+        "kind": "inferred"
+      },
+      "argv": [
+        "npm",
+        "test",
+        "--",
+        "--reporter=json",
+        "--outputFile=.sflow/results/node-tests.json"
+      ],
+      "workingDirectory": ".",
+      "affectedRoots": [
+        "."
+      ],
+      "adapter": "vitest-json",
+      "definition": [
+        {
+          "path": "package.json",
+          "selector": "scripts.test",
+          "sha256": "ad6cd6b8acf39571390d7bc1772410249266fa406be150a22f0065827e400496"
+        },
+        {
+          "path": "vite.config.js",
+          "selector": null,
+          "sha256": "4d36db3522a7b2dd10e0936e1004373c7ee65f10f7cd7920cd76410459c15a45"
+        }
+      ],
+      "definitionVersion": 2,
+      "sha256": "sha256:587e48d3532898f9819f0bdaee9131b126de821da5db056e866192f05566835c",
+      "restoredToBase": true,
+      "baselineRestoration": {
+        "commit": "5344b77f1b0d2027a0741a93bb98dff27311e00c",
+        "definitions": [
+          {
+            "path": "vite.config.js",
+            "selector": null,
+            "sha256": "4d36db3522a7b2dd10e0936e1004373c7ee65f10f7cd7920cd76410459c15a45"
+          }
+        ]
+      },
+      "baseline": {
+        "discovered": 4,
+        "skipped": 0,
+        "attemptId": "TA-faaa653c58a81e3a6af9"
+      },
+      "at": "2026-11-03T17:55:19.893Z"
     }
   ]
 }

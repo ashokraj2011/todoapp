@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 5,
+  "kind": "test-execution",
+  "attemptId": "TA-50995dc75a0f149c7e5e",
+  "nonce": "3975d72065b8647071ee68fea07ed61f",
+  "parentAttemptId": null,
+  "purpose": "preflight",
+  "workId": "test-101",
+  "phase": "implementation",
+  "generation": 1,
+  "commandId": ".-node-tests",
+  "commandSha256": "sha256:365a3f7fa75a6c536f4c2b3d33b5accc770995e7294753ce19d1fe5466a341ce",
+  "argvSha256": "7ea91cb57633bb94e24395e7b34f059abecf6ac68b822ee60f2db1c06646d5a9",
+  "selection": {
+    "selection": "complete",
+    "gaps": [],
+    "selectionSha256": "sha256:8684f0528fd02325e4a466ce66e7714105b5cb351a343ea1f7c045e9ceca5bd5"
+  },
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "ci": "1",
+    "removed": [],
+    "declaredSha256": null,
+    "toolchain": {
+      "node": "26.12.0",
+      "npm": "11.20.0"
+    },
+    "host": "node 26.12.0"
+  },
+  "environmentSha256": "sha256:69c4a59593ce22ef5d3589590725638759633d2d4ce6ce68a2d01c6eca56b4d8",
+  "platform": "darwin",
+  "workingDirectory": ".",
+  "affectedRoots": [
+    "."
+  ],
+  "adapter": "vitest-json",
+  "profile": "vitest-static-v2",
+  "candidate": {
+    "commit": "1c0a1475a493b6eed5e20e951f2eeda849409701",
+    "treeSha256": "sha256:8d4e3ecc5ed55523db923c9bebe98c8ec3b01d852851439e59daec3f27cbbf54"
+  },
+  "process": {
+    "status": "failed",
+    "exitCode": 1,
+    "signal": null,
+    "timedOut": false,
+    "infrastructureUnavailable": false,
+    "startedAt": "2026-11-03T16:34:32.657Z",
+    "completedAt": "2026-11-03T16:34:34.001Z"
+  },
+  "status": "failed",
+  "terminal": true,
+  "exitCode": 1,
+  "timedOut": false,
+  "skipped": false,
+  "suppressed": false,
+  "tests": {
+    "discovered": 4,
+    "passed": 0,
+    "failed": 4,
+    "skipped": 0
+  },
+  "result": {
+    "path": ".sflow/results/node-tests.json",
+    "sha256": "5c074006131d0487fdf7414708da81dfc17633c89a08c54b21f02a72ead84621",
+    "bytes": 7577,
+    "files": [
+      {
+        "sourcePath": ".sflow/results/node-tests.json",
+        "sha256": "5c074006131d0487fdf7414708da81dfc17633c89a08c54b21f02a72ead84621",
+        "bytes": 7577
+      }
+    ]
+  },
+  "rawReports": [
+    {
+      "path": "singularity/work-items/test-101/context/code-delivery/tests/raw/5c074006131d0487fdf7414708da81dfc17633c89a08c54b21f02a72ead84621.bin",
+      "sha256": "5c074006131d0487fdf7414708da81dfc17633c89a08c54b21f02a72ead84621",
+      "bytes": 7577
+    }
+  ],
+  "occurrences": [
+    {
+      "suitePath": [
+        "in-app calendar"
+      ],
+      "name": "shows Todo tasks and events in month, week, and day views",
+      "outcome": "failed",
+      "durationMs": 2
+    },
+    {
+      "suitePath": [
+        "in-app calendar"
+      ],
+      "name": "creates both a Todo task and a general event",
+      "outcome": "failed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "in-app calendar"
+      ],
+      "name": "edits Todo tasks and events",
+      "outcome": "failed",
+      "durationMs": 0
+    },
+    {
+      "suitePath": [
+        "in-app calendar"
+      ],
+      "name": "deletes Todo tasks and events",
+      "outcome": "failed",
+      "durationMs": 0
+    }
+  ],
+  "reportError": null,
+  "assurance": "module-executed",
+  "cause": {
+    "category": "code",
+    "class": "assertion-failure",
+    "basis": "tests",
+    "signal": "failed test",
+    "failedTests": 4
+  },
+  "pin": {
+    "commandId": ".-node-tests",
+    "source": {
+      "kind": "inferred"
+    },
+    "argv": [
+      "npm",
+      "test",
+      "--",
+      "--reporter=json",
+      "--outputFile=.sflow/results/node-tests.json"
+    ],
+    "workingDirectory": ".",
+    "affectedRoots": [
+      "."
+    ],
+    "adapter": "vitest-json",
+    "definition": [
+      {
+        "path": "package.json",
+        "selector": "scripts.test",
+        "sha256": "ad6cd6b8acf39571390d7bc1772410249266fa406be150a22f0065827e400496"
+      },
+      {
+        "path": "vite.config.js",
+        "selector": null,
+        "sha256": "9a1c6c9aaf766b7b55622904a4b52886a28787b813482009d309125de9c3ea76"
+      }
+    ],
+    "definitionVersion": 2,
+    "sha256": "sha256:28902af6ca26737c13be95b8eda2c63147152d3122b7152718ab4bef8e022818"
+  },
+  "narrowing": {
+    "reasons": [],
+    "filters": [],
+    "focused": [],
+    "skipped": 0,
+    "discovered": 4,
+    "baseline": null,
+    "shortfall": 0
+  }
+}

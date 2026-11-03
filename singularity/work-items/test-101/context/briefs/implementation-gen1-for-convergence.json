@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "workId": "test-101",
+  "producer": {
+    "phase": "implementation",
+    "generation": 1
+  },
+  "consumer": {
+    "phase": "convergence"
+  },
+  "source": {
+    "path": "singularity/work-items/test-101/artifacts/implementation/implementation-summary.md",
+    "sha256": "e4229052c7e3ef0f40f6d43e07ea8f810134bd2e597f3ba806fdd96aebd111f0",
+    "bytes": 16827
+  },
+  "policy": {
+    "projection": "approved-summary",
+    "preserve": [
+      "Changed components and decisions",
+      "Tests and operational notes"
+    ],
+    "maximumSummaryBytes": 24576,
+    "expansion": "hash-bound-reference",
+    "fallback": "block"
+  },
+  "policySha256": "9f2b941cb72cb442bfd2d97ed655fa573ebb6f53fe71468998372353bd0cc901",
+  "status": "ready",
+  "summary": {
+    "heading": "Agent brief"
+  },
+  "preserved": [
+    "Changed components and decisions",
+    "Tests and operational notes"
+  ],
+  "rendered": {
+    "path": "singularity/work-items/test-101/context/briefs/implementation-gen1-for-convergence.md",
+    "sha256": "c1e00d70e78d728bdeb078ba9b54f1c69f55caf9c936b5551cfa6b73f6b40fb9",
+    "bytes": 2876
+  },
+  "generatedAt": "2026-11-03T17:55:20.161Z",
+  "integritySha256": "5b7b35068620749037af3c162f41b3df82abffb63953a2d41e8b1c76a31d5b91"
+}

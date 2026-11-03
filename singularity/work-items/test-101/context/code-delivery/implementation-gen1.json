@@ -1,0 +1,666 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "test-101",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "c1b80b0d-30c7-4083-9e5a-f6ecf0572e50",
+  "changeSet": {
+    "path": "singularity/work-items/test-101/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:f25ff8e24cbde3ea997d1738214b5fa43f14ec15fa511b04edd2d849c9ca33d8",
+    "sourcePaths": [
+      "src/App.css",
+      "src/App.jsx"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      "package-lock.json",
+      "package.json"
+    ],
+    "executableTestPaths": [
+      "src/App.test.jsx"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 1,
+      "dependency-lock": 1,
+      "product-source": 2,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:10f5e1735efd41d4e4ab8c206fcb90bdf34cb9c8ed6ae6d567a64e43bbe4e8c9",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:f00b6fb28196f936dad001a9b4017c859ad1fbaf5ce9f330816d4cfc45a2a730",
+        "status": "modified",
+        "oldPath": "package-lock.json",
+        "newPath": "package-lock.json",
+        "role": "dependency-lock",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:d8599838bc889071cbc2b6a34d4bb140bf72a09fec77ef7071d6ef4f453e4dec",
+        "status": "modified",
+        "oldPath": "package.json",
+        "newPath": "package.json",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:c79d271c769781fd5b53e80981f21e17b26ebdec2d8fe253af12ef8f4494dbda",
+        "status": "modified",
+        "oldPath": "src/App.css",
+        "newPath": "src/App.css",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:1edef97f96ddf7b432c081cbbe11c956ffafff28828e3ba0da495eb685991f85",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [],
+    "bound": [],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [],
+    "witnesses": [],
+    "unattachedTags": [],
+    "adapterProfiles": [],
+    "sourceRequired": [
+      {
+        "clauseId": "TEST-101:REQ-001",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "TEST-101:REQ-002",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "TEST-101:REQ-003",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "TEST-101:REQ-004",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "TEST-101:REQ-001",
+        "sourcePath": "src/App.css",
+        "line": 279,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "TEST-101:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 72,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "TEST-101:REQ-002",
+        "sourcePath": "src/App.css",
+        "line": 131,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "TEST-101:REQ-002",
+        "sourcePath": "src/App.jsx",
+        "line": 97,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "TEST-101:REQ-003",
+        "sourcePath": "src/App.css",
+        "line": 356,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "TEST-101:REQ-003",
+        "sourcePath": "src/App.jsx",
+        "line": 98,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "TEST-101:REQ-004",
+        "sourcePath": "src/App.css",
+        "line": 357,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "TEST-101:REQ-004",
+        "sourcePath": "src/App.jsx",
+        "line": 142,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "TEST-101:AC-001",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/test-101/evidence/calendar-ui.png",
+            "state": "present",
+            "sha256": "2745d57a28572a1240df1344cbb747cd8f7b0668b3740cbe6617eeda250bcca1"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "TEST-101:REQ-001",
+        "explanation": {
+          "text": "Keep task and event presentation visible in each calendar range.",
+          "path": "src/App.css",
+          "line": 279
+        },
+        "regions": [
+          {
+            "path": "src/App.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 9
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 1,
+                "afterStart": 13,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 3,
+                "afterStart": 20,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 11,
+                "beforeLines": 4,
+                "afterStart": 26,
+                "afterLines": 424
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          },
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 0,
+                "afterStart": 4,
+                "afterLines": 59
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 2,
+                "afterStart": 64,
+                "afterLines": 18
+              },
+              {
+                "beforeStart": 8,
+                "beforeLines": 5,
+                "afterStart": 83,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 2,
+                "afterStart": 90,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 2,
+                "afterStart": 97,
+                "afterLines": 48
+              },
+              {
+                "beforeStart": 22,
+                "beforeLines": 0,
+                "afterStart": 147,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 24,
+                "beforeLines": 21,
+                "afterStart": 150,
+                "afterLines": 88
+              },
+              {
+                "beforeStart": 46,
+                "beforeLines": 4,
+                "afterStart": 239,
+                "afterLines": 95
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "TEST-101:REQ-002",
+        "explanation": {
+          "text": "Make calendar task and event creation available from the UI.",
+          "path": "src/App.css",
+          "line": 131
+        },
+        "regions": [
+          {
+            "path": "src/App.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 9
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 1,
+                "afterStart": 13,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 3,
+                "afterStart": 20,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 11,
+                "beforeLines": 4,
+                "afterStart": 26,
+                "afterLines": 424
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          },
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 0,
+                "afterStart": 4,
+                "afterLines": 59
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 2,
+                "afterStart": 64,
+                "afterLines": 18
+              },
+              {
+                "beforeStart": 8,
+                "beforeLines": 5,
+                "afterStart": 83,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 2,
+                "afterStart": 90,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 2,
+                "afterStart": 97,
+                "afterLines": 48
+              },
+              {
+                "beforeStart": 22,
+                "beforeLines": 0,
+                "afterStart": 147,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 24,
+                "beforeLines": 21,
+                "afterStart": 150,
+                "afterLines": 88
+              },
+              {
+                "beforeStart": 46,
+                "beforeLines": 4,
+                "afterStart": 239,
+                "afterLines": 95
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "TEST-101:REQ-003",
+        "explanation": {
+          "text": "Expose editing controls for both calendar item types.",
+          "path": "src/App.css",
+          "line": 356
+        },
+        "regions": [
+          {
+            "path": "src/App.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 9
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 1,
+                "afterStart": 13,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 3,
+                "afterStart": 20,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 11,
+                "beforeLines": 4,
+                "afterStart": 26,
+                "afterLines": 424
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          },
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 0,
+                "afterStart": 4,
+                "afterLines": 59
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 2,
+                "afterStart": 64,
+                "afterLines": 18
+              },
+              {
+                "beforeStart": 8,
+                "beforeLines": 5,
+                "afterStart": 83,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 2,
+                "afterStart": 90,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 2,
+                "afterStart": 97,
+                "afterLines": 48
+              },
+              {
+                "beforeStart": 22,
+                "beforeLines": 0,
+                "afterStart": 147,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 24,
+                "beforeLines": 21,
+                "afterStart": 150,
+                "afterLines": 88
+              },
+              {
+                "beforeStart": 46,
+                "beforeLines": 4,
+                "afterStart": 239,
+                "afterLines": 95
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "TEST-101:REQ-004",
+        "explanation": {
+          "text": "Expose deletion controls for both calendar item types.",
+          "path": "src/App.css",
+          "line": 357
+        },
+        "regions": [
+          {
+            "path": "src/App.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 3,
+                "afterLines": 9
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 1,
+                "afterStart": 13,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 3,
+                "afterStart": 20,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 11,
+                "beforeLines": 4,
+                "afterStart": 26,
+                "afterLines": 424
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          },
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 0,
+                "afterStart": 4,
+                "afterLines": 59
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 2,
+                "afterStart": 64,
+                "afterLines": 18
+              },
+              {
+                "beforeStart": 8,
+                "beforeLines": 5,
+                "afterStart": 83,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 2,
+                "afterStart": 90,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 2,
+                "afterStart": 97,
+                "afterLines": 48
+              },
+              {
+                "beforeStart": 22,
+                "beforeLines": 0,
+                "afterStart": 147,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 24,
+                "beforeLines": 21,
+                "afterStart": 150,
+                "afterLines": 88
+              },
+              {
+                "beforeStart": 46,
+                "beforeLines": 4,
+                "afterStart": 239,
+                "afterLines": 95
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:799e60cf3b6e92a810c1bdb861305a284a11e5fbac78802b7189ed2bef945c72"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:873a7fe2528bae62f029cec7d51dac5e17124dd8ec7bd61fdb3fa49818ae7209",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-03T17:55:20.045Z"
+}
