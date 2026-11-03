@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "bytes": 19093,
+    "path": "singularity/work-items/test-101/artifacts/planning/plan.md",
+    "role": "document",
+    "sha256": "19c59d1ac4c0467b4f8284ff4ba379aa1f7ef13d5ba0aee720a103b14ecc9930"
+  },
+  "configuration": {
+    "revision": "2b2bb89e41a271303d630ace7ef837d312ebbd67",
+    "sha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590"
+  },
+  "generation": 2,
+  "inputs": [
+    {
+      "kind": null,
+      "path": "artifacts/specification/spec.md",
+      "sha256": null
+    }
+  ],
+  "integritySha256": "67641b285edc41fb4cd19fa845ab57eec2f4f9f6e761bf8f6c91ca5ff85ecc74",
+  "phase": "planning",
+  "producer": {
+    "actor": "88361104+ashokraj2011@users.noreply.github.com",
+    "agent": "architect",
+    "kind": "governed-agent"
+  },
+  "publication": {
+    "branch": "test-101",
+    "commit": null,
+    "publishedAt": "2026-11-03T16:00:26.412Z"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "id": "test-101",
+    "kind": "story"
+  },
+  "template": {
+    "path": "singularity/work-items/test-101/config/wfa/blobs/sha256/502d705077ebbb399de79a9523b3cb2d377e17ba1fc05acbb43fd106a5c2fd84",
+    "sha256": "502d705077ebbb399de79a9523b3cb2d377e17ba1fc05acbb43fd106a5c2fd84"
+  }
+}

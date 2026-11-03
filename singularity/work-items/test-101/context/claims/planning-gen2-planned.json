@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-11-03T16:00:26.479Z",
+  "claims": {
+    "TEST-101:AC-001": {
+      "expectedPaths": [
+        "singularity/work-items/test-101/evidence/calendar-ui.png"
+      ],
+      "tests": [],
+      "testDisposition": "non-test",
+      "testReason": null,
+      "verificationCriterion": "TEST-101:AC-001",
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "A retained screenshot shows the completed in-app calendar UI."
+    },
+    "TEST-101:REQ-001": {
+      "expectedPaths": [
+        "src/App.css",
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Both Todo tasks and general events are visible in month, week, and day views."
+    },
+    "TEST-101:REQ-002": {
+      "expectedPaths": [
+        "src/App.css",
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "The user can create a Todo task and a general event, and each appears in the calendar."
+    },
+    "TEST-101:REQ-003": {
+      "expectedPaths": [
+        "src/App.css",
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "The user can edit a Todo task and a general event, and each updated item appears in the calendar."
+    },
+    "TEST-101:REQ-004": {
+      "expectedPaths": [
+        "src/App.css",
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "The user can delete a Todo task and a general event, and neither remains displayed."
+    }
+  },
+  "supportingFiles": [
+    "package-lock.json",
+    "package.json"
+  ],
+  "supportingFileDetails": [
+    {
+      "path": "package-lock.json",
+      "class": "dependency-lock",
+      "reason": "record the corresponding reproducible dependency updates."
+    },
+    {
+      "path": "package.json",
+      "class": "build-configuration",
+      "reason": "add a focused test script and the test runner/DOM testing dependencies needed for `src/App.test.jsx`."
+    }
+  ],
+  "verificationContracts": [
+    {
+      "clauseId": "TEST-101:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "calendar-screen",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "Completed in-app calendar UI"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "test-101",
+  "phase": "planning",
+  "generation": 2,
+  "source": {
+    "path": "singularity/work-items/test-101/artifacts/planning/plan.md",
+    "sha256": "19c59d1ac4c0467b4f8284ff4ba379aa1f7ef13d5ba0aee720a103b14ecc9930",
+    "bytes": 19093
+  }
+}

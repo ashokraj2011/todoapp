@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "workId": "test-101",
+  "producer": {
+    "phase": "planning",
+    "generation": 2
+  },
+  "consumer": {
+    "phase": "verification"
+  },
+  "source": {
+    "path": "singularity/work-items/test-101/artifacts/planning/plan.md",
+    "sha256": "19c59d1ac4c0467b4f8284ff4ba379aa1f7ef13d5ba0aee720a103b14ecc9930",
+    "bytes": 19093
+  },
+  "policy": {
+    "projection": "approved-summary",
+    "preserve": [
+      "Test strategy",
+      "Risks and rollback"
+    ],
+    "maximumSummaryBytes": 24576,
+    "expansion": "hash-bound-reference",
+    "fallback": "block"
+  },
+  "policySha256": "8c5a791d726ae572bf97fd0139dc9cde5eb51e4c2299c73932aa6860d56e7407",
+  "status": "ready",
+  "summary": {
+    "heading": "Agent brief"
+  },
+  "preserved": [
+    "Test strategy",
+    "Risks and rollback"
+  ],
+  "rendered": {
+    "path": "singularity/work-items/test-101/context/briefs/planning-gen2-for-verification.md",
+    "sha256": "dd4e103ed8c1e6361a7997a039a9049efbab0410a9ce86b8ab54664088ead294",
+    "bytes": 3463
+  },
+  "generatedAt": "2026-11-03T16:00:26.461Z",
+  "integritySha256": "2570a1b40878ea408365491ec56a0a3e60ce514a76a7f1c2f059ff3fb2b6a671"
+}
