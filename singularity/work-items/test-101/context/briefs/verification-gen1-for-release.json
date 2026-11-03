@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "workId": "test-101",
+  "producer": {
+    "phase": "verification",
+    "generation": 1
+  },
+  "consumer": {
+    "phase": "release"
+  },
+  "source": {
+    "path": "singularity/work-items/test-101/artifacts/verification/test-evidence.md",
+    "sha256": "61edc812d9b8f8391ae12cb52fb72427dd923b97b3738bfa5a062652dc64e19b",
+    "bytes": 21169
+  },
+  "policy": {
+    "projection": "approved-summary",
+    "preserve": [
+      "Acceptance and specification results",
+      "Negative, regression, security, and non-functional checks"
+    ],
+    "maximumSummaryBytes": 24576,
+    "expansion": "hash-bound-reference",
+    "fallback": "block"
+  },
+  "policySha256": "70fd9c1ef003903422277c48884f18939f82e880710cb36f5d0c436f989b1be4",
+  "status": "ready",
+  "summary": {
+    "heading": "Agent brief"
+  },
+  "preserved": [
+    "Acceptance and specification results",
+    "Negative, regression, security, and non-functional checks"
+  ],
+  "rendered": {
+    "path": "singularity/work-items/test-101/context/briefs/verification-gen1-for-release.md",
+    "sha256": "ce5182c1a7d31e4544e8e41affb42f3f16943f76dfaa5c2175680a1baec58621",
+    "bytes": 3371
+  },
+  "generatedAt": "2026-11-03T18:15:54.896Z",
+  "integritySha256": "6f13a25be3dc88fc59383b034714dda5f37d517fc6fc38ed46c897e309c8f85b"
+}

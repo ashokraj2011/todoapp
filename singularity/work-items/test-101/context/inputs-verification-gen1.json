@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 2,
+  "workId": "test-101",
+  "workType": "spec-driven-standard",
+  "phase": "verification",
+  "generation": 1,
+  "mode": "enforce",
+  "recordedAt": "2026-11-03T18:15:54.812Z",
+  "renderedSha256": "883113902582cb4377feaea94be2b21dbea024cff1fa82fe44570427e406d525",
+  "warnings": [],
+  "inputs": [
+    {
+      "phase": "specification",
+      "path": "artifacts/specification/spec.md",
+      "repositoryPath": "singularity/work-items/test-101/artifacts/specification/spec.md",
+      "optional": false,
+      "maxBytes": null,
+      "status": "captured",
+      "producerStatus": "approved",
+      "producerGeneration": 1,
+      "approvedAt": "2026-11-03T15:55:34.966Z",
+      "approvedBy": "ashokraj2011",
+      "approvedSha256": "5eb5f4c5d9b0771bd084c5590a34b6fa87605263790dc77e460d58f5cb08d52d",
+      "sha256": "5eb5f4c5d9b0771bd084c5590a34b6fa87605263790dc77e460d58f5cb08d52d",
+      "bytes": 15416,
+      "source": {
+        "path": "singularity/work-items/test-101/artifacts/specification/spec.md",
+        "rawSha256": "sha256:5eb5f4c5d9b0771bd084c5590a34b6fa87605263790dc77e460d58f5cb08d52d"
+      },
+      "representation": {
+        "kind": "summary",
+        "sha256": "sha256:e209be45036ed5e587bf87632f3af1e6f8c6dc2e9e499ae8d74d281465603c66",
+        "bytes": 4848,
+        "complete": false,
+        "expansionHandle": "sfref:v1:story:test-101:b6cf2c1ca0dfbfbcf5cae591d43685bccb122da3b8241efdfea0b47fdd72b5b4"
+      },
+      "injectedBytes": 4848,
+      "truncated": false,
+      "authoredBytes": 5644,
+      "managedBytesExcluded": 9772,
+      "projection": {
+        "kind": "approved-summary",
+        "preserve": [
+          "Actors",
+          "User scenarios",
+          "Failure and empty states",
+          "Permissions",
+          "Boundary conditions",
+          "Requirements",
+          "Non-functional requirements",
+          "Assumptions",
+          "Out of scope"
+        ],
+        "maximumSummaryBytes": 32768,
+        "expansion": "hash-bound-reference",
+        "fallback": "block",
+        "briefPath": "singularity/work-items/test-101/context/briefs/specification-gen1-for-verification.md",
+        "briefSha256": "e209be45036ed5e587bf87632f3af1e6f8c6dc2e9e499ae8d74d281465603c66",
+        "expansionHandle": "sfref:v1:story:test-101:b6cf2c1ca0dfbfbcf5cae591d43685bccb122da3b8241efdfea0b47fdd72b5b4"
+      }
+    },
+    {
+      "phase": "planning",
+      "path": "artifacts/planning/plan.md",
+      "repositoryPath": "singularity/work-items/test-101/artifacts/planning/plan.md",
+      "optional": false,
+      "maxBytes": null,
+      "status": "captured",
+      "producerStatus": "approved",
+      "producerGeneration": 2,
+      "approvedAt": "2026-11-03T16:21:17.674Z",
+      "approvedBy": "ashokraj2011",
+      "approvedSha256": "5a99f92876e08c98d0810c7258c6800a581bb6862ef03f767b762f6b2ecd72ef",
+      "sha256": "5a99f92876e08c98d0810c7258c6800a581bb6862ef03f767b762f6b2ecd72ef",
+      "bytes": 24217,
+      "source": {
+        "path": "singularity/work-items/test-101/artifacts/planning/plan.md",
+        "rawSha256": "sha256:5a99f92876e08c98d0810c7258c6800a581bb6862ef03f767b762f6b2ecd72ef"
+      },
+      "representation": {
+        "kind": "summary",
+        "sha256": "sha256:dd4e103ed8c1e6361a7997a039a9049efbab0410a9ce86b8ab54664088ead294",
+        "bytes": 3463,
+        "complete": false,
+        "expansionHandle": "sfref:v1:story:test-101:520bb36d241939413095a5272c75ce102ef82b5ae6cdeaf258ae286c0d0f3b50"
+      },
+      "injectedBytes": 3463,
+      "truncated": false,
+      "authoredBytes": 8637,
+      "managedBytesExcluded": 15580,
+      "projection": {
+        "kind": "approved-summary",
+        "preserve": [
+          "Test strategy",
+          "Risks and rollback"
+        ],
+        "maximumSummaryBytes": 24576,
+        "expansion": "hash-bound-reference",
+        "fallback": "block",
+        "briefPath": "singularity/work-items/test-101/context/briefs/planning-gen2-for-verification.md",
+        "briefSha256": "dd4e103ed8c1e6361a7997a039a9049efbab0410a9ce86b8ab54664088ead294",
+        "expansionHandle": "sfref:v1:story:test-101:520bb36d241939413095a5272c75ce102ef82b5ae6cdeaf258ae286c0d0f3b50"
+      }
+    },
+    {
+      "phase": "implementation",
+      "path": "artifacts/implementation/implementation-summary.md",
+      "repositoryPath": "singularity/work-items/test-101/artifacts/implementation/implementation-summary.md",
+      "optional": false,
+      "maxBytes": null,
+      "status": "captured",
+      "producerStatus": "approved",
+      "producerGeneration": 1,
+      "approvedAt": "2026-11-03T17:59:30.568Z",
+      "approvedBy": "ashokraj2011",
+      "approvedSha256": "e2c0e7918f4e2537e2f0d220a66bcece813d9abc11ba607c452475cc58d2a8ce",
+      "sha256": "e2c0e7918f4e2537e2f0d220a66bcece813d9abc11ba607c452475cc58d2a8ce",
+      "bytes": 23927,
+      "source": {
+        "path": "singularity/work-items/test-101/artifacts/implementation/implementation-summary.md",
+        "rawSha256": "sha256:e2c0e7918f4e2537e2f0d220a66bcece813d9abc11ba607c452475cc58d2a8ce"
+      },
+      "representation": {
+        "kind": "summary",
+        "sha256": "sha256:c50d60590055b416c9e6220b91b5e0bee4d0d7e41d7e036b1b22577d0295b5ba",
+        "bytes": 2877,
+        "complete": false,
+        "expansionHandle": "sfref:v1:story:test-101:932dc5aae091cc729880dc6a14a2bbfa14b9017b149128c477a12873f1b9d969"
+      },
+      "injectedBytes": 2877,
+      "truncated": false,
+      "authoredBytes": 3002,
+      "managedBytesExcluded": 20925,
+      "projection": {
+        "kind": "approved-summary",
+        "preserve": [
+          "Changed components and decisions",
+          "Tests and operational notes"
+        ],
+        "maximumSummaryBytes": 24576,
+        "expansion": "hash-bound-reference",
+        "fallback": "block",
+        "briefPath": "singularity/work-items/test-101/context/briefs/implementation-gen1-for-verification.md",
+        "briefSha256": "c50d60590055b416c9e6220b91b5e0bee4d0d7e41d7e036b1b22577d0295b5ba",
+        "expansionHandle": "sfref:v1:story:test-101:932dc5aae091cc729880dc6a14a2bbfa14b9017b149128c477a12873f1b9d969"
+      }
+    }
+  ]
+}
