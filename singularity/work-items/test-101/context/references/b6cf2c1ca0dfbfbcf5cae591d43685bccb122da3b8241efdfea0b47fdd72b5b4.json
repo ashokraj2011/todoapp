@@ -1,0 +1,28 @@
+{
+  "artifact": {
+    "generation": 1,
+    "mediaType": "text/markdown",
+    "outputId": "document",
+    "path": "singularity/work-items/test-101/artifacts/specification/spec.md",
+    "phaseId": "specification"
+  },
+  "createdAt": "2026-11-03T15:53:13.002Z",
+  "kind": "governed-reference",
+  "repository": {
+    "id": ".w-cd50f65c062e736cf192d17f",
+    "origin": "https://github.com/ashokraj2011/todoapp.git"
+  },
+  "revision": {
+    "bytes": 9696,
+    "commitSha": "b44bbe3f93ede611d167db6d742ed68d5dc5751c",
+    "sha256": "9c7aec4404212ee0e9fa534576f370c7b2969a43fcbf73ef91ff2449cd88f2a0"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "branch": "test-101",
+    "id": "test-101",
+    "kind": "story",
+    "subjectRevision": 1
+  },
+  "visibility": "model"
+}
