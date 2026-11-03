@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "phase": "specification",
+  "generation": 1,
+  "reportSha256": "169b2cafbea0eec2c90a4d30468e2b233a9681b55bf277e2b9737fed6b165508",
+  "lifecycleEventId": "4cbffbc5-7772-45be-8ed8-d057566699b6",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "specification",
+    "binding": {
+      "workId": "test-101",
+      "phase": "specification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/test-101/USER-STORY.md",
+          "textSha256": "77be6add7d8ef9253bce92565cda0b4cc94e8d62aabb35a090a588d84362148a",
+          "originalSha256": "ba3d41abfff47fe1050d716eda6fb2fcc3c5a9ffe317fb2382d6d92a7e3b5071"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/test-101/context/clarifications-specification-gen1.json",
+          "sha256": "f70d3db94c82063a8fb8415fe12d0489d4694d1db08daeb61e9fa1402274eb19"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/test-101/artifacts/specification/spec.md",
+        "sha256": "874933cca432ef5b6e32582a1e5c96267b7879949311165b961a1a25d59ac69f"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "id": "story-calendar-views",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "TEST-101:REQ-001"
+        ],
+        "line": 7,
+        "quote": "add google type calander"
+      },
+      {
+        "id": "story-calendar-management",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S2",
+        "clauseIds": [
+          "TEST-101:REQ-002",
+          "TEST-101:REQ-003",
+          "TEST-101:REQ-004"
+        ],
+        "line": 7,
+        "quote": "add google type calander"
+      },
+      {
+        "id": "story-screenshot",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S3",
+        "clauseIds": [
+          "TEST-101:AC-001"
+        ],
+        "line": 16,
+        "quote": "screenshot"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "product-owner",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-03T15:50:37.795Z",
+  "recordSha256": "04a037c6aee7ca0742be630f7457bd5abaca3d58b3667a8ecca93708be0d2161"
+}
