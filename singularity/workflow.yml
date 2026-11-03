@@ -45,13 +45,13 @@ auto:
   # explicit SGOS selection fails locally without making ordinary Story work unavailable.
   profile:
     default: story
-    allowed: [story]
+    allowed: [ story ]
   defaultPace: phase
   defaultUntil: first-human-boundary
   workIdAllocator: ulid
   planTtlMinutes: 30
   execution:
-    allowedHosts: [copilot-cli]
+    allowedHosts: [ copilot-cli ]
     requireManagedWorktree: true
     automaticResume: false
     allowPolicyWaivers: false
@@ -118,6 +118,9 @@ adhoc:
 git:
   remote: origin
   publish: required
+  commitPolicy:
+    schemaVersion: 1
+    mode: discover
 
 # Flow Ledger. Every lifecycle commit carries a durable intent on the work
 # branch and is then appended to the unrelated state orphan branch. A fresh
@@ -210,10 +213,10 @@ worldModel:
   # sourceRoots: [apps/payments, services/checkout]
   # sharedRoots: [packages/contracts, packages/observability]
 
-# Optional structural intelligence. The kernel always retains a bounded text-assurance fallback;
-# syntax and semantic assurance require an explicitly installed out-of-process adapter. Text
-# symbols are advisory discovery only; every required symbol-exists predicate needs syntax or
-# semantic assurance.
+  # Optional structural intelligence. The kernel always retains a bounded text-assurance fallback;
+  # syntax and semantic assurance require an explicitly installed out-of-process adapter. Text
+  # symbols are advisory discovery only; every required symbol-exists predicate needs syntax or
+  # semantic assurance.
 ast:
   mode: auto
   fallback: host-and-text
@@ -259,8 +262,8 @@ tokens:
   #   premium-model-name: 1
   #   included-model-name: 0
 
-# Closed-loop context accounting starts in observe mode: packets and local metadata are measured,
-# but the host's agent context is not changed until a repository explicitly selects assist/enforce.
+  # Closed-loop context accounting starts in observe mode: packets and local metadata are measured,
+  # but the host's agent context is not changed until a repository explicitly selects assist/enforce.
 tokenEconomy:
   enabled: true
   mode: observe
@@ -319,8 +322,17 @@ faultRepair:
     - infra/production
 
 documents:
-  storage: { allowed: [local], default: local }
-  allowedPhases: [intake, requirements, design, implementation-spec, reproduction, fix-design, fix-spec]
+  storage: { allowed: [ local ], default: local }
+  allowedPhases:
+    [
+      intake,
+      requirements,
+      design,
+      implementation-spec,
+      reproduction,
+      fix-design,
+      fix-spec
+    ]
   maxFileBytes: 26214400
   maxPreviewBytes: 1048576
 
@@ -344,7 +356,7 @@ collaboration:
   approvalReminderAfterHours: 24
   # Add teams-webhook to summon reviewers after publication. The URL stays local
   # in VS Code SecretStorage or SINGULARITY_FLOW_TEAMS_WEBHOOK_URL; it is never committed.
-  notifications: [terminal]
+  notifications: [ terminal ]
 
 # Activity logging. The log is written to .git/singularity-flow/logs/activity.log, so it
 # stays machine-local and is never committed. Read it with `singularity-flow logs`.
@@ -374,9 +386,23 @@ mcpServers:
   figma:
     label: Figma design context
     hostReference: figma
-    agents: [product-designer]
-    phases: [design-intake, design-inventory, component-mapping, mobile-spec, visual-verification]
-    tools: [get_metadata, get_design_context, get_screenshot, get_variable_defs, get_code_connect_map]
+    agents: [ product-designer ]
+    phases:
+      [
+        design-intake,
+        design-inventory,
+        component-mapping,
+        mobile-spec,
+        visual-verification
+      ]
+    tools:
+      [
+        get_metadata,
+        get_design_context,
+        get_screenshot,
+        get_variable_defs,
+        get_code_connect_map
+      ]
     required: false
     approval: confirm
     evidence:
@@ -385,9 +411,44 @@ mcpServers:
   playwright:
     label: Playwright browser automation
     hostReference: playwright
-    agents: [qa, product-designer, poc-automation, poc-explorer, poc-validator, scenario-tester, demo-web-tester]
-    phases: [design-intake, design-inventory, verification, testing, visual-verification, conformance, poc-ui-exploration, poc-validation, scenario-check, scenario-retest, demo-web-check, demo-web-retest]
-    tools: [browser_navigate, browser_snapshot, browser_click, browser_fill_form, browser_hover, browser_press_key, browser_resize, browser_take_screenshot, browser_console_messages, browser_network_requests]
+    agents:
+      [
+        qa,
+        product-designer,
+        poc-automation,
+        poc-explorer,
+        poc-validator,
+        scenario-tester,
+        demo-web-tester
+      ]
+    phases:
+      [
+        design-intake,
+        design-inventory,
+        verification,
+        testing,
+        visual-verification,
+        conformance,
+        poc-ui-exploration,
+        poc-validation,
+        scenario-check,
+        scenario-retest,
+        demo-web-check,
+        demo-web-retest
+      ]
+    tools:
+      [
+        browser_navigate,
+        browser_snapshot,
+        browser_click,
+        browser_fill_form,
+        browser_hover,
+        browser_press_key,
+        browser_resize,
+        browser_take_screenshot,
+        browser_console_messages,
+        browser_network_requests
+      ]
     required: false
     approval: confirm
     evidence:
@@ -399,9 +460,21 @@ mcpServers:
   demo-playwright:
     label: Demo acceptance browser
     hostReference: playwright
-    agents: [demo-code-checker]
-    phases: [demo-check]
-    tools: [browser_navigate, browser_snapshot, browser_click, browser_fill_form, browser_hover, browser_press_key, browser_resize, browser_take_screenshot, browser_console_messages, browser_network_requests]
+    agents: [ demo-code-checker ]
+    phases: [ demo-check ]
+    tools:
+      [
+        browser_navigate,
+        browser_snapshot,
+        browser_click,
+        browser_fill_form,
+        browser_hover,
+        browser_press_key,
+        browser_resize,
+        browser_take_screenshot,
+        browser_console_messages,
+        browser_network_requests
+      ]
     required: false
     approval: confirm
     evidence:
@@ -467,12 +540,22 @@ artifactSets:
       # be a second copy of those decisions that the author writes about themselves, which is the
       # provenance problem the protected sidecars exist to avoid. This member is a place to write
       # review notes, and it is never the evidence.
-      - { path: checklists/requirements.md, role: specification-quality, required: false, authority: advisory }
+      - {
+          path: checklists/requirements.md,
+          role: specification-quality,
+          required: false,
+          authority: advisory
+        }
   spec-driven-planning:
     primary: plan.md
     members:
       - { path: plan.md, role: implementation-plan, required: true }
-      - { path: tasks.md, role: advisory-task-map, required: false, authority: advisory }
+      - {
+          path: tasks.md,
+          role: advisory-task-map,
+          required: false,
+          authority: advisory
+        }
   spec-driven-verification:
     primary: conformance.md
     members:
@@ -482,10 +565,19 @@ artifactSets:
 workTypes:
   feature:
     label: Feature
-    phases: [intake, requirements, design, implementation-spec, implementation, verification, conformance]
+    phases:
+      [
+        intake,
+        requirements,
+        design,
+        implementation-spec,
+        implementation,
+        verification,
+        conformance
+      ]
     plannedClaims:
       mode: required
-      clausePhases: [requirements, implementation-spec]
+      clausePhases: [ requirements, implementation-spec ]
       owners: { implementation: implementation-spec }
     templateOverrides:
       intake: feature/intake.md
@@ -494,26 +586,61 @@ workTypes:
       implementation-spec: feature/implementation-spec.md
     # Every reviewed step may return the Story to any earlier step or to itself.
     phaseOverrides:
-      requirements: { inputs: [intake] }
+      requirements: { inputs: [ intake ] }
       design:
-        inputs: [requirements]
-        approval: { rejectTo: [intake, requirements, design] }
-      implementation-spec: { inputs: [requirements, design] }
+        inputs: [ requirements ]
+        approval: { rejectTo: [ intake, requirements, design ] }
+      implementation-spec: { inputs: [ requirements, design ] }
       implementation:
-        inputs: [design, implementation-spec]
-        approval: { rejectTo: [intake, requirements, design, implementation-spec, implementation] }
+        inputs: [ design, implementation-spec ]
+        approval:
+          {
+            rejectTo: [ intake, requirements, design, implementation-spec, implementation ]
+          }
       verification:
-        inputs: [implementation-spec, implementation]
-        approval: { rejectTo: [intake, requirements, design, implementation-spec, implementation, verification] }
+        inputs: [ implementation-spec, implementation ]
+        approval:
+          {
+            rejectTo:
+              [
+                intake,
+                requirements,
+                design,
+                implementation-spec,
+                implementation,
+                verification
+              ]
+          }
       conformance:
-        inputs: [implementation-spec, implementation, verification]
-        approval: { rejectTo: [intake, requirements, design, implementation-spec, implementation, verification, conformance] }
+        inputs: [ implementation-spec, implementation, verification ]
+        approval:
+          {
+            rejectTo:
+              [
+                intake,
+                requirements,
+                design,
+                implementation-spec,
+                implementation,
+                verification,
+                conformance
+              ]
+          }
   bugfix:
     label: Bug fix
-    phases: [intake, reproduction, fix-design, fix-spec, implementation, verification, conformance]
+    phases:
+      [
+        intake,
+        reproduction,
+        fix-design,
+        fix-spec,
+        implementation,
+        verification,
+        conformance
+      ]
     plannedClaims:
       mode: required
-      clausePhases: [fix-spec]
+      clausePhases: [ fix-spec ]
       owners: { implementation: fix-spec }
     templateOverrides:
       intake: bugfix/intake.md
@@ -522,21 +649,44 @@ workTypes:
       fix-spec: bugfix/fix-spec.md
     # Every reviewed step may return the Story to any earlier step or to itself.
     phaseOverrides:
-      reproduction: { inputs: [intake] }
-      fix-design: { inputs: [reproduction] }
-      fix-spec: { inputs: [reproduction, fix-design] }
+      reproduction: { inputs: [ intake ] }
+      fix-design: { inputs: [ reproduction ] }
+      fix-spec: { inputs: [ reproduction, fix-design ] }
       implementation:
-        inputs: [fix-spec]
-        approval: { rejectTo: [intake, reproduction, fix-design, fix-spec, implementation] }
+        inputs: [ fix-spec ]
+        approval: { rejectTo: [ intake, reproduction, fix-design, fix-spec, implementation ] }
       verification:
-        inputs: [fix-spec, implementation]
-        approval: { rejectTo: [intake, reproduction, fix-design, fix-spec, implementation, verification] }
+        inputs: [ fix-spec, implementation ]
+        approval:
+          {
+            rejectTo:
+              [
+                intake,
+                reproduction,
+                fix-design,
+                fix-spec,
+                implementation,
+                verification
+              ]
+          }
       conformance:
-        inputs: [fix-spec, implementation, verification]
-        approval: { rejectTo: [intake, reproduction, fix-design, fix-spec, implementation, verification, conformance] }
+        inputs: [ fix-spec, implementation, verification ]
+        approval:
+          {
+            rejectTo:
+              [
+                intake,
+                reproduction,
+                fix-design,
+                fix-spec,
+                implementation,
+                verification,
+                conformance
+              ]
+          }
   chore:
     label: Chore
-    phases: [intake, implementation, verification, conformance]
+    phases: [ intake, implementation, verification, conformance ]
     templateOverrides:
       intake: chore/intake.md
     phaseOverrides:
@@ -546,33 +696,61 @@ workTypes:
       # Chores may deliver an operational/configuration change with no product code. Keep the
       # shared implementation artifact but do not misclassify this work type as code generation.
       implementation:
-        inputs: [intake]
+        inputs: [ intake ]
         generation: { task: analyze }
-        approval: { rejectTo: [intake, implementation] }
+        approval: { rejectTo: [ intake, implementation ] }
       verification:
-        inputs: [implementation]
-        approval: { rejectTo: [intake, implementation, verification] }
+        inputs: [ implementation ]
+        approval: { rejectTo: [ intake, implementation, verification ] }
       conformance:
-        inputs: [implementation, verification]
-        approval: { rejectTo: [intake, implementation, verification, conformance] }
+        inputs: [ implementation, verification ]
+        approval: { rejectTo: [ intake, implementation, verification, conformance ] }
   figma-mobile:
     label: Figma export to mobile app
-    phases: [design-intake, design-inventory, component-mapping, mobile-spec, implementation, visual-verification, conformance]
+    phases:
+      [
+        design-intake,
+        design-inventory,
+        component-mapping,
+        mobile-spec,
+        implementation,
+        visual-verification,
+        conformance
+      ]
     plannedClaims:
       mode: required
-      clausePhases: [mobile-spec]
+      clausePhases: [ mobile-spec ]
       owners: { implementation: mobile-spec }
     designSources:
       capturePhase: design-intake
-      consumeIn: [design-inventory, component-mapping, mobile-spec, visual-verification, conformance]
+      consumeIn:
+        [
+          design-inventory,
+          component-mapping,
+          mobile-spec,
+          visual-verification,
+          conformance
+        ]
       staleness: warn
       requireApprovedSet: true
       inventoryDigest: optional
     verification:
       coverage: enforce
       profiles:
-        - { id: phone-390x844, label: Phone 390 × 844, width: 390, height: 844, deviceScaleFactor: 1 }
-        - { id: tablet-834x1194, label: Tablet 834 × 1194, width: 834, height: 1194, deviceScaleFactor: 1 }
+        - {
+            id: phone-390x844,
+            label: Phone 390 × 844,
+            width: 390,
+            height: 844,
+            deviceScaleFactor: 1
+          }
+        - {
+            id: tablet-834x1194,
+            label: Tablet 834 × 1194,
+            width: 834,
+            height: 1194,
+            deviceScaleFactor: 1
+          }
       comparison:
         mode: warn
         channelTolerance: 8
@@ -580,7 +758,7 @@ workTypes:
         maxDifferingPixels: null
         maxPixels: 40000000
     documents:
-      allowedPhases: [design-intake, design-inventory]
+      allowedPhases: [ design-intake, design-inventory ]
     templateOverrides:
       design-intake: figma-mobile/design-intake.md
       design-inventory: figma-mobile/design-inventory.md
@@ -590,26 +768,50 @@ workTypes:
       visual-verification: figma-mobile/visual-verification.md
       conformance: figma-mobile/conformance.md
     phaseOverrides:
-      design-inventory: { inputs: [design-intake] }
-      component-mapping: { inputs: [design-inventory] }
-      mobile-spec: { inputs: [design-inventory, component-mapping] }
+      design-inventory: { inputs: [ design-intake ] }
+      component-mapping: { inputs: [ design-inventory ] }
+      mobile-spec: { inputs: [ design-inventory, component-mapping ] }
       implementation:
-        inputs: [component-mapping, mobile-spec]
-        approval: { rejectTo: [design-intake, design-inventory, component-mapping, mobile-spec, implementation] }
-      visual-verification: { inputs: [design-inventory, mobile-spec, implementation] }
+        inputs: [ component-mapping, mobile-spec ]
+        approval:
+          {
+            rejectTo:
+              [
+                design-intake,
+                design-inventory,
+                component-mapping,
+                mobile-spec,
+                implementation
+              ]
+          }
+      visual-verification: { inputs: [ design-inventory, mobile-spec, implementation ] }
       conformance:
-        inputs: [mobile-spec, implementation, visual-verification]
-        approval: { authorities: [design-reviewers, architecture-reviewers, quality-reviewers], minimum: 1, rejectTo: [design-intake, design-inventory, component-mapping, mobile-spec, implementation, visual-verification, conformance] }
+        inputs: [ mobile-spec, implementation, visual-verification ]
+        approval:
+          {
+            authorities: [ design-reviewers, architecture-reviewers, quality-reviewers ],
+            minimum: 1,
+            rejectTo:
+              [
+                design-intake,
+                design-inventory,
+                component-mapping,
+                mobile-spec,
+                implementation,
+                visual-verification,
+                conformance
+              ]
+          }
     sequenceGates:
       documentPhase: hard
   quick-fix:
     label: Quick fix
     # Even a short code change states what it must do and where it lands before code changes: its
     # intake is the scope-and-plan checkpoint one engineer signs off.
-    phases: [intake, implement, verify]
+    phases: [ intake, implement, verify ]
     plannedClaims:
       mode: required
-      clausePhases: [intake]
+      clausePhases: [ intake ]
       owners: { implement: intake }
     templateOverrides:
       intake: quick-fix/intake.md
@@ -619,10 +821,15 @@ workTypes:
       intake:
         label: Scope and plan
         artifact: { kind: requirements }
-        clarification: { mode: when-needed, maxQuestions: 3, topics: [acceptance criteria, changed paths, tests] }
-        approval: { authorities: [engineering-reviewers], minimum: 1, rejectTo: [intake] }
-      implement: { inputs: [intake] }
-      verify: { inputs: [intake, implement] }
+        clarification:
+          {
+            mode: when-needed,
+            maxQuestions: 3,
+            topics: [ acceptance criteria, changed paths, tests ]
+          }
+        approval: { authorities: [ engineering-reviewers ], minimum: 1, rejectTo: [ intake ] }
+      implement: { inputs: [ intake ] }
+      verify: { inputs: [ intake, implement ] }
 
   # A sample user-defined agent, as `call add` makes one: the folder in
   # singularity/user-defined/careful-change/ runs as this one step (start <WORK-ID> --agent
@@ -631,22 +838,27 @@ workTypes:
   careful-change:
     label: Careful change
     description: Careful change, run as one step (user-defined agent).
-    phases: [careful-change]
+    phases: [ careful-change ]
     omits:
       - responsibility: scope
-        reason: Careful change is a user-defined agent run as one step; it defines no requirement clauses.
+        reason: Careful change is a user-defined agent run as one step; it defines no
+          requirement clauses.
         authority: engineering-reviewers
       - responsibility: plan
-        reason: Careful change plans and makes the change itself, in its one step, from its own instructions.
+        reason: Careful change plans and makes the change itself, in its one step, from
+          its own instructions.
         authority: engineering-reviewers
 
   classic-delivery:
     label: Classic delivery
-    description: Intake, code, testing, and code checking with committed test receipts, the guarded manual REV refinement pilot during Code, and explicit reviewer feedback/rework to Code; REV feedback attachments are evidence only.
-    phases: [intake, implementation, testing, conformance]
+    description: Intake, code, testing, and code checking with committed test
+      receipts, the guarded manual REV refinement pilot during Code, and
+      explicit reviewer feedback/rework to Code; REV feedback attachments are
+      evidence only.
+    phases: [ intake, implementation, testing, conformance ]
     plannedClaims:
       mode: required
-      clausePhases: [intake]
+      clausePhases: [ intake ]
       owners: { implementation: intake }
     templateOverrides:
       intake: classic-delivery/intake.md
@@ -655,36 +867,66 @@ workTypes:
     phaseOverrides:
       intake:
         artifact: { kind: requirements }
-        clarification: { mode: required, maxQuestions: 5, topics: [problem, outcome, scope, acceptance criteria, tests] }
+        clarification:
+          {
+            mode: required,
+            maxQuestions: 5,
+            topics: [ problem, outcome, scope, acceptance criteria, tests ]
+          }
       implementation:
         label: Code
-        inputs: [intake]
-        approval: { authorities: [engineering-reviewers], minimum: 1, rejectTo: [intake, implementation] }
+        inputs: [ intake ]
+        approval:
+          {
+            authorities: [ engineering-reviewers ],
+            minimum: 1,
+            rejectTo: [ intake, implementation ]
+          }
       testing:
         label: Testing
-        inputs: [intake, implementation]
+        inputs: [ intake, implementation ]
         writeScope: artifact-only
         testEvidenceFrom: implementation
-        approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [intake, implementation, testing] }
+        approval:
+          {
+            authorities: [ quality-reviewers ],
+            minimum: 1,
+            rejectTo: [ intake, implementation, testing ]
+          }
       conformance:
         label: Code checking
-        inputs: [intake, implementation, testing]
+        inputs: [ intake, implementation, testing ]
         testEvidenceFrom: implementation
-        approval: { authorities: [quality-reviewers, engineering-reviewers], minimum: 1, rejectTo: [intake, implementation, testing, conformance] }
+        approval:
+          {
+            authorities: [ quality-reviewers, engineering-reviewers ],
+            minimum: 1,
+            rejectTo: [ intake, implementation, testing, conformance ]
+          }
 
   spec-code-test-loop:
     label: Spec → code → Playwright review
-    description: A specification-first Story with Code publication, governed Playwright browser observations, and bounded human-directed rework. The optional BRL foundation can inspect or plan the exact retained Code Candidate, but runs fail closed without its approved runner; MCP or BRL observations never replace structured test receipts, Testing, publication, or approval.
-    phases: [specification, implementation, testing, conformance]
+    description: A specification-first Story with Code publication, governed
+      Playwright browser observations, and bounded human-directed rework. The
+      optional BRL foundation can inspect or plan the exact retained Code
+      Candidate, but runs fail closed without its approved runner; MCP or BRL
+      observations never replace structured test receipts, Testing, publication,
+      or approval.
+    phases: [ specification, implementation, testing, conformance ]
     reworkLoops:
-      - { from: testing, to: implementation, maxAttempts: 3, resetOnPhase: specification }
+      - {
+          from: testing,
+          to: implementation,
+          maxAttempts: 3,
+          resetOnPhase: specification
+        }
     spec: { mode: enforce }
     plannedClaims:
       mode: required
-      clausePhases: [specification]
+      clausePhases: [ specification ]
       owners: { implementation: specification }
     documents:
-      allowedPhases: [specification]
+      allowedPhases: [ specification ]
     templateOverrides:
       specification: spec-code-test-loop/specification.md
       testing: spec-code-test-loop/testing.md
@@ -692,50 +934,111 @@ workTypes:
     phaseOverrides:
       implementation:
         label: Code
-        inputs: [specification]
+        inputs: [ specification ]
         # `/sf-revision-checks` may inspect the installed BRL boundary and plan only from the
         # current retained REV Candidate. The workflow grants no browser runner, green verdict,
         # publication bridge, or standing authority merely by selecting this work type.
-        approval: { authorities: [engineering-reviewers], minimum: 1, rejectTo: [specification, implementation] }
+        approval:
+          {
+            authorities: [ engineering-reviewers ],
+            minimum: 1,
+            rejectTo: [ specification, implementation ]
+          }
       testing:
         label: Playwright testing review
-        inputs: [specification, implementation]
+        inputs: [ specification, implementation ]
         artifact:
-          validation: { requiredHeadings: [Exact inputs and committed test receipt, Authorized target and environment, Playwright observations, Clause results and gaps, Correction decision, Residual risk] }
+          validation:
+            {
+              requiredHeadings:
+                [
+                  Exact inputs and committed test receipt,
+                  Authorized target and environment,
+                  Playwright observations,
+                  Clause results and gaps,
+                  Correction decision,
+                  Residual risk
+                ]
+            }
         writeScope: artifact-only
         testEvidenceFrom: implementation
         mcp:
-          requiredServers: [playwright]
+          requiredServers: [ playwright ]
           requireSmoke: true
           evidence:
-            - { server: playwright, tool: browser_navigate, minimum: 1, outputRequired: false }
-            - { server: playwright, tool: browser_snapshot, minimum: 1, outputRequired: true }
-            - { server: playwright, tool: browser_take_screenshot, minimum: 1, outputRequired: true }
-        approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [specification, testing] }
+            - {
+                server: playwright,
+                tool: browser_navigate,
+                minimum: 1,
+                outputRequired: false
+              }
+            - {
+                server: playwright,
+                tool: browser_snapshot,
+                minimum: 1,
+                outputRequired: true
+              }
+            - {
+                server: playwright,
+                tool: browser_take_screenshot,
+                minimum: 1,
+                outputRequired: true
+              }
+        approval:
+          {
+            authorities: [ quality-reviewers ],
+            minimum: 1,
+            rejectTo: [ specification, testing ]
+          }
       conformance:
         label: Spec, code and test checking
-        inputs: [specification, implementation, testing]
+        inputs: [ specification, implementation, testing ]
         artifact:
-          validation: { requiredHeadings: [Exact generation bindings, Clause-by-clause comparison, Unplanned changes and evidence gaps, Correction and final decision] }
+          validation:
+            {
+              requiredHeadings:
+                [
+                  Exact generation bindings,
+                  Clause-by-clause comparison,
+                  Unplanned changes and evidence gaps,
+                  Correction and final decision
+                ]
+            }
         testEvidenceFrom: implementation
-        approval: { authorities: [quality-reviewers, architecture-reviewers], minimum: 1, rejectTo: [specification, implementation, testing, conformance] }
+        approval:
+          {
+            authorities: [ quality-reviewers, architecture-reviewers ],
+            minimum: 1,
+            rejectTo: [ specification, implementation, testing, conformance ]
+          }
 
   document-test-repair:
     label: Document-led acceptance & repair
-    description: Turn approved documents or screenshots into scenarios, test existing behavior first, repair only demonstrated defects, and retest. Completion requires an evidence-backed agent pass and human approval. Browser tools are optional; unavailable tests never count as passes. After two automatic rework rounds, stop for explicit human direction.
-    phases: [document-intake, scenario-check, scenario-repair, scenario-retest]
+    description: Turn approved documents or screenshots into scenarios, test
+      existing behavior first, repair only demonstrated defects, and retest.
+      Completion requires an evidence-backed agent pass and human approval.
+      Browser tools are optional; unavailable tests never count as passes. After
+      two automatic rework rounds, stop for explicit human direction.
+    phases: [ document-intake, scenario-check, scenario-repair, scenario-retest ]
     plannedClaims:
       mode: required
-      clausePhases: [document-intake]
+      clausePhases: [ document-intake ]
       owners: { scenario-repair: document-intake }
-    documents: { allowedPhases: [document-intake] }
+    documents: { allowedPhases: [ document-intake ] }
     decisions:
       - id: existing-behavior
         after: scenario-check
         kind: branch
         label: Does the existing behavior satisfy every approved scenario?
         enforceConditions: true
-        inputs: [{ name: verdict, label: Agent scenario verdict, values: [pass, repair, blocked] }]
+        inputs:
+          [
+            {
+                name: verdict,
+                label: Agent scenario verdict,
+                values: [ pass, repair, blocked ]
+              }
+          ]
         routes:
           - id: already-satisfied
             label: Accept existing behavior — no repair
@@ -743,39 +1046,83 @@ workTypes:
             to: end
             omits:
               - responsibility: implement
-                reason: Fresh scenario evidence demonstrates the approved behavior already exists; no product implementation is needed for this Story.
+                reason: Fresh scenario evidence demonstrates the approved behavior already
+                  exists; no product implementation is needed for this Story.
                 authority: quality-reviewers
-          - { id: repair-defect, label: Repair the evidenced defect, when: { verdict: repair }, to: scenario-repair }
-          - { id: restore-test-access, label: Resolve blocked test access and recheck, to: scenario-check }
+          - {
+              id: repair-defect,
+              label: Repair the evidenced defect,
+              when: { verdict: repair },
+              to: scenario-repair
+            }
+          - {
+              id: restore-test-access,
+              label: Resolve blocked test access and recheck,
+              to: scenario-check
+            }
         maxRounds: 2
       - id: repaired-behavior
         after: scenario-retest
         kind: branch
         label: Do the repaired behavior and fresh tests satisfy every approved scenario?
         enforceConditions: true
-        inputs: [{ name: verdict, label: Agent scenario verdict, values: [pass, repair, blocked] }]
+        inputs:
+          [
+            {
+                name: verdict,
+                label: Agent scenario verdict,
+                values: [ pass, repair, blocked ]
+              }
+          ]
         routes:
-          - { id: accepted, label: Accept the repaired behavior, when: { verdict: pass }, to: end }
-          - { id: repair-again, label: Repair the remaining evidenced defect, when: { verdict: repair }, to: scenario-repair }
-          - { id: restore-test-access, label: Resolve blocked test access and retest, to: scenario-retest }
+          - {
+              id: accepted,
+              label: Accept the repaired behavior,
+              when: { verdict: pass },
+              to: end
+            }
+          - {
+              id: repair-again,
+              label: Repair the remaining evidenced defect,
+              when: { verdict: repair },
+              to: scenario-repair
+            }
+          - {
+              id: restore-test-access,
+              label: Resolve blocked test access and retest,
+              to: scenario-retest
+            }
         maxRounds: 2
 
   demo-web-e2e-testing:
     label: Demo Web E2E Testing
-    description: Compare a web application with approved screenshots and interaction scenarios using custom agents and skills. Test existing code first, repair demonstrated defects, then retest with fresh evidence. A passing agent verdict and human acceptance are both required. Playwright or an approved repository E2E runner can be used; two automatic backward routes are followed by explicit human direction.
-    phases: [demo-web-intake, demo-web-check, demo-web-repair, demo-web-retest]
+    description: Compare a web application with approved screenshots and interaction
+      scenarios using custom agents and skills. Test existing code first, repair
+      demonstrated defects, then retest with fresh evidence. A passing agent
+      verdict and human acceptance are both required. Playwright or an approved
+      repository E2E runner can be used; two automatic backward routes are
+      followed by explicit human direction.
+    phases: [ demo-web-intake, demo-web-check, demo-web-repair, demo-web-retest ]
     plannedClaims:
       mode: required
-      clausePhases: [demo-web-intake]
+      clausePhases: [ demo-web-intake ]
       owners: { demo-web-repair: demo-web-intake }
-    documents: { allowedPhases: [demo-web-intake] }
+    documents: { allowedPhases: [ demo-web-intake ] }
     decisions:
       - id: demo-existing-web-behavior
         after: demo-web-check
         kind: branch
-        label: Does the current web application meet the approved screenshot and behavior?
+        label: Does the current web application meet the approved screenshot and
+          behavior?
         enforceConditions: true
-        inputs: [{ name: verdict, label: Agent web E2E verdict, values: [pass, repair, blocked] }]
+        inputs:
+          [
+            {
+                name: verdict,
+                label: Agent web E2E verdict,
+                values: [ pass, repair, blocked ]
+              }
+          ]
         routes:
           - id: already-satisfied
             label: Accept existing web behavior — no repair
@@ -783,45 +1130,90 @@ workTypes:
             to: end
             omits:
               - responsibility: implement
-                reason: Fresh web scenario evidence demonstrates the approved screenshot and behavior already match; no product repair is needed.
+                reason: Fresh web scenario evidence demonstrates the approved screenshot and
+                  behavior already match; no product repair is needed.
                 authority: quality-reviewers
-          - { id: repair-web-defect, label: Repair the demonstrated web defect, when: { verdict: repair }, to: demo-web-repair }
-          - { id: restore-web-access, label: Restore authorized test access and recheck, to: demo-web-check }
+          - {
+              id: repair-web-defect,
+              label: Repair the demonstrated web defect,
+              when: { verdict: repair },
+              to: demo-web-repair
+            }
+          - {
+              id: restore-web-access,
+              label: Restore authorized test access and recheck,
+              to: demo-web-check
+            }
         maxRounds: 2
       - id: demo-repaired-web-behavior
         after: demo-web-retest
         kind: branch
         label: Do fresh web tests and screenshot comparison pass after repair?
         enforceConditions: true
-        inputs: [{ name: verdict, label: Agent web E2E verdict, values: [pass, repair, blocked] }]
+        inputs:
+          [
+            {
+                name: verdict,
+                label: Agent web E2E verdict,
+                values: [ pass, repair, blocked ]
+              }
+          ]
         routes:
-          - { id: accepted, label: Accept the tested web repair, when: { verdict: pass }, to: end }
-          - { id: repair-web-again, label: Repair the remaining web defect, when: { verdict: repair }, to: demo-web-repair }
-          - { id: restore-web-access, label: Restore authorized test access and retest, to: demo-web-retest }
+          - {
+              id: accepted,
+              label: Accept the tested web repair,
+              when: { verdict: pass },
+              to: end
+            }
+          - {
+              id: repair-web-again,
+              label: Repair the remaining web defect,
+              when: { verdict: repair },
+              to: demo-web-repair
+            }
+          - {
+              id: restore-web-access,
+              label: Restore authorized test access and retest,
+              to: demo-web-retest
+            }
         maxRounds: 2
 
   demo-check-repair-close:
     label: Demo — Check, Repair & Close
-    description: Four phases with agent-attached custom skills. Capture screenshots, documents and observable scenarios; check existing code first; repair demonstrated defects and return to checking; close with a retained report only after a fresh pass and human acceptance. Automatic routing retains human checkpoints. Three backward routes per decision require renewed human direction, never a false pass.
-    phases: [demo-intake, demo-check, demo-repair, demo-close]
+    description: Four phases with agent-attached custom skills. Capture screenshots,
+      documents and observable scenarios; check existing code first; repair
+      demonstrated defects and return to checking; close with a retained report
+      only after a fresh pass and human acceptance. Automatic routing retains
+      human checkpoints. Three backward routes per decision require renewed
+      human direction, never a false pass.
+    phases: [ demo-intake, demo-check, demo-repair, demo-close ]
     # The natural closing endpoint can also be reached without a new repair. Account for
     # that no-additional-implementation responsibility at the endpoint, not only the skip edge.
     omits:
       - responsibility: implement
-        reason: The approved final check proves current code meets the scenarios; retained repair history is reported separately and no additional implementation is needed to close.
+        reason: The approved final check proves current code meets the scenarios;
+          retained repair history is reported separately and no additional
+          implementation is needed to close.
         authority: quality-reviewers
     plannedClaims:
       mode: required
-      clausePhases: [demo-intake]
+      clausePhases: [ demo-intake ]
       owners: { demo-repair: demo-intake }
-    documents: { allowedPhases: [demo-intake] }
+    documents: { allowedPhases: [ demo-intake ] }
     decisions:
       - id: demo-check-result
         after: demo-check
         kind: branch
         label: Does fresh evidence satisfy every approved scenario?
         enforceConditions: true
-        inputs: [{ name: verdict, label: Evidence-backed checker verdict, values: [pass, repair, blocked] }]
+        inputs:
+          [
+            {
+                name: verdict,
+                label: Evidence-backed checker verdict,
+                values: [ pass, repair, blocked ]
+              }
+          ]
         routes:
           - id: demo-pass-to-close
             label: Accept the checked behavior and prepare closing documents
@@ -829,71 +1221,146 @@ workTypes:
             to: demo-close
             omits:
               - responsibility: implement
-                reason: Fresh checks demonstrate the current code already meets the approved scenarios, including any retained earlier repairs; no additional implementation is needed on this route.
+                reason: Fresh checks demonstrate the current code already meets the approved
+                  scenarios, including any retained earlier repairs; no
+                  additional implementation is needed on this route.
                 authority: quality-reviewers
-          - { id: demo-repair-defect, label: Repair the demonstrated defect, when: { verdict: repair }, to: demo-repair }
-          - { id: demo-recheck-access, label: Resolve unavailable evidence or access and recheck, to: demo-check }
+          - {
+              id: demo-repair-defect,
+              label: Repair the demonstrated defect,
+              when: { verdict: repair },
+              to: demo-repair
+            }
+          - {
+              id: demo-recheck-access,
+              label: Resolve unavailable evidence or access and recheck,
+              to: demo-check
+            }
         maxRounds: 3
       - id: demo-repair-handoff
         after: demo-repair
         kind: branch
         label: Retest the repair or return changed scope to intake
         enforceConditions: true
-        inputs: [{ name: next, label: Reviewed repair handoff, values: [recheck, revise-intake] }]
+        inputs:
+          [
+            {
+                name: next,
+                label: Reviewed repair handoff,
+                values: [ recheck, revise-intake ]
+              }
+          ]
         routes:
-          - { id: demo-retest-repair, label: Independently check the repaired code, when: { next: recheck }, to: demo-check }
-          - { id: demo-revise-intake, label: Review changed intent or repair scope, to: demo-intake }
+          - {
+              id: demo-retest-repair,
+              label: Independently check the repaired code,
+              when: { next: recheck },
+              to: demo-check
+            }
+          - {
+              id: demo-revise-intake,
+              label: Review changed intent or repair scope,
+              to: demo-intake
+            }
         maxRounds: 3
 
   demo-instruction-test-loop:
     label: Demo — Instruction-composed Test Loop
-    description: Custom agents and skills compose reusable instructions at explicit procedure steps. Intake pins documents and screenshots; an independent checker proposes pass, repair or blocked from fresh evidence; repair returns to checking; closing retains results. Automatic routing keeps human approval checkpoints and a three-round bound.
-    phases: [demo-instruction-intake, demo-instruction-test, demo-instruction-repair, demo-instruction-close]
+    description: Custom agents and skills compose reusable instructions at explicit
+      procedure steps. Intake pins documents and screenshots; an independent
+      checker proposes pass, repair or blocked from fresh evidence; repair
+      returns to checking; closing retains results. Automatic routing keeps
+      human approval checkpoints and a three-round bound.
+    phases:
+      [
+        demo-instruction-intake,
+        demo-instruction-test,
+        demo-instruction-repair,
+        demo-instruction-close
+      ]
     intelligence: { worldModel: off, ast: off, agentBriefs: off }
     omits:
-      - { responsibility: implement, reason: The approved final check proves no additional repair is needed; earlier repair history is retained in closing documents., authority: quality-reviewers }
+      - {
+          responsibility: implement,
+          reason: The approved final check proves no additional repair is needed; earlier
+            repair history is retained in closing documents.,
+          authority: quality-reviewers
+        }
     plannedClaims:
       mode: required
-      clausePhases: [demo-instruction-intake]
+      clausePhases: [ demo-instruction-intake ]
       owners: { demo-instruction-repair: demo-instruction-intake }
-    documents: { allowedPhases: [demo-instruction-intake] }
+    documents: { allowedPhases: [ demo-instruction-intake ] }
     decisions:
       - id: demo-instruction-test-result
         after: demo-instruction-test
         kind: branch
         label: Do fresh tests and source comparisons satisfy every approved scenario?
         enforceConditions: true
-        inputs: [{ name: verdict, label: Evidence-backed checker verdict, values: [pass, repair, blocked] }]
+        inputs:
+          [
+            {
+                name: verdict,
+                label: Evidence-backed checker verdict,
+                values: [ pass, repair, blocked ]
+              }
+          ]
         routes:
           - id: demo-instruction-pass
             label: Review the passing check and prepare closing documents
             when: { verdict: pass }
             to: demo-instruction-close
             omits:
-              - { responsibility: implement, reason: Fresh evidence proves current code satisfies the agreed scenarios without another repair., authority: quality-reviewers }
-          - { id: demo-instruction-fix, label: Repair the observed defect, when: { verdict: repair }, to: demo-instruction-repair }
-          - { id: demo-instruction-access, label: Restore test access or missing evidence and recheck, to: demo-instruction-test }
+              - {
+                  responsibility: implement,
+                  reason: Fresh evidence proves current code satisfies the agreed scenarios
+                    without another repair.,
+                  authority: quality-reviewers
+                }
+          - {
+              id: demo-instruction-fix,
+              label: Repair the observed defect,
+              when: { verdict: repair },
+              to: demo-instruction-repair
+            }
+          - {
+              id: demo-instruction-access,
+              label: Restore test access or missing evidence and recheck,
+              to: demo-instruction-test
+            }
         maxRounds: 3
       - id: demo-instruction-repair-result
         after: demo-instruction-repair
         kind: branch
         label: Independently retest the repair or review changed scope
         enforceConditions: true
-        inputs: [{ name: next, label: Repair handoff, values: [recheck, revise-intake] }]
+        inputs: [ { name: next, label: Repair handoff, values: [ recheck, revise-intake ] } ]
         routes:
-          - { id: demo-instruction-retest, label: Check the repaired current revision, when: { next: recheck }, to: demo-instruction-test }
-          - { id: demo-instruction-scope, label: Review new scope at intake, to: demo-instruction-intake }
+          - {
+              id: demo-instruction-retest,
+              label: Check the repaired current revision,
+              when: { next: recheck },
+              to: demo-instruction-test
+            }
+          - {
+              id: demo-instruction-scope,
+              label: Review new scope at intake,
+              to: demo-instruction-intake
+            }
         maxRounds: 3
 
   poc-lite:
     label: POC Lite — local governed change
-    description: A model-free four-checkpoint demonstration with repository-native validation and one explicit human finish decision; it imposes no MCP, tracker, or hosted-service dependency.
-    phases: [poc-lite-plan, poc-lite-act, poc-lite-verify, poc-lite-finalize]
+    description: A model-free four-checkpoint demonstration with repository-native
+      validation and one explicit human finish decision; it imposes no MCP,
+      tracker, or hosted-service dependency.
+    phases: [ poc-lite-plan, poc-lite-act, poc-lite-verify, poc-lite-finalize ]
     # A model-free demonstration defines no requirement clauses, so it omits scope; the final reviewer
     # records why scope does not apply before the Story finishes.
     omits:
       - responsibility: scope
-        reason: POC Lite demonstrates the governed lifecycle on one bounded local change and defines no requirement clauses.
+        reason: POC Lite demonstrates the governed lifecycle on one bounded local change
+          and defines no requirement clauses.
         authority: quality-reviewers
     intelligence: { worldModel: off, ast: off, agentBriefs: off }
     templateOverrides:
@@ -902,19 +1369,21 @@ workTypes:
       poc-lite-verify: poc-lite/verify.md
       poc-lite-finalize: poc-lite/finalize.md
     phaseOverrides:
-      poc-lite-act: { inputs: [poc-lite-plan] }
-      poc-lite-verify: { inputs: [poc-lite-plan, poc-lite-act] }
-      poc-lite-finalize: { inputs: [poc-lite-plan, poc-lite-act, poc-lite-verify] }
+      poc-lite-act: { inputs: [ poc-lite-plan ] }
+      poc-lite-verify: { inputs: [ poc-lite-plan, poc-lite-act ] }
+      poc-lite-finalize: { inputs: [ poc-lite-plan, poc-lite-act, poc-lite-verify ] }
 
   benchmarking-a:
     label: Benchmark A — governed intelligence
-    description: Measures governed world-model, bounded AST, and approval-bound agent-brief context; unavailable intelligence is a degraded benchmark run, not a lifecycle refusal.
+    description: Measures governed world-model, bounded AST, and approval-bound
+      agent-brief context; unavailable intelligence is a degraded benchmark run,
+      not a lifecycle refusal.
     # Experimental arm: identical lifecycle, templates, agents, artifacts, and approvals to
     # Benchmark B. Only the pinned intelligence profile and input projection differ.
-    phases: [intake, design, implementation, testing, conformance]
+    phases: [ intake, design, implementation, testing, conformance ]
     plannedClaims:
       mode: required
-      clausePhases: [intake]
+      clausePhases: [ intake ]
       owners: { implementation: design }
     intelligence: { worldModel: required, ast: optional-context, agentBriefs: required }
     templateOverrides:
@@ -928,34 +1397,101 @@ workTypes:
         artifact: { kind: requirements }
       design:
         inputs:
-          - { phase: intake, projection: approved-summary, preserve: [Success criteria, Scope and constraints], maximumSummaryBytes: 16384, expansion: hash-bound-reference, fallback: block }
-        approval: { authorities: [architecture-reviewers], minimum: 1, rejectTo: [intake, design] }
+          - {
+              phase: intake,
+              projection: approved-summary,
+              preserve: [ Success criteria, Scope and constraints ],
+              maximumSummaryBytes: 16384,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+        approval:
+          {
+            authorities: [ architecture-reviewers ],
+            minimum: 1,
+            rejectTo: [ intake, design ]
+          }
       implementation:
         inputs:
-          - { phase: design, projection: approved-summary, preserve: [Design and interfaces, Risks and rollback], maximumSummaryBytes: 16384, expansion: hash-bound-reference, fallback: block }
-        approval: { rejectTo: [intake, design, implementation] }
+          - {
+              phase: design,
+              projection: approved-summary,
+              preserve: [ Design and interfaces, Risks and rollback ],
+              maximumSummaryBytes: 16384,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+        approval: { rejectTo: [ intake, design, implementation ] }
       testing:
         inputs:
-          - { phase: intake, projection: approved-summary, preserve: [Success criteria], maximumSummaryBytes: 12288, expansion: hash-bound-reference, fallback: block }
-          - { phase: implementation, projection: approved-summary, preserve: [Changed components, Validation and operational notes], maximumSummaryBytes: 16384, expansion: hash-bound-reference, fallback: block }
-        approval: { rejectTo: [intake, design, implementation, testing] }
+          - {
+              phase: intake,
+              projection: approved-summary,
+              preserve: [ Success criteria ],
+              maximumSummaryBytes: 12288,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+          - {
+              phase: implementation,
+              projection: approved-summary,
+              preserve: [ Changed components, Validation and operational notes ],
+              maximumSummaryBytes: 16384,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+        approval: { rejectTo: [ intake, design, implementation, testing ] }
       conformance:
         inputs:
-          - { phase: intake, projection: approved-summary, preserve: [Success criteria], maximumSummaryBytes: 12288, expansion: hash-bound-reference, fallback: block }
-          - { phase: design, projection: approved-summary, preserve: [Design and interfaces], maximumSummaryBytes: 12288, expansion: hash-bound-reference, fallback: block }
-          - { phase: implementation, projection: approved-summary, preserve: [Changed components], maximumSummaryBytes: 12288, expansion: hash-bound-reference, fallback: block }
-          - { phase: testing, projection: approved-summary, preserve: [Test evidence and results], maximumSummaryBytes: 16384, expansion: hash-bound-reference, fallback: block }
-        approval: { authorities: [quality-reviewers, architecture-reviewers], minimum: 1, rejectTo: [intake, design, implementation, testing, conformance] }
+          - {
+              phase: intake,
+              projection: approved-summary,
+              preserve: [ Success criteria ],
+              maximumSummaryBytes: 12288,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+          - {
+              phase: design,
+              projection: approved-summary,
+              preserve: [ Design and interfaces ],
+              maximumSummaryBytes: 12288,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+          - {
+              phase: implementation,
+              projection: approved-summary,
+              preserve: [ Changed components ],
+              maximumSummaryBytes: 12288,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+          - {
+              phase: testing,
+              projection: approved-summary,
+              preserve: [ Test evidence and results ],
+              maximumSummaryBytes: 16384,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+        approval:
+          {
+            authorities: [ quality-reviewers, architecture-reviewers ],
+            minimum: 1,
+            rejectTo: [ intake, design, implementation, testing, conformance ]
+          }
 
   benchmarking-b:
     label: Benchmark B — generic context
-    description: Uses full approved artifacts without world-model, AST, or agent-brief enrichment.
+    description: Uses full approved artifacts without world-model, AST, or
+      agent-brief enrichment.
     # Control arm: full approved upstream artifacts, with no world-model, AST, or agent-brief
     # enrichment. The lifecycle contract remains byte-for-byte comparable with Benchmark A.
-    phases: [intake, design, implementation, testing, conformance]
+    phases: [ intake, design, implementation, testing, conformance ]
     plannedClaims:
       mode: required
-      clausePhases: [intake]
+      clausePhases: [ intake ]
       owners: { implementation: design }
     intelligence: { worldModel: off, ast: off, agentBriefs: off }
     templateOverrides:
@@ -967,30 +1503,51 @@ workTypes:
     phaseOverrides:
       intake: { artifact: { kind: requirements } }
       design:
-        inputs: [intake]
-        approval: { authorities: [architecture-reviewers], minimum: 1, rejectTo: [intake, design] }
+        inputs: [ intake ]
+        approval:
+          {
+            authorities: [ architecture-reviewers ],
+            minimum: 1,
+            rejectTo: [ intake, design ]
+          }
       implementation:
-        inputs: [design]
-        approval: { rejectTo: [intake, design, implementation] }
+        inputs: [ design ]
+        approval: { rejectTo: [ intake, design, implementation ] }
       testing:
-        inputs: [intake, implementation]
-        approval: { rejectTo: [intake, design, implementation, testing] }
+        inputs: [ intake, implementation ]
+        approval: { rejectTo: [ intake, design, implementation, testing ] }
       conformance:
-        inputs: [intake, design, implementation, testing]
-        approval: { authorities: [quality-reviewers, architecture-reviewers], minimum: 1, rejectTo: [intake, design, implementation, testing, conformance] }
+        inputs: [ intake, design, implementation, testing ]
+        approval:
+          {
+            authorities: [ quality-reviewers, architecture-reviewers ],
+            minimum: 1,
+            rejectTo: [ intake, design, implementation, testing, conformance ]
+          }
 
   poc-workflow:
     label: POC workflow — enterprise Playwright
-    description: The existing enterprise browser-regression profile for TypeScript Playwright suites run through npm — its validation gates run `npx --no-install tsc --noEmit` and `npx --no-install playwright test` — with governed Playwright MCP evidence and independent publication review.
+    description: The existing enterprise browser-regression profile for TypeScript
+      Playwright suites run through npm — its validation gates run `npx
+      --no-install tsc --noEmit` and `npx --no-install playwright test` — with
+      governed Playwright MCP evidence and independent publication review.
     # A governed UI-regression proof of concept: understand the requested target, calculate the
     # change footprint, observe the live UI, author repository-native Playwright tests, validate
     # them with bounded repair, and stop at a human publication decision. The selected remote base
     # and isolated Story branch are supplied by normal Story start; this profile never writes the
     # selected base branch directly.
-    phases: [poc-intake, poc-impact-analysis, poc-ui-exploration, poc-test-generation, poc-validation, poc-publication-review]
+    phases:
+      [
+        poc-intake,
+        poc-impact-analysis,
+        poc-ui-exploration,
+        poc-test-generation,
+        poc-validation,
+        poc-publication-review
+      ]
     plannedClaims:
       mode: required
-      clausePhases: [poc-intake]
+      clausePhases: [ poc-intake ]
       owners: { poc-test-generation: poc-ui-exploration }
     templateOverrides:
       poc-intake: poc-workflow/intake.md
@@ -1001,24 +1558,43 @@ workTypes:
       poc-publication-review: poc-workflow/publication-review.md
     phaseOverrides:
       poc-intake: { artifact: { kind: requirements } }
-      poc-impact-analysis: { inputs: [poc-intake] }
-      poc-ui-exploration: { inputs: [poc-intake, poc-impact-analysis] }
-      poc-test-generation: { inputs: [poc-intake, poc-impact-analysis, poc-ui-exploration] }
-      poc-validation: { inputs: [poc-impact-analysis, poc-ui-exploration, poc-test-generation] }
-      poc-publication-review: { inputs: [poc-intake, poc-impact-analysis, poc-ui-exploration, poc-test-generation, poc-validation] }
+      poc-impact-analysis: { inputs: [ poc-intake ] }
+      poc-ui-exploration: { inputs: [ poc-intake, poc-impact-analysis ] }
+      poc-test-generation: { inputs: [ poc-intake, poc-impact-analysis, poc-ui-exploration ] }
+      poc-validation: { inputs: [ poc-impact-analysis, poc-ui-exploration, poc-test-generation ] }
+      poc-publication-review:
+        {
+          inputs:
+            [
+              poc-intake,
+              poc-impact-analysis,
+              poc-ui-exploration,
+              poc-test-generation,
+              poc-validation
+            ]
+        }
 
   reference-driven-build:
     label: Reference-driven build
-    description: Creates a new implementation in the delivery repository from one or more immutable, read-only repository branches pinned at Story intake.
+    description: Creates a new implementation in the delivery repository from one or
+      more immutable, read-only repository branches pinned at Story intake.
     references: { mode: required }
-    phases: [specification, planning, implementation, convergence, verification, release]
+    phases:
+      [
+        specification,
+        planning,
+        implementation,
+        convergence,
+        verification,
+        release
+      ]
     # Supporting documents belong to the phases that read sources: the specification cites them
     # and planning checks the plan against them.
-    documents: { allowedPhases: [specification, planning] }
+    documents: { allowedPhases: [ specification, planning ] }
     spec: { mode: enforce }
     plannedClaims:
       mode: required
-      clausePhases: [specification]
+      clausePhases: [ specification ]
       owners: { implementation: planning }
     templateOverrides:
       specification: spec-driven/spec.md
@@ -1027,32 +1603,48 @@ workTypes:
     # Every reviewed step may return the Story to any earlier step or to itself; the shared
     # planning, convergence and release steps already declare these returns.
     phaseOverrides:
-      planning: { inputs: [specification] }
+      planning: { inputs: [ specification ] }
       implementation:
-        inputs: [specification, planning]
-        approval: { rejectTo: [specification, planning, implementation] }
-      convergence: { inputs: [specification, planning, implementation] }
+        inputs: [ specification, planning ]
+        approval: { rejectTo: [ specification, planning, implementation ] }
+      convergence: { inputs: [ specification, planning, implementation ] }
       verification:
-        inputs: [specification, planning, implementation]
-        approval: { rejectTo: [specification, planning, implementation, convergence, verification] }
-      release: { inputs: [verification] }
+        inputs: [ specification, planning, implementation ]
+        approval:
+          {
+            rejectTo: [ specification, planning, implementation, convergence, verification ]
+          }
+      release: { inputs: [ verification ] }
 
   spec-driven-standard:
     label: Spec-Driven Standard
     # This profile promises clause-level continuity. Display-only labels such as "AC-001" must be
     # replaced with stable [WORK-ID:AC-001] anchors before its specification can be approved.
     spec: { mode: enforce, coverage: enforce }
-    sourceReview: { mode: enforce, phases: [specification, planning], reviewerAgent: sflow-source-reviewer }
+    sourceReview:
+      {
+        mode: enforce,
+        phases: [ specification, planning ],
+        reviewerAgent: sflow-source-reviewer
+      }
     # Supporting documents belong to the phases that read sources: the specification cites them
     # and planning checks the plan against them.
-    documents: { allowedPhases: [specification, planning] }
+    documents: { allowedPhases: [ specification, planning ] }
     plannedClaims:
       mode: required
-      clausePhases: [specification]
+      clausePhases: [ specification ]
       owners: { implementation: planning }
     # specification -> planning -> implementation -> convergence -> verification -> release
     # [SPK:REQ-031]
-    phases: [specification, planning, implementation, convergence, verification, release]
+    phases:
+      [
+        specification,
+        planning,
+        implementation,
+        convergence,
+        verification,
+        release
+      ]
     # The five verbs, and the milestone each one proves from workflow state [SPK:REQ-012..016].
     # A milestone is reached only when the state proves it — never because a command returned
     # successfully [SPK:CON-011].
@@ -1064,7 +1656,7 @@ workTypes:
       # Verification owns the terminal release phase as well. Keeping release outside every verb
       # lets the five-verb rail report its final milestone while a Story still has governed work
       # remaining. The milestone is therefore reached only when both phases are complete.
-      verify: { milestone: release-approved, phases: [verification, release] }
+      verify: { milestone: release-approved, phases: [ verification, release ] }
     # One constitution per approved configuration [SPK:REQ-090]. Shipped at `warn` rather than
     # `enforce` because `init` does not create one and the shipped examples must never become
     # active policy on installation [SPK:REQ-099] — so `enforce` out of the box would refuse every
@@ -1086,27 +1678,148 @@ workTypes:
     phaseOverrides:
       planning:
         inputs:
-          - { phase: specification, projection: approved-summary, preserve: [Actors, User scenarios, Failure and empty states, Permissions, Boundary conditions, Requirements, Non-functional requirements, Assumptions, Out of scope], maximumSummaryBytes: 32768, expansion: hash-bound-reference, fallback: block }
+          - {
+              phase: specification,
+              projection: approved-summary,
+              preserve:
+                [
+                  Actors,
+                  User scenarios,
+                  Failure and empty states,
+                  Permissions,
+                  Boundary conditions,
+                  Requirements,
+                  Non-functional requirements,
+                  Assumptions,
+                  Out of scope
+                ],
+              maximumSummaryBytes: 32768,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
       implementation:
         inputs:
-          - { phase: specification, projection: approved-summary, preserve: [Actors, User scenarios, Failure and empty states, Permissions, Boundary conditions, Requirements, Non-functional requirements, Assumptions, Out of scope], maximumSummaryBytes: 32768, expansion: hash-bound-reference, fallback: block }
-          - { phase: planning, projection: approved-summary, preserve: [Test strategy, Risks and rollback], maximumSummaryBytes: 24576, expansion: hash-bound-reference, fallback: block }
-        approval: { rejectTo: [specification, planning, implementation] }
+          - {
+              phase: specification,
+              projection: approved-summary,
+              preserve:
+                [
+                  Actors,
+                  User scenarios,
+                  Failure and empty states,
+                  Permissions,
+                  Boundary conditions,
+                  Requirements,
+                  Non-functional requirements,
+                  Assumptions,
+                  Out of scope
+                ],
+              maximumSummaryBytes: 32768,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+          - {
+              phase: planning,
+              projection: approved-summary,
+              preserve: [ Test strategy, Risks and rollback ],
+              maximumSummaryBytes: 24576,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+        approval: { rejectTo: [ specification, planning, implementation ] }
       convergence:
         inputs:
-          - { phase: specification, projection: approved-summary, preserve: [Actors, User scenarios, Failure and empty states, Permissions, Boundary conditions, Requirements, Non-functional requirements, Assumptions, Out of scope], maximumSummaryBytes: 32768, expansion: hash-bound-reference, fallback: block }
-          - { phase: planning, projection: approved-summary, preserve: [Test strategy, Risks and rollback], maximumSummaryBytes: 24576, expansion: hash-bound-reference, fallback: block }
-          - { phase: implementation, projection: approved-summary, preserve: [Changed components and decisions, Tests and operational notes], maximumSummaryBytes: 24576, expansion: hash-bound-reference, fallback: block }
+          - {
+              phase: specification,
+              projection: approved-summary,
+              preserve:
+                [
+                  Actors,
+                  User scenarios,
+                  Failure and empty states,
+                  Permissions,
+                  Boundary conditions,
+                  Requirements,
+                  Non-functional requirements,
+                  Assumptions,
+                  Out of scope
+                ],
+              maximumSummaryBytes: 32768,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+          - {
+              phase: planning,
+              projection: approved-summary,
+              preserve: [ Test strategy, Risks and rollback ],
+              maximumSummaryBytes: 24576,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+          - {
+              phase: implementation,
+              projection: approved-summary,
+              preserve: [ Changed components and decisions, Tests and operational notes ],
+              maximumSummaryBytes: 24576,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
       verification:
         inputs:
-          - { phase: specification, projection: approved-summary, preserve: [Actors, User scenarios, Failure and empty states, Permissions, Boundary conditions, Requirements, Non-functional requirements, Assumptions, Out of scope], maximumSummaryBytes: 32768, expansion: hash-bound-reference, fallback: block }
-          - { phase: planning, projection: approved-summary, preserve: [Test strategy, Risks and rollback], maximumSummaryBytes: 24576, expansion: hash-bound-reference, fallback: block }
-          - { phase: implementation, projection: approved-summary, preserve: [Changed components and decisions, Tests and operational notes], maximumSummaryBytes: 24576, expansion: hash-bound-reference, fallback: block }
-        approval: { rejectTo: [specification, planning, implementation, convergence, verification] }
+          - {
+              phase: specification,
+              projection: approved-summary,
+              preserve:
+                [
+                  Actors,
+                  User scenarios,
+                  Failure and empty states,
+                  Permissions,
+                  Boundary conditions,
+                  Requirements,
+                  Non-functional requirements,
+                  Assumptions,
+                  Out of scope
+                ],
+              maximumSummaryBytes: 32768,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+          - {
+              phase: planning,
+              projection: approved-summary,
+              preserve: [ Test strategy, Risks and rollback ],
+              maximumSummaryBytes: 24576,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+          - {
+              phase: implementation,
+              projection: approved-summary,
+              preserve: [ Changed components and decisions, Tests and operational notes ],
+              maximumSummaryBytes: 24576,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
+        approval:
+          {
+            rejectTo: [ specification, planning, implementation, convergence, verification ]
+          }
       release:
         inputs:
           - { phase: convergence }
-          - { phase: verification, projection: approved-summary, preserve: [Acceptance and specification results, "Negative, regression, security, and non-functional checks"], maximumSummaryBytes: 24576, expansion: hash-bound-reference, fallback: block }
+          - {
+              phase: verification,
+              projection: approved-summary,
+              preserve:
+                [
+                  Acceptance and specification results,
+                  "Negative, regression, security, and non-functional checks"
+                ],
+              maximumSummaryBytes: 24576,
+              expansion: hash-bound-reference,
+              fallback: block
+            }
 phases:
   intake:
     label: Intake
@@ -1115,19 +1828,29 @@ phases:
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [problem, outcome, users, scope, constraints]
+      topics: [ problem, outcome, users, scope, constraints ]
     writeScope: artifact-only
-    approval: { authorities: [product-approvers], minimum: 1, rejectTo: [intake] }
+    approval: { authorities: [ product-approvers ], minimum: 1, rejectTo: [ intake ] }
   requirements:
     label: Requirements
     defaultTemplate: feature/requirements.md
-    artifact: { path: artifacts/requirements/requirements.md, kind: requirements, minimumBytes: 300 }
+    artifact:
+      {
+        path: artifacts/requirements/requirements.md,
+        kind: requirements,
+        minimumBytes: 300
+      }
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [scope, acceptance criteria, dependencies, constraints, risks]
+      topics: [ scope, acceptance criteria, dependencies, constraints, risks ]
     writeScope: artifact-only
-    approval: { authorities: [product-approvers], minimum: 1, rejectTo: [intake, requirements] }
+    approval:
+      {
+        authorities: [ product-approvers ],
+        minimum: 1,
+        rejectTo: [ intake, requirements ]
+      }
   design:
     label: Architecture and design
     defaultTemplate: feature/design.md
@@ -1135,107 +1858,231 @@ phases:
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [boundaries, contracts, failure behavior, security, migration]
+      topics: [ boundaries, contracts, failure behavior, security, migration ]
     writeScope: artifact-only
-    approval: { authorities: [architecture-reviewers], minimum: 1, rejectTo: [requirements, design] }
+    approval:
+      {
+        authorities: [ architecture-reviewers ],
+        minimum: 1,
+        rejectTo: [ requirements, design ]
+      }
   implementation-spec:
     label: Implementation specification
     defaultTemplate: feature/implementation-spec.md
-    artifact: { path: artifacts/implementation-spec/implementation-spec.md, kind: implementation-spec, minimumBytes: 400 }
+    artifact:
+      {
+        path: artifacts/implementation-spec/implementation-spec.md,
+        kind: implementation-spec,
+        minimumBytes: 400
+      }
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [interfaces, data, security, observability, migration, tests]
+      topics: [ interfaces, data, security, observability, migration, tests ]
     writeScope: artifact-only
-    approval: { authorities: [architecture-reviewers], minimum: 1, rejectTo: [intake, requirements, design, implementation-spec] }
+    approval:
+      {
+        authorities: [ architecture-reviewers ],
+        minimum: 1,
+        rejectTo: [ intake, requirements, design, implementation-spec ]
+      }
   reproduction:
     label: Reproduction
     defaultTemplate: bugfix/reproduction.md
-    artifact: { path: artifacts/reproduction/reproduction.md, kind: reproduction, minimumBytes: 250 }
+    artifact:
+      {
+        path: artifacts/reproduction/reproduction.md,
+        kind: reproduction,
+        minimumBytes: 250
+      }
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [observed behavior, expected behavior, reproduction, environment, impact]
+      topics: [ observed behavior, expected behavior, reproduction, environment, impact ]
     writeScope: artifact-only
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [intake, reproduction] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ intake, reproduction ]
+      }
   fix-design:
     label: Fix design
     defaultTemplate: bugfix/fix-design.md
-    artifact: { path: artifacts/fix-design/fix-design.md, kind: fix-design, minimumBytes: 250 }
+    artifact:
+      {
+        path: artifacts/fix-design/fix-design.md,
+        kind: fix-design,
+        minimumBytes: 250
+      }
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [root cause, scope, regression risk, compatibility, rollback]
+      topics: [ root cause, scope, regression risk, compatibility, rollback ]
     writeScope: artifact-only
-    approval: { authorities: [architecture-reviewers], minimum: 1, rejectTo: [intake, reproduction, fix-design] }
+    approval:
+      {
+        authorities: [ architecture-reviewers ],
+        minimum: 1,
+        rejectTo: [ intake, reproduction, fix-design ]
+      }
   fix-spec:
     label: Fix specification
     defaultTemplate: bugfix/fix-spec.md
-    artifact: { path: artifacts/fix-spec/fix-spec.md, kind: implementation-spec, minimumBytes: 300 }
+    artifact:
+      {
+        path: artifacts/fix-spec/fix-spec.md,
+        kind: implementation-spec,
+        minimumBytes: 300
+      }
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [changed behavior, test expectations, compatibility, failure behavior, rollback]
+      topics:
+        [
+          changed behavior,
+          test expectations,
+          compatibility,
+          failure behavior,
+          rollback
+        ]
     writeScope: artifact-only
-    approval: { authorities: [architecture-reviewers], minimum: 1, rejectTo: [intake, reproduction, fix-design, fix-spec] }
+    approval:
+      {
+        authorities: [ architecture-reviewers ],
+        minimum: 1,
+        rejectTo: [ intake, reproduction, fix-design, fix-spec ]
+      }
   design-intake:
     label: Design package intake
     defaultTemplate: figma-mobile/design-intake.md
-    artifact: { path: artifacts/design-intake/design-package-intake.md, kind: design-intake, minimumBytes: 350 }
+    artifact:
+      {
+        path: artifacts/design-intake/design-package-intake.md,
+        kind: design-intake,
+        minimumBytes: 350
+      }
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [target platforms, screen states, interactions, accessibility, design constraints]
+      topics:
+        [
+          target platforms,
+          screen states,
+          interactions,
+          accessibility,
+          design constraints
+        ]
     writeScope: artifact-only
-    approval: { authorities: [design-reviewers], minimum: 1, rejectTo: [design-intake] }
+    approval: { authorities: [ design-reviewers ], minimum: 1, rejectTo: [ design-intake ] }
   design-inventory:
     label: Screen and design inventory
     defaultTemplate: figma-mobile/design-inventory.md
-    artifact: { path: artifacts/design-inventory/design-inventory.md, kind: design-inventory, minimumBytes: 500 }
+    artifact:
+      {
+        path: artifacts/design-inventory/design-inventory.md,
+        kind: design-inventory,
+        minimumBytes: 500
+      }
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [screen states, transitions, assets, responsive behavior, evidence gaps]
+      topics: [ screen states, transitions, assets, responsive behavior, evidence gaps ]
     writeScope: artifact-only
-    approval: { authorities: [design-reviewers], minimum: 1, rejectTo: [design-intake, design-inventory] }
+    approval:
+      {
+        authorities: [ design-reviewers ],
+        minimum: 1,
+        rejectTo: [ design-intake, design-inventory ]
+      }
   component-mapping:
     label: Mobile component mapping
     defaultTemplate: figma-mobile/component-mapping.md
-    artifact: { path: artifacts/component-mapping/component-mapping.md, kind: component-mapping, minimumBytes: 500 }
+    artifact:
+      {
+        path: artifacts/component-mapping/component-mapping.md,
+        kind: component-mapping,
+        minimumBytes: 500
+      }
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [component ownership, navigation, state, data contracts, accessibility]
+      topics: [ component ownership, navigation, state, data contracts, accessibility ]
     writeScope: artifact-only
-    approval: { authorities: [architecture-reviewers], minimum: 1, rejectTo: [design-intake, design-inventory, component-mapping] }
+    approval:
+      {
+        authorities: [ architecture-reviewers ],
+        minimum: 1,
+        rejectTo: [ design-intake, design-inventory, component-mapping ]
+      }
   mobile-spec:
     label: Mobile implementation specification
     defaultTemplate: figma-mobile/mobile-spec.md
-    artifact: { path: artifacts/mobile-spec/mobile-spec.md, kind: implementation-spec, minimumBytes: 700 }
+    artifact:
+      {
+        path: artifacts/mobile-spec/mobile-spec.md,
+        kind: implementation-spec,
+        minimumBytes: 700
+      }
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [behavior, interfaces, failure states, analytics, testing]
+      topics: [ behavior, interfaces, failure states, analytics, testing ]
     writeScope: artifact-only
-    approval: { authorities: [architecture-reviewers], minimum: 1, rejectTo: [design-intake, design-inventory, component-mapping, mobile-spec] }
+    approval:
+      {
+        authorities: [ architecture-reviewers ],
+        minimum: 1,
+        rejectTo: [ design-intake, design-inventory, component-mapping, mobile-spec ]
+      }
   implementation:
     label: Implementation
     defaultTemplate: common/implementation.md
-    artifact: { path: artifacts/implementation/implementation-summary.md, kind: implementation-summary, minimumBytes: 250 }
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [approved deviations, implementation blockers] }
+    artifact:
+      {
+        path: artifacts/implementation/implementation-summary.md,
+        kind: implementation-summary,
+        minimumBytes: 250
+      }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ approved deviations, implementation blockers ]
+      }
     generation: { task: code }
     writeScope: source-and-artifact
     # Shared by many work types, so each packaged work type names its own earlier return targets in
     # its phaseOverrides. The same holds for verification, testing and conformance below.
-    approval: { authorities: [engineering-reviewers], minimum: 1, rejectTo: [implementation] }
+    approval:
+      {
+        authorities: [ engineering-reviewers ],
+        minimum: 1,
+        rejectTo: [ implementation ]
+      }
     qualityCommands: []
   verification:
     label: Verification
     defaultTemplate: common/verification.md
-    artifact: { path: artifacts/verification/test-evidence.md, kind: test-evidence, minimumBytes: 300 }
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [test gaps, environment, evidence, deviations] }
+    artifact:
+      {
+        path: artifacts/verification/test-evidence.md,
+        kind: test-evidence,
+        minimumBytes: 300
+      }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ test gaps, environment, evidence, deviations ]
+      }
     writeScope: source-and-artifact
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [implementation, verification] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ implementation, verification ]
+      }
     qualityCommands: []
     # Submission also runs the repository's own tests (npm test, mvn test, go test, ...), found from
     # its build files, unless the step names its own test command. A failing run goes to the reviewer,
@@ -1245,10 +2092,25 @@ phases:
   testing:
     label: Testing
     defaultTemplate: benchmark/testing.md
-    artifact: { path: artifacts/testing/test-evidence.md, kind: test-evidence, minimumBytes: 300 }
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [test gaps, environment, evidence, deviations] }
+    artifact:
+      {
+        path: artifacts/testing/test-evidence.md,
+        kind: test-evidence,
+        minimumBytes: 300
+      }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ test gaps, environment, evidence, deviations ]
+      }
     writeScope: source-and-artifact
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [implementation, testing] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ implementation, testing ]
+      }
     qualityCommands: []
     # As for verification. A review of one code step's committed test receipt (testEvidenceFrom)
     # does not run them again.
@@ -1256,19 +2118,61 @@ phases:
   visual-verification:
     label: Mobile visual verification
     defaultTemplate: figma-mobile/visual-verification.md
-    artifact: { path: artifacts/visual-verification/visual-comparison.md, kind: visual-test-evidence, minimumBytes: 600 }
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [visual tolerance, device evidence, accessibility, deviations] }
+    artifact:
+      {
+        path: artifacts/visual-verification/visual-comparison.md,
+        kind: visual-test-evidence,
+        minimumBytes: 600
+      }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ visual tolerance, device evidence, accessibility, deviations ]
+      }
     writeScope: source-and-artifact
-    approval: { authorities: [design-reviewers, quality-reviewers], minimum: 1, rejectTo: [design-intake, design-inventory, component-mapping, mobile-spec, implementation, visual-verification] }
+    approval:
+      {
+        authorities: [ design-reviewers, quality-reviewers ],
+        minimum: 1,
+        rejectTo:
+          [
+            design-intake,
+            design-inventory,
+            component-mapping,
+            mobile-spec,
+            implementation,
+            visual-verification
+          ]
+      }
     qualityCommands: []
   conformance:
     label: Spec-to-code conformance
     defaultTemplate: common/conformance.md
-    artifact: { path: artifacts/conformance/spec-code-comparison.md, kind: conformance-report, minimumBytes: 400 }
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [approved deviations, missing evidence, unplanned work] }
+    artifact:
+      {
+        path: artifacts/conformance/spec-code-comparison.md,
+        kind: conformance-report,
+        minimumBytes: 400
+      }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ approved deviations, missing evidence, unplanned work ]
+      }
     writeScope: artifact-only
-    comparison: { identifiers: [acceptance-criteria, specification], verdicts: [matched, partial, missing, deviated, unplanned] }
-    approval: { authorities: [quality-reviewers, architecture-reviewers], minimum: 1, rejectTo: [implementation-spec, fix-spec, implementation, verification, conformance] }
+    comparison:
+      {
+        identifiers: [ acceptance-criteria, specification ],
+        verdicts: [ matched, partial, missing, deviated, unplanned ]
+      }
+    approval:
+      {
+        authorities: [ quality-reviewers, architecture-reviewers ],
+        minimum: 1,
+        rejectTo: [ implementation-spec, fix-spec, implementation, verification, conformance ]
+      }
 
   # POC workflow phases are intentionally private to `poc-workflow`. A failed validation is
   # rejected to exploration, generation, or validation for a human-directed repair generation;
@@ -1280,12 +2184,40 @@ phases:
       path: artifacts/document-intake/intake.md
       kind: requirements
       minimumBytes: 500
-      validation: { requiredHeadings: [Approved sources, Scope and acceptance criteria, Scenario matrix, Test tool and authorized environment, Planned implementation evidence, Repair and acceptance agreement] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Approved sources,
+              Scope and acceptance criteria,
+              Scenario matrix,
+              Test tool and authorized environment,
+              Planned implementation evidence,
+              Repair and acceptance agreement
+            ]
+        }
     authoringSkill: sf-document-intake
-    clarification: { mode: required, maxQuestions: 5, topics: [source interpretation, observable acceptance, test tool, authorized target, repair boundary] }
+    clarification:
+      {
+        mode: required,
+        maxQuestions: 5,
+        topics:
+          [
+            source interpretation,
+            observable acceptance,
+            test tool,
+            authorized target,
+            repair boundary
+          ]
+      }
     generation: { task: clarify }
     writeScope: artifact-only
-    approval: { authorities: [product-approvers], minimum: 1, rejectTo: [document-intake] }
+    approval:
+      {
+        authorities: [ product-approvers ],
+        minimum: 1,
+        rejectTo: [ document-intake ]
+      }
     qualityCommands: []
   scenario-check:
     label: Test existing behavior
@@ -1294,13 +2226,33 @@ phases:
       path: artifacts/scenario-check/scenario-results.md
       kind: test-evidence
       minimumBytes: 500
-      validation: { requiredHeadings: [Pinned inputs and tested revision, Tool execution and evidence, Scenario results, Agent verdict and repair request, Human acceptance] }
-    inputs: [document-intake]
+      validation:
+        {
+          requiredHeadings:
+            [
+              Pinned inputs and tested revision,
+              Tool execution and evidence,
+              Scenario results,
+              Agent verdict and repair request,
+              Human acceptance
+            ]
+        }
+    inputs: [ document-intake ]
     authoringSkill: sf-scenario-check
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [test access, inconclusive evidence, defect classification] }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ test access, inconclusive evidence, defect classification ]
+      }
     generation: { task: analyze }
     writeScope: artifact-only
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [document-intake, scenario-check] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ document-intake, scenario-check ]
+      }
     # Negative observations are reviewable reports, not passing quality gates. The tester runs the
     # intake's authorized commands/tools and retains their results. Code repair has its own kernel
     # structured-test publication gate; optional MCP observations never replace that receipt.
@@ -1312,12 +2264,31 @@ phases:
       path: artifacts/scenario-repair/implementation-summary.md
       kind: implementation-summary
       minimumBytes: 400
-      validation: { requiredHeadings: [Approved defect and scope, Changes and clause bindings, Test results and regression evidence, Remaining risks] }
-    inputs: [document-intake, scenario-check]
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [root cause, authorized scope, repair risks] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Approved defect and scope,
+              Changes and clause bindings,
+              Test results and regression evidence,
+              Remaining risks
+            ]
+        }
+    inputs: [ document-intake, scenario-check ]
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ root cause, authorized scope, repair risks ]
+      }
     generation: { task: code }
     writeScope: source-and-artifact
-    approval: { authorities: [engineering-reviewers], minimum: 1, rejectTo: [document-intake, scenario-check, scenario-repair] }
+    approval:
+      {
+        authorities: [ engineering-reviewers ],
+        minimum: 1,
+        rejectTo: [ document-intake, scenario-check, scenario-repair ]
+      }
     qualityCommands: []
   scenario-retest:
     label: Retest and accept
@@ -1326,14 +2297,34 @@ phases:
       path: artifacts/scenario-retest/scenario-results.md
       kind: test-evidence
       minimumBytes: 500
-      validation: { requiredHeadings: [Pinned inputs and tested revision, Tool execution and evidence, Scenario results, Agent verdict and repair request, Human acceptance] }
-    inputs: [document-intake, scenario-check, scenario-repair]
+      validation:
+        {
+          requiredHeadings:
+            [
+              Pinned inputs and tested revision,
+              Tool execution and evidence,
+              Scenario results,
+              Agent verdict and repair request,
+              Human acceptance
+            ]
+        }
+    inputs: [ document-intake, scenario-check, scenario-repair ]
     testEvidenceFrom: scenario-repair
     authoringSkill: sf-scenario-check
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [test access, inconclusive evidence, remaining defects] }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ test access, inconclusive evidence, remaining defects ]
+      }
     generation: { task: analyze }
     writeScope: artifact-only
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [document-intake, scenario-check, scenario-repair, scenario-retest] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ document-intake, scenario-check, scenario-repair, scenario-retest ]
+      }
     qualityCommands: []
 
   demo-web-intake:
@@ -1343,12 +2334,40 @@ phases:
       path: artifacts/demo-web-intake/intake.md
       kind: requirements
       minimumBytes: 500
-      validation: { requiredHeadings: [Approved screenshots, Scope and acceptance criteria, Scenario matrix, Test environment and commands, Planned implementation evidence, Repair and acceptance agreement] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Approved screenshots,
+              Scope and acceptance criteria,
+              Scenario matrix,
+              Test environment and commands,
+              Planned implementation evidence,
+              Repair and acceptance agreement
+            ]
+        }
     authoringSkill: sf-document-intake
-    clarification: { mode: required, maxQuestions: 5, topics: [screenshot interpretation, visual tolerance, interaction expectations, test environment, repair boundary] }
+    clarification:
+      {
+        mode: required,
+        maxQuestions: 5,
+        topics:
+          [
+            screenshot interpretation,
+            visual tolerance,
+            interaction expectations,
+            test environment,
+            repair boundary
+          ]
+      }
     generation: { task: clarify }
     writeScope: artifact-only
-    approval: { authorities: [product-approvers], minimum: 1, rejectTo: [demo-web-intake] }
+    approval:
+      {
+        authorities: [ product-approvers ],
+        minimum: 1,
+        rejectTo: [ demo-web-intake ]
+      }
     qualityCommands: []
   demo-web-check:
     label: Check current web application
@@ -1357,13 +2376,34 @@ phases:
       path: artifacts/demo-web-check/web-e2e-results.md
       kind: test-evidence
       minimumBytes: 500
-      validation: { requiredHeadings: [Pinned inputs and tested revision, Browser and test execution, Screenshot comparison, Scenario results, Agent verdict and repair request, Human acceptance] }
-    inputs: [demo-web-intake]
+      validation:
+        {
+          requiredHeadings:
+            [
+              Pinned inputs and tested revision,
+              Browser and test execution,
+              Screenshot comparison,
+              Scenario results,
+              Agent verdict and repair request,
+              Human acceptance
+            ]
+        }
+    inputs: [ demo-web-intake ]
     authoringSkill: sf-scenario-check
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [test access, ambiguous screenshots, defect classification] }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ test access, ambiguous screenshots, defect classification ]
+      }
     generation: { task: analyze }
     writeScope: artifact-only
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [demo-web-intake, demo-web-check] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ demo-web-intake, demo-web-check ]
+      }
     qualityCommands: []
   demo-web-repair:
     label: Repair web code and regression tests
@@ -1372,12 +2412,31 @@ phases:
       path: artifacts/demo-web-repair/implementation-summary.md
       kind: implementation-summary
       minimumBytes: 400
-      validation: { requiredHeadings: [Approved defect and scope, Changes and clause bindings, Test results and regression evidence, Remaining risks] }
-    inputs: [demo-web-intake, demo-web-check]
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [root cause, allowed paths, repair risks] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Approved defect and scope,
+              Changes and clause bindings,
+              Test results and regression evidence,
+              Remaining risks
+            ]
+        }
+    inputs: [ demo-web-intake, demo-web-check ]
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ root cause, allowed paths, repair risks ]
+      }
     generation: { task: code }
     writeScope: source-and-artifact
-    approval: { authorities: [engineering-reviewers], minimum: 1, rejectTo: [demo-web-intake, demo-web-check, demo-web-repair] }
+    approval:
+      {
+        authorities: [ engineering-reviewers ],
+        minimum: 1,
+        rejectTo: [ demo-web-intake, demo-web-check, demo-web-repair ]
+      }
     qualityCommands: []
   demo-web-retest:
     label: Retest web behavior and accept
@@ -1386,14 +2445,35 @@ phases:
       path: artifacts/demo-web-retest/web-e2e-results.md
       kind: test-evidence
       minimumBytes: 500
-      validation: { requiredHeadings: [Pinned inputs and tested revision, Browser and test execution, Screenshot comparison, Scenario results, Agent verdict and repair request, Human acceptance] }
-    inputs: [demo-web-intake, demo-web-check, demo-web-repair]
+      validation:
+        {
+          requiredHeadings:
+            [
+              Pinned inputs and tested revision,
+              Browser and test execution,
+              Screenshot comparison,
+              Scenario results,
+              Agent verdict and repair request,
+              Human acceptance
+            ]
+        }
+    inputs: [ demo-web-intake, demo-web-check, demo-web-repair ]
     testEvidenceFrom: demo-web-repair
     authoringSkill: sf-scenario-check
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [test access, inconclusive evidence, remaining defects] }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ test access, inconclusive evidence, remaining defects ]
+      }
     generation: { task: analyze }
     writeScope: artifact-only
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [demo-web-intake, demo-web-check, demo-web-repair, demo-web-retest] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ demo-web-intake, demo-web-check, demo-web-repair, demo-web-retest ]
+      }
     qualityCommands: []
 
   demo-intake:
@@ -1403,12 +2483,35 @@ phases:
       path: artifacts/demo-intake/intake.md
       kind: requirements
       minimumBytes: 500
-      validation: { requiredHeadings: [Approved sources, Scope and acceptance criteria, Scenario matrix, Test environment and commands, Planned implementation evidence, Routing and human checkpoints] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Approved sources,
+              Scope and acceptance criteria,
+              Scenario matrix,
+              Test environment and commands,
+              Planned implementation evidence,
+              Routing and human checkpoints
+            ]
+        }
     authoringSkill: sf-document-intake
-    clarification: { mode: required, maxQuestions: 5, topics: [source interpretation, expected behavior, test environment, repair scope, human checkpoints] }
+    clarification:
+      {
+        mode: required,
+        maxQuestions: 5,
+        topics:
+          [
+            source interpretation,
+            expected behavior,
+            test environment,
+            repair scope,
+            human checkpoints
+          ]
+      }
     generation: { task: clarify }
     writeScope: artifact-only
-    approval: { authorities: [product-approvers], minimum: 1, rejectTo: [demo-intake] }
+    approval: { authorities: [ product-approvers ], minimum: 1, rejectTo: [ demo-intake ] }
     qualityCommands: []
   demo-check:
     label: Check code against approved scenarios
@@ -1417,13 +2520,34 @@ phases:
       path: artifacts/demo-check/check-results.md
       kind: test-evidence
       minimumBytes: 500
-      validation: { requiredHeadings: [Pinned inputs and tested revision, Test execution and evidence, Source and visual comparison, Scenario results, Verdict and repair request, Human checkpoint] }
-    inputs: [demo-intake]
+      validation:
+        {
+          requiredHeadings:
+            [
+              Pinned inputs and tested revision,
+              Test execution and evidence,
+              Source and visual comparison,
+              Scenario results,
+              Verdict and repair request,
+              Human checkpoint
+            ]
+        }
+    inputs: [ demo-intake ]
     authoringSkill: sf-scenario-check
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [test access, inconclusive evidence, defect classification] }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ test access, inconclusive evidence, defect classification ]
+      }
     generation: { task: analyze }
     writeScope: artifact-only
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [demo-intake, demo-check] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ demo-intake, demo-check ]
+      }
     # Failure reports must be reviewable so they can authorize repair. Their actual execution
     # evidence is retained in the report; failed or unavailable tests cannot produce verdict=pass.
     qualityCommands: []
@@ -1434,12 +2558,32 @@ phases:
       path: artifacts/demo-repair/implementation-summary.md
       kind: implementation-summary
       minimumBytes: 400
-      validation: { requiredHeadings: [Agent brief, Approved defect and scope, Changes and clause bindings, Test results and regression evidence, Handoff and remaining risks] }
-    inputs: [demo-intake, demo-check]
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [root cause, allowed paths, repair risks] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Agent brief,
+              Approved defect and scope,
+              Changes and clause bindings,
+              Test results and regression evidence,
+              Handoff and remaining risks
+            ]
+        }
+    inputs: [ demo-intake, demo-check ]
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ root cause, allowed paths, repair risks ]
+      }
     generation: { task: code }
     writeScope: source-and-artifact
-    approval: { authorities: [engineering-reviewers], minimum: 1, rejectTo: [demo-intake, demo-check, demo-repair] }
+    approval:
+      {
+        authorities: [ engineering-reviewers ],
+        minimum: 1,
+        rejectTo: [ demo-intake, demo-check, demo-repair ]
+      }
     qualityCommands: []
   demo-close:
     label: Closing documents and human acceptance
@@ -1448,12 +2592,33 @@ phases:
       path: artifacts/demo-close/closing-report.md
       kind: publication-review
       minimumBytes: 500
-      validation: { requiredHeadings: [Agent brief, Approved scope and final revision, Final check and evidence, Repair history and no-change accounting, Residual risks and operational handoff, Human closing decision] }
-    inputs: [demo-intake, demo-check, { phase: demo-repair, optional: true }]
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [residual risk, final acceptance, operational handoff] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Agent brief,
+              Approved scope and final revision,
+              Final check and evidence,
+              Repair history and no-change accounting,
+              Residual risks and operational handoff,
+              Human closing decision
+            ]
+        }
+    inputs: [ demo-intake, demo-check, { phase: demo-repair, optional: true } ]
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ residual risk, final acceptance, operational handoff ]
+      }
     generation: { task: summarize }
     writeScope: artifact-only
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [demo-intake, demo-check, demo-repair, demo-close] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ demo-intake, demo-check, demo-repair, demo-close ]
+      }
     qualityCommands: []
 
   demo-instruction-intake:
@@ -1463,12 +2628,40 @@ phases:
       path: artifacts/demo-instruction-intake/intake.md
       kind: requirements
       minimumBytes: 500
-      validation: { requiredHeadings: [Approved sources, Scope and acceptance criteria, Scenario matrix, Test environment and commands, Planned implementation evidence, Routing and human checkpoints] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Approved sources,
+              Scope and acceptance criteria,
+              Scenario matrix,
+              Test environment and commands,
+              Planned implementation evidence,
+              Routing and human checkpoints
+            ]
+        }
     authoringSkill: sf-document-intake
-    clarification: { mode: required, maxQuestions: 5, topics: [source interpretation, expected behavior, test tools, repair scope, human checkpoints] }
+    clarification:
+      {
+        mode: required,
+        maxQuestions: 5,
+        topics:
+          [
+            source interpretation,
+            expected behavior,
+            test tools,
+            repair scope,
+            human checkpoints
+          ]
+      }
     generation: { task: clarify }
     writeScope: artifact-only
-    approval: { authorities: [product-approvers], minimum: 1, rejectTo: [demo-instruction-intake] }
+    approval:
+      {
+        authorities: [ product-approvers ],
+        minimum: 1,
+        rejectTo: [ demo-instruction-intake ]
+      }
     qualityCommands: []
   demo-instruction-test:
     label: Instruction demo — Test and compare
@@ -1477,13 +2670,34 @@ phases:
       path: artifacts/demo-instruction-test/test-results.md
       kind: test-evidence
       minimumBytes: 500
-      validation: { requiredHeadings: [Pinned inputs and tested revision, Test execution and evidence, Source and visual comparison, Scenario results, Verdict and repair request, Human checkpoint] }
-    inputs: [demo-instruction-intake]
+      validation:
+        {
+          requiredHeadings:
+            [
+              Pinned inputs and tested revision,
+              Test execution and evidence,
+              Source and visual comparison,
+              Scenario results,
+              Verdict and repair request,
+              Human checkpoint
+            ]
+        }
+    inputs: [ demo-instruction-intake ]
     authoringSkill: sf-scenario-check
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [test access, missing evidence, defect classification] }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ test access, missing evidence, defect classification ]
+      }
     generation: { task: analyze }
     writeScope: artifact-only
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [demo-instruction-intake, demo-instruction-test] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ demo-instruction-intake, demo-instruction-test ]
+      }
     qualityCommands: []
   demo-instruction-repair:
     label: Instruction demo — Repair
@@ -1492,12 +2706,32 @@ phases:
       path: artifacts/demo-instruction-repair/implementation-summary.md
       kind: implementation-summary
       minimumBytes: 400
-      validation: { requiredHeadings: [Agent brief, Approved defect and scope, Changes and clause bindings, Test results and regression evidence, Handoff and remaining risks] }
-    inputs: [demo-instruction-intake, demo-instruction-test]
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [root cause, allowed paths, repair risks] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Agent brief,
+              Approved defect and scope,
+              Changes and clause bindings,
+              Test results and regression evidence,
+              Handoff and remaining risks
+            ]
+        }
+    inputs: [ demo-instruction-intake, demo-instruction-test ]
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ root cause, allowed paths, repair risks ]
+      }
     generation: { task: code }
     writeScope: source-and-artifact
-    approval: { authorities: [engineering-reviewers], minimum: 1, rejectTo: [demo-instruction-intake, demo-instruction-test, demo-instruction-repair] }
+    approval:
+      {
+        authorities: [ engineering-reviewers ],
+        minimum: 1,
+        rejectTo: [ demo-instruction-intake, demo-instruction-test, demo-instruction-repair ]
+      }
     qualityCommands: []
   demo-instruction-close:
     label: Instruction demo — Close
@@ -1506,12 +2740,44 @@ phases:
       path: artifacts/demo-instruction-close/closing-report.md
       kind: publication-review
       minimumBytes: 500
-      validation: { requiredHeadings: [Agent brief, Approved scope and final revision, Final check and evidence, Repair history and no-change accounting, Residual risks and operational handoff, Human closing decision] }
-    inputs: [demo-instruction-intake, demo-instruction-test, { phase: demo-instruction-repair, optional: true }]
+      validation:
+        {
+          requiredHeadings:
+            [
+              Agent brief,
+              Approved scope and final revision,
+              Final check and evidence,
+              Repair history and no-change accounting,
+              Residual risks and operational handoff,
+              Human closing decision
+            ]
+        }
+    inputs:
+      [
+        demo-instruction-intake,
+        demo-instruction-test,
+        { phase: demo-instruction-repair, optional: true }
+      ]
     generation: { task: summarize }
     writeScope: artifact-only
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [final acceptance, residual risk] }
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [demo-instruction-intake, demo-instruction-test, demo-instruction-repair, demo-instruction-close] }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ final acceptance, residual risk ]
+      }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo:
+          [
+            demo-instruction-intake,
+            demo-instruction-test,
+            demo-instruction-repair,
+            demo-instruction-close
+          ]
+      }
     qualityCommands: []
 
   poc-intake:
@@ -1521,14 +2787,31 @@ phases:
       path: artifacts/poc-intake/intake.md
       kind: poc-intake
       minimumBytes: 500
-      validation: { requiredHeadings: [Objective and scope, Repository and branch context, Target environment, Test intent and acceptance criteria, Safety and access] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Objective and scope,
+              Repository and branch context,
+              Target environment,
+              Test intent and acceptance criteria,
+              Safety and access
+            ]
+        }
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [test intent, target environment, acceptance criteria, access and safety, exclusions]
+      topics:
+        [
+          test intent,
+          target environment,
+          acceptance criteria,
+          access and safety,
+          exclusions
+        ]
     writeScope: artifact-only
     generation: { task: clarify }
-    approval: { authorities: [product-approvers], minimum: 1, rejectTo: [poc-intake] }
+    approval: { authorities: [ product-approvers ], minimum: 1, rejectTo: [ poc-intake ] }
   poc-impact-analysis:
     label: Regression impact analysis
     defaultTemplate: poc-workflow/impact-analysis.md
@@ -1536,11 +2819,31 @@ phases:
       path: artifacts/poc-impact-analysis/impact-analysis.md
       kind: impact-analysis
       minimumBytes: 600
-      validation: { requiredHeadings: [Compared revisions, Changed-code evidence, Regression footprint, Proposed scenarios, Risks and unknowns] }
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [change boundary, affected routes, test seams, risk, unknowns] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Compared revisions,
+              Changed-code evidence,
+              Regression footprint,
+              Proposed scenarios,
+              Risks and unknowns
+            ]
+        }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics: [ change boundary, affected routes, test seams, risk, unknowns ]
+      }
     writeScope: artifact-only
     generation: { task: analyze }
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [poc-intake, poc-impact-analysis] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ poc-intake, poc-impact-analysis ]
+      }
   poc-ui-exploration:
     label: Governed UI exploration
     defaultTemplate: poc-workflow/ui-exploration.md
@@ -1548,18 +2851,60 @@ phases:
       path: artifacts/poc-ui-exploration/ui-exploration.md
       kind: ui-exploration-evidence
       minimumBytes: 700
-      validation: { requiredHeadings: [Authorized target, Observed journeys and states, Accessibility and locator evidence, Visual and runtime evidence, Coverage gaps] }
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [environment access, test data, observed behavior, accessibility, evidence gaps] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Authorized target,
+              Observed journeys and states,
+              Accessibility and locator evidence,
+              Visual and runtime evidence,
+              Coverage gaps
+            ]
+        }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics:
+          [
+            environment access,
+            test data,
+            observed behavior,
+            accessibility,
+            evidence gaps
+          ]
+      }
     writeScope: artifact-only
     generation: { task: analyze }
     mcp:
-      requiredServers: [playwright]
+      requiredServers: [ playwright ]
       requireSmoke: true
       evidence:
-        - { server: playwright, tool: browser_navigate, minimum: 1, outputRequired: false }
-        - { server: playwright, tool: browser_snapshot, minimum: 1, outputRequired: true }
-        - { server: playwright, tool: browser_take_screenshot, minimum: 1, outputRequired: true }
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [poc-intake, poc-impact-analysis, poc-ui-exploration] }
+        - {
+            server: playwright,
+            tool: browser_navigate,
+            minimum: 1,
+            outputRequired: false
+          }
+        - {
+            server: playwright,
+            tool: browser_snapshot,
+            minimum: 1,
+            outputRequired: true
+          }
+        - {
+            server: playwright,
+            tool: browser_take_screenshot,
+            minimum: 1,
+            outputRequired: true
+          }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ poc-intake, poc-impact-analysis, poc-ui-exploration ]
+      }
   poc-test-generation:
     label: Playwright test generation
     defaultTemplate: poc-workflow/test-generation.md
@@ -1567,14 +2912,41 @@ phases:
       path: artifacts/poc-test-generation/test-generation.md
       kind: implementation-summary
       minimumBytes: 600
-      validation: { requiredHeadings: [Repository-native design, Files changed, Scenario traceability, Locator and test-data strategy, Deviations and residual risk] }
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [framework conventions, fixtures, test data, approved deviations, implementation blockers] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Repository-native design,
+              Files changed,
+              Scenario traceability,
+              Locator and test-data strategy,
+              Deviations and residual risk
+            ]
+        }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics:
+          [
+            framework conventions,
+            fixtures,
+            test data,
+            approved deviations,
+            implementation blockers
+          ]
+      }
     writeScope: source-and-artifact
     sourceBoundary: test-automation
     generation: { task: code }
-    approval: { authorities: [engineering-reviewers], minimum: 1, rejectTo: [poc-intake, poc-impact-analysis, poc-ui-exploration, poc-test-generation] }
+    approval:
+      {
+        authorities: [ engineering-reviewers ],
+        minimum: 1,
+        rejectTo: [ poc-intake, poc-impact-analysis, poc-ui-exploration, poc-test-generation ]
+      }
     qualityCommands:
-      - { id: git-diff-check, argv: [git, diff, --check], modelPolicy: never }
+      - { id: git-diff-check, argv: [ git, diff, --check ], modelPolicy: never }
   poc-validation:
     label: Playwright validation and bounded repair
     defaultTemplate: poc-workflow/validation.md
@@ -1582,24 +2954,89 @@ phases:
       path: artifacts/poc-validation/validation.md
       kind: test-evidence
       minimumBytes: 800
-      validation: { requiredHeadings: [Validation scope, Commands and environment, Scenario results, Evidence inventory, Repair attempts, Final verdict] }
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [failure classification, environment, evidence, repair scope, residual risk] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Validation scope,
+              Commands and environment,
+              Scenario results,
+              Evidence inventory,
+              Repair attempts,
+              Final verdict
+            ]
+        }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics:
+          [
+            failure classification,
+            environment,
+            evidence,
+            repair scope,
+            residual risk
+          ]
+      }
     writeScope: source-and-artifact
     sourceBoundary: test-automation
     generation: { task: analyze }
     mcp:
-      requiredServers: [playwright]
+      requiredServers: [ playwright ]
       requireSmoke: true
       evidence:
-        - { server: playwright, tool: browser_console_messages, minimum: 1, outputRequired: true }
-        - { server: playwright, tool: browser_network_requests, minimum: 1, outputRequired: true }
-        - { server: playwright, tool: browser_take_screenshot, minimum: 1, outputRequired: true }
+        - {
+            server: playwright,
+            tool: browser_console_messages,
+            minimum: 1,
+            outputRequired: true
+          }
+        - {
+            server: playwright,
+            tool: browser_network_requests,
+            minimum: 1,
+            outputRequired: true
+          }
+        - {
+            server: playwright,
+            tool: browser_take_screenshot,
+            minimum: 1,
+            outputRequired: true
+          }
     repairBudget: { maxAttempts: 2, resetOnPhase: poc-intake }
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [poc-intake, poc-impact-analysis, poc-ui-exploration, poc-test-generation, poc-validation] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo:
+          [
+            poc-intake,
+            poc-impact-analysis,
+            poc-ui-exploration,
+            poc-test-generation,
+            poc-validation
+          ]
+      }
     qualityCommands:
-      - { id: git-diff-check, argv: [git, diff, --check], modelPolicy: never, timeoutMs: 60000 }
-      - { id: typescript-compile, argv: [npx, --no-install, tsc, --noEmit], modelPolicy: never, timeoutMs: 300000 }
-      - { id: playwright-tests, argv: [npx, --no-install, playwright, test, --reporter=json], modelPolicy: never, timeoutMs: 1200000 }
+      - {
+          id: git-diff-check,
+          argv: [ git, diff, --check ],
+          modelPolicy: never,
+          timeoutMs: 60000
+        }
+      - {
+          id: typescript-compile,
+          argv: [ npx, --no-install, tsc, --noEmit ],
+          modelPolicy: never,
+          timeoutMs: 300000
+        }
+      - {
+          id: playwright-tests,
+          argv: [ npx, --no-install, playwright, test, --reporter=json ],
+          modelPolicy: never,
+          timeoutMs: 1200000
+        }
   poc-publication-review:
     label: Publication and PR review
     defaultTemplate: poc-workflow/publication-review.md
@@ -1607,11 +3044,47 @@ phases:
       path: artifacts/poc-publication-review/publication-review.md
       kind: publication-review
       minimumBytes: 700
-      validation: { requiredHeadings: [Publication boundary, Change and coverage summary, Validation evidence, Residual risk and rollback, Human decision] }
-    clarification: { mode: when-needed, maxQuestions: 3, topics: [publication target, evidence gaps, residual risk, rollback, reviewer decision] }
+      validation:
+        {
+          requiredHeadings:
+            [
+              Publication boundary,
+              Change and coverage summary,
+              Validation evidence,
+              Residual risk and rollback,
+              Human decision
+            ]
+        }
+    clarification:
+      {
+        mode: when-needed,
+        maxQuestions: 3,
+        topics:
+          [
+            publication target,
+            evidence gaps,
+            residual risk,
+            rollback,
+            reviewer decision
+          ]
+      }
     writeScope: artifact-only
     generation: { task: summarize }
-    approval: { authorities: [quality-reviewers, engineering-reviewers], requiredAuthorities: [quality-reviewers], minimum: 1, rejectTo: [poc-intake, poc-impact-analysis, poc-ui-exploration, poc-test-generation, poc-validation, poc-publication-review] }
+    approval:
+      {
+        authorities: [ quality-reviewers, engineering-reviewers ],
+        requiredAuthorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo:
+          [
+            poc-intake,
+            poc-impact-analysis,
+            poc-ui-exploration,
+            poc-test-generation,
+            poc-validation,
+            poc-publication-review
+          ]
+      }
 
   # POC Lite is the first proof, not a second lifecycle engine. All four checkpoints use the
   # ordinary phase machinery, deterministic artifacts, the repository's own executable tests,
@@ -1623,7 +3096,10 @@ phases:
       path: artifacts/poc-lite-plan/plan.md
       kind: delivery-plan
       minimumBytes: 200
-      validation: { requiredHeadings: [Work item, Changed paths, Configured checks, Specification claims] }
+      validation:
+        {
+          requiredHeadings: [ Work item, Changed paths, Configured checks, Specification claims ]
+        }
     generation: { requirement: required, producer: deterministic, task: reason }
     writeScope: artifact-only
     approval: none
@@ -1634,14 +3110,17 @@ phases:
       path: artifacts/poc-lite-act/implementation-summary.md
       kind: implementation-summary
       minimumBytes: 200
-      validation: { requiredHeadings: [Work item, Changed paths, Configured checks, Specification claims] }
+      validation:
+        {
+          requiredHeadings: [ Work item, Changed paths, Configured checks, Specification claims ]
+        }
     generation: { requirement: required, producer: deterministic, task: code }
     writeScope: source-and-artifact
     approval: none
     # Code-delivery publication adds the repository-native executable test command inferred from
     # the changed module. This deterministic whitespace check is additive, not a substitute.
     qualityCommands:
-      - { id: git-diff-check, argv: [git, diff, --check], modelPolicy: never }
+      - { id: git-diff-check, argv: [ git, diff, --check ], modelPolicy: never }
   poc-lite-verify:
     label: VERIFY — run repository checks
     defaultTemplate: poc-lite/verify.md
@@ -1649,12 +3128,15 @@ phases:
       path: artifacts/poc-lite-verify/verification.md
       kind: test-evidence
       minimumBytes: 200
-      validation: { requiredHeadings: [Work item, Changed paths, Configured checks, Specification claims] }
+      validation:
+        {
+          requiredHeadings: [ Work item, Changed paths, Configured checks, Specification claims ]
+        }
     generation: { requirement: required, producer: deterministic, task: analyze }
     writeScope: artifact-only
     approval: none
     qualityCommands:
-      - { id: git-diff-check, argv: [git, diff, --check], modelPolicy: never }
+      - { id: git-diff-check, argv: [ git, diff, --check ], modelPolicy: never }
   poc-lite-finalize:
     label: FINALIZE — human finish decision
     defaultTemplate: poc-lite/finalize.md
@@ -1662,10 +3144,19 @@ phases:
       path: artifacts/poc-lite-finalize/finalize.md
       kind: publication-review
       minimumBytes: 200
-      validation: { requiredHeadings: [Work item, Changed paths, Configured checks, Specification claims] }
+      validation:
+        {
+          requiredHeadings: [ Work item, Changed paths, Configured checks, Specification claims ]
+        }
     generation: { requirement: required, producer: deterministic, task: summarize }
     writeScope: artifact-only
-    approval: { authorities: [quality-reviewers], requiredAuthorities: [quality-reviewers], minimum: 1, rejectTo: [poc-lite-plan, poc-lite-act, poc-lite-verify, poc-lite-finalize] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        requiredAuthorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ poc-lite-plan, poc-lite-act, poc-lite-verify, poc-lite-finalize ]
+      }
 
   # ---------------------------------------------------------------------------------------------
   # Spec-driven phases. Ordinary phases in every respect: they use the same generation, input,
@@ -1676,12 +3167,24 @@ phases:
   specification:
     label: Specification
     defaultTemplate: spec-driven/spec.md
-    artifact: { path: artifacts/specification/spec.md, kind: requirements, minimumBytes: 400 }
+    artifact:
+      {
+        path: artifacts/specification/spec.md,
+        kind: requirements,
+        minimumBytes: 400
+      }
     artifactSet: spec-driven-specification
     clarification:
       mode: required
       maxQuestions: 5
-      topics: [scope, acceptance criteria, actors, boundary conditions, non-functional requirements]
+      topics:
+        [
+          scope,
+          acceptance criteria,
+          actors,
+          boundary conditions,
+          non-functional requirements
+        ]
       # Pinned separately from the conversational mode above [SPK:REQ-064]. Under `block` an
       # unresolved [NEEDS CLARIFICATION: ...] stops publication before any state mutation, so an
       # honest admission costs only the answer [SPK:REQ-065].
@@ -1695,7 +3198,12 @@ phases:
       # decisions at Specification approval. Existing Stories retain their pinned policy.
       approvalChecklist: off
     writeScope: artifact-only
-    approval: { authorities: [product-approvers], minimum: 1, rejectTo: [specification] }
+    approval:
+      {
+        authorities: [ product-approvers ],
+        minimum: 1,
+        rejectTo: [ specification ]
+      }
   planning:
     label: Planning
     defaultTemplate: spec-driven/plan.md
@@ -1705,30 +3213,68 @@ phases:
     # intent changes return through governed amendment/rework rather than an ad-hoc response file.
     clarification: { mode: off }
     writeScope: artifact-only
-    approval: { authorities: [architecture-reviewers], minimum: 1, rejectTo: [specification, planning] }
+    approval:
+      {
+        authorities: [ architecture-reviewers ],
+        minimum: 1,
+        rejectTo: [ specification, planning ]
+      }
   release:
     label: Release
     defaultTemplate: spec-driven/release.md
-    artifact: { path: artifacts/release/conformance.md, kind: conformance-report, minimumBytes: 300 }
+    artifact:
+      {
+        path: artifacts/release/conformance.md,
+        kind: conformance-report,
+        minimumBytes: 300
+      }
     artifactSet: spec-driven-verification
     writeScope: artifact-only
-    approval: { authorities: [quality-reviewers], minimum: 1, rejectTo: [specification, planning, implementation, convergence, verification, release] }
+    approval:
+      {
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo:
+          [
+            specification,
+            planning,
+            implementation,
+            convergence,
+            verification,
+            release
+          ]
+      }
   convergence:
     label: Convergence
     defaultTemplate: spec-driven/convergence.md
     # The convergence-report kind is what makes a step convergence, whatever it is called: the
     # engine generates it, and only explicit human advancement and approval pass it [E2G-001].
-    artifact: { path: artifacts/convergence/convergence.md, kind: convergence-report, minimumBytes: 200 }
+    artifact:
+      {
+        path: artifacts/convergence/convergence.md,
+        kind: convergence-report,
+        minimumBytes: 200
+      }
     generation: { requirement: required, producer: deterministic, task: analyze }
     writeScope: artifact-only
     # Human advancement out of convergence, and governed rework back to implementation
     # [SPK:REQ-032]. Advancement fails while blocking findings remain [SPK:REQ-183]. Its reviewers
     # may also return the Story to planning or the specification when the defect started there.
-    approval: { authorities: [architecture-reviewers], minimum: 1, rejectTo: [specification, planning, implementation, convergence] }
+    approval:
+      {
+        authorities: [ architecture-reviewers ],
+        minimum: 1,
+        rejectTo: [ specification, planning, implementation, convergence ]
+      }
   implement:
     label: Implement
     defaultTemplate: quick-fix/implement.md
-    artifact: { path: artifacts/implement/implementation-summary.md, kind: implementation-summary, minimumBytes: 200 }
+    artifact:
+      {
+        path: artifacts/implement/implementation-summary.md,
+        kind: implementation-summary,
+        minimumBytes: 200
+      }
     generation: { requirement: required, producer: deterministic, task: code }
     writeScope: source-and-artifact
     approval: none
@@ -1736,26 +3282,44 @@ phases:
   verify:
     label: Verify
     defaultTemplate: quick-fix/verify.md
-    artifact: { path: artifacts/verify/verification-summary.md, kind: test-evidence, minimumBytes: 200 }
+    artifact:
+      {
+        path: artifacts/verify/verification-summary.md,
+        kind: test-evidence,
+        minimumBytes: 200
+      }
     generation: { requirement: required, producer: deterministic, task: analyze }
     writeScope: source-and-artifact
-    approval: { mode: policy, policy: quick-fix-low-risk-v1, maximumChangedPaths: 5, authorities: [quality-reviewers], minimum: 1, rejectTo: [intake, implement, verify] }
+    approval:
+      {
+        mode: policy,
+        policy: quick-fix-low-risk-v1,
+        maximumChangedPaths: 5,
+        authorities: [ quality-reviewers ],
+        minimum: 1,
+        rejectTo: [ intake, implement, verify ]
+      }
     # A policy waiver is impossible without at least one required check. Repositories
     # should replace or extend this deterministic baseline with their own test command.
     qualityCommands:
       - id: git-diff-check
-        argv: [git, diff, --check]
+        argv: [ git, diff, --check ]
         modelPolicy: never
   # The sample user-defined agent's one step; its agent's instructions are its folder's main file.
   careful-change:
     label: Careful change
     description: Runs Careful change, the user-defined agent from the careful-change folder.
     defaultTemplate: common/careful-change.md
-    artifact: { path: artifacts/careful-change/careful-change.md, kind: careful-change, minimumBytes: 200 }
+    artifact:
+      {
+        path: artifacts/careful-change/careful-change.md,
+        kind: careful-change,
+        minimumBytes: 200
+      }
     generation: { task: code }
     writeScope: source-and-artifact
     inputs: []
-    approval: { authorities: [engineering-reviewers], minimum: 1 }
+    approval: { authorities: [ engineering-reviewers ], minimum: 1 }
 governance:
   requireAcceptanceCriteriaTags: true
   protectedPaths:
