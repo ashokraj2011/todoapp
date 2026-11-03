@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 3,
+  "workId": "test-101",
+  "epicId": null,
+  "planId": null,
+  "jiraIssueId": "test-101",
+  "initialJiraKey": null,
+  "currentJiraKey": null,
+  "canonicalBranch": "test-101",
+  "submittedBranch": "test-101",
+  "submissionCommit": "5c3b64e8816020c938d5042d93ac76f0685c4c7d",
+  "sourceCommit": "5c3b64e8816020c938d5042d93ac76f0685c4c7d",
+  "sourceTreeSha256": "sha256:873a7fe2528bae62f029cec7d51dac5e17124dd8ec7bd61fdb3fa49818ae7209",
+  "phase": "release",
+  "generation": 1,
+  "authorship": {
+    "schemaVersion": 1,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "qa"
+    },
+    "kernelModel": {
+      "invoked": false,
+      "status": "exact",
+      "invocationIds": []
+    },
+    "externalAiUse": {
+      "value": "unknown",
+      "status": "unavailable"
+    },
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "conformance.md",
+      "mediaType": "text/markdown",
+      "sha256": "a917da880645d9f68a345dfb0ef81645b23f8701223083a7102f9723ceb0b102",
+      "bytes": 5231
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-03T18:22:53.482Z"
+  },
+  "artifacts": [
+    {
+      "path": "singularity/work-items/test-101/artifacts/release/conformance.md",
+      "kind": "document",
+      "sha256": "b7f8179a31da52752ac5d119850ec22f4e77dbfca6d66c66af40be226ebfdc33",
+      "size": 15404,
+      "reference": {
+        "handle": "sfref:v1:story:test-101:49a05920043670046ff24d424a28445c9898606d4a8b21f08150b6230ca102ca",
+        "recordHash": "49a05920043670046ff24d424a28445c9898606d4a8b21f08150b6230ca102ca"
+      }
+    },
+    {
+      "path": "singularity/work-items/test-101/artifacts/release/verification/evidence-index.md",
+      "kind": "document",
+      "sha256": "8777ee9b82bf1ce12b8e7340ebf1ff5c7569d0d2ade13e72135ba1b1ab4ece01",
+      "size": 2794,
+      "reference": {
+        "handle": "sfref:v1:story:test-101:ca112596c5eafc98d93fb1c3000e4a8323a8c2fe705e1e913dae2e8f721dacde",
+        "recordHash": "ca112596c5eafc98d93fb1c3000e4a8323a8c2fe705e1e913dae2e8f721dacde"
+      }
+    }
+  ],
+  "references": [
+    {
+      "handle": "sfref:v1:story:test-101:49a05920043670046ff24d424a28445c9898606d4a8b21f08150b6230ca102ca",
+      "recordHash": "49a05920043670046ff24d424a28445c9898606d4a8b21f08150b6230ca102ca",
+      "purpose": "review-evidence",
+      "required": true
+    },
+    {
+      "handle": "sfref:v1:story:test-101:ca112596c5eafc98d93fb1c3000e4a8323a8c2fe705e1e913dae2e8f721dacde",
+      "recordHash": "ca112596c5eafc98d93fb1c3000e4a8323a8c2fe705e1e913dae2e8f721dacde",
+      "purpose": "review-evidence",
+      "required": true
+    }
+  ],
+  "agentBriefs": [],
+  "checks": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-03T18:22:53.482Z",
+      "completedAt": "2026-11-03T18:22:53.482Z",
+      "agent": "qa",
+      "generation": 1
+    }
+  ],
+  "approvals": [],
+  "visualAssurance": null,
+  "submissionEvidence": {
+    "architectureIntent": null,
+    "architectureDecision": null,
+    "testExecutions": [],
+    "claimMaps": [],
+    "checksSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "artifactSetSha256": "b9eaa92a29a397061db401cd6f9a441bd6629ef709be6fa0c5edb591a40b497e"
+  },
+  "witnessReview": {
+    "enrollment": {
+      "schemaVersion": 1,
+      "mode": "disabled",
+      "witnessedClauses": {
+        "enabled": false,
+        "profiles": []
+      },
+      "testcaseExact": {
+        "mode": "disabled",
+        "profile": null,
+        "requiredAssurance": "unavailable",
+        "policySha256": "sha256:12b50a34a1f03338377ecd76f44b20cbee83e7b91a0b07392ef08e3d8fd60800"
+      },
+      "claimMapContractVersion": 2,
+      "cab": null,
+      "sgos": null,
+      "rollout": {
+        "id": "wel-v0.2-observe",
+        "version": 1,
+        "enrollment": "new-story-only"
+      },
+      "configurationAuthority": {
+        "repository": "https://github.com/ashokraj2011/todoapp.git",
+        "branch": "sflow/config",
+        "commit": "2b2bb89e41a271303d630ace7ef837d312ebbd67",
+        "projectionSha256": "b98149ca93018b1a2c891b67b38581cb7edac2a1b5500aa39bdd3dded5cfa6f4"
+      }
+    },
+    "enrollmentClassification": "enrolled",
+    "enrollmentReason": null,
+    "clauseMappings": [],
+    "testcaseObservations": []
+  },
+  "submittedAt": "2026-11-03T18:23:40.070Z",
+  "submittedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "status": "awaiting_review",
+  "packetSha256": "b0737e540635eb68b9f5eee47aad80ac130a6d5ae8f67c8ceef4085a5660ac44"
+}

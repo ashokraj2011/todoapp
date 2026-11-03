@@ -1,0 +1,28 @@
+{
+  "artifact": {
+    "generation": 1,
+    "mediaType": "text/markdown",
+    "outputId": "document",
+    "path": "singularity/work-items/test-101/artifacts/release/conformance.md",
+    "phaseId": "release"
+  },
+  "createdAt": "2026-11-03T18:23:40.141Z",
+  "kind": "governed-reference",
+  "repository": {
+    "id": ".w-cd50f65c062e736cf192d17f",
+    "origin": "https://github.com/ashokraj2011/todoapp.git"
+  },
+  "revision": {
+    "bytes": 15322,
+    "commitSha": "5c3b64e8816020c938d5042d93ac76f0685c4c7d",
+    "sha256": "2efd99857aeba07e89c2ac466d6672b2b796f35547aa9f2a33c4b29ee62fa5d5"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "branch": "test-101",
+    "id": "test-101",
+    "kind": "story",
+    "subjectRevision": 1
+  },
+  "visibility": "model"
+}

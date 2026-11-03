@@ -1,0 +1,28 @@
+{
+  "artifact": {
+    "generation": 1,
+    "mediaType": "text/markdown",
+    "outputId": "document",
+    "path": "singularity/work-items/test-101/artifacts/release/verification/evidence-index.md",
+    "phaseId": "release"
+  },
+  "createdAt": "2026-11-03T18:23:40.199Z",
+  "kind": "governed-reference",
+  "repository": {
+    "id": ".w-cd50f65c062e736cf192d17f",
+    "origin": "https://github.com/ashokraj2011/todoapp.git"
+  },
+  "revision": {
+    "bytes": 2794,
+    "commitSha": "5c3b64e8816020c938d5042d93ac76f0685c4c7d",
+    "sha256": "8777ee9b82bf1ce12b8e7340ebf1ff5c7569d0d2ade13e72135ba1b1ab4ece01"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "branch": "test-101",
+    "id": "test-101",
+    "kind": "story",
+    "subjectRevision": 1
+  },
+  "visibility": "model"
+}
