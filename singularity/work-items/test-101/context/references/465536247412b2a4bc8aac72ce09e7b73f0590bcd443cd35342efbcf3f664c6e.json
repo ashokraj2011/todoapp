@@ -1,0 +1,28 @@
+{
+  "artifact": {
+    "generation": 1,
+    "mediaType": "text/markdown",
+    "outputId": "document",
+    "path": "singularity/work-items/test-101/artifacts/verification/test-evidence.md",
+    "phaseId": "verification"
+  },
+  "createdAt": "2026-11-03T18:17:17.734Z",
+  "kind": "governed-reference",
+  "repository": {
+    "id": ".w-cd50f65c062e736cf192d17f",
+    "origin": "https://github.com/ashokraj2011/todoapp.git"
+  },
+  "revision": {
+    "bytes": 21169,
+    "commitSha": "d75778d5057d77f7cadb3f55b8ba4767204c7654",
+    "sha256": "61edc812d9b8f8391ae12cb52fb72427dd923b97b3738bfa5a062652dc64e19b"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "branch": "test-101",
+    "id": "test-101",
+    "kind": "story",
+    "subjectRevision": 1
+  },
+  "visibility": "model"
+}
