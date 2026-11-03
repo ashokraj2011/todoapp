@@ -638,11 +638,19 @@
     ],
     "bindingsSha256": "sha256:799e60cf3b6e92a810c1bdb861305a284a11e5fbac78802b7189ed2bef945c72"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-8d83bbc14e3a7581a003",
+      "receiptPath": "singularity/work-items/test-101/context/code-delivery/tests/attempts/implementation/TA-8d83bbc14e3a7581a003.json",
+      "receiptSha256": "1ec3a4fbcf8fb9030d6b5063c0500fdeae2b37c58f0c51bb5b85bdb93d922404",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:873a7fe2528bae62f029cec7d51dac5e17124dd8ec7bd61fdb3fa49818ae7209",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "8c0f07cb4736fe59728697f53289ac3567b1a060",
+    "generationTree": "a5ed056d3db61fc6c32ad2c2b0109d13cf90e033"
   },
   "model": {
     "task": "code",
@@ -661,6 +669,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-11-03T17:55:20.045Z"
+  "status": "ready",
+  "capturedAt": "2026-11-03T17:55:20.045Z",
+  "validatedAt": "2026-11-03T17:56:54.045Z"
 }

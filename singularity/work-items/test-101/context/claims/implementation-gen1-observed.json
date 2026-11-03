@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 2,
+  "kind": "observed",
+  "recordedAt": "2026-11-03T17:56:54.048Z",
+  "claims": {
+    "TEST-101:AC-001": {
+      "observedPaths": [
+        "singularity/work-items/test-101/evidence/calendar-ui.png"
+      ],
+      "testResults": [],
+      "commits": [
+        "8c0f07cb4736fe59728697f53289ac3567b1a060"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "TEST-101:REQ-001": {
+      "observedPaths": [
+        "src/App.css",
+        "src/App.jsx"
+      ],
+      "testResults": [
+        "src/App.test.jsx"
+      ],
+      "commits": [
+        "8c0f07cb4736fe59728697f53289ac3567b1a060"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "TEST-101:REQ-002": {
+      "observedPaths": [
+        "src/App.css",
+        "src/App.jsx"
+      ],
+      "testResults": [
+        "src/App.test.jsx"
+      ],
+      "commits": [
+        "8c0f07cb4736fe59728697f53289ac3567b1a060"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "TEST-101:REQ-003": {
+      "observedPaths": [
+        "src/App.css",
+        "src/App.jsx"
+      ],
+      "testResults": [
+        "src/App.test.jsx"
+      ],
+      "commits": [
+        "8c0f07cb4736fe59728697f53289ac3567b1a060"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "TEST-101:REQ-004": {
+      "observedPaths": [
+        "src/App.css",
+        "src/App.jsx"
+      ],
+      "testResults": [
+        "src/App.test.jsx"
+      ],
+      "commits": [
+        "8c0f07cb4736fe59728697f53289ac3567b1a060"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    }
+  },
+  "workId": "test-101",
+  "phase": "implementation",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/test-101/context/code-delivery/implementation-gen1.json",
+    "sha256": "944018bd1e30a4162997b45ab192a3e14503e70899cf2526d023217303da9ba2",
+    "changeSetDigest": "sha256:f25ff8e24cbde3ea997d1738214b5fa43f14ec15fa511b04edd2d849c9ca33d8"
+  }
+}

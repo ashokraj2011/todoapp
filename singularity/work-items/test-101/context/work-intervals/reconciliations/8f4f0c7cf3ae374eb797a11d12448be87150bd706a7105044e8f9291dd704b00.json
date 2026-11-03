@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "test-101",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "d86a55ff5eec02a97c5cb76b6ba2e2a4a4636d405572c551519965f97510c644",
+  "baseline": {
+    "path": "singularity/work-items/test-101/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "d86a55ff5eec02a97c5cb76b6ba2e2a4a4636d405572c551519965f97510c644",
+    "verified": true,
+    "sourceBaseCommit": "5344b77f1b0d2027a0741a93bb98dff27311e00c"
+  },
+  "sourceBaseCommit": "5344b77f1b0d2027a0741a93bb98dff27311e00c",
+  "target": {
+    "branch": "test-101",
+    "head": "8c0f07cb4736fe59728697f53289ac3567b1a060",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "package-lock.json",
+      "status": "present",
+      "sha256": "f3256b16eeb8ea46b28bf18e1ce7b202bf4b5e3a48b45298db475924738ab87d",
+      "bytes": 123049,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "package.json",
+      "status": "present",
+      "sha256": "dbd75050aa38cb66886422c49339c0cd0d61507f1f962758343996cc61a9baca",
+      "bytes": 765,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "src/App.css",
+      "status": "present",
+      "sha256": "02a9e9c0d236be04d8e2ebb28cbf622f1060d3e5c381863f35d07b1b6e2fa872",
+      "bytes": 10557,
+      "verdict": "planned",
+      "clauseIds": [
+        "TEST-101:REQ-001",
+        "TEST-101:REQ-002",
+        "TEST-101:REQ-003",
+        "TEST-101:REQ-004"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "aee10f019784fa84157c53430d5c0c46a40d89adab0b39fe5fbc8374a344769a",
+      "bytes": 12412,
+      "verdict": "planned",
+      "clauseIds": [
+        "TEST-101:REQ-001",
+        "TEST-101:REQ-002",
+        "TEST-101:REQ-003",
+        "TEST-101:REQ-004"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.test.jsx",
+      "status": "present",
+      "sha256": "cd08cd3aaa2932f29a1797f309bd4700deb227dcddc7098a556d5699267121ca",
+      "bytes": 3633,
+      "verdict": "planned",
+      "clauseIds": [
+        "TEST-101:REQ-001",
+        "TEST-101:REQ-002",
+        "TEST-101:REQ-003",
+        "TEST-101:REQ-004"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 5,
+    "planned": 3,
+    "unplanned": 2,
+    "protected": 0
+  },
+  "decision": {
+    "status": "review",
+    "summaryStatus": "attention",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "8f4f0c7cf3ae374eb797a11d12448be87150bd706a7105044e8f9291dd704b00",
+  "reconciledAt": "2026-11-03T17:56:54.145Z",
+  "final": true,
+  "recordedAt": "2026-11-03T17:56:54.146Z",
+  "path": "singularity/work-items/test-101/context/work-intervals/reconciliations/8f4f0c7cf3ae374eb797a11d12448be87150bd706a7105044e8f9291dd704b00.json"
+}
