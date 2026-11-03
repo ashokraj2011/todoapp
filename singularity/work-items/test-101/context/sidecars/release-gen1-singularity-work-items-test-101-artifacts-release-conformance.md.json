@@ -1,0 +1,46 @@
+{
+  "artifact": {
+    "bytes": 15322,
+    "path": "singularity/work-items/test-101/artifacts/release/conformance.md",
+    "role": "document",
+    "sha256": "2efd99857aeba07e89c2ac466d6672b2b796f35547aa9f2a33c4b29ee62fa5d5"
+  },
+  "configuration": {
+    "revision": "2b2bb89e41a271303d630ace7ef837d312ebbd67",
+    "sha256": "ece34bebf699bd016761306f85eb0a38c9eb13e453e52f100944569c96215590"
+  },
+  "generation": 1,
+  "inputs": [
+    {
+      "kind": null,
+      "path": "artifacts/convergence/convergence.md",
+      "sha256": null
+    },
+    {
+      "kind": null,
+      "path": "artifacts/verification/test-evidence.md",
+      "sha256": null
+    }
+  ],
+  "integritySha256": "9ca9d52420e24cd56a609e8ef25d050b6875348139be187ecb0a3dc3bf6faabb",
+  "phase": "release",
+  "producer": {
+    "actor": "88361104+ashokraj2011@users.noreply.github.com",
+    "agent": "qa",
+    "kind": "governed-agent"
+  },
+  "publication": {
+    "branch": "test-101",
+    "commit": null,
+    "publishedAt": "2026-11-03T18:22:53.482Z"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "id": "test-101",
+    "kind": "story"
+  },
+  "template": {
+    "path": "singularity/work-items/test-101/config/wfa/blobs/sha256/8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe",
+    "sha256": "8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe"
+  }
+}

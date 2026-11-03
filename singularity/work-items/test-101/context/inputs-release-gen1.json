@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 2,
+  "workId": "test-101",
+  "workType": "spec-driven-standard",
+  "phase": "release",
+  "generation": 1,
+  "mode": "enforce",
+  "recordedAt": "2026-11-03T18:22:53.426Z",
+  "renderedSha256": "d8f51154e25cf6b932231f3389c0da5928d7b5948491c8ec093218e530686a89",
+  "warnings": [],
+  "inputs": [
+    {
+      "phase": "convergence",
+      "path": "artifacts/convergence/convergence.md",
+      "repositoryPath": "singularity/work-items/test-101/artifacts/convergence/convergence.md",
+      "optional": false,
+      "maxBytes": null,
+      "status": "captured",
+      "producerStatus": "approved",
+      "producerGeneration": 1,
+      "approvedAt": "2026-11-03T18:12:00.601Z",
+      "approvedBy": "ashokraj2011",
+      "approvedSha256": "1ef354961695fda5b4d01d5704d20b2002296472e1c66a00562a373dfaac177f",
+      "sha256": "1ef354961695fda5b4d01d5704d20b2002296472e1c66a00562a373dfaac177f",
+      "bytes": 20616,
+      "source": {
+        "path": "singularity/work-items/test-101/artifacts/convergence/convergence.md",
+        "rawSha256": "sha256:1ef354961695fda5b4d01d5704d20b2002296472e1c66a00562a373dfaac177f"
+      },
+      "representation": {
+        "kind": "full",
+        "sha256": "sha256:8105105b85724874f118f156b0022c09067e8383e49a37dd8cecd72d5f677d7f",
+        "bytes": 1269,
+        "complete": true,
+        "expansionHandle": "sfref:v1:story:test-101:da7ce53abaea530174f6a55242639a47efecbb995f57be42a5c95a90e8574e74"
+      },
+      "injectedBytes": 1269,
+      "truncated": false,
+      "authoredBytes": 1269,
+      "managedBytesExcluded": 19347,
+      "projection": {
+        "kind": "full"
+      }
+    },
+    {
+      "phase": "verification",
+      "path": "artifacts/verification/test-evidence.md",
+      "repositoryPath": "singularity/work-items/test-101/artifacts/verification/test-evidence.md",
+      "optional": false,
+      "maxBytes": null,
+      "status": "captured",
+      "producerStatus": "approved",
+      "producerGeneration": 1,
+      "approvedAt": "2026-11-03T18:19:04.452Z",
+      "approvedBy": "ashokraj2011",
+      "approvedSha256": "6e6f71c1a14b435e4cc6139c1e44fc3011a24c66aa1a3b9f279da763290ba8be",
+      "sha256": "6e6f71c1a14b435e4cc6139c1e44fc3011a24c66aa1a3b9f279da763290ba8be",
+      "bytes": 25535,
+      "source": {
+        "path": "singularity/work-items/test-101/artifacts/verification/test-evidence.md",
+        "rawSha256": "sha256:6e6f71c1a14b435e4cc6139c1e44fc3011a24c66aa1a3b9f279da763290ba8be"
+      },
+      "representation": {
+        "kind": "summary",
+        "sha256": "sha256:ce5182c1a7d31e4544e8e41affb42f3f16943f76dfaa5c2175680a1baec58621",
+        "bytes": 3371,
+        "complete": false,
+        "expansionHandle": "sfref:v1:story:test-101:465536247412b2a4bc8aac72ce09e7b73f0590bcd443cd35342efbcf3f664c6e"
+      },
+      "injectedBytes": 3371,
+      "truncated": false,
+      "authoredBytes": 3687,
+      "managedBytesExcluded": 21848,
+      "projection": {
+        "kind": "approved-summary",
+        "preserve": [
+          "Acceptance and specification results",
+          "Negative, regression, security, and non-functional checks"
+        ],
+        "maximumSummaryBytes": 24576,
+        "expansion": "hash-bound-reference",
+        "fallback": "block",
+        "briefPath": "singularity/work-items/test-101/context/briefs/verification-gen1-for-release.md",
+        "briefSha256": "ce5182c1a7d31e4544e8e41affb42f3f16943f76dfaa5c2175680a1baec58621",
+        "expansionHandle": "sfref:v1:story:test-101:465536247412b2a4bc8aac72ce09e7b73f0590bcd443cd35342efbcf3f664c6e"
+      }
+    }
+  ]
+}
