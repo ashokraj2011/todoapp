@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "kind": "story-test-readiness",
+  "workId": "google-cal",
+  "required": false,
+  "baselineChoice": "reuse",
+  "baselineObservation": "pending-not-verified",
+  "repositories": [
+    {
+      "repository": "todoapp",
+      "sourceCommit": "8639948f2ffc21703255b93bd4a55111677cfcd0",
+      "receiptSourceCommit": null,
+      "scope": "full",
+      "status": "missing",
+      "receiptSha256": null,
+      "baselineSha256": null,
+      "sourceManifestSha256": null,
+      "planId": null,
+      "testToolStatus": "not-checked",
+      "testTools": [],
+      "commandResults": [],
+      "testResults": [],
+      "riskAcceptance": null,
+      "existingFailureDisposition": "test-configuration-pending"
+    }
+  ],
+  "guidance": "Test setup and baseline results are advisory at Story creation, including observed failures. Inspect the selected module, configure and run the chosen tests during coding/verification. Repair failures or obtain an eligible human risk decision before publication. Intake never installs dependencies, runs tests, creates a pass, or waives publication, approval, or protected-path checks.\n- Copilot: /sf-test-setup\n- Shell: singularity-flow capability test-setup --json\n- VS Code (model-free): not available for this action"
+}

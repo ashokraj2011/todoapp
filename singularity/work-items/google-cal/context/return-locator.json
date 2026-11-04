@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "return-locator",
+  "workId": "google-cal",
+  "capabilityId": "todoapp",
+  "originRepositoryId": "todoapp",
+  "repositories": [
+    {
+      "id": "todoapp",
+      "remote": "origin",
+      "required": true,
+      "url": "https://github.com/ashokraj2011/todoapp.git",
+      "fingerprint": "dfe1f860fcf207163acf18b351405d8ae2d81bccf2168f9b0f625813f49ac984",
+      "portability": "portable"
+    }
+  ],
+  "lifecycleRef": "refs/heads/google-cal",
+  "workBranchRef": "refs/heads/google-cal",
+  "configuration": {
+    "sha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
+    "branch": "sflow/config",
+    "commit": "d5429d82e15ef2b2156586b587045fe68d2fdd6a"
+  },
+  "cloneStrategy": "existing-or-clone",
+  "integritySha256": "43ed0b5f8ad6e9ac34b275bbab2427c2a623caac9cd7cd2b9d25da02ef3677ce"
+}

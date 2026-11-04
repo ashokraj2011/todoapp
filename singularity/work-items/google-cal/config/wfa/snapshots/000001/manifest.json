@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 1,
+  "kind": "workflow-snapshot",
+  "story": {
+    "repositoryId": "sha256:74d7f79b4e352f64729fdeb9890a6d22627c2654e8f6ddc7c7550dcf3782f83f",
+    "workId": "google-cal"
+  },
+  "revision": 1,
+  "parentSnapshotHash": null,
+  "policy": {
+    "sha256": "sha256:dcb8f8ab45df3832840c9d82919fa84efccdc1d84ce13368e121709ae766b0dc",
+    "bytes": 114311,
+    "mediaType": "application/json; profile=singularity-flow-effective-policy-v1",
+    "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/dcb8f8ab45df3832840c9d82919fa84efccdc1d84ce13368e121709ae766b0dc"
+  },
+  "assets": [
+    {
+      "logicalId": "agent:architect",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:d75713542fb455b2bff883f290f7610bca1895228080ff4e77ce14e3e549be62",
+        "bytes": 2353,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/d75713542fb455b2bff883f290f7610bca1895228080ff4e77ce14e3e549be62"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/architect.agent.md",
+        "sourceId": "sha256:d7c465ddda01a94b0e4fc658f591c6a1ccaf6321322c1d551ba531d699fd874e",
+        "sha256": "sha256:d75713542fb455b2bff883f290f7610bca1895228080ff4e77ce14e3e549be62"
+      }
+    },
+    {
+      "logicalId": "agent:developer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:936ef73ff06a815226d372a8ccf2e988e04b3dda3db20f4e4f465604b0db1366",
+        "bytes": 2968,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/936ef73ff06a815226d372a8ccf2e988e04b3dda3db20f4e4f465604b0db1366"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/developer.agent.md",
+        "sourceId": "sha256:8dbfd3ed72fd91d55a5dea07d3c483ce41ed55a5e7159f65dec7fc4026b481d8",
+        "sha256": "sha256:936ef73ff06a815226d372a8ccf2e988e04b3dda3db20f4e4f465604b0db1366"
+      }
+    },
+    {
+      "logicalId": "agent:product-owner",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:cb6eca00fec845153bf4fb004a3b6ba94b523a1c767645a0fc3df8c5e404bc9e",
+        "bytes": 2481,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/cb6eca00fec845153bf4fb004a3b6ba94b523a1c767645a0fc3df8c5e404bc9e"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/product-owner.agent.md",
+        "sourceId": "sha256:a52b2949aab5deeceea3c1a6a0f64bf546e602a079c1a6b47113574f8c273a80",
+        "sha256": "sha256:cb6eca00fec845153bf4fb004a3b6ba94b523a1c767645a0fc3df8c5e404bc9e"
+      }
+    },
+    {
+      "logicalId": "agent:qa",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:bb474fd701396faf680eb00039154fac1a01948cf5a6f2408fac1946e09214e6",
+        "bytes": 2258,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/bb474fd701396faf680eb00039154fac1a01948cf5a6f2408fac1946e09214e6"
+      },
+      "source": {
+        "kind": "repository-agent",
+        "scope": "repository",
+        "source": ".github/agents/qa.agent.md",
+        "sourceId": "sha256:972dec98c9cc3c02aa852deece5fca54c673ddf30df8095e32d6550eec5a71e0",
+        "sha256": "sha256:bb474fd701396faf680eb00039154fac1a01948cf5a6f2408fac1946e09214e6"
+      }
+    },
+    {
+      "logicalId": "agent:sflow-source-reviewer",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+        "bytes": 8347,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991"
+      },
+      "source": {
+        "kind": "installed-reviewed-agent",
+        "scope": "plugin",
+        "source": null,
+        "sourceId": "sha256:521546a67d001ab0ca709177f13e90a9c48d35e09e782dcff04ef8c54af919e1",
+        "sha256": "sha256:adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991"
+      }
+    },
+    {
+      "logicalId": "agent:sflow-utility",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:1b4d609e5932ef4f938d5dea59e5ec93396d3442c841bbce0c4efe438798898e",
+        "bytes": 3428,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/1b4d609e5932ef4f938d5dea59e5ec93396d3442c841bbce0c4efe438798898e"
+      },
+      "source": {
+        "kind": "installed-reviewed-agent",
+        "scope": "plugin",
+        "source": null,
+        "sourceId": "sha256:ab2c3f8942c1234b8453ca94db62a129f41cf407b20a13b10156b61c9a08df19",
+        "sha256": "sha256:1b4d609e5932ef4f938d5dea59e5ec93396d3442c841bbce0c4efe438798898e"
+      }
+    },
+    {
+      "logicalId": "agent:sflow-workflow",
+      "purpose": "governed-agent",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:886280a0355c75c49c9f7e839824f8b911b5626cac0161a85be51fff7aacc497",
+        "bytes": 5409,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/886280a0355c75c49c9f7e839824f8b911b5626cac0161a85be51fff7aacc497"
+      },
+      "source": {
+        "kind": "installed-reviewed-agent",
+        "scope": "plugin",
+        "source": null,
+        "sourceId": "sha256:864f0ca3578bdbea3ba9798fba26d169dbfc389883dd7259a9a623c3c1bef790",
+        "sha256": "sha256:886280a0355c75c49c9f7e839824f8b911b5626cac0161a85be51fff7aacc497"
+      }
+    },
+    {
+      "logicalId": "prompt:planning",
+      "purpose": "planning-prompt",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db",
+        "bytes": 3271,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/prompts/copilot-planning.md",
+        "sha256": "sha256:4128acc6930949e4ba1e50e8b8c7c4f7beb23f4361c2e8428475b081712b77db"
+      }
+    },
+    {
+      "logicalId": "template:convergence",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:eb257477afca0229ed858875499736c57498015aaee0a527b714356819a9dde2",
+        "bytes": 1036,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/eb257477afca0229ed858875499736c57498015aaee0a527b714356819a9dde2"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/spec-driven/convergence.md",
+        "sha256": "sha256:eb257477afca0229ed858875499736c57498015aaee0a527b714356819a9dde2"
+      }
+    },
+    {
+      "logicalId": "template:implementation",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+        "bytes": 1431,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/common/implementation.md",
+        "sha256": "sha256:2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54"
+      }
+    },
+    {
+      "logicalId": "template:planning",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:502d705077ebbb399de79a9523b3cb2d377e17ba1fc05acbb43fd106a5c2fd84",
+        "bytes": 5862,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/502d705077ebbb399de79a9523b3cb2d377e17ba1fc05acbb43fd106a5c2fd84"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/spec-driven/plan.md",
+        "sha256": "sha256:502d705077ebbb399de79a9523b3cb2d377e17ba1fc05acbb43fd106a5c2fd84"
+      }
+    },
+    {
+      "logicalId": "template:release",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe",
+        "bytes": 1969,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/spec-driven/release.md",
+        "sha256": "sha256:8f3e84e8e19dfc851d9948f20fbd48c0e43e5d8df9c747404d602106930e14fe"
+      }
+    },
+    {
+      "logicalId": "template:specification",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:fbb7f5f29844d24836c6b918e2796940cbc21c24ae0a7aa252d4e1207588e2cb",
+        "bytes": 6522,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/fbb7f5f29844d24836c6b918e2796940cbc21c24ae0a7aa252d4e1207588e2cb"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/spec-driven/spec.md",
+        "sha256": "sha256:fbb7f5f29844d24836c6b918e2796940cbc21c24ae0a7aa252d4e1207588e2cb"
+      }
+    },
+    {
+      "logicalId": "template:verification",
+      "purpose": "phase-template",
+      "dependencies": [],
+      "blob": {
+        "sha256": "sha256:fdda5ab9e701142bd6d1f12e90b85b4e24dddffb0f4f5d89c5b534bd9137e4e0",
+        "bytes": 1123,
+        "mediaType": "text/markdown; charset=utf-8",
+        "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/fdda5ab9e701142bd6d1f12e90b85b4e24dddffb0f4f5d89c5b534bd9137e4e0"
+      },
+      "source": {
+        "kind": "repository-path",
+        "path": "singularity/templates/common/verification.md",
+        "sha256": "sha256:fdda5ab9e701142bd6d1f12e90b85b4e24dddffb0f4f5d89c5b534bd9137e4e0"
+      }
+    }
+  ],
+  "executionDependencies": [],
+  "provenance": {
+    "configuration": {
+      "repository": "https://github.com/ashokraj2011/todoapp.git",
+      "commit": "d5429d82e15ef2b2156586b587045fe68d2fdd6a",
+      "filesSha256": "d2763bd57f4dc87ec02f7404c13ec7004b260dbc8c67ba5fbb6a5c0f80818143"
+    },
+    "workType": "spec-driven-standard",
+    "foldProfile": "singularity-flow-resolution-v1"
+  },
+  "semantics": {
+    "snapshot": "wfa-snapshot-v1",
+    "canonicalJson": "singularity-flow-canonical-json-v1",
+    "policyReaderMinimum": 5,
+    "agentDocumentParser": "sflow-agent-document-v1",
+    "promptComposer": "story-snapshot-agent-v1",
+    "phaseSemantics": "sflow-phase-semantics/v1"
+  },
+  "configFoldHash": "sha256:b1edd9936a7700e1a92334c2e25475bf282708063e9314632b951b1c650ae59e",
+  "createdAt": "2026-11-04T01:35:49.066Z",
+  "limits": {
+    "assets": 14,
+    "bytes": 162769
+  },
+  "snapshotHash": "sha256:5046ddc8f6ecf8eeb23bc9c514b4607a1373a3d03f407a3fa6edd87dd072ee87"
+}
