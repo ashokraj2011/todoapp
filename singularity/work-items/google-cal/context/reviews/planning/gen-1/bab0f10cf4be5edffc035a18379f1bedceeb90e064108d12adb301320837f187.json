@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "phase": "planning",
+  "generation": 1,
+  "reportSha256": "bab0f10cf4be5edffc035a18379f1bedceeb90e064108d12adb301320837f187",
+  "lifecycleEventId": "a8f57a0a-fec8-4cd3-bbaa-c47786aa7b74",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "planning",
+    "binding": {
+      "workId": "google-cal",
+      "phase": "planning",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/google-cal/USER-STORY.md",
+          "textSha256": "a17ec31d4480477c68e51ba7a1d97642e92099afbc30d15bcfcc37a741c98ef7",
+          "originalSha256": "4cf7c7f3d360d866b60680919e540beea7ec7bd9c4cf5e80fdc07a10a65d83fa"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:approved-scope",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/google-cal/context/clarifications-specification-gen1.json",
+          "sha256": "597021ff0db5f9360347ff10d62ecec0b3956d202aaf8c2c081f442736e74240"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/google-cal/artifacts/planning/plan.md",
+        "sha256": "0de7d5c1efbe14b0fae51e9e5535bbb24da019335e5e6e4802f30f9ba46abb96"
+      },
+      "upstreamSpec": {
+        "path": "singularity/work-items/google-cal/artifacts/specification/spec.md",
+        "sha256": "0cdf985df75c41ed63a9c053ce242c0c957fd985d832329b06e0fe2ed691ddcf"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:approved-scope"
+    ],
+    "rows": [
+      {
+        "clauseId": "GOOGLE-CAL:REQ-001",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx"
+        ],
+        "plannedTests": [
+          "tests/calendar.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Calendar renders the displayed month as a grid.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "GOOGLE-CAL:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx"
+        ],
+        "plannedTests": [
+          "tests/calendar.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Submitting a non-empty title and date renders that event on the corresponding date.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "GOOGLE-CAL:REQ-003",
+        "expectedPaths": [
+          "src/App.jsx"
+        ],
+        "plannedTests": [
+          "tests/calendar.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "modified",
+        "observableResult": "Activating an event’s delete control removes it immediately without a confirmation step.",
+        "assessment": "supported"
+      },
+      {
+        "clauseId": "GOOGLE-CAL:AC-001",
+        "expectedPaths": [
+          "singularity/work-items/google-cal/evidence/calendar-month-grid.png"
+        ],
+        "plannedTests": [
+          "tests/calendar.spec.js"
+        ],
+        "testDisposition": "applicable",
+        "testReason": null,
+        "fulfillment": "evidence",
+        "observableResult": "Screenshot shows the month grid with an event and visible add and delete interactions.",
+        "assessment": "supported"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "architect",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-04T01:58:15.616Z",
+  "recordSha256": "c03889e7f25ffe73f26f1155351c5baeff0e06cdb9351fb5134f235a70d7dffd"
+}
