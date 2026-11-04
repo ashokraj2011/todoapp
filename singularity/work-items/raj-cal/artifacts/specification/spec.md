@@ -5,7 +5,7 @@
   "workType": "spec-driven-standard",
   "phase": "specification",
   "generation": 1,
-  "status": "awaiting_approval",
+  "status": "approved",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -127,8 +127,115 @@
     }
   ],
   "sequenceOverrides": [],
-  "approvals": [],
-  "selfApproval": false,
+  "approvals": [
+    {
+      "decision": "approved",
+      "phase": "specification",
+      "at": "2026-11-04T05:20:16.220Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": "product-owner",
+      "authorityGroup": "product-approvers",
+      "identityAssurance": "configured-local",
+      "channel": "copilot-selection-receipt",
+      "generation": 1,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md",
+          "sha256": "59593f34bb433ed17e8720da91458c52e4eeba1673c40e8271c06b57882e4abe"
+        }
+      ],
+      "artifactSet": "spec-driven-specification",
+      "bundleSha256": "fcaab489e4639a8c270a9ec5d1ba48212cb124c644c562dca629957e7675d6f5",
+      "reviewPacketSha256": "8c558b398ad2ca101e41271c3ba6034c87a4ca00d6633d4ddde352e6ac734c8f",
+      "evidenceCommit": "bcffaa06ec2bd268674a728819e9e6efcf1c5473",
+      "artifactSetSha256": "6ceb6f859429787521462673031f8f7143153e11ab16303a0d38370ce806720e",
+      "architectureIntent": null,
+      "architectureDecision": null,
+      "actionContext": {
+        "phase": "specification",
+        "label": "Specification",
+        "generation": 1,
+        "submittedAt": "2026-11-04T05:18:06.279Z",
+        "artifacts": [
+          {
+            "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md",
+            "sha256": "59593f34bb433ed17e8720da91458c52e4eeba1673c40e8271c06b57882e4abe"
+          }
+        ],
+        "agentBriefs": [
+          {
+            "consumerPhase": "convergence",
+            "status": "ready",
+            "path": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-convergence.json",
+            "renderedPath": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-convergence.md",
+            "renderedSha256": "9102a2715d3294a224c60dacd137c975631ecc508864f920f0d48942f9007d87",
+            "integritySha256": "88344617663d68922cf4d093fdecf26f3b89722175f2d3411080b86ce1e0f8be",
+            "documentId": "agent-brief-specification-gen1-convergence",
+            "documentPath": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-convergence.md",
+            "documentSha256": "9102a2715d3294a224c60dacd137c975631ecc508864f920f0d48942f9007d87"
+          },
+          {
+            "consumerPhase": "implementation",
+            "status": "ready",
+            "path": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-implementation.json",
+            "renderedPath": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-implementation.md",
+            "renderedSha256": "7cbdbe90c23cac8619539d8550dd77a7cf3111170e3e5b38b02071a6e99c2606",
+            "integritySha256": "b6a4ab289c7c4e0f37e38305f8fa15e76b5f02175153020f99cdcdc58f6d2501",
+            "documentId": "agent-brief-specification-gen1-implementation",
+            "documentPath": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-implementation.md",
+            "documentSha256": "7cbdbe90c23cac8619539d8550dd77a7cf3111170e3e5b38b02071a6e99c2606"
+          },
+          {
+            "consumerPhase": "planning",
+            "status": "ready",
+            "path": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-planning.json",
+            "renderedPath": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-planning.md",
+            "renderedSha256": "2478615c53fd292d42714957ec7190e1653062015aa317a1e75a36474917a257",
+            "integritySha256": "b7990d5013c88f4dc3fa74755a4384067c5ad7017953b9958bf461c44e9c9dba",
+            "documentId": "agent-brief-specification-gen1-planning",
+            "documentPath": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-planning.md",
+            "documentSha256": "2478615c53fd292d42714957ec7190e1653062015aa317a1e75a36474917a257"
+          },
+          {
+            "consumerPhase": "verification",
+            "status": "ready",
+            "path": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-verification.json",
+            "renderedPath": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-verification.md",
+            "renderedSha256": "59c170c7f15e800c356285e504560e6b15926c194ab8dac187828c6f88fec927",
+            "integritySha256": "6c2b66fa8591f215514392f35beda8fe07083baf611f45284b245f236230b925",
+            "documentId": "agent-brief-specification-gen1-verification",
+            "documentPath": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-verification.md",
+            "documentSha256": "59c170c7f15e800c356285e504560e6b15926c194ab8dac187828c6f88fec927"
+          }
+        ],
+        "reviewPacketSha256": "8c558b398ad2ca101e41271c3ba6034c87a4ca00d6633d4ddde352e6ac734c8f",
+        "submittedSourceCommit": "7cc48d19f33845382fdcf9f437b1e3b0fbd4d6bc",
+        "planId": "774938074dd2fb75c538fc16"
+      },
+      "upstream": {
+        "sha256": "sha256:169cedc30fbae5a7fc862d112da535c1c153261dff209cae106d128145296c66",
+        "refs": [
+          {
+            "kind": "documents",
+            "ref": "specification",
+            "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+          },
+          {
+            "kind": "decisions",
+            "ref": "story",
+            "sha256": "sha256:ebade4dba52a070bc4615535bc642737abe7d357fbe4a032fce8056876cf63f6"
+          }
+        ]
+      },
+      "selfApproval": true
+    }
+  ],
+  "selfApproval": true,
   "conformanceTree": null
 }
 -->
