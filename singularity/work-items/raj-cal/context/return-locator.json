@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "return-locator",
+  "workId": "raj-cal",
+  "capabilityId": "todoapp",
+  "originRepositoryId": "todoapp",
+  "repositories": [
+    {
+      "id": "todoapp",
+      "remote": "origin",
+      "required": true,
+      "url": "https://github.com/ashokraj2011/todoapp.git",
+      "fingerprint": "dfe1f860fcf207163acf18b351405d8ae2d81bccf2168f9b0f625813f49ac984",
+      "portability": "portable"
+    }
+  ],
+  "lifecycleRef": "refs/heads/raj-cal",
+  "workBranchRef": "refs/heads/raj-cal",
+  "configuration": {
+    "sha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
+    "branch": "sflow/config",
+    "commit": "5af0f06caca0c277331cda9490849598996321d0"
+  },
+  "cloneStrategy": "existing-or-clone",
+  "integritySha256": "7c520fd361c39f60ef57fd77508508a5a3be2f1aaf1b7dc6100e1ca6f21a7ada"
+}

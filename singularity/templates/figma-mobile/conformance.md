@@ -10,9 +10,17 @@ TODO: Record the inspected source/test tree hash, implementation commit, design 
 
 ## Acceptance and specification comparison
 
+Use one exact namespace-qualified approved clause ID per ID row. Keep design identifiers
+such as `SPEC-001` and `SCREEN-001` in their own evidence columns; a combined
+`AC-001 / SPEC-001` label is not a clause identity.
+
+The clause table is the only place a verdict is stated. Under `## Upstream discrepancies`, describe each
+problem and its owner, never a verdict; the engine-written Verdict summary lists each gap with the
+upstream issue that covers it.
+
 | ID | Screen/component | Approved requirement | Code evidence | Test evidence | Visual evidence | Verdict | Deviation |
 |---|---|---|---|---|---|---|---|
-| AC-001 / SPEC-001 | SCREEN-001 / MAP-001 | TODO | exact file:line | exact test/file evidence | exact screenshot/diff path | matched/partial/missing/deviated/unplanned | TODO |
+| `{{work.id}}:AC-001` | SCREEN-001 / SPEC-001 / MAP-001 | TODO | exact file:line | exact test/file evidence | exact screenshot/diff path | matched/partial/missing/deviated/unplanned | TODO |
 
 ## Screen and state coverage
 
@@ -26,7 +34,7 @@ TODO: List every unplanned screen, component, dependency, asset, token, or behav
 
 ## Approved visual and platform deviations
 
-TODO: List each approved difference, its decision record, approver identity, persona, and rationale.
+TODO: List each approved difference, its decision record, approver identity, agent, and rationale.
 
 ## Self-approval and review independence
 
