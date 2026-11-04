@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "phase": "specification",
+  "generation": 1,
+  "reportSha256": "1d59ad48d0bca9e8a3d3052683eabb48cf930f33c59196305e0f7c4d9274c560",
+  "lifecycleEventId": "32188bae-0b13-47ba-bc82-999af995ccb4",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "specification",
+    "binding": {
+      "workId": "raj-cal",
+      "phase": "specification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/raj-cal/USER-STORY.md",
+          "textSha256": "d57951c7661a80b5696016c3ecbdc10acf1140ca3dad58e578e015ea10354d79",
+          "originalSha256": "65ca1cdacf1aa0210c9f149aa20f61435cfd2c30a21ff038bda7f6e13f73e4e3"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/raj-cal/context/clarifications-specification-gen1.json",
+          "sha256": "9efc1e8071108d0bd376e92bf9081e674b1db78f62d6c303421041d3b86dd4a3"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md",
+        "sha256": "eab068ca0f4321dbfa1008be205d8371751c3d61b8df0739531bfcd0c874db34"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "id": "source-screenshot",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S3",
+        "clauseIds": [
+          "RAJ-CAL:AC-001"
+        ],
+        "line": 16,
+        "quote": "screenshot"
+      },
+      {
+        "id": "clarified-calendar-views",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "RAJ-CAL:REQ-001",
+          "RAJ-CAL:REQ-002"
+        ],
+        "line": 7,
+        "quote": "Replicare google calendar behavior .Same theme"
+      },
+      {
+        "id": "clarified-event-management",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S2",
+        "clauseIds": [
+          "RAJ-CAL:REQ-003",
+          "RAJ-CAL:REQ-004",
+          "RAJ-CAL:REQ-005"
+        ],
+        "line": 7,
+        "quote": "Replicare google calendar behavior .Same theme"
+      },
+      {
+        "id": "clarified-original-theme",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S3",
+        "clauseIds": [
+          "RAJ-CAL:REQ-006"
+        ],
+        "line": 7,
+        "quote": "Replicare google calendar behavior .Same theme"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "product-owner",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-04T05:13:24.873Z",
+  "recordSha256": "b4154ca9b91bdd37edccd8c05246f2b8216cbcb288174d5830cdea0152a32607"
+}
