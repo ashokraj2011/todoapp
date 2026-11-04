@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 7,
+  "workId": "google-cal",
+  "phase": "planning",
+  "generation": 1,
+  "agent": "architect",
+  "modelCommit": null,
+  "matchedRules": 0,
+  "mode": "off",
+  "applied": false,
+  "depth": "standard",
+  "evidence": false,
+  "groundingAvailability": {
+    "status": "unavailable",
+    "reasonCode": "WORLD_MODEL_GROUNDING_DISABLED"
+  },
+  "sourceComparison": {
+    "status": "unavailable",
+    "reasonCode": "WORLD_MODEL_GROUNDING_DISABLED"
+  },
+  "requiredViews": [],
+  "requiredSelections": [],
+  "task": null,
+  "supportingEvidence": [],
+  "references": [],
+  "modelSourceTreeSha256": null,
+  "composedSourceTreeSha256": null,
+  "worldModelCommit": null,
+  "manifestSha256": null,
+  "fresh": true,
+  "renderedSha256": "45b6e800abcf457a1e94edf5178997173b90f13807a01d5cdc1f1087b205a134",
+  "promptStudy": null,
+  "promptDefinition": null,
+  "structuralContext": null,
+  "workSource": {
+    "path": "singularity/work-items/google-cal/source.json",
+    "sha256": "4cf7c7f3d360d866b60680919e540beea7ec7bd9c4cf5e80fdc07a10a65d83fa",
+    "bytes": 949
+  },
+  "promptBudget": {
+    "policy": {
+      "mode": "observe",
+      "profile": "standard",
+      "maximumBytes": 72000,
+      "maximumEstimatedPromptTokens": 18000,
+      "policyOnBudgetBreach": "refuse",
+      "assurance": "estimated-prompt-text"
+    },
+    "admission": {
+      "model": null,
+      "logicalPromptBytes": 28482,
+      "logicalPromptTokens": {
+        "value": 7121,
+        "assurance": "estimated"
+      },
+      "systemAndToolReserveTokens": {
+        "value": null,
+        "assurance": "unavailable"
+      },
+      "historyTokens": {
+        "value": null,
+        "assurance": "unavailable"
+      },
+      "totalAdmissionTokens": {
+        "value": 7121,
+        "assurance": "partial"
+      },
+      "maximumInputTokens": 18000,
+      "safeToEnforce": false,
+      "admitted": null,
+      "policyApprovedConservativeUpperBound": false
+    },
+    "compliance": "compliant",
+    "originalBytes": 28482,
+    "originalEstimatedTokens": 7121,
+    "finalBytes": 28482,
+    "finalEstimatedTokens": 7121,
+    "overflow": false,
+    "warnings": [],
+    "economics": {
+      "prompt": {
+        "candidatePromptBytes": 28482,
+        "deduplicatedPromptBytes": 515,
+        "budgetEvictedPromptBytes": 0,
+        "finalPromptBytes": 28482,
+        "tkrCandidatePromptBytes": null,
+        "tkrCandidateByteDelta": null,
+        "tkrCandidateAssurance": "unavailable",
+        "clauseInputBytesSaved": 306
+      },
+      "provider": {
+        "inputTokens": null,
+        "cachedInputTokens": null,
+        "uncachedInputTokens": null,
+        "assurance": "unavailable"
+      },
+      "system": {
+        "totalSystemTokens": null,
+        "assurance": "unavailable"
+      },
+      "source": {
+        "sourceBytes": 15326,
+        "authoredSourceBytes": 5518,
+        "managedSourceBytesExcluded": 9808,
+        "managedReferenceBytesExcluded": 0,
+        "deliveredSourceBytes": 4142,
+        "assurance": "sflow-measured"
+      }
+    },
+    "sections": [
+      {
+        "id": "phase-contract",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 14262,
+        "estimatedTokens": 3566,
+        "sha256": "0b81a23334043076a870fbda9eb0cff3686b2fd47b98576cdda1383dc7a86927",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "approved-phase-inputs",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 5034,
+        "estimatedTokens": 1259,
+        "sha256": "19d079ba495db5a267e526503de8fb2aebacce9dc2e92769e7e5bf6f8e0560b9",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "work-source",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 867,
+        "estimatedTokens": 217,
+        "sha256": "797aa9cd301305314abb9dab69f0861f3a4f62b5b27d1c129715109f7125e838",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "active-clause-capsule",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1627,
+        "estimatedTokens": 407,
+        "sha256": "5f78d1995173c2a2673c9c97b84408fe0d6e3a7d3887e28a45a70604c4eb3f55",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "governed-agent-policy",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1930,
+        "estimatedTokens": 483,
+        "sha256": "7b793721cac1a9209ac10c856f769acb493f8a42d07169e2811a2b66c6e0daa6",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "pinned-constitution",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 279,
+        "estimatedTokens": 70,
+        "sha256": "c2bca305dec54257e342fd76fd3ba28043e73a0c8df132fcba273acddcfc4fe9",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "world-model-grounding",
+        "mandatory": false,
+        "priority": 40,
+        "bytes": 1433,
+        "estimatedTokens": 359,
+        "sha256": "579d5655a215901ba77dae1878e241cd78043833c9d3618e2350649d7a6124b9",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "governed-execution-evidence",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 1540,
+        "estimatedTokens": 385,
+        "sha256": "7d22a94ff7c557d8ca4e6b25fbfea40fa1d2697b4052c22035d3cba3e3ac9d6e",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "evidence-consistency",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 920,
+        "estimatedTokens": 230,
+        "sha256": "8f9d9a735b247233773d19e173fb2376d49c2cb3465a5ac58b637a9fe5d59512",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      },
+      {
+        "id": "final-clarification-guard",
+        "mandatory": true,
+        "priority": 0,
+        "bytes": 571,
+        "estimatedTokens": 143,
+        "sha256": "167b17253d68feaed6a118bc3766ea9a2f0775c5fa873f60b94affac681cad61",
+        "included": true,
+        "omissionReason": null,
+        "expandHandles": [],
+        "expandability": "unavailable"
+      }
+    ],
+    "omitted": [],
+    "tokenReduction": {
+      "mode": "shadow",
+      "record": {
+        "kind": "tkr/shadow-evaluation",
+        "version": 1,
+        "status": "unavailable",
+        "scope": {
+          "workId": "google-cal",
+          "phase": "planning",
+          "generation": 1,
+          "sourceRevision": null,
+          "configurationSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
+          "executionMode": "workflow-snapshot"
+        },
+        "code": "TKR_CONTRACT_UNSUPPORTED",
+        "diagnosticSha256": "sha256:bbc1b387ff023d8937e8a5b0c40df298562be324edfc06f94b67a2867c751bce",
+        "delivery": {
+          "state": "shadow-not-delivered",
+          "candidateDelivered": false
+        },
+        "receiptSha256": null,
+        "shadowSha256": "sha256:17055b2adfbedb0b1f776a378634098d4c8311213e7a723207c5887bc675a9bf"
+      }
+    },
+    "deduplicatedReferences": [
+      {
+        "handle": "sfref:v1:story:google-cal:95285da2448f936d67b98d228171b4f58318b0324419d70a8d86a6bf2faf61fb",
+        "path": "singularity/work-items/google-cal/artifacts/specification/spec.md",
+        "rawSha256": "dc0e76815df061bfc7c37a1daa1026be92c9f57ad3701dda7447b1ece870cc56",
+        "rawBytes": 9578,
+        "previewBytes": 515,
+        "reason": "same-governed-reference-handle"
+      }
+    ],
+    "inputLinearization": {
+      "sourceBytes": 15326,
+      "authoredBytes": 5518,
+      "managedBytesExcluded": 9808,
+      "injectedBytes": 4448
+    },
+    "inputProjection": {
+      "renderer": "approved-inputs-v3",
+      "capsuleSha256": "sha256:c69045898b2218a36269abf23ed7776682da189608bdcdec27d02b45a8609c9a",
+      "originalSha256": "4c392d3b046fa904cd4bddc7392bdc01e0f6e5932cb6c8d937bcc3abd8e6911a",
+      "renderedSha256": "b8c2b4a2243a135af20b0fe3e688c2b0ff4869f03c30243c9ef5084536224a0c",
+      "originalBytes": 5359,
+      "renderedBytes": 4657,
+      "originalContentBytes": 4448,
+      "renderedContentBytes": 4142,
+      "savedBytes": 306,
+      "metadataBytesSaved": 396,
+      "inputs": [
+        {
+          "phase": "specification",
+          "path": "singularity/work-items/google-cal/artifacts/specification/spec.md",
+          "sourceSha256": "33ade576d2366d5fa925dde55c7c0e26aa60102b95e2c1c33223537d814fb43d",
+          "briefSha256": "b457370c74fff01a31b1924735ca8a19e79ca2691000f04d533acb92e6d11b08",
+          "originalSha256": "sha256:b457370c74fff01a31b1924735ca8a19e79ca2691000f04d533acb92e6d11b08",
+          "renderedSha256": "sha256:0c786ff3928538148f1f6efb583e0b058ab84b2a94b2243024e53f2b112e344b",
+          "deduplicatedClauseIds": [],
+          "savedBytes": 306
+        }
+      ]
+    },
+    "inputDigests": [
+      {
+        "phase": "specification",
+        "path": "singularity/work-items/google-cal/artifacts/specification/spec.md",
+        "status": "captured",
+        "sha256": "33ade576d2366d5fa925dde55c7c0e26aa60102b95e2c1c33223537d814fb43d",
+        "briefSha256": "b457370c74fff01a31b1924735ca8a19e79ca2691000f04d533acb92e6d11b08"
+      }
+    ],
+    "stakeholderProjection": {
+      "renderer": "stakeholder-requests-v2",
+      "referencedRequestIds": [],
+      "requests": [],
+      "capsuleBytesSaved": 0
+    },
+    "executionEvidence": {
+      "projectionSha256": "sha256:8472717b559ef677a62121162649b2b094317de167814fc761435f7badf61a6f",
+      "packets": 1,
+      "omittedPackets": 0,
+      "diagnostics": []
+    },
+    "evidenceConsistency": {
+      "projectionSha256": "sha256:1096210237faee5080636e723ef13bd4996288395a2ff025f4268a831e17ff2c"
+    },
+    "skillLoading": [],
+    "structuralContext": null,
+    "referenceRepositories": [],
+    "workSource": {
+      "path": "singularity/work-items/google-cal/source.json",
+      "sha256": "4cf7c7f3d360d866b60680919e540beea7ec7bd9c4cf5e80fdc07a10a65d83fa",
+      "bytes": 949
+    },
+    "activeClauseCapsule": {
+      "renderer": "clause-capsule-v4",
+      "renderedSha256": "sha256:5f78d1995173c2a2673c9c97b84408fe0d6e3a7d3887e28a45a70604c4eb3f55",
+      "sha256": "sha256:c69045898b2218a36269abf23ed7776682da189608bdcdec27d02b45a8609c9a",
+      "clauses": 4,
+      "openRisks": 0,
+      "clarifications": 0
+    }
+  },
+  "persistedGrounding": null,
+  "tokenReduction": null,
+  "repositoryBrief": {
+    "renderer": "repository-brief@1",
+    "profile": "design",
+    "budget": 3072,
+    "bytes": 1433,
+    "records": [
+      "C-d7c1d8dc4f33",
+      "F-004a0d253a5b",
+      "F-d3f65080a414",
+      "F-afe8fb96ba6c",
+      "F-b3d2fc055a5f",
+      "F-f6c67279379d",
+      "F-8f24f653a6e8",
+      "F-0f03dc2f4c27",
+      "K-risk-8b1835ceb663",
+      "K-risk-4afbbd76a85f",
+      "K-risk-f50777a9b294",
+      "T-7236b3250d11",
+      "T-a3d11b54c276",
+      "T-6a5f0609963d",
+      "T-728f0b6ccd1d"
+    ],
+    "omitted": 0,
+    "phrasing": {
+      "by": "template"
+    }
+  },
+  "remoteSkills": [],
+  "executionContext": {
+    "mode": "workflow-snapshot",
+    "snapshotHash": "sha256:5046ddc8f6ecf8eeb23bc9c514b4607a1373a3d03f407a3fa6edd87dd072ee87",
+    "agentId": "architect",
+    "agentBlobSha256": "sha256:d75713542fb455b2bff883f290f7610bca1895228080ff4e77ce14e3e549be62",
+    "dependencies": [],
+    "instructions": [],
+    "parserProfile": "sflow-agent-document-v1",
+    "composerProfile": "story-snapshot-agent-v1",
+    "overrideSha256": null
+  },
+  "compositionCache": {
+    "key": "d0553182064cd8ab6287af0ae88a53772f367a0b7dd9a693d74473bb9b0b1d99",
+    "promptSha256": "45b6e800abcf457a1e94edf5178997173b90f13807a01d5cdc1f1087b205a134"
+  },
+  "promptPath": "singularity/work-items/google-cal/context/prompts/planning-gen1.md",
+  "files": [],
+  "injectedAt": "2026-11-04T01:55:02.394Z"
+}

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-11-04T01:56:56.556Z",
+  "claims": {
+    "GOOGLE-CAL:AC-001": {
+      "expectedPaths": [
+        "singularity/work-items/google-cal/evidence/calendar-month-grid.png"
+      ],
+      "tests": [
+        "tests/calendar.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "Screenshot shows the month grid with an event and visible add and delete interactions."
+    },
+    "GOOGLE-CAL:REQ-001": {
+      "expectedPaths": [
+        "src/App.css",
+        "src/App.jsx"
+      ],
+      "tests": [
+        "tests/calendar.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Calendar renders the displayed month as a grid."
+    },
+    "GOOGLE-CAL:REQ-002": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "tests/calendar.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Submitting a non-empty title and date renders that event on the corresponding date."
+    },
+    "GOOGLE-CAL:REQ-003": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "tests/calendar.spec.js"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Activating an event’s delete control removes it immediately without a confirmation step."
+    }
+  },
+  "supportingFiles": [
+    "package-lock.json",
+    "package.json",
+    "playwright.config.js"
+  ],
+  "supportingFileDetails": [
+    {
+      "path": "package-lock.json",
+      "class": "dependency-lock",
+      "reason": "record the resolved test-tool dependency tree."
+    },
+    {
+      "path": "package.json",
+      "class": "build-configuration",
+      "reason": "add the browser-test script and required Playwright development dependency."
+    },
+    {
+      "path": "playwright.config.js",
+      "class": "build-configuration",
+      "reason": "configure the local Vite app and browser test/output locations."
+    }
+  ],
+  "verificationContracts": [
+    {
+      "clauseId": "GOOGLE-CAL:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "month-grid",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "Month grid with an event and visible add and delete controls"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "google-cal",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/google-cal/artifacts/planning/plan.md",
+    "sha256": "5fa1dfec4b165402e89cdf05f4c918844a1feaece388241e8399f02b8652b7b2",
+    "bytes": 19882
+  }
+}

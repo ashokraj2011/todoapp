@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "workId": "google-cal",
+  "workType": "spec-driven-standard",
+  "phase": "planning",
+  "generation": 1,
+  "mode": "enforce",
+  "recordedAt": "2026-11-04T01:56:56.461Z",
+  "renderedSha256": "4c392d3b046fa904cd4bddc7392bdc01e0f6e5932cb6c8d937bcc3abd8e6911a",
+  "warnings": [],
+  "inputs": [
+    {
+      "phase": "specification",
+      "path": "artifacts/specification/spec.md",
+      "repositoryPath": "singularity/work-items/google-cal/artifacts/specification/spec.md",
+      "optional": false,
+      "maxBytes": null,
+      "status": "captured",
+      "producerStatus": "approved",
+      "producerGeneration": 1,
+      "approvedAt": "2026-11-04T01:52:56.705Z",
+      "approvedBy": "ashokraj2011",
+      "approvedSha256": "33ade576d2366d5fa925dde55c7c0e26aa60102b95e2c1c33223537d814fb43d",
+      "sha256": "33ade576d2366d5fa925dde55c7c0e26aa60102b95e2c1c33223537d814fb43d",
+      "bytes": 15326,
+      "source": {
+        "path": "singularity/work-items/google-cal/artifacts/specification/spec.md",
+        "rawSha256": "sha256:33ade576d2366d5fa925dde55c7c0e26aa60102b95e2c1c33223537d814fb43d"
+      },
+      "representation": {
+        "kind": "summary",
+        "sha256": "sha256:b457370c74fff01a31b1924735ca8a19e79ca2691000f04d533acb92e6d11b08",
+        "bytes": 4448,
+        "complete": false,
+        "expansionHandle": "sfref:v1:story:google-cal:95285da2448f936d67b98d228171b4f58318b0324419d70a8d86a6bf2faf61fb"
+      },
+      "injectedBytes": 4448,
+      "truncated": false,
+      "authoredBytes": 5518,
+      "managedBytesExcluded": 9808,
+      "projection": {
+        "kind": "approved-summary",
+        "preserve": [
+          "Actors",
+          "User scenarios",
+          "Failure and empty states",
+          "Permissions",
+          "Boundary conditions",
+          "Requirements",
+          "Non-functional requirements",
+          "Assumptions",
+          "Out of scope"
+        ],
+        "maximumSummaryBytes": 32768,
+        "expansion": "hash-bound-reference",
+        "fallback": "block",
+        "briefPath": "singularity/work-items/google-cal/context/briefs/specification-gen1-for-planning.md",
+        "briefSha256": "b457370c74fff01a31b1924735ca8a19e79ca2691000f04d533acb92e6d11b08",
+        "expansionHandle": "sfref:v1:story:google-cal:95285da2448f936d67b98d228171b4f58318b0324419d70a8d86a6bf2faf61fb"
+      }
+    }
+  ]
+}

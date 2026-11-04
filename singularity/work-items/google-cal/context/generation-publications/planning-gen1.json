@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "kind": "generation-publication",
+  "workId": "google-cal",
+  "phase": "planning",
+  "generation": 1,
+  "generationIntentId": null,
+  "generationStart": null,
+  "changeSet": {
+    "path": null,
+    "digest": null
+  },
+  "resultDigest": "sha256:796497476cc1436a348266e8f5b00a97b82f48f851b5205e835e5295686185ae",
+  "architectureIntent": null,
+  "architectureDecision": null,
+  "baseline": {
+    "commit": "29c1e21c42770385d6b7e13db4508a10b085f5d2",
+    "tree": "a0ca2d23eff7a11807f12f51283441779bbe8333"
+  },
+  "transactionId": "8bbc09f9-7552-4a0c-8d7c-1b02f088636d",
+  "eventId": "49fda871-5f97-42e2-bf03-1c9854d4ef98",
+  "eventSha256": "sha256:c3438b05e206374d44bb2cd8d6deeba74c8001d00a3afecc4bee97641bc31fb7",
+  "commitBinding": {
+    "method": "containing-governed-transaction",
+    "commit": "$self",
+    "tree": "$self",
+    "parent": "29c1e21c42770385d6b7e13db4508a10b085f5d2"
+  },
+  "publishedAt": "2026-11-04T01:56:56.515Z",
+  "recordSha256": "sha256:133d30c201ca424834b1798038f4d46859a4c6fa87067785562cea70ec76dae1"
+}

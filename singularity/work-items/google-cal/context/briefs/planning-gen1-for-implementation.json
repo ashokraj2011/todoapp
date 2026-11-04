@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "workId": "google-cal",
+  "producer": {
+    "phase": "planning",
+    "generation": 1
+  },
+  "consumer": {
+    "phase": "implementation"
+  },
+  "source": {
+    "path": "singularity/work-items/google-cal/artifacts/planning/plan.md",
+    "sha256": "5fa1dfec4b165402e89cdf05f4c918844a1feaece388241e8399f02b8652b7b2",
+    "bytes": 19882
+  },
+  "policy": {
+    "projection": "approved-summary",
+    "preserve": [
+      "Test strategy",
+      "Risks and rollback"
+    ],
+    "maximumSummaryBytes": 24576,
+    "expansion": "hash-bound-reference",
+    "fallback": "block"
+  },
+  "policySha256": "8c5a791d726ae572bf97fd0139dc9cde5eb51e4c2299c73932aa6860d56e7407",
+  "status": "ready",
+  "summary": {
+    "heading": "Agent brief"
+  },
+  "preserved": [
+    "Test strategy",
+    "Risks and rollback"
+  ],
+  "rendered": {
+    "path": "singularity/work-items/google-cal/context/briefs/planning-gen1-for-implementation.md",
+    "sha256": "fd95b6475b5dcf539b68ba4ecf794d55e7ce33818bcc90c461260d8957f06ec7",
+    "bytes": 5113
+  },
+  "generatedAt": "2026-11-04T01:56:56.542Z",
+  "integritySha256": "07075144fae9580dff4dc55f0559f31a31e9b496863e937821a965e4511e6896"
+}
