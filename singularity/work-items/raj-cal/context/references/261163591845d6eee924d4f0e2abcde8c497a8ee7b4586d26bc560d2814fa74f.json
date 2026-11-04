@@ -1,0 +1,28 @@
+{
+  "artifact": {
+    "generation": 1,
+    "mediaType": "text/markdown",
+    "outputId": "document",
+    "path": "singularity/work-items/raj-cal/artifacts/planning/plan.md",
+    "phaseId": "planning"
+  },
+  "createdAt": "2026-11-04T05:28:07.437Z",
+  "kind": "governed-reference",
+  "repository": {
+    "id": ".w-b3cbb6c9af628b81a1811637",
+    "origin": "https://github.com/ashokraj2011/todoapp.git"
+  },
+  "revision": {
+    "bytes": 20612,
+    "commitSha": "0619a485d71fe02f2d95575d8c4cddd181d7e84c",
+    "sha256": "40d777e88183aec11e0873c2c7e904612612392500419125518596edd50e29c3"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "branch": "raj-cal",
+    "id": "raj-cal",
+    "kind": "story",
+    "subjectRevision": 1
+  },
+  "visibility": "model"
+}
