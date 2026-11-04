@@ -3633,7 +3633,7 @@
     "policySha256": "sha256:158c6923e4255867a8039aa6e9eb1569da97f76491a8997cf3c9540952f199c9"
   },
   "status": "in_progress",
-  "currentPhase": "implementation",
+  "currentPhase": "convergence",
   "phaseOrder": [
     "specification",
     "planning",
@@ -4494,7 +4494,7 @@
       "label": "Implementation",
       "order": 2,
       "defaultAgent": "developer",
-      "status": "awaiting_approval",
+      "status": "approved",
       "requiredArtifact": {
         "path": "artifacts/implementation/implementation-summary.md",
         "kind": "implementation-summary",
@@ -4583,8 +4583,8 @@
       "qualityCommands": [],
       "startedAt": "2026-11-04T02:01:06.049Z",
       "submittedAt": "2026-11-04T02:54:38.552Z",
-      "approvedAt": null,
-      "approvedBy": null,
+      "approvedAt": "2026-11-04T03:01:38.481Z",
+      "approvedBy": "ashokraj2011",
       "rejectedAt": null,
       "rejectedBy": null,
       "rejectionReason": null,
@@ -4678,7 +4678,201 @@
           "captureGap": "no-metered-session"
         }
       ],
-      "approvals": [],
+      "approvals": [
+        {
+          "decision": "approved",
+          "phase": "implementation",
+          "at": "2026-11-04T03:01:38.481Z",
+          "actor": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "agent": "developer",
+          "authorityGroup": "engineering-reviewers",
+          "identityAssurance": "configured-local",
+          "channel": "copilot-selection-receipt",
+          "generation": 1,
+          "artifactSha256": [
+            {
+              "path": "package-lock.json",
+              "sha256": "b3bf789cb26e2e4fc147dedc64092532bdda9b911edac68c1701e70584efde65"
+            },
+            {
+              "path": "package.json",
+              "sha256": "e7b989c368867607580d8367d3926c8d7884ff8512cf4fcb72f56f3941f395f9"
+            },
+            {
+              "path": "playwright.config.js",
+              "sha256": "a427e710758ade385b63fa26f568e3b01c41df7c4f322bca9608809eb95521e9"
+            },
+            {
+              "path": "singularity/work-items/google-cal/artifacts/implementation/implementation-summary.md",
+              "sha256": "1b14bcc470637e275a5d350b63c04f0a60b0db0d89492112317a02062dacd5e8"
+            },
+            {
+              "path": "src/App.css",
+              "sha256": "d57244ad2ef95d3f0c1fd95bb38a5b081c96bcd1d88a7f94184ca490500c7b49"
+            },
+            {
+              "path": "src/App.jsx",
+              "sha256": "85395ab8cb9413b9514103b7aac587bf99fc801a7b9d3ddf0e7ffa00d9f66f5b"
+            },
+            {
+              "path": "tests/calendar.spec.js",
+              "sha256": "58bc4a6d877762d061ea028965f8def6a8ad4be3363f9b5eaa5bf8f40af4ba9c"
+            }
+          ],
+          "reviewPacketSha256": "ffefd9d4d1fa7962d8a3dc407ccdb650b85e0a0db26f67eef7b760a183d29a7b",
+          "evidenceCommit": "c84da2a642fa554648942e67d9aa0e84db57a915",
+          "artifactSetSha256": "2edc616e8d740a47a58e1be8644471f0e627c756050d2e724b8db1b65f01117e",
+          "architectureIntent": null,
+          "architectureDecision": null,
+          "reviewEvidenceCommit": "c84da2a642fa554648942e67d9aa0e84db57a915",
+          "implementationBindings": {
+            "bindingsSha256": "sha256:50def27f614019df2d3b9449d2c7b873be2ddd9b4c1e46785540af3c3f99a891",
+            "decisions": [
+              {
+                "clauseId": "GOOGLE-CAL:REQ-001",
+                "decision": "accepted"
+              },
+              {
+                "clauseId": "GOOGLE-CAL:REQ-002",
+                "decision": "accepted"
+              },
+              {
+                "clauseId": "GOOGLE-CAL:REQ-003",
+                "decision": "accepted"
+              }
+            ]
+          },
+          "witnessMappings": [
+            {
+              "mappingSha256": "sha256:a832104728c07861deb442636350d46c79b2197eea7396d26c687c81147b343a",
+              "clauseId": "GOOGLE-CAL:AC-001",
+              "clauseBodySha256": "sha256:9cc6703db2a7745f821b147cff24272bf64a17dbb17e612845ce9601a3dc9130",
+              "logicalTestId": "sha256:360941a0e0bedfbfd23d9d5b50fb452ad8f680df57cc40375b1f3dc96ebc1c79",
+              "sourcePath": "tests/calendar.spec.js",
+              "sourceDeclarationSha256": "sha256:3f7e2c972b76f259d60e90a1d58a473ad1a804bf8ce3b52a5365d05239f5946a",
+              "slot": null,
+              "decision": "satisfied",
+              "reason": null,
+              "expiresAt": null,
+              "adequacy": {
+                "setup": "adequate",
+                "action": "adequate",
+                "assertions": "adequate",
+                "boundaries": "adequate",
+                "implementation": "adequate"
+              },
+              "source": "batch"
+            }
+          ],
+          "witnessMappingsSha256": "sha256:d8a50bdcce96d7d627ee00842d4c9f0d84c69c74703a67a5d6e23e068339528f",
+          "actionContext": {
+            "phase": "implementation",
+            "label": "Implementation",
+            "generation": 1,
+            "submittedAt": "2026-11-04T02:54:38.552Z",
+            "artifacts": [
+              {
+                "path": "package-lock.json",
+                "sha256": "b3bf789cb26e2e4fc147dedc64092532bdda9b911edac68c1701e70584efde65"
+              },
+              {
+                "path": "package.json",
+                "sha256": "e7b989c368867607580d8367d3926c8d7884ff8512cf4fcb72f56f3941f395f9"
+              },
+              {
+                "path": "playwright.config.js",
+                "sha256": "a427e710758ade385b63fa26f568e3b01c41df7c4f322bca9608809eb95521e9"
+              },
+              {
+                "path": "singularity/work-items/google-cal/artifacts/implementation/implementation-summary.md",
+                "sha256": "1b14bcc470637e275a5d350b63c04f0a60b0db0d89492112317a02062dacd5e8"
+              },
+              {
+                "path": "src/App.css",
+                "sha256": "d57244ad2ef95d3f0c1fd95bb38a5b081c96bcd1d88a7f94184ca490500c7b49"
+              },
+              {
+                "path": "src/App.jsx",
+                "sha256": "85395ab8cb9413b9514103b7aac587bf99fc801a7b9d3ddf0e7ffa00d9f66f5b"
+              },
+              {
+                "path": "tests/calendar.spec.js",
+                "sha256": "58bc4a6d877762d061ea028965f8def6a8ad4be3363f9b5eaa5bf8f40af4ba9c"
+              }
+            ],
+            "agentBriefs": [
+              {
+                "consumerPhase": "convergence",
+                "status": "ready",
+                "path": "singularity/work-items/google-cal/context/briefs/implementation-gen1-for-convergence.json",
+                "renderedPath": "singularity/work-items/google-cal/context/briefs/implementation-gen1-for-convergence.md",
+                "renderedSha256": "1de897e5e3cf58ce28657fe97d269fb32ad88814da132d03495d32cad96bd4a2",
+                "integritySha256": "a96701293d6b38b3e50c5137c643abab1f79e9316d0d4d082ac5150c55bf4624",
+                "documentId": "agent-brief-implementation-gen1-convergence",
+                "documentPath": "singularity/work-items/google-cal/context/briefs/implementation-gen1-for-convergence.md",
+                "documentSha256": "1de897e5e3cf58ce28657fe97d269fb32ad88814da132d03495d32cad96bd4a2"
+              },
+              {
+                "consumerPhase": "verification",
+                "status": "ready",
+                "path": "singularity/work-items/google-cal/context/briefs/implementation-gen1-for-verification.json",
+                "renderedPath": "singularity/work-items/google-cal/context/briefs/implementation-gen1-for-verification.md",
+                "renderedSha256": "223ff51e72f75a105e6e42179e50d3d06208fcd73fd02ebfecb69bceced51971",
+                "integritySha256": "f25a8fe67e71a7006e05886fc789250915ef0ac138cfb6bddeb728056bba9102",
+                "documentId": "agent-brief-implementation-gen1-verification",
+                "documentPath": "singularity/work-items/google-cal/context/briefs/implementation-gen1-for-verification.md",
+                "documentSha256": "223ff51e72f75a105e6e42179e50d3d06208fcd73fd02ebfecb69bceced51971"
+              }
+            ],
+            "reviewPacketSha256": "ffefd9d4d1fa7962d8a3dc407ccdb650b85e0a0db26f67eef7b760a183d29a7b",
+            "submittedSourceCommit": "83a1f04705801b865687d93b9f0115b353212500",
+            "planId": "07a102591a53a9838d9cc083"
+          },
+          "upstream": {
+            "sha256": "sha256:983bbfba21374642b3c386264aba9a4f02a47cee792c01dca9ee795b233a72d3",
+            "refs": [
+              {
+                "kind": "input",
+                "ref": "planning",
+                "sha256": "sha256:5d6ce028da988fbd1650385705464bc9062187eeb3e88a3642299b2c06f2c193",
+                "authoredSha256": "sha256:99c9c27c9362d65ae4b2b03adc55ef34369537f5cfe5dc69b425e131e97a7f10"
+              },
+              {
+                "kind": "input",
+                "ref": "specification",
+                "sha256": "sha256:68cf31e4a2ef14da810be2242b55e9f363cae95f4b058279276d67514f7dc0cf",
+                "authoredSha256": "sha256:b21af338c19caec355c24a78c9be82fe4b5b7ac522b3ef6ea7949ca2180a9d54"
+              },
+              {
+                "kind": "candidate",
+                "ref": "HEAD",
+                "sha256": "sha256:97386d157c0568fd9699fcb6fadccbd98896fb981eb0f0d0049e21f9fb499664"
+              },
+              {
+                "kind": "specification",
+                "ref": "records",
+                "sha256": "sha256:4cb684df10d30027248e9cdf2b86e7b1ee2ccc6bb642d0b4fc0855c62d81fd0d"
+              },
+              {
+                "kind": "documents",
+                "ref": "implementation",
+                "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+              },
+              {
+                "kind": "decisions",
+                "ref": "story",
+                "sha256": "sha256:562cc2ee87caf6e9e7176efd3d407f5871c94a7c6cc13df2914b29fe304ead17"
+              }
+            ]
+          },
+          "selfApproval": true
+        }
+      ],
       "generationPublications": [
         {
           "generation": 1,
@@ -4731,12 +4925,14 @@
         {
           "path": "singularity/work-items/google-cal/artifacts/implementation/implementation-summary.md",
           "kind": "document",
-          "status": "pending",
+          "status": "approved",
           "exists": true,
-          "size": 18041,
-          "sha256": "1b14bcc470637e275a5d350b63c04f0a60b0db0d89492112317a02062dacd5e8",
+          "size": 26336,
+          "sha256": "8379d6dd47948edfe702bacac9d61e237c968708c94a63632ec48b02a2928f06",
           "registeredAt": "2026-11-04T02:15:45.448Z",
-          "updatedAt": "2026-11-04T02:54:38.552Z"
+          "updatedAt": "2026-11-04T03:01:38.482Z",
+          "approvedAt": "2026-11-04T03:01:38.481Z",
+          "approvedBy": "ashokraj2011"
         },
         {
           "path": "src/App.css",
@@ -5914,7 +6110,7 @@
       "label": "Convergence",
       "order": 3,
       "defaultAgent": "architect",
-      "status": "not_started",
+      "status": "in_progress",
       "requiredArtifact": {
         "path": "artifacts/convergence/convergence.md",
         "kind": "convergence-report",
@@ -6015,7 +6211,7 @@
         }
       },
       "qualityCommands": [],
-      "startedAt": null,
+      "startedAt": "2026-11-04T03:01:38.481Z",
       "submittedAt": null,
       "approvedAt": null,
       "approvedBy": null,
@@ -6451,6 +6647,22 @@
       "event": "phase_submitted",
       "phase": "implementation",
       "detail": "7 artifacts"
+    },
+    {
+      "at": "2026-11-04T03:01:38.481Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "work_interval_closed",
+      "phase": "implementation",
+      "detail": "interval INT-implementation-G1-001 closed after phase approval"
+    },
+    {
+      "at": "2026-11-04T03:01:38.481Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "phase_self_approved",
+      "phase": "implementation",
+      "detail": "threshold reached; advanced to convergence"
     }
   ],
   "measurement": {
@@ -8150,6 +8362,143 @@
         },
         "createdAt": "2026-11-04T02:54:36.117Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "6d6d6da6-dd14-4293-8087-c7a5a33b8afb",
+        "type": "phase-approved",
+        "subject": {
+          "kind": "story",
+          "id": "google-cal",
+          "branch": "google-cal"
+        },
+        "phaseId": "implementation",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "approved",
+          "reviewPacketSha256": "ffefd9d4d1fa7962d8a3dc407ccdb650b85e0a0db26f67eef7b760a183d29a7b",
+          "evidenceCommit": "c84da2a642fa554648942e67d9aa0e84db57a915",
+          "artifactSetSha256": "2edc616e8d740a47a58e1be8644471f0e627c756050d2e724b8db1b65f01117e",
+          "witnessMappingsSha256": "sha256:d8a50bdcce96d7d627ee00842d4c9f0d84c69c74703a67a5d6e23e068339528f"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-04T03:01:38.039Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "6d6d6da6-dd14-4293-8087-c7a5a33b8afb",
+        "eventType": "phase-approved",
+        "capabilityId": "todoapp",
+        "subject": {
+          "aliases": [
+            "google-cal"
+          ],
+          "branch": "google-cal",
+          "canonicalBranch": "google-cal",
+          "createdAt": "2026-11-04T01:35:49.066Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "convergence",
+          "generation": 1,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 3,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 2,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 3,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "convergence",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "google",
+          "updatedAt": "2026-11-04T03:01:38.481Z",
+          "workId": "google-cal",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "8b165a854d72b38ffd26f9a79d2e3674f0fa52e5640011fc8f6e7ace10ea4d46",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
+          "lifecycleEventId": "6d6d6da6-dd14-4293-8087-c7a5a33b8afb",
+          "lifecyclePayload": {
+            "decision": "approved",
+            "reviewPacketSha256": "ffefd9d4d1fa7962d8a3dc407ccdb650b85e0a0db26f67eef7b760a183d29a7b",
+            "evidenceCommit": "c84da2a642fa554648942e67d9aa0e84db57a915",
+            "artifactSetSha256": "2edc616e8d740a47a58e1be8644471f0e627c756050d2e724b8db1b65f01117e",
+            "witnessMappingsSha256": "sha256:d8a50bdcce96d7d627ee00842d4c9f0d84c69c74703a67a5d6e23e068339528f"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "6d6d6da6-dd14-4293-8087-c7a5a33b8afb",
+            "type": "phase-approved",
+            "subject": {
+              "kind": "story",
+              "id": "google-cal",
+              "branch": "google-cal"
+            },
+            "phaseId": "implementation",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "approved",
+              "reviewPacketSha256": "ffefd9d4d1fa7962d8a3dc407ccdb650b85e0a0db26f67eef7b760a183d29a7b",
+              "evidenceCommit": "c84da2a642fa554648942e67d9aa0e84db57a915",
+              "artifactSetSha256": "2edc616e8d740a47a58e1be8644471f0e627c756050d2e724b8db1b65f01117e",
+              "witnessMappingsSha256": "sha256:d8a50bdcce96d7d627ee00842d4c9f0d84c69c74703a67a5d6e23e068339528f"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-04T03:01:38.039Z"
+          }
+        },
+        "createdAt": "2026-11-04T03:01:38.043Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -8163,13 +8512,14 @@
       "sourceBaseCommit": "0e1f748b8c9a84423c33c1076e5e500e8988872b",
       "escalationTarget": null,
       "path": "singularity/work-items/google-cal/context/work-intervals/implementation-gen1-baseline.json",
-      "status": "reconciled",
+      "status": "closed",
       "finalReconciliation": {
         "reconciliationSha256": "2a4b6c33c5801a5e50a46d33f8746962731db5357074c2a4b3a9467e6013c8d0",
         "path": "singularity/work-items/google-cal/context/work-intervals/reconciliations/2a4b6c33c5801a5e50a46d33f8746962731db5357074c2a4b3a9467e6013c8d0.json",
         "targetHead": "83a1f04705801b865687d93b9f0115b353212500",
         "recordedAt": "2026-11-04T02:54:38.551Z"
-      }
+      },
+      "closedAt": "2026-11-04T03:01:38.481Z"
     },
     "history": [
       {
