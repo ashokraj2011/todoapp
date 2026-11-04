@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "workId": "raj-cal",
+  "workType": "spec-driven-standard",
+  "phase": "planning",
+  "generation": 1,
+  "mode": "enforce",
+  "recordedAt": "2026-11-04T05:25:59.145Z",
+  "renderedSha256": "ad12625e572a1cf82537dcf49d39bcec310857f7d7183c8534ad8d98933b810e",
+  "warnings": [],
+  "inputs": [
+    {
+      "phase": "specification",
+      "path": "artifacts/specification/spec.md",
+      "repositoryPath": "singularity/work-items/raj-cal/artifacts/specification/spec.md",
+      "optional": false,
+      "maxBytes": null,
+      "status": "captured",
+      "producerStatus": "approved",
+      "producerGeneration": 1,
+      "approvedAt": "2026-11-04T05:20:16.220Z",
+      "approvedBy": "ashokraj2011",
+      "approvedSha256": "6afb633eb22478b659c28d734b151a8b423f3977dceb7c93b9b78826d147be37",
+      "sha256": "6afb633eb22478b659c28d734b151a8b423f3977dceb7c93b9b78826d147be37",
+      "bytes": 16966,
+      "source": {
+        "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md",
+        "rawSha256": "sha256:6afb633eb22478b659c28d734b151a8b423f3977dceb7c93b9b78826d147be37"
+      },
+      "representation": {
+        "kind": "summary",
+        "sha256": "sha256:2478615c53fd292d42714957ec7190e1653062015aa317a1e75a36474917a257",
+        "bytes": 5053,
+        "complete": false,
+        "expansionHandle": "sfref:v1:story:raj-cal:432ea1ac6ac60f188df0edff17c25302836bcc6dbff4afa388e08fe8f602508a"
+      },
+      "injectedBytes": 5053,
+      "truncated": false,
+      "authoredBytes": 7212,
+      "managedBytesExcluded": 9754,
+      "projection": {
+        "kind": "approved-summary",
+        "preserve": [
+          "Actors",
+          "User scenarios",
+          "Failure and empty states",
+          "Permissions",
+          "Boundary conditions",
+          "Requirements",
+          "Non-functional requirements",
+          "Assumptions",
+          "Out of scope"
+        ],
+        "maximumSummaryBytes": 32768,
+        "expansion": "hash-bound-reference",
+        "fallback": "block",
+        "briefPath": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-planning.md",
+        "briefSha256": "2478615c53fd292d42714957ec7190e1653062015aa317a1e75a36474917a257",
+        "expansionHandle": "sfref:v1:story:raj-cal:432ea1ac6ac60f188df0edff17c25302836bcc6dbff4afa388e08fe8f602508a"
+      }
+    }
+  ]
+}

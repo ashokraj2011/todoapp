@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "bytes": 20612,
+    "path": "singularity/work-items/raj-cal/artifacts/planning/plan.md",
+    "role": "document",
+    "sha256": "40d777e88183aec11e0873c2c7e904612612392500419125518596edd50e29c3"
+  },
+  "configuration": {
+    "revision": "5af0f06caca0c277331cda9490849598996321d0",
+    "sha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a"
+  },
+  "generation": 1,
+  "inputs": [
+    {
+      "kind": null,
+      "path": "artifacts/specification/spec.md",
+      "sha256": null
+    }
+  ],
+  "integritySha256": "468606a109470532374304f14c30bc1d7d95ccea6db72065eb284c64370be3ba",
+  "phase": "planning",
+  "producer": {
+    "actor": "88361104+ashokraj2011@users.noreply.github.com",
+    "agent": "architect",
+    "kind": "governed-agent"
+  },
+  "publication": {
+    "branch": "raj-cal",
+    "commit": null,
+    "publishedAt": "2026-11-04T05:25:59.202Z"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "id": "raj-cal",
+    "kind": "story"
+  },
+  "template": {
+    "path": "singularity/work-items/raj-cal/config/wfa/blobs/sha256/502d705077ebbb399de79a9523b3cb2d377e17ba1fc05acbb43fd106a5c2fd84",
+    "sha256": "502d705077ebbb399de79a9523b3cb2d377e17ba1fc05acbb43fd106a5c2fd84"
+  }
+}

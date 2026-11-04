@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 2,
+  "kind": "planned",
+  "recordedAt": "2026-11-04T05:25:59.248Z",
+  "claims": {
+    "RAJ-CAL:AC-001": {
+      "expectedPaths": [
+        "singularity/work-items/raj-cal/evidence/calendar-dark-theme.png"
+      ],
+      "tests": [],
+      "testDisposition": "non-test",
+      "testReason": null,
+      "verificationCriterion": "RAJ-CAL:AC-001",
+      "deviation": null,
+      "fulfillment": "evidence",
+      "observableResult": "A captured completed-app screenshot shows a calendar view and its original dark theme for human review; it is not a Google Calendar visual-match target."
+    },
+    "RAJ-CAL:REQ-001": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Selecting Month, Week, or Day renders the corresponding period."
+    },
+    "RAJ-CAL:REQ-002": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Previous/next moves by the displayed period and Today returns the display to the current date."
+    },
+    "RAJ-CAL:REQ-003": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Creating an event for a date displays it on that date."
+    },
+    "RAJ-CAL:REQ-004": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Editing an event updates its displayed details without changing another event."
+    },
+    "RAJ-CAL:REQ-005": {
+      "expectedPaths": [
+        "src/App.jsx"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Deleting an event removes it from the calendar."
+    },
+    "RAJ-CAL:REQ-006": {
+      "expectedPaths": [
+        "src/App.css",
+        "src/index.css"
+      ],
+      "tests": [
+        "src/App.test.jsx"
+      ],
+      "testDisposition": "applicable",
+      "testReason": null,
+      "deviation": null,
+      "fulfillment": "modified",
+      "observableResult": "Calendar uses an original dark theme and does not reproduce Google Calendar's distinctive interface or branding; visual review is covered by `RAJ-CAL:AC-001`."
+    }
+  },
+  "supportingFiles": [
+    "package-lock.json",
+    "package.json",
+    "vite.config.js"
+  ],
+  "supportingFileDetails": [
+    {
+      "path": "package-lock.json",
+      "class": "dependency-lock",
+      "reason": "records the resolved test dependencies."
+    },
+    {
+      "path": "package.json",
+      "class": "build-configuration",
+      "reason": "adds the test script and test dependencies."
+    },
+    {
+      "path": "vite.config.js",
+      "class": "build-configuration",
+      "reason": "configures the component-test environment."
+    }
+  ],
+  "verificationContracts": [
+    {
+      "clauseId": "RAJ-CAL:AC-001",
+      "combination": "all",
+      "slots": [
+        {
+          "slot": "calendar-screen",
+          "method": "visual",
+          "role": "primary",
+          "witness": {
+            "target": "Completed calendar in Month view"
+          },
+          "requiredAssurance": "source-bound"
+        }
+      ]
+    }
+  ],
+  "workId": "raj-cal",
+  "phase": "planning",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/raj-cal/artifacts/planning/plan.md",
+    "sha256": "40d777e88183aec11e0873c2c7e904612612392500419125518596edd50e29c3",
+    "bytes": 20612
+  }
+}
