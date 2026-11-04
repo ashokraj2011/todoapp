@@ -1,0 +1,46 @@
+{
+  "artifact": {
+    "bytes": 674,
+    "path": "package.json",
+    "role": "configuration",
+    "sha256": "e7b989c368867607580d8367d3926c8d7884ff8512cf4fcb72f56f3941f395f9"
+  },
+  "configuration": {
+    "revision": "d5429d82e15ef2b2156586b587045fe68d2fdd6a",
+    "sha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a"
+  },
+  "generation": 1,
+  "inputs": [
+    {
+      "kind": null,
+      "path": "artifacts/planning/plan.md",
+      "sha256": null
+    },
+    {
+      "kind": null,
+      "path": "artifacts/specification/spec.md",
+      "sha256": null
+    }
+  ],
+  "integritySha256": "14e96ab0b222fcf852babc0dfe650235db5123ae5c53f361ddf2c0d92ba49d3d",
+  "phase": "implementation",
+  "producer": {
+    "actor": "88361104+ashokraj2011@users.noreply.github.com",
+    "agent": "developer",
+    "kind": "governed-agent"
+  },
+  "publication": {
+    "branch": "google-cal",
+    "commit": null,
+    "publishedAt": "2026-11-04T02:15:48.324Z"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "id": "google-cal",
+    "kind": "story"
+  },
+  "template": {
+    "path": "singularity/work-items/google-cal/config/wfa/blobs/sha256/2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+    "sha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54"
+  }
+}

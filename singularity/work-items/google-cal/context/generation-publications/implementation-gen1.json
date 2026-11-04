@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "kind": "generation-publication",
+  "workId": "google-cal",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "d8f49d78-3aa4-47e9-9a0b-fc842f713b65",
+  "generationStart": {
+    "path": "singularity/work-items/google-cal/context/generation-start/implementation-gen1.json",
+    "sha256": "sha256:457e01826aef00f5365ff065ce635422fb3a15b129530c4cfb8c4c85be61c7d2"
+  },
+  "changeSet": {
+    "path": "singularity/work-items/google-cal/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:1a3ff12b6e2e1fa374cf335b867932730a7f3077afd530e3f20e97cf0777b325"
+  },
+  "resultDigest": "sha256:f94dc7afd5b128db6fa9846e6427d1692edd32b44445b4496feaea4581eb883c",
+  "architectureIntent": null,
+  "architectureDecision": null,
+  "baseline": {
+    "commit": "0e1f748b8c9a84423c33c1076e5e500e8988872b",
+    "tree": "4c761b3026da34ca0913f0c8cb5031f3fce78422"
+  },
+  "transactionId": "59d9f608-7415-4bb1-abc9-8eb327157b7e",
+  "eventId": "8efd6253-6e55-4a5a-9d46-725e3e7839f0",
+  "eventSha256": "sha256:8fa295dca34f8ca3525eda7d0868282cc07047311cc5cd5cc0b8fe05330a238d",
+  "commitBinding": {
+    "method": "containing-governed-transaction",
+    "commit": "$self",
+    "tree": "$self",
+    "parent": "be543216a10c441dfe5e13d90c0259587ddad9bb"
+  },
+  "publishedAt": "2026-11-04T02:15:48.324Z",
+  "recordSha256": "sha256:a137703979f2367e524364d243f473f14b53842b9ef847d2546b350033ba4a85"
+}

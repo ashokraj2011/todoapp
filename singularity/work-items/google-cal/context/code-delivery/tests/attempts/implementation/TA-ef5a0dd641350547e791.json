@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 5,
+  "kind": "test-execution",
+  "attemptId": "TA-ef5a0dd641350547e791",
+  "nonce": "dee93b58a2313a8fdefae6c52573458e",
+  "parentAttemptId": null,
+  "purpose": "preflight",
+  "workId": "google-cal",
+  "phase": "implementation",
+  "generation": 1,
+  "commandId": "playwright-tests",
+  "commandSha256": "sha256:6d98c29c94909555b78d1c3d1304755b2c9b8d8346941b0e792eb7340854441c",
+  "argvSha256": "e9c3f81587b101b6b2e6a7ea683e36eedcd03c26a244cfed81fb433fd5b4598c",
+  "selection": {
+    "selection": "complete",
+    "gaps": [],
+    "selectionSha256": "sha256:039da759343cefbe790fa07d5890dfc79e172fc47cc0799b373bd49048c130bb"
+  },
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "ci": "1",
+    "removed": [],
+    "declaredSha256": null,
+    "toolchain": {
+      "node": "26.12.0",
+      "npm": "11.20.0",
+      "playwright": "1.64.1"
+    },
+    "host": "node 26.12.0"
+  },
+  "environmentSha256": "sha256:f88b0dfeaba7b940d41f73f7eece2275f3c4a2352c8f6d0e44f845b1f63689b5",
+  "platform": "darwin",
+  "workingDirectory": ".",
+  "affectedRoots": [
+    "."
+  ],
+  "adapter": "playwright-json",
+  "profile": "playwright-json-v1",
+  "candidate": {
+    "commit": "be543216a10c441dfe5e13d90c0259587ddad9bb",
+    "treeSha256": "sha256:1509991d59f82b894c913542f00ba4030d174cfd37db242e1527c910a29c084e"
+  },
+  "process": {
+    "status": "passed",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "infrastructureUnavailable": false,
+    "startedAt": "2026-11-04T02:15:46.462Z",
+    "completedAt": "2026-11-04T02:15:48.176Z"
+  },
+  "status": "passed",
+  "terminal": true,
+  "exitCode": 0,
+  "timedOut": false,
+  "skipped": false,
+  "suppressed": false,
+  "tests": {
+    "discovered": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  },
+  "result": {
+    "path": ".sflow/results/playwright-tests.json",
+    "sha256": "e81b2674a4c12cc1ee3c8c77e3fc6715790aa07ccfac7149ee9be819a1ac6fa9",
+    "bytes": 4770,
+    "files": [
+      {
+        "sourcePath": ".sflow/results/playwright-tests.json",
+        "sha256": "e81b2674a4c12cc1ee3c8c77e3fc6715790aa07ccfac7149ee9be819a1ac6fa9",
+        "bytes": 4770
+      }
+    ]
+  },
+  "rawReports": [
+    {
+      "path": "singularity/work-items/google-cal/context/code-delivery/tests/raw/e81b2674a4c12cc1ee3c8c77e3fc6715790aa07ccfac7149ee9be819a1ac6fa9.bin",
+      "sha256": "e81b2674a4c12cc1ee3c8c77e3fc6715790aa07ccfac7149ee9be819a1ac6fa9",
+      "bytes": 4770
+    }
+  ],
+  "occurrences": [
+    {
+      "suitePath": [],
+      "name": "calendar displays a month grid and supports adding and deleting an event",
+      "file": "calendar.spec.js",
+      "line": 4,
+      "outcome": "passed",
+      "durationMs": 465
+    }
+  ],
+  "reportError": null,
+  "assurance": "module-executed",
+  "pin": {
+    "commandId": "playwright-tests",
+    "source": {
+      "kind": "inferred"
+    },
+    "argv": [
+      "npm",
+      "run",
+      "test:e2e",
+      "--",
+      "--reporter=json"
+    ],
+    "workingDirectory": ".",
+    "affectedRoots": [
+      "."
+    ],
+    "adapter": "playwright-json",
+    "definition": [
+      {
+        "path": "package.json",
+        "selector": "scripts.test:e2e",
+        "sha256": "cfd10b01d174664b54cfcac2326926df03a15051afb6e7af180bbcf265789612"
+      },
+      {
+        "path": "playwright.config.js",
+        "selector": null,
+        "sha256": "a427e710758ade385b63fa26f568e3b01c41df7c4f322bca9608809eb95521e9"
+      },
+      {
+        "path": "vite.config.js",
+        "selector": null,
+        "sha256": "4d36db3522a7b2dd10e0936e1004373c7ee65f10f7cd7920cd76410459c15a45"
+      }
+    ],
+    "definitionVersion": 2,
+    "sha256": "sha256:2ca25609bfe1f42326660143dda4cffa40e49ab77d58139896bf13df6cfb308f"
+  },
+  "narrowing": {
+    "reasons": [],
+    "filters": [],
+    "focused": [],
+    "skipped": 0,
+    "discovered": 1,
+    "baseline": null,
+    "shortfall": 0
+  }
+}

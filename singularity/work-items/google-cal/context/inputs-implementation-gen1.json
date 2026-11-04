@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "workId": "google-cal",
+  "workType": "spec-driven-standard",
+  "phase": "implementation",
+  "generation": 1,
+  "mode": "enforce",
+  "recordedAt": "2026-11-04T02:15:48.304Z",
+  "renderedSha256": "70bb748a47f83d8fa635057175bd9fb44918c797fa2f6ae6e0ac005c180feab3",
+  "warnings": [],
+  "inputs": [
+    {
+      "phase": "specification",
+      "path": "artifacts/specification/spec.md",
+      "repositoryPath": "singularity/work-items/google-cal/artifacts/specification/spec.md",
+      "optional": false,
+      "maxBytes": null,
+      "status": "captured",
+      "producerStatus": "approved",
+      "producerGeneration": 1,
+      "approvedAt": "2026-11-04T01:52:56.705Z",
+      "approvedBy": "ashokraj2011",
+      "approvedSha256": "33ade576d2366d5fa925dde55c7c0e26aa60102b95e2c1c33223537d814fb43d",
+      "sha256": "33ade576d2366d5fa925dde55c7c0e26aa60102b95e2c1c33223537d814fb43d",
+      "bytes": 15326,
+      "source": {
+        "path": "singularity/work-items/google-cal/artifacts/specification/spec.md",
+        "rawSha256": "sha256:33ade576d2366d5fa925dde55c7c0e26aa60102b95e2c1c33223537d814fb43d"
+      },
+      "representation": {
+        "kind": "summary",
+        "sha256": "sha256:8a2e03297d4181b4acf3407eb9a87a99e11aa37c739cc1cd0d244c2c594d8d91",
+        "bytes": 4454,
+        "complete": false,
+        "expansionHandle": "sfref:v1:story:google-cal:95285da2448f936d67b98d228171b4f58318b0324419d70a8d86a6bf2faf61fb"
+      },
+      "injectedBytes": 4454,
+      "truncated": false,
+      "authoredBytes": 5518,
+      "managedBytesExcluded": 9808,
+      "projection": {
+        "kind": "approved-summary",
+        "preserve": [
+          "Actors",
+          "User scenarios",
+          "Failure and empty states",
+          "Permissions",
+          "Boundary conditions",
+          "Requirements",
+          "Non-functional requirements",
+          "Assumptions",
+          "Out of scope"
+        ],
+        "maximumSummaryBytes": 32768,
+        "expansion": "hash-bound-reference",
+        "fallback": "block",
+        "briefPath": "singularity/work-items/google-cal/context/briefs/specification-gen1-for-implementation.md",
+        "briefSha256": "8a2e03297d4181b4acf3407eb9a87a99e11aa37c739cc1cd0d244c2c594d8d91",
+        "expansionHandle": "sfref:v1:story:google-cal:95285da2448f936d67b98d228171b4f58318b0324419d70a8d86a6bf2faf61fb"
+      }
+    },
+    {
+      "phase": "planning",
+      "path": "artifacts/planning/plan.md",
+      "repositoryPath": "singularity/work-items/google-cal/artifacts/planning/plan.md",
+      "optional": false,
+      "maxBytes": null,
+      "status": "captured",
+      "producerStatus": "approved",
+      "producerGeneration": 1,
+      "approvedAt": "2026-11-04T02:01:06.049Z",
+      "approvedBy": "ashokraj2011",
+      "approvedSha256": "9f032908b690a33fe895bb0fd7c080847f4303c2336a3ec3cc033fe86dea2f47",
+      "sha256": "9f032908b690a33fe895bb0fd7c080847f4303c2336a3ec3cc033fe86dea2f47",
+      "bytes": 25028,
+      "source": {
+        "path": "singularity/work-items/google-cal/artifacts/planning/plan.md",
+        "rawSha256": "sha256:9f032908b690a33fe895bb0fd7c080847f4303c2336a3ec3cc033fe86dea2f47"
+      },
+      "representation": {
+        "kind": "summary",
+        "sha256": "sha256:fd95b6475b5dcf539b68ba4ecf794d55e7ce33818bcc90c461260d8957f06ec7",
+        "bytes": 5113,
+        "complete": false,
+        "expansionHandle": "sfref:v1:story:google-cal:4894339edf8481de9ffab024370032d20746e8683e86c815d4bc74129e574326"
+      },
+      "injectedBytes": 5113,
+      "truncated": false,
+      "authoredBytes": 10740,
+      "managedBytesExcluded": 14288,
+      "projection": {
+        "kind": "approved-summary",
+        "preserve": [
+          "Test strategy",
+          "Risks and rollback"
+        ],
+        "maximumSummaryBytes": 24576,
+        "expansion": "hash-bound-reference",
+        "fallback": "block",
+        "briefPath": "singularity/work-items/google-cal/context/briefs/planning-gen1-for-implementation.md",
+        "briefSha256": "fd95b6475b5dcf539b68ba4ecf794d55e7ce33818bcc90c461260d8957f06ec7",
+        "expansionHandle": "sfref:v1:story:google-cal:4894339edf8481de9ffab024370032d20746e8683e86c815d4bc74129e574326"
+      }
+    }
+  ]
+}

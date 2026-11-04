@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "workId": "google-cal",
+  "workType": "spec-driven-standard",
+  "phase": "implementation",
+  "generation": 1,
+  "capturedAt": "2026-11-04T02:15:48.365Z",
+  "source": "copilot-otel",
+  "rawTraceCommitted": false,
+  "spanCount": 0,
+  "rawBytesRead": 0,
+  "startedAt": "2026-11-04T02:09:23.468Z",
+  "completedAt": "2026-11-04T02:15:48.324Z",
+  "pending": true,
+  "warnings": [
+    "Copilot usage is not read during the work; run singularity-flow telemetry reconcile to record it.",
+    "No Copilot activity was captured for this phase."
+  ],
+  "privacyDiagnostics": [],
+  "launches": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-04T02:15:48.324Z",
+      "completedAt": "2026-11-04T02:15:48.324Z",
+      "agent": "developer",
+      "generation": 1
+    }
+  ],
+  "activity": null,
+  "prompt": {
+    "source": "sflow-composition",
+    "bytes": 31533,
+    "estimatedTokens": 7884,
+    "estimation": "UTF-8 bytes divided by four, rounded up",
+    "maximumBytes": 72000,
+    "maximumEstimatedTokens": 18000,
+    "budgetMode": "observe",
+    "originalBytes": 31533,
+    "omittedSections": 0
+  }
+}

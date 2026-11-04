@@ -1,0 +1,404 @@
+{
+  "schemaVersion": 1,
+  "kind": "repository-change-set",
+  "subject": {
+    "workId": "google-cal",
+    "phase": "implementation",
+    "generation": 1,
+    "generationIntentId": "d8f49d78-3aa4-47e9-9a0b-fc842f713b65"
+  },
+  "base": {
+    "commit": "0e1f748b8c9a84423c33c1076e5e500e8988872b",
+    "tree": "4c761b3026da34ca0913f0c8cb5031f3fce78422"
+  },
+  "target": {
+    "head": "be543216a10c441dfe5e13d90c0259587ddad9bb",
+    "includesIndex": true,
+    "includesWorktree": true,
+    "includesUntracked": true,
+    "caseInsensitivePaths": true
+  },
+  "entries": [
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": ".sflow/results/playwright/.last-run.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+        "bytes": 45
+      },
+      "changeId": "sha256:355aa8e2f944db7cc20acf3c37b3b3ee0237c2b18917267657e3f24e32d41344"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": ".sflow/results/playwright/calendar-month-grid.png",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:07c541b1181a8f0f85d7e5a10689dc5c2310b6fcc34faa9c54c0be10bb8b2e2b",
+        "bytes": 57617
+      },
+      "changeId": "sha256:b7b03b21faa1e7b1b2ba9bb0ca4bca8c850157e55ca76d8f80f77018f8296f2a"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "playwright.config.js",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:a427e710758ade385b63fa26f568e3b01c41df7c4f322bca9608809eb95521e9",
+        "bytes": 550
+      },
+      "changeId": "sha256:0aa36c7a655791dfe7d8f133e408251a61149c31360b77b624860b520b7a1faf"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/google-cal/approvals/planning.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": "3482d5906c258dc2961d2c32521006fea0aa9595",
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:a7878aef7d6278f4cf8e000397090f36a562b5b083877dd0763e17c74b924519",
+        "bytes": 5141
+      },
+      "changeId": "sha256:d5ad48dd350c943a95d5fb1abfa6611cb6f504e5f957797c3d6d243497ddd429"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/google-cal/approvals/planning/2026-11-04T02-01-06-049Z-approved.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": "16a44f79161951cbf21f362953dffac701e4f29e",
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:f17f58090e91a7947d7f74cc2f02eeecae42080202008ed23221215c518e047a",
+        "bytes": 4667
+      },
+      "changeId": "sha256:93c8512b06af9937f212fb9efdff54d2a799855bc44e0ff7a6affcd9fe085ad8"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/google-cal/artifacts/implementation/implementation-summary.md",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:23d4b8eba4af9afef6137a410af2b8f0a3b85b9d6db0fd97b11043847be6c505",
+        "bytes": 15928
+      },
+      "changeId": "sha256:02b569733830a9381819ed3464c55e5da8ae78630ccbe2e9d54a452d2bf6b24c"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/google-cal/context/code-delivery/tests/attempts/implementation/TA-ef5a0dd641350547e791.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:4b1a9b200bb25cc776ad1a98566a51fd232cc4003b5b2c5fd8619e6ac57027e7",
+        "bytes": 3870
+      },
+      "changeId": "sha256:ab5dce2985a27f37e31833f23ec5f85920cf729df31c6bd7370b3274d2d4a724"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/google-cal/context/code-delivery/tests/raw/e81b2674a4c12cc1ee3c8c77e3fc6715790aa07ccfac7149ee9be819a1ac6fa9.bin",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:e81b2674a4c12cc1ee3c8c77e3fc6715790aa07ccfac7149ee9be819a1ac6fa9",
+        "bytes": 4770
+      },
+      "changeId": "sha256:d57e1c7cc5e84ff735062d1d3019ea763e5aa6d588a65cb4904abc945755c132"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/google-cal/context/generation-start/implementation-gen1.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:584001f5a8e8b6128387a207ad3eff37d472c884fa0a15c6bdac02cf8c0d9e96",
+        "bytes": 1185
+      },
+      "changeId": "sha256:dfa33d8d98c50525ef629694cf9128fb08036e4f33871ad13753762585a3fbd4"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/google-cal/context/implementation-gen1.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:8bf153af219335514040351bf4d773a99ee140fabe05deaae2404678cb908ff6",
+        "bytes": 13900
+      },
+      "changeId": "sha256:2b5d83a8ba9d543ad30df4cd1d18cb1a3d7e5cab9cc875fcabc903a9167fb200"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/google-cal/context/inputs-implementation-gen1.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:4edbee94cea1055bf531c666e7a998bed956de6d85db059f8709d0d4d5bde06d",
+        "bytes": 4224
+      },
+      "changeId": "sha256:b2e217b0f28076a445e94981f8b4ad1258b46fa870337aa09343864fed79e5b8"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/google-cal/context/ledger-intents/96cc58aa-4922-4c6c-a4f8-6ce6d9f651f7.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": "3a0662fe6e48491b8ba5e2f16d727b87011552b9",
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:ba990780b6745cd46e8307eeb4ecbe25017b982c99fc2d9b0efeafd08bff5262",
+        "bytes": 2611
+      },
+      "changeId": "sha256:22e2ba17c4044d28506a7e584714f33f3524f2abeb7f89eb7581de05b9fc1599"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/google-cal/context/prompts/implementation-gen1.md",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:2cb893a6cd50d526a36acdfc4539525ff0d58d7639ff0ee2d7410d5de8cbc49f",
+        "bytes": 31533
+      },
+      "changeId": "sha256:97775be7b0949a666986062b3e918641b5d8a86676fdc46f572f809ea421a476"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/google-cal/context/work-intervals/implementation-gen1-baseline.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": "63fb7b6d4606a110c41d0d5b44ee72f313328762",
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:6d52b3e08369955b1f474eb15e984e525db853470b51bc09a446b425b36f250b",
+        "bytes": 1676
+      },
+      "changeId": "sha256:cc66e436569da0b120760c04e66f867190e55f0195cd2b626cda8f7248168386"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/google-cal/evidence/calendar-month-grid.png",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:4a600d51df67f1fa6c566fc28a2f1f35a668cfad6e2078a73628ff91005801b8",
+        "bytes": 57515
+      },
+      "changeId": "sha256:20f1054558af5353412eea15110fe7c1c9a280cc070a5c1cc1771e13c6d674c3"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "tests/calendar.spec.js",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:58bc4a6d877762d061ea028965f8def6a8ad4be3363f9b5eaa5bf8f40af4ba9c",
+        "bytes": 1487
+      },
+      "changeId": "sha256:c4688189735b8aa3f63cc94271527c43bbef80d014216ff51be013e9d923004d"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "package-lock.json",
+      "newPath": "package-lock.json",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "46cfe6107d6f172a2516d8bec06ae3ce0a604eb7",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:b3bf789cb26e2e4fc147dedc64092532bdda9b911edac68c1701e70584efde65",
+        "bytes": 91720
+      },
+      "changeId": "sha256:fc3996babf3bba3457914615c6521ca00f9dcc7d7fa24fba28d951ddb3ddd10c"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "package.json",
+      "newPath": "package.json",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "7118c5a581b08a80c7762b6c3995e2e2a30e5f3c",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:e7b989c368867607580d8367d3926c8d7884ff8512cf4fcb72f56f3941f395f9",
+        "bytes": 674
+      },
+      "changeId": "sha256:55af03b48f505ddd1ec8390f9b04453c53225ef5cc5ef4703b3a39b371cd28c9"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "singularity/work-items/google-cal/STATUS.md",
+      "newPath": "singularity/work-items/google-cal/STATUS.md",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "3dd0163035a2d249cca8dc4d0e1ec3e6d22e0061",
+      "newObject": "724ce94d80dd66324169f68166854662be85b239",
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:53b77dd27616855ec9f2aa3dbc3c40ec0f65a829b31058bb7d3365e04ee76a2e",
+        "bytes": 2588
+      },
+      "changeId": "sha256:c2ae4f627acdc24efdd52e6702d1684f73d49edb43f3c4a73db2f1f2b3f6a4d9"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "singularity/work-items/google-cal/artifacts/planning/plan.md",
+      "newPath": "singularity/work-items/google-cal/artifacts/planning/plan.md",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "19ed785d4859a648220426740b185868ddb0d4c7",
+      "newObject": "a04cd1e8730822a279fd6a56dac69a7d4a8877a6",
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:9f032908b690a33fe895bb0fd7c080847f4303c2336a3ec3cc033fe86dea2f47",
+        "bytes": 25028
+      },
+      "changeId": "sha256:95a73affdecbed854500913269764e9b0118c4efcb52963417fe80e194b4cdc3"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "singularity/work-items/google-cal/workflow.json",
+      "newPath": "singularity/work-items/google-cal/workflow.json",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "8ec20dfa71331b568c1c1045fc19f2e0f52a57cf",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:7c072cd0c3ff20cb556bf4074e936452aa6aa4d5690cba2410df68879e30b093",
+        "bytes": 246461
+      },
+      "changeId": "sha256:b4715392e29d248427d26db966432533ef50b823cdd124ab45455ce04da5e96b"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "src/App.css",
+      "newPath": "src/App.css",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "149ec7e8eebb443a8ec35cf6eaba1f1119cd4c1e",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:d57244ad2ef95d3f0c1fd95bb38a5b081c96bcd1d88a7f94184ca490500c7b49",
+        "bytes": 6806
+      },
+      "changeId": "sha256:589d01a661d8c5a6e6a2ccb19440ef36c8d69140d2e727c20341e3fbc0b15d4c"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "src/App.jsx",
+      "newPath": "src/App.jsx",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "c8baa0d07b1bac12fd3018728adca30ca01e8495",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:85395ab8cb9413b9514103b7aac587bf99fc801a7b9d3ddf0e7ffa00d9f66f5b",
+        "bytes": 5664
+      },
+      "changeId": "sha256:bc49433c80372dc738a5dd9ce57ca00496f1fa590b0ea4e5db5f61f302740d44"
+    }
+  ],
+  "digest": "sha256:1a3ff12b6e2e1fa374cf335b867932730a7f3077afd530e3f20e97cf0777b325"
+}

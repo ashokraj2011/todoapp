@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "workId": "google-cal",
+  "producer": {
+    "phase": "implementation",
+    "generation": 1
+  },
+  "consumer": {
+    "phase": "convergence"
+  },
+  "source": {
+    "path": "singularity/work-items/google-cal/artifacts/implementation/implementation-summary.md",
+    "sha256": "a8d8eeb3686b12686d36d395f954f4c7664acbc3b5579ce3846fe251134538f7",
+    "bytes": 17959
+  },
+  "policy": {
+    "projection": "approved-summary",
+    "preserve": [
+      "Changed components and decisions",
+      "Tests and operational notes"
+    ],
+    "maximumSummaryBytes": 24576,
+    "expansion": "hash-bound-reference",
+    "fallback": "block"
+  },
+  "policySha256": "9f2b941cb72cb442bfd2d97ed655fa573ebb6f53fe71468998372353bd0cc901",
+  "status": "ready",
+  "summary": {
+    "heading": "Agent brief"
+  },
+  "preserved": [
+    "Changed components and decisions",
+    "Tests and operational notes"
+  ],
+  "rendered": {
+    "path": "singularity/work-items/google-cal/context/briefs/implementation-gen1-for-convergence.md",
+    "sha256": "1de897e5e3cf58ce28657fe97d269fb32ad88814da132d03495d32cad96bd4a2",
+    "bytes": 2618
+  },
+  "generatedAt": "2026-11-04T02:15:48.434Z",
+  "integritySha256": "a96701293d6b38b3e50c5137c643abab1f79e9316d0d4d082ac5150c55bf4624"
+}

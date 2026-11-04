@@ -1,0 +1,450 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "google-cal",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "d8f49d78-3aa4-47e9-9a0b-fc842f713b65",
+  "changeSet": {
+    "path": "singularity/work-items/google-cal/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:1a3ff12b6e2e1fa374cf335b867932730a7f3077afd530e3f20e97cf0777b325",
+    "sourcePaths": [
+      "src/App.css",
+      "src/App.jsx"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      "package-lock.json",
+      "package.json",
+      "playwright.config.js"
+    ],
+    "executableTestPaths": [
+      "tests/calendar.spec.js"
+    ],
+    "supportingTestPaths": [
+      "playwright.config.js"
+    ]
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 2,
+      "dependency-lock": 1,
+      "product-source": 2,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:0aa36c7a655791dfe7d8f133e408251a61149c31360b77b624860b520b7a1faf",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "playwright.config.js",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:c4688189735b8aa3f63cc94271527c43bbef80d014216ff51be013e9d923004d",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "tests/calendar.spec.js",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:fc3996babf3bba3457914615c6521ca00f9dcc7d7fa24fba28d951ddb3ddd10c",
+        "status": "modified",
+        "oldPath": "package-lock.json",
+        "newPath": "package-lock.json",
+        "role": "dependency-lock",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:55af03b48f505ddd1ec8390f9b04453c53225ef5cc5ef4703b3a39b371cd28c9",
+        "status": "modified",
+        "oldPath": "package.json",
+        "newPath": "package.json",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:589d01a661d8c5a6e6a2ccb19440ef36c8d69140d2e727c20341e3fbc0b15d4c",
+        "status": "modified",
+        "oldPath": "src/App.css",
+        "newPath": "src/App.css",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:bc49433c80372dc738a5dd9ce57ca00496f1fa590b0ea4e5db5f61f302740d44",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [],
+    "bound": [
+      "GOOGLE-CAL:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "GOOGLE-CAL:AC-001",
+        "testSource": "tests/calendar.spec.js",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "GOOGLE-CAL:AC-001",
+        "testSource": "tests/calendar.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "identity": {
+          "framework": "playwright",
+          "suitePath": [],
+          "name": "calendar displays a month grid and supports adding and deleting an event"
+        },
+        "logicalTestId": "sha256:360941a0e0bedfbfd23d9d5b50fb452ad8f680df57cc40375b1f3dc96ebc1c79",
+        "declarationSha256": "sha256:3f7e2c972b76f259d60e90a1d58a473ad1a804bf8ce3b52a5365d05239f5946a",
+        "supportSha256": null,
+        "assertions": {
+          "count": 1,
+          "tautological": 0,
+          "negative": false,
+          "boundary": true,
+          "nullability": false,
+          "adequacy": "adequate",
+          "subjects": [
+            "Date",
+            "async",
+            "click",
+            "dismiss",
+            "fill",
+            "getByLabel",
+            "getByRole",
+            "getByText",
+            "goto",
+            "install",
+            "on",
+            "screenshot",
+            "setViewportSize",
+            "toBeVisible",
+            "toHaveCount"
+          ]
+        },
+        "line": 4,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "tests/calendar.spec.js",
+        "profile": "playwright-json-v1",
+        "commandId": "playwright-tests",
+        "resultAdapter": "playwright-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "GOOGLE-CAL:REQ-001",
+        "expectedPaths": [
+          "src/App.css",
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "GOOGLE-CAL:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "GOOGLE-CAL:REQ-003",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "GOOGLE-CAL:REQ-001",
+        "sourcePath": "src/App.css",
+        "line": 1,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "GOOGLE-CAL:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 15,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "GOOGLE-CAL:REQ-002",
+        "sourcePath": "src/App.jsx",
+        "line": 36,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "GOOGLE-CAL:REQ-003",
+        "sourcePath": "src/App.jsx",
+        "line": 50,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "GOOGLE-CAL:AC-001",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/google-cal/evidence/calendar-month-grid.png",
+            "state": "present",
+            "sha256": "4a600d51df67f1fa6c566fc28a2f1f35a668cfad6e2078a73628ff91005801b8"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "GOOGLE-CAL:REQ-001",
+        "explanation": {
+          "text": "Style the month grid and its day cells.",
+          "path": "src/App.css",
+          "line": 1
+        },
+        "regions": [
+          {
+            "path": "src/App.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 14,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 1,
+                "afterStart": 21,
+                "afterLines": 7
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 3,
+                "afterStart": 29,
+                "afterLines": 6
+              },
+              {
+                "beforeStart": 11,
+                "beforeLines": 4,
+                "afterStart": 36,
+                "afterLines": 389
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          },
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 3,
+                "beforeLines": 0,
+                "afterStart": 4,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 8,
+                "afterStart": 17,
+                "afterLines": 27
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 2,
+                "afterStart": 46,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 2,
+                "afterStart": 50,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 24,
+                "beforeLines": 26,
+                "afterStart": 56,
+                "afterLines": 89
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "GOOGLE-CAL:REQ-002",
+        "explanation": {
+          "text": "Store title and date as a local date-only value.",
+          "path": "src/App.jsx",
+          "line": 36
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 3,
+                "beforeLines": 0,
+                "afterStart": 4,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 8,
+                "afterStart": 17,
+                "afterLines": 27
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 2,
+                "afterStart": 46,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 2,
+                "afterStart": 50,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 24,
+                "beforeLines": 26,
+                "afterStart": 56,
+                "afterLines": 89
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "GOOGLE-CAL:REQ-003",
+        "explanation": {
+          "text": "Remove the event immediately without confirmation.",
+          "path": "src/App.jsx",
+          "line": 50
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 3,
+                "beforeLines": 0,
+                "afterStart": 4,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 8,
+                "afterStart": 17,
+                "afterLines": 27
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 2,
+                "afterStart": 46,
+                "afterLines": 2
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 2,
+                "afterStart": 50,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 24,
+                "beforeLines": 26,
+                "afterStart": 56,
+                "afterLines": 89
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:50def27f614019df2d3b9449d2c7b873be2ddd9b4c1e46785540af3c3f99a891"
+  },
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:1509991d59f82b894c913542f00ba4030d174cfd37db242e1527c910a29c084e",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-04T02:15:48.324Z"
+}

@@ -1,0 +1,157 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.12.0/bin/node",
+      "/Users/ashokraj/Downloads/rr/todoapp/.singularity-flow/story-worktrees/.w-7451cf881f103b71344b6652/node_modules/.bin/playwright",
+      "test",
+      "--reporter=json"
+    ],
+    "configFile": "/Users/ashokraj/Downloads/rr/todoapp/.singularity-flow/story-worktrees/.w-7451cf881f103b71344b6652/playwright.config.js",
+    "rootDir": "/Users/ashokraj/Downloads/rr/todoapp/.singularity-flow/story-worktrees/.w-7451cf881f103b71344b6652/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ashokraj/Downloads/rr/todoapp/.singularity-flow/story-worktrees/.w-7451cf881f103b71344b6652/.sflow/results/playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ashokraj/Downloads/rr/todoapp/.singularity-flow/story-worktrees/.w-7451cf881f103b71344b6652/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/ashokraj/Downloads/rr/todoapp/.singularity-flow/story-worktrees/.w-7451cf881f103b71344b6652/.sflow/results/playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/ashokraj/Downloads/rr/todoapp/.singularity-flow/story-worktrees/.w-7451cf881f103b71344b6652/tests",
+        "snapshotDir": "/Users/ashokraj/Downloads/rr/todoapp/.singularity-flow/story-worktrees/.w-7451cf881f103b71344b6652/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "baseURL": "http://127.0.0.1:4173",
+          "timezoneId": "America/Los_Angeles",
+          "screenshot": "off"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 5,
+    "webServer": {
+      "command": "npm run dev -- --host 127.0.0.1 --port 4173 --strictPort",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "calendar.spec.js",
+      "file": "calendar.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "calendar displays a month grid and supports adding and deleting an event",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 465,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T02:15:47.428Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a24ae44a634413bdfd70-7b4ee2e03778780b2810",
+          "file": "calendar.spec.js",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-04T02:15:46.848Z",
+    "duration": 1282.4489999999998,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
