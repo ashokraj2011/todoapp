@@ -1,0 +1,28 @@
+{
+  "artifact": {
+    "generation": 1,
+    "mediaType": "text/markdown",
+    "outputId": "document",
+    "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md",
+    "phaseId": "specification"
+  },
+  "createdAt": "2026-11-04T05:18:06.339Z",
+  "kind": "governed-reference",
+  "repository": {
+    "id": ".w-b3cbb6c9af628b81a1811637",
+    "origin": "https://github.com/ashokraj2011/todoapp.git"
+  },
+  "revision": {
+    "bytes": 11260,
+    "commitSha": "7cc48d19f33845382fdcf9f437b1e3b0fbd4d6bc",
+    "sha256": "33858cecde70ccc10990f5f3819cd9983bba71944ee3fe46a78d47eb29e06751"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "branch": "raj-cal",
+    "id": "raj-cal",
+    "kind": "story",
+    "subjectRevision": 1
+  },
+  "visibility": "model"
+}
