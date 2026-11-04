@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 2,
+  "kind": "observed",
+  "recordedAt": "2026-11-04T05:37:47.759Z",
+  "claims": {
+    "RAJ-CAL:AC-001": {
+      "observedPaths": [
+        "singularity/work-items/raj-cal/evidence/calendar-dark-theme.png"
+      ],
+      "testResults": [],
+      "commits": [
+        "fe65c5f53143b596b50bb4666d011075aabb18d5"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "RAJ-CAL:REQ-001": {
+      "observedPaths": [
+        "src/App.jsx"
+      ],
+      "testResults": [
+        "src/App.test.jsx"
+      ],
+      "commits": [
+        "fe65c5f53143b596b50bb4666d011075aabb18d5"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "RAJ-CAL:REQ-002": {
+      "observedPaths": [
+        "src/App.jsx"
+      ],
+      "testResults": [
+        "src/App.test.jsx"
+      ],
+      "commits": [
+        "fe65c5f53143b596b50bb4666d011075aabb18d5"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "RAJ-CAL:REQ-003": {
+      "observedPaths": [
+        "src/App.jsx"
+      ],
+      "testResults": [
+        "src/App.test.jsx"
+      ],
+      "commits": [
+        "fe65c5f53143b596b50bb4666d011075aabb18d5"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "RAJ-CAL:REQ-004": {
+      "observedPaths": [
+        "src/App.jsx"
+      ],
+      "testResults": [
+        "src/App.test.jsx"
+      ],
+      "commits": [
+        "fe65c5f53143b596b50bb4666d011075aabb18d5"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "RAJ-CAL:REQ-005": {
+      "observedPaths": [
+        "src/App.jsx"
+      ],
+      "testResults": [
+        "src/App.test.jsx"
+      ],
+      "commits": [
+        "fe65c5f53143b596b50bb4666d011075aabb18d5"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "RAJ-CAL:REQ-006": {
+      "observedPaths": [
+        "src/App.css",
+        "src/index.css"
+      ],
+      "testResults": [
+        "src/App.test.jsx"
+      ],
+      "commits": [
+        "fe65c5f53143b596b50bb4666d011075aabb18d5"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    }
+  },
+  "workId": "raj-cal",
+  "phase": "implementation",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/raj-cal/context/code-delivery/implementation-gen1.json",
+    "sha256": "5bfc80a979c064034dcd3e535dc277d0daf2adfedb1331166ae89d64102db47e",
+    "changeSetDigest": "sha256:75f2a5b5b5705bc0122ce9c26d8c3bc1df4b6e9b730f043a14bc8dc9d5f7233e"
+  }
+}

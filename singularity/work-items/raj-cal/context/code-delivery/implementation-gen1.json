@@ -131,7 +131,13 @@
       {
         "clauseId": "RAJ-CAL:AC-001",
         "testSource": "src/App.test.jsx",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": ".-node-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -693,11 +699,19 @@
   "excludedChanges": [
     "index.html"
   ],
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": ".-node-tests",
+      "attemptId": "TA-1f3b6e0c9ddd663796f0",
+      "receiptPath": "singularity/work-items/raj-cal/context/code-delivery/tests/attempts/implementation/TA-1f3b6e0c9ddd663796f0.json",
+      "receiptSha256": "a868f898bfd8b816fad9e8fc79ad7aa59bd22a597cc1d9325d938e9dbe42cdcd",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:ad7b27502dccbe4dab879bcfd6ef0c0732a4ce9d547134252e0d58347fea7e4e",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "fe65c5f53143b596b50bb4666d011075aabb18d5",
+    "generationTree": "d5ced86e31a0ac245c1d9920887d99642a854760"
   },
   "model": {
     "task": "code",
@@ -716,6 +730,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-11-04T05:35:17.184Z"
+  "status": "ready",
+  "capturedAt": "2026-11-04T05:35:17.184Z",
+  "validatedAt": "2026-11-04T05:37:47.752Z"
 }

@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 5,
+  "kind": "test-execution",
+  "attemptId": "TA-ceee8bdb4f5bbd419d7b",
+  "nonce": "89a5808b71c85fb0ab6adca433a005a9",
+  "parentAttemptId": "TA-0d2159f230f2ba24e318",
+  "purpose": "local",
+  "workId": "raj-cal",
+  "phase": "implementation",
+  "generation": 2,
+  "localRunId": "RUN-20261104T053601Z-d5df0062",
+  "uncommittedChanges": true,
+  "commandId": ".-node-tests",
+  "commandSha256": "sha256:365a3f7fa75a6c536f4c2b3d33b5accc770995e7294753ce19d1fe5466a341ce",
+  "argvSha256": "7ea91cb57633bb94e24395e7b34f059abecf6ac68b822ee60f2db1c06646d5a9",
+  "selection": {
+    "selection": "complete",
+    "gaps": [],
+    "selectionSha256": "sha256:8684f0528fd02325e4a466ce66e7714105b5cb351a343ea1f7c045e9ceca5bd5"
+  },
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "ci": "1",
+    "removed": [],
+    "declaredSha256": null,
+    "toolchain": {
+      "node": "26.12.0",
+      "npm": "11.20.0"
+    },
+    "host": "node 24.22.1"
+  },
+  "environmentSha256": "sha256:69c4a59593ce22ef5d3589590725638759633d2d4ce6ce68a2d01c6eca56b4d8",
+  "platform": "darwin",
+  "workingDirectory": ".",
+  "affectedRoots": [
+    "."
+  ],
+  "adapter": "vitest-json",
+  "profile": "vitest-static-v2",
+  "candidate": {
+    "commit": "fe65c5f53143b596b50bb4666d011075aabb18d5",
+    "treeSha256": "sha256:ad7b27502dccbe4dab879bcfd6ef0c0732a4ce9d547134252e0d58347fea7e4e"
+  },
+  "process": {
+    "status": "passed",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "infrastructureUnavailable": false,
+    "startedAt": "2026-11-04T05:36:03.959Z",
+    "completedAt": "2026-11-04T05:36:06.357Z"
+  },
+  "status": "passed",
+  "terminal": true,
+  "exitCode": 0,
+  "timedOut": false,
+  "skipped": false,
+  "suppressed": false,
+  "tests": {
+    "discovered": 6,
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0
+  },
+  "result": {
+    "path": ".sflow/results/node-tests.json",
+    "sha256": "91c703e1badd65eff47335f4886950bd517aee48d61ac72676389110eaf9c101",
+    "bytes": 2453,
+    "files": [
+      {
+        "sourcePath": ".sflow/results/node-tests.json",
+        "sha256": "91c703e1badd65eff47335f4886950bd517aee48d61ac72676389110eaf9c101",
+        "bytes": 2453
+      }
+    ]
+  },
+  "rawReports": [
+    {
+      "path": "singularity/work-items/raj-cal/context/code-delivery/tests/raw/91c703e1badd65eff47335f4886950bd517aee48d61ac72676389110eaf9c101.bin",
+      "sha256": "91c703e1badd65eff47335f4886950bd517aee48d61ac72676389110eaf9c101",
+      "bytes": 2453
+    }
+  ],
+  "occurrences": [
+    {
+      "suitePath": [
+        "calendar experience"
+      ],
+      "name": "switches between month, week, and day periods",
+      "outcome": "passed",
+      "durationMs": 127
+    },
+    {
+      "suitePath": [
+        "calendar experience"
+      ],
+      "name": "navigates periods and returns to today",
+      "outcome": "passed",
+      "durationMs": 58
+    },
+    {
+      "suitePath": [
+        "calendar experience"
+      ],
+      "name": "creates an event on its selected date",
+      "outcome": "passed",
+      "durationMs": 151
+    },
+    {
+      "suitePath": [
+        "calendar experience"
+      ],
+      "name": "edits an event without changing a different event",
+      "outcome": "passed",
+      "durationMs": 345
+    },
+    {
+      "suitePath": [
+        "calendar experience"
+      ],
+      "name": "deletes only the selected event and retains the empty calendar",
+      "outcome": "passed",
+      "durationMs": 176
+    },
+    {
+      "suitePath": [
+        "calendar experience"
+      ],
+      "name": "renders a complete calendar view ready for the separate visual review",
+      "outcome": "passed",
+      "durationMs": 16
+    }
+  ],
+  "reportError": null,
+  "assurance": "module-executed"
+}

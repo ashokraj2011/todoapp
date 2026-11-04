@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "raj-cal",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "2a30f00e4c7f2b5f7f4ac181e344ea05f897e026b05cd9ac5390c1f23b48e3ae",
+  "baseline": {
+    "path": "singularity/work-items/raj-cal/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "2a30f00e4c7f2b5f7f4ac181e344ea05f897e026b05cd9ac5390c1f23b48e3ae",
+    "verified": true,
+    "sourceBaseCommit": "e8d0ace852d97504addaac71963e43c62efade81"
+  },
+  "sourceBaseCommit": "e8d0ace852d97504addaac71963e43c62efade81",
+  "target": {
+    "branch": "raj-cal",
+    "head": "2a42997b225a24dc716b9037ec02339268f20dc9",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "index.html",
+      "status": "present",
+      "sha256": "44871c43fe96780c324a5614d1bf9599315f416515030a479fe19784fbdb1d1f",
+      "bytes": 427,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "package-lock.json",
+      "status": "present",
+      "sha256": "f3256b16eeb8ea46b28bf18e1ce7b202bf4b5e3a48b45298db475924738ab87d",
+      "bytes": 123049,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "package.json",
+      "status": "present",
+      "sha256": "a2ea207d0f41b7483baa4577de120a41355628fdb03964729490b6c87f84154d",
+      "bytes": 765,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "src/App.css",
+      "status": "present",
+      "sha256": "32dbfc57463caf26ba7e33bc5f8848d2c9620a8dab1fb4532f72f019094b5e97",
+      "bytes": 8183,
+      "verdict": "planned",
+      "clauseIds": [
+        "RAJ-CAL:REQ-006"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "9d9f4304cf2e9239a3477becd577e8d9c0f8508240c04c4a6f89677fa98944a8",
+      "bytes": 8756,
+      "verdict": "planned",
+      "clauseIds": [
+        "RAJ-CAL:REQ-001",
+        "RAJ-CAL:REQ-002",
+        "RAJ-CAL:REQ-003",
+        "RAJ-CAL:REQ-004",
+        "RAJ-CAL:REQ-005"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.test.jsx",
+      "status": "present",
+      "sha256": "1a5c0d54cb0b0878f54f9ebf5a432407a975277625e4119411d9b05984174321",
+      "bytes": 4413,
+      "verdict": "planned",
+      "clauseIds": [
+        "RAJ-CAL:REQ-001",
+        "RAJ-CAL:REQ-002",
+        "RAJ-CAL:REQ-003",
+        "RAJ-CAL:REQ-004",
+        "RAJ-CAL:REQ-005",
+        "RAJ-CAL:REQ-006"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/index.css",
+      "status": "present",
+      "sha256": "ecfb5cba3207aec30ac7974826bac4ab4637cdbd83f7b19ed0bd85c3f0fb0798",
+      "bytes": 844,
+      "verdict": "planned",
+      "clauseIds": [
+        "RAJ-CAL:REQ-006"
+      ],
+      "protected": false
+    },
+    {
+      "path": "vite.config.js",
+      "status": "present",
+      "sha256": "1fd21805e182f2824364d3cfff9d5b3c0c86043d16964063da81c9ab5e666e21",
+      "bytes": 202,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 8,
+    "planned": 4,
+    "unplanned": 4,
+    "protected": 0
+  },
+  "decision": {
+    "status": "review",
+    "summaryStatus": "attention",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "89e1d2852c6c31be9bad6c9f02b9bf2aa70d4aa6a0a1b335c88dc707130be342",
+  "reconciledAt": "2026-11-04T05:37:47.862Z",
+  "final": true,
+  "recordedAt": "2026-11-04T05:37:47.863Z",
+  "path": "singularity/work-items/raj-cal/context/work-intervals/reconciliations/89e1d2852c6c31be9bad6c9f02b9bf2aa70d4aa6a0a1b335c88dc707130be342.json"
+}
