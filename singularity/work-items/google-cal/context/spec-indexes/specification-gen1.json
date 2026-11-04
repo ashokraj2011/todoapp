@@ -1,0 +1,94 @@
+{
+  "clauses": [
+    {
+      "anchor": "[GOOGLE-CAL:REQ-001]",
+      "body": "The calendar presents events in a month-grid view. *(S1)*",
+      "bodySha256": "b0b65fa51e143b702be9170a8f7a8cf254128abaa5e7414ebc0951592addfd08",
+      "dependsOn": [],
+      "id": "GOOGLE-CAL:REQ-001",
+      "namespace": "GOOGLE-CAL",
+      "number": 1,
+      "source": {
+        "line": 207,
+        "path": "singularity/work-items/google-cal/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "GOOGLE-CAL:AC-001",
+        "methods": [
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[GOOGLE-CAL:REQ-002]",
+      "body": "A calendar user can add an event with a title and date, and the event appears on the calendar for that date. *(S1)*",
+      "bodySha256": "5461012658d30e7f7407d45f3447ed59be084558f612f0a8e70615884e5885e7",
+      "dependsOn": [],
+      "id": "GOOGLE-CAL:REQ-002",
+      "namespace": "GOOGLE-CAL",
+      "number": 2,
+      "source": {
+        "line": 208,
+        "path": "singularity/work-items/google-cal/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[GOOGLE-CAL:REQ-003]",
+      "body": "A calendar user can delete an event; deletion removes it immediately without confirmation. *(S2)*",
+      "bodySha256": "045ed41d8244f755cf3f5ca64e331f5c23ae7be01eba176cc17bb0766b4cc7f0",
+      "dependsOn": [],
+      "id": "GOOGLE-CAL:REQ-003",
+      "namespace": "GOOGLE-CAL",
+      "number": 3,
+      "source": {
+        "line": 209,
+        "path": "singularity/work-items/google-cal/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[GOOGLE-CAL:AC-001]",
+      "body": "A screenshot shows the month-grid calendar with an event and visible representations of adding and deleting events. *(S3)* [scope:SRI-35efa5d9d09b]",
+      "bodySha256": "9cc6703db2a7745f821b147cff24272bf64a17dbb17e612845ce9601a3dc9130",
+      "dependsOn": [],
+      "id": "GOOGLE-CAL:AC-001",
+      "namespace": "GOOGLE-CAL",
+      "number": 1,
+      "source": {
+        "line": 213,
+        "path": "singularity/work-items/google-cal/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "GOOGLE-CAL:AC-001",
+        "methods": [
+          "visual"
+        ]
+      }
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "6b999d28729ad0059f36f9ec88132d7a21a0d3dfabe1ed473d838ca6a832f148",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 9578,
+    "path": "singularity/work-items/google-cal/artifacts/specification/spec.md",
+    "sha256": "dc0e76815df061bfc7c37a1daa1026be92c9f57ad3701dda7447b1ece870cc56"
+  },
+  "workId": "google-cal"
+}

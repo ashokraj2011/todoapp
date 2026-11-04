@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "workId": "google-cal",
+  "producer": {
+    "phase": "specification",
+    "generation": 1
+  },
+  "consumer": {
+    "phase": "convergence"
+  },
+  "source": {
+    "path": "singularity/work-items/google-cal/artifacts/specification/spec.md",
+    "sha256": "dc0e76815df061bfc7c37a1daa1026be92c9f57ad3701dda7447b1ece870cc56",
+    "bytes": 9578
+  },
+  "policy": {
+    "projection": "approved-summary",
+    "preserve": [
+      "Actors",
+      "User scenarios",
+      "Failure and empty states",
+      "Permissions",
+      "Boundary conditions",
+      "Requirements",
+      "Non-functional requirements",
+      "Assumptions",
+      "Out of scope"
+    ],
+    "maximumSummaryBytes": 32768,
+    "expansion": "hash-bound-reference",
+    "fallback": "block"
+  },
+  "policySha256": "ad9f77ec2409a7c7e71d3a2e6e96018c815245c3c21845f78d811f212b7d1db7",
+  "status": "ready",
+  "summary": {
+    "heading": "Agent brief"
+  },
+  "preserved": [
+    "Actors",
+    "User scenarios",
+    "Failure and empty states",
+    "Permissions",
+    "Boundary conditions",
+    "Requirements",
+    "Non-functional requirements",
+    "Assumptions",
+    "Out of scope"
+  ],
+  "rendered": {
+    "path": "singularity/work-items/google-cal/context/briefs/specification-gen1-for-convergence.md",
+    "sha256": "1470d8fd9bffeda50640727e5885d394c4b10456534c893172e238222f8c3521",
+    "bytes": 4451
+  },
+  "generatedAt": "2026-11-04T01:43:17.894Z",
+  "integritySha256": "2f852e359bec5d2e5f792796113405ce06eb47ee45bbd29869bb0b54f2c47fc5"
+}

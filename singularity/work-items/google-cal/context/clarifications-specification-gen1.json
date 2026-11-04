@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "workId": "google-cal",
+  "phase": "specification",
+  "generation": 1,
+  "mode": "required",
+  "promptPath": "singularity/work-items/google-cal/context/prompts/specification-gen1.md",
+  "promptSha256": "851825b4e87634537070dd1a3816037a729ddefc67331394249e1ac0b06dad60",
+  "groundingRecordPath": "singularity/work-items/google-cal/context/specification-gen1.json",
+  "groundingRecordSha256": "adf9e0c9dac4970fd1af9f83d3c8609ae1e29e7f637816eb869703cac76dafb8",
+  "responses": [
+    {
+      "id": "Q-001",
+      "question": "Which calendar view should the specification cover?",
+      "answer": "Month grid (proposal)",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-002",
+      "question": "What minimum information should an event include?",
+      "answer": "Title and date (proposal)",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-003",
+      "question": "Should event deletion be immediate or confirmed?",
+      "answer": "Immediate delete (proposal)",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-004",
+      "question": "What should the screenshot demonstrate?",
+      "answer": "Calendar view with an event and add/delete interactions (proposal)",
+      "status": "answered",
+      "blocking": false
+    }
+  ],
+  "completed": true,
+  "recordedAt": "2026-11-04T01:39:53.639Z",
+  "recordedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "agent": "product-owner"
+}

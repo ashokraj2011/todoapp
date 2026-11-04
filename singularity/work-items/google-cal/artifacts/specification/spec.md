@@ -4,27 +4,51 @@
   "workId": "google-cal",
   "workType": "spec-driven-standard",
   "phase": "specification",
-  "generation": 0,
+  "generation": 1,
   "status": "in_progress",
-  "generatedBy": null,
-  "generatedAgent": null,
+  "generatedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "generatedAgent": "product-owner",
   "authorship": {
     "schemaVersion": 1,
-    "producer": "legacy-unspecified",
-    "channel": "legacy",
-    "governedAgentContext": null,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "product-owner"
+    },
     "kernelModel": {
       "invoked": false,
-      "status": "unavailable",
+      "status": "exact",
       "invocationIds": []
     },
     "externalAiUse": {
       "value": "unknown",
       "status": "unavailable"
     },
-    "source": null
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "spec.md",
+      "mediaType": "text/markdown",
+      "sha256": "0cdf985df75c41ed63a9c053ce242c0c957fd985d832329b06e0fe2ed691ddcf",
+      "bytes": 5518
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-04T01:43:17.867Z"
   },
-  "sourceCommit": null,
+  "sourceCommit": "fc084151a78b4c6e128ff447c75949a11ee0c914",
   "generationCommit": null,
   "publicationCommit": null,
   "configSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
@@ -41,10 +65,67 @@
     "approved": null
   },
   "remoteAgent": null,
-  "clarification": null,
-  "telemetry": [],
+  "clarification": {
+    "generation": 1,
+    "path": "singularity/work-items/google-cal/context/clarifications-specification-gen1.json",
+    "sha256": "597021ff0db5f9360347ff10d62ecec0b3956d202aaf8c2c081f442736e74240",
+    "promptSha256": "851825b4e87634537070dd1a3816037a729ddefc67331394249e1ac0b06dad60",
+    "responses": 4,
+    "markers": [],
+    "recordedAt": "2026-11-04T01:39:53.639Z",
+    "recordedBy": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    }
+  },
+  "telemetry": [
+    {
+      "generation": 1,
+      "path": "singularity/work-items/google-cal/telemetry/specification-gen1.json",
+      "sha256": "c45ee0971e026936f328caae88a58e7b7f2e298ca7e5b42b74ded4208e01c646",
+      "status": "pending",
+      "models": [],
+      "providerCost": null,
+      "prompt": {
+        "source": "sflow-composition",
+        "bytes": 27660,
+        "estimatedTokens": 6915,
+        "estimation": "UTF-8 bytes divided by four, rounded up",
+        "maximumBytes": 72000,
+        "maximumEstimatedTokens": 18000,
+        "budgetMode": "observe",
+        "originalBytes": 27660,
+        "omittedSections": 0
+      },
+      "captureGap": "no-metered-session"
+    }
+  ],
   "remoteOutputs": [],
-  "usage": [],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-04T01:43:17.867Z",
+      "completedAt": "2026-11-04T01:43:17.867Z",
+      "agent": "product-owner",
+      "generation": 1
+    }
+  ],
   "sequenceOverrides": [],
   "approvals": [],
   "selfApproval": false,
@@ -54,116 +135,82 @@
 
 # Specification — google-cal
 
-<!--
-Scenarios come first, and general requirements come after them `[SPK:REQ-068]`. That ordering is the
-template's opinion: a requirement written before anyone has described the situation it serves tends
-to describe the system instead of the need, and nobody notices until verification.
-
-Where the current Story evidence leaves something material unknown, say so with a marker rather
-than guessing. Use this syntax:
-
-    [NEEDS CLARIFICATION: <one question grounded in the current Story evidence>]
-
-Replace the angle-bracketed placeholder; never copy or ask it as written. The question must be one
-non-empty line and must arise from the pinned sources, approved upstream artifacts, repository world
-model, or a contradiction among them. Markers are extracted the same way clauses are, so a marker
-inside fenced or inline code is ignored `[SPK:REQ-063]`. This phase blocks publication while any
-marker is unresolved, and a marker is only resolved when a later generation removes it *and* records
-the answer `[SPK:REQ-067]` — deleting the text alone is an integrity failure, not an answer.
--->
-
-Keep every section of this template. When one does not fit this change (for example Permissions
-for a library or command-line tool with no roles), write `Not applicable: <reason>` under it
-rather than deleting it: later steps carry Actors, Failure and empty states, Permissions,
-Boundary conditions and the other sections forward, and stop when one is missing.
-
 ## Agent brief
 
-<!--
-Summarize the approved intent for downstream agents in a compact, standalone form. Include the
-problem, intended outcome, principal actors, most important scenarios, hard constraints, and major
-exclusions. Do not introduce claims that are absent from the sections below. Exact requirements and
-boundary conditions are preserved separately by the governed projection.
--->
-
-TODO: Write the Agent brief here as visible text; text inside the comment above is not read.
+Provide a month-grid calendar in which a calendar user can add an event with a title and date, see it on the calendar, and delete it immediately without a confirmation step. The screenshot acceptance criterion is a visual view of the month grid with an event and the add/delete interactions represented. No additional roles, event fields, or calendar behavior are specified.
 
 ## Actors
 
-Who uses this, and what authority does each hold?
+- **Calendar user:** views the month grid and adds or deletes events. No distinct roles or authority differences are specified.
 
 ## User scenarios
 
-Prioritized. Each scenario leads with the situation, then its acceptance cases.
+### S1 — View the month calendar and add an event
 
-<!-- Before drafting, split the pinned request and recorded answers into observable obligations
-for the actual interfaces (UI, API, event/message, batch/job, CLI, library or mixed). Keep the
-source -> REQ/AC -> assertion -> verification mapping in the existing sections. Existing ACs count;
-do not duplicate clauses or invent controls, endpoints, limits, errors or screenshot requirements.
-Self-check whether an implementation could meet this draft yet omit an explicit request. Repair
-clear omissions in this editable draft and recheck within the returned repair policy; preserve
-published inputs and settled answers. These are authoring instructions, not execution evidence. -->
+**Priority:** P1  
+**Actor:** Calendar user  
+**Context:** The calendar is available in a month-grid view.
 
-### S1 — <the most important situation, in the user's words>
+- **Given** the calendar is open, **When** the user views it, **Then** the calendar presents the month in a grid.
+- **Given** an event title and date, **When** the user adds the event, **Then** it appears on the calendar for that date.
 
-**Priority:** P1
-**Actor:** <role>
-**Context:** <what is true before this begins>
+### S2 — Delete an event
 
-- **Given** <the starting state>
-  **When** <the actor does this>
-  **Then** <the observable outcome>
+**Priority:** P1  
+**Actor:** Calendar user  
+**Context:** An event appears on the month calendar.
 
-- **Given** <a variation worth stating>
-  **When** <…>
-  **Then** <…>
+- **Given** an event appears on the calendar, **When** the user deletes it, **Then** it is removed immediately without a confirmation step.
 
-### S2 — <the next situation>
+### S3 — Meet the screenshot acceptance criterion
 
-**Priority:** P2
+**Priority:** P1  
+**Actor:** Calendar user  
+**Context:** The month-grid calendar contains an event.
 
-- **Given** … **When** … **Then** …
+- **Given** the calendar is in month-grid view with an event, **When** a screenshot is captured, **Then** it shows the calendar, the event, and visible representations of the add and delete interactions.
 
 ## Failure and empty states
 
-What happens the first time, with nothing there yet, and when each step fails. These are where
-specifications are usually silent and implementations usually improvise.
-
-- **Empty:** <no records yet>
-- **Failure:** <the dependency is unavailable>
-- **Partial:** <some of it worked>
+- **Empty:** With no events, the month grid remains available; adding an event makes it appear on its date.
+- **Failure:** The pinned Story and clarification do not define failure behavior, error wording, or recovery.
+- **Partial:** Partial completion of an add or delete operation is not specified.
 
 ## Scenario coverage
 
-<!-- One row per behavior/acceptance clause; repeat rows for multiple outcomes. Every referenced
-S-number must have complete Given/When/Then acceptance cases above. Outcome is success, failure,
-boundary, or empty. Rejection/error requirements need distinct failure cases, not only happy-path
-prose. Use the pinned request and clarification answers; do not invent error text or new scope. -->
-
 | Clause | Scenario | Outcome |
 |---|---|---|
-| `GOOGLE-CAL:REQ-001` | S1 | TODO |
-| `GOOGLE-CAL:REQ-002` | S2 | TODO |
-| `GOOGLE-CAL:AC-001` | S1 | TODO |
+| `GOOGLE-CAL:REQ-001` | S1 | success |
+| `GOOGLE-CAL:REQ-002` | S1 | success |
+| `GOOGLE-CAL:REQ-003` | S2 | success |
+| `GOOGLE-CAL:AC-001` | S3 | success |
 
 ## Permissions
 
-Who may do each thing, and what a reader without that authority sees instead.
+A calendar user may view the calendar, add events, and delete events. No other roles or permission rules are specified.
 
 ## Boundary conditions
 
-Limits, sizes, counts, timeouts, and what happens exactly at and beyond each one.
+The calendar view is a month grid. The minimum event information specified is a title and date. No event-count limits, time-of-day, recurrence, time-zone behavior, or retention requirements are specified.
 
 ## Requirements
 
-Numbered, testable, one obligation each. Cite the scenario each serves.
+### Source-to-acceptance mapping
 
-- <requirement>. *(S1)* [GOOGLE-CAL:REQ-001]
-- <requirement>. *(S1, S2)* [GOOGLE-CAL:REQ-002]
+| Source obligation | Clause | Observable assertion | Verification intent |
+|---|---|---|---|
+| Calendar intent, clarified as a month grid | `GOOGLE-CAL:REQ-001` | The calendar presents a month-grid view. | visual |
+| Add events; clarified minimum fields are title and date | `GOOGLE-CAL:REQ-002` | An added event appears on the calendar for its date. | test |
+| Delete events; clarified as immediate deletion | `GOOGLE-CAL:REQ-003` | A deleted event is removed without a confirmation step. | test |
+| Screenshot acceptance criterion: `screenshot` | `GOOGLE-CAL:AC-001` | A screenshot shows the month grid, an event, and the add/delete interactions. | visual |
 
-Acceptance criteria use the same stable, namespaced form:
+- The calendar presents events in a month-grid view. *(S1)* [GOOGLE-CAL:REQ-001]
+- A calendar user can add an event with a title and date, and the event appears on the calendar for that date. *(S1)* [GOOGLE-CAL:REQ-002]
+- A calendar user can delete an event; deletion removes it immediately without confirmation. *(S2)* [GOOGLE-CAL:REQ-003]
 
-- <observable acceptance outcome>. *(S1)* [GOOGLE-CAL:AC-001]
+Acceptance criterion:
+
+- A screenshot shows the month-grid calendar with an event and visible representations of adding and deleting events. *(S3)* [GOOGLE-CAL:AC-001] [scope:SRI-35efa5d9d09b]
 
 ## Verification intent
 
@@ -177,36 +224,29 @@ Planning must inherit these methods and cannot change them without an approved s
 
 | Clause | Methods | Criterion |
 |---|---|---|
-| `GOOGLE-CAL:REQ-001` | TODO | - |
-| `GOOGLE-CAL:REQ-002` | TODO | - |
-| `GOOGLE-CAL:AC-001` | TODO | `GOOGLE-CAL:AC-001` |
+| `GOOGLE-CAL:REQ-001` | visual | `GOOGLE-CAL:AC-001` |
+| `GOOGLE-CAL:REQ-002` | test | - |
+| `GOOGLE-CAL:REQ-003` | test | - |
+| `GOOGLE-CAL:AC-001` | visual | `GOOGLE-CAL:AC-001` |
 
 ## Non-functional requirements
 
-Latency, throughput, availability, accessibility, privacy, retention. State the number and how it
-will be measured; "fast" is not a requirement.
-
-Use governed requirement anchors here too (for example `[GOOGLE-CAL:REQ-003]`); `NFR-001` by
-itself is only a display label and is not a stable clause identity.
+None are specified by the pinned Story or clarification.
 
 ## Constitution articles
 
-Cite the article IDs this specification is bound by `[SPK:REQ-100]`. The kernel validates that each
-cited ID exists at the pinned revision before publication `[SPK:REQ-101]`.
-
-- <ART-…>
+None: this Story pinned no constitution.
 
 ## Assumptions
 
-What this specification takes as true without proving. An assumption that turns out false is a
-change request, not a defect — which is only true if it was written down.
+The confirmed title/date fields are the minimum event information, not an exhaustive event schema. The specification makes no claim about persistence across reloads or sessions.
 
 ## Out of scope
 
-Named explicitly, so the boundary is reviewable rather than inferred.
+No behavior beyond the month-grid view, adding and deleting events, and the screenshot acceptance criterion is specified by this Story.
 
 ## Sources
 
-Each supporting document this specification relies on, cited as `DOC-nnn — <name>`, and each one
-offered to this phase that could not be read or was not available here, named as a gap. Without
-supporting documents, say so.
+- Pinned Story source: `singularity/work-items/google-cal/source.json` (SHA-256 `4cf7c7f3d360d866b60680919e540beea7ec7bd9c4cf5e80fdc07a10a65d83fa`).
+- Clarification responses recorded for specification generation 1 (SHA-256 `597021ff0db5f9360347ff10d62ecec0b3956d202aaf8c2c081f442736e74240`).
+- No supporting documents were offered to this phase.
