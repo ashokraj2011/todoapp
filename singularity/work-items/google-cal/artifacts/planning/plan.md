@@ -5,7 +5,7 @@
   "workType": "spec-driven-standard",
   "phase": "planning",
   "generation": 1,
-  "status": "awaiting_approval",
+  "status": "approved",
   "generatedBy": {
     "name": "Ashok Raj",
     "email": "88361104+ashokraj2011@users.noreply.github.com",
@@ -119,8 +119,110 @@
     }
   ],
   "sequenceOverrides": [],
-  "approvals": [],
-  "selfApproval": false,
+  "approvals": [
+    {
+      "decision": "approved",
+      "phase": "planning",
+      "at": "2026-11-04T02:01:06.049Z",
+      "actor": {
+        "name": "Ashok Raj",
+        "email": "88361104+ashokraj2011@users.noreply.github.com",
+        "login": "ashokraj2011",
+        "githubLookup": "resolved"
+      },
+      "agent": "architect",
+      "authorityGroup": "architecture-reviewers",
+      "identityAssurance": "configured-local",
+      "channel": "copilot-selection-receipt",
+      "generation": 1,
+      "artifactSha256": [
+        {
+          "path": "singularity/work-items/google-cal/artifacts/planning/plan.md",
+          "sha256": "fd9fc00fffc9c8e857b92f7e7c751fa565bc3c2d10c48e3d295d3edf1d2d1f85"
+        }
+      ],
+      "artifactSet": "spec-driven-planning",
+      "bundleSha256": "29f68c35d4e69641e1b2d8b4da5374453cac524c302a2d15cec95dccb6241a47",
+      "reviewPacketSha256": "2d5aafe71a0f1e8737c4d57d46fa9c3cf93c6e7202247f6ecd239df188287e4c",
+      "evidenceCommit": "0e1f748b8c9a84423c33c1076e5e500e8988872b",
+      "artifactSetSha256": "a4ffaf77df6fedfd4b8adf3b98b4f4bc1331d1405654bce72530a8cb4516f56c",
+      "architectureIntent": null,
+      "architectureDecision": null,
+      "actionContext": {
+        "phase": "planning",
+        "label": "Planning",
+        "generation": 1,
+        "submittedAt": "2026-11-04T01:59:23.768Z",
+        "artifacts": [
+          {
+            "path": "singularity/work-items/google-cal/artifacts/planning/plan.md",
+            "sha256": "fd9fc00fffc9c8e857b92f7e7c751fa565bc3c2d10c48e3d295d3edf1d2d1f85"
+          }
+        ],
+        "agentBriefs": [
+          {
+            "consumerPhase": "convergence",
+            "status": "ready",
+            "path": "singularity/work-items/google-cal/context/briefs/planning-gen1-for-convergence.json",
+            "renderedPath": "singularity/work-items/google-cal/context/briefs/planning-gen1-for-convergence.md",
+            "renderedSha256": "a46736e428501bd85b4970dadaa403c81c34169e5acec9cf76647c2244c53d58",
+            "integritySha256": "e9f7d6737a3103eb650bfbee235e57b0dddfb6c1c085ca721e93cc33eef21ffe",
+            "documentId": "agent-brief-planning-gen1-convergence",
+            "documentPath": "singularity/work-items/google-cal/context/briefs/planning-gen1-for-convergence.md",
+            "documentSha256": "a46736e428501bd85b4970dadaa403c81c34169e5acec9cf76647c2244c53d58"
+          },
+          {
+            "consumerPhase": "implementation",
+            "status": "ready",
+            "path": "singularity/work-items/google-cal/context/briefs/planning-gen1-for-implementation.json",
+            "renderedPath": "singularity/work-items/google-cal/context/briefs/planning-gen1-for-implementation.md",
+            "renderedSha256": "fd95b6475b5dcf539b68ba4ecf794d55e7ce33818bcc90c461260d8957f06ec7",
+            "integritySha256": "07075144fae9580dff4dc55f0559f31a31e9b496863e937821a965e4511e6896",
+            "documentId": "agent-brief-planning-gen1-implementation",
+            "documentPath": "singularity/work-items/google-cal/context/briefs/planning-gen1-for-implementation.md",
+            "documentSha256": "fd95b6475b5dcf539b68ba4ecf794d55e7ce33818bcc90c461260d8957f06ec7"
+          },
+          {
+            "consumerPhase": "verification",
+            "status": "ready",
+            "path": "singularity/work-items/google-cal/context/briefs/planning-gen1-for-verification.json",
+            "renderedPath": "singularity/work-items/google-cal/context/briefs/planning-gen1-for-verification.md",
+            "renderedSha256": "af0585369e1d91e77d72ae028d15e97a0146b4b92f4a0d3ca1fc4df0fad0b0bf",
+            "integritySha256": "73bbafd8090634025b1ce7b739bb23a646b4cfdd3666f807dfd0c4523dfe77a0",
+            "documentId": "agent-brief-planning-gen1-verification",
+            "documentPath": "singularity/work-items/google-cal/context/briefs/planning-gen1-for-verification.md",
+            "documentSha256": "af0585369e1d91e77d72ae028d15e97a0146b4b92f4a0d3ca1fc4df0fad0b0bf"
+          }
+        ],
+        "reviewPacketSha256": "2d5aafe71a0f1e8737c4d57d46fa9c3cf93c6e7202247f6ecd239df188287e4c",
+        "submittedSourceCommit": "44bc2bbfcac6a4ac8fe082fb6fb14db48b46b3ca",
+        "planId": "1db4723b865b4ff3939e4deb"
+      },
+      "upstream": {
+        "sha256": "sha256:0d2ebc05539d29cb8c0b2b2110d804407681472f17412c5a5105b6b681e18820",
+        "refs": [
+          {
+            "kind": "input",
+            "ref": "specification",
+            "sha256": "sha256:68cf31e4a2ef14da810be2242b55e9f363cae95f4b058279276d67514f7dc0cf",
+            "authoredSha256": "sha256:b21af338c19caec355c24a78c9be82fe4b5b7ac522b3ef6ea7949ca2180a9d54"
+          },
+          {
+            "kind": "documents",
+            "ref": "planning",
+            "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+          },
+          {
+            "kind": "decisions",
+            "ref": "story",
+            "sha256": "sha256:562cc2ee87caf6e9e7176efd3d407f5871c94a7c6cc13df2914b29fe304ead17"
+          }
+        ]
+      },
+      "selfApproval": true
+    }
+  ],
+  "selfApproval": true,
   "conformanceTree": null
 }
 -->
