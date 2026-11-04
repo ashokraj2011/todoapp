@@ -6312,6 +6312,14 @@
       "event": "phase_generated",
       "phase": "implementation",
       "detail": "generation 1"
+    },
+    {
+      "at": "2026-11-04T05:36:45.079Z",
+      "actor": "ashokraj2011",
+      "agent": "developer",
+      "event": "witness_recorded",
+      "phase": "implementation",
+      "detail": "WIT-001: visual of singularity/work-items/raj-cal/evidence/calendar-dark-theme.png for RAJ-CAL:AC-001 slot calendar-screen satisfies it. looks good to me"
     }
   ],
   "measurement": {
@@ -7885,6 +7893,137 @@
         },
         "createdAt": "2026-11-04T05:35:10.509Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "2e0285a3-6e74-473d-bcd8-93400bb24150",
+        "type": "decision-made",
+        "subject": {
+          "kind": "story",
+          "id": "raj-cal",
+          "branch": "raj-cal"
+        },
+        "phaseId": "implementation",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "decision": "witness",
+          "reviewPacketSha256": null,
+          "record": "WIT-001"
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-04T05:36:44.287Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "2e0285a3-6e74-473d-bcd8-93400bb24150",
+        "eventType": "decision-made",
+        "capabilityId": "todoapp",
+        "subject": {
+          "aliases": [
+            "raj-cal"
+          ],
+          "branch": "raj-cal",
+          "canonicalBranch": "raj-cal",
+          "createdAt": "2026-11-04T04:54:40.472Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 1,
+          "phase": "implementation",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "rajappan cal",
+          "updatedAt": "2026-11-04T05:36:45.079Z",
+          "workId": "raj-cal",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "developer",
+        "authorityGroup": "engineering-reviewers",
+        "payload": {
+          "capabilityMapSha256": "8b165a854d72b38ffd26f9a79d2e3674f0fa52e5640011fc8f6e7ace10ea4d46",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
+          "lifecycleEventId": "2e0285a3-6e74-473d-bcd8-93400bb24150",
+          "lifecyclePayload": {
+            "decision": "witness",
+            "reviewPacketSha256": null,
+            "record": "WIT-001"
+          },
+          "templateSha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "2e0285a3-6e74-473d-bcd8-93400bb24150",
+            "type": "decision-made",
+            "subject": {
+              "kind": "story",
+              "id": "raj-cal",
+              "branch": "raj-cal"
+            },
+            "phaseId": "implementation",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "developer",
+            "authorityGroup": "engineering-reviewers",
+            "payload": {
+              "decision": "witness",
+              "reviewPacketSha256": null,
+              "record": "WIT-001"
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-04T05:36:44.287Z"
+          }
+        },
+        "createdAt": "2026-11-04T05:36:44.287Z"
+      }
     }
   ],
   "repairBudgets": {},
@@ -8021,6 +8160,29 @@
         "attemptId": "TA-0d2159f230f2ba24e318"
       },
       "at": "2026-11-04T05:35:16.999Z"
+    }
+  ],
+  "witnessRecords": [
+    {
+      "id": "WIT-001",
+      "clauseId": "RAJ-CAL:AC-001",
+      "slot": "calendar-screen",
+      "method": "visual",
+      "file": "singularity/work-items/raj-cal/evidence/calendar-dark-theme.png",
+      "sha256": "sha256:94c08c59e4eda87745c0c6246b91c2decc771065fa9cc0e0887b763615f75e9f",
+      "contextBinding": "sha256:021dd54322e92e5f0b1d16e333f571e8df398258c3ea9151f79ed34106dc64db",
+      "target": "Completed calendar in Month view",
+      "checklist": {
+        "states-the-outcome": "yes",
+        "matches-the-criterion": "yes",
+        "current-for-this-change": "yes"
+      },
+      "outcome": "met",
+      "reason": "looks good to me",
+      "actor": "ashokraj2011",
+      "authorityGroup": "engineering-reviewers",
+      "identityAssurance": "configured-local",
+      "at": "2026-11-04T05:36:45.079Z"
     }
   ]
 }
