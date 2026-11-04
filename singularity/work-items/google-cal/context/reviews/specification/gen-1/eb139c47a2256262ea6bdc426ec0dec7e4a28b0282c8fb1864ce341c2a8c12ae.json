@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "phase": "specification",
+  "generation": 1,
+  "reportSha256": "eb139c47a2256262ea6bdc426ec0dec7e4a28b0282c8fb1864ce341c2a8c12ae",
+  "lifecycleEventId": "b6317755-318a-424b-a3b5-750761d37d6d",
+  "report": {
+    "schemaVersion": 1,
+    "resultType": "source-grounded-review",
+    "kind": "specification",
+    "binding": {
+      "workId": "google-cal",
+      "phase": "specification",
+      "generation": 1,
+      "sources": [
+        {
+          "id": "story",
+          "path": "singularity/work-items/google-cal/USER-STORY.md",
+          "textSha256": "a17ec31d4480477c68e51ba7a1d97642e92099afbc30d15bcfcc37a741c98ef7",
+          "originalSha256": "4cf7c7f3d360d866b60680919e540beea7ec7bd9c4cf5e80fdc07a10a65d83fa"
+        }
+      ],
+      "clarifications": [
+        {
+          "id": "clarification:current-phase",
+          "phase": "specification",
+          "generation": 1,
+          "path": "singularity/work-items/google-cal/context/clarifications-specification-gen1.json",
+          "sha256": "597021ff0db5f9360347ff10d62ecec0b3956d202aaf8c2c081f442736e74240"
+        }
+      ],
+      "artifact": {
+        "path": "singularity/work-items/google-cal/artifacts/specification/spec.md",
+        "sha256": "0cdf985df75c41ed63a9c053ce242c0c957fd985d832329b06e0fe2ed691ddcf"
+      }
+    },
+    "reviewer": {
+      "agentId": "sflow-source-reviewer",
+      "readOnly": true
+    },
+    "sourcesReviewed": [
+      "story"
+    ],
+    "clarificationsReviewed": [
+      "clarification:current-phase"
+    ],
+    "rows": [
+      {
+        "id": "story-s1-calendar-view",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "GOOGLE-CAL:REQ-001"
+        ],
+        "line": 7,
+        "quote": "Add google like calnader ,add events ,delete events"
+      },
+      {
+        "id": "story-s1-add-events",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S1",
+        "clauseIds": [
+          "GOOGLE-CAL:REQ-002"
+        ],
+        "line": 7,
+        "quote": "Add google like calnader ,add events ,delete events"
+      },
+      {
+        "id": "story-s2-delete-events",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S2",
+        "clauseIds": [
+          "GOOGLE-CAL:REQ-003"
+        ],
+        "line": 7,
+        "quote": "Add google like calnader ,add events ,delete events"
+      },
+      {
+        "id": "story-s3-screenshot",
+        "sourceId": "story",
+        "outcome": "covered",
+        "scenarioId": "S3",
+        "clauseIds": [
+          "GOOGLE-CAL:AC-001"
+        ],
+        "line": 16,
+        "quote": "screenshot"
+      }
+    ],
+    "findings": []
+  },
+  "provenance": {
+    "reviewerAgentId": "sflow-source-reviewer",
+    "reviewerAgentSha256": "adebae380c85c66b3e158c5e65633b47c3aadd50c6abeabd6fcbb6f42de23991",
+    "reviewerActor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "authorAgentId": "product-owner",
+    "readOnly": true
+  },
+  "submittedAt": "2026-11-04T01:47:46.694Z",
+  "recordSha256": "e7a28ba5ba4983f4236dc88553c6be63a2d19e84dc7c0b33efa5ad43519b7495"
+}

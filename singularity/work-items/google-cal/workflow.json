@@ -3920,6 +3920,14 @@
       "event": "phase_generated",
       "phase": "specification",
       "detail": "generation 1"
+    },
+    {
+      "at": "2026-11-04T01:47:46.694Z",
+      "actor": "88361104+ashokraj2011@users.noreply.github.com",
+      "agent": "sflow-source-reviewer",
+      "event": "source_review_submitted",
+      "phase": "specification",
+      "detail": "eb139c47a2256262ea6bdc426ec0dec7e4a28b0282c8fb1864ce341c2a8c12ae"
     }
   ],
   "measurement": {
@@ -3986,6 +3994,44 @@
       ],
       "blockedCode": null,
       "recordSha256": "b9b97271165c4ee6a8f37a1c934e409db94c973fa6b5436e92bbfe79ba3df525"
+    },
+    "WT-4f1ae9a2b04f940f7f4619ba5388023397d274ac113bc385303afbb02d477283": {
+      "schemaVersion": 1,
+      "kind": "workflow-task-record",
+      "authority": "progress-only",
+      "workId": "google-cal",
+      "phaseId": "specification",
+      "generation": 1,
+      "role": "source-reviewer",
+      "repositoryIdentity": "0fa1aed2828404efacf2cd07139c2df59784bb30bf6aa1f2754f799d26ab4375",
+      "storyIdentity": "f847b7c64d9d0b12d35bf277facb9478ac6614a4b56d276524191ee871db4e9b",
+      "id": "WT-4f1ae9a2b04f940f7f4619ba5388023397d274ac113bc385303afbb02d477283",
+      "inputSha256": "d39939bb95e045552747960f138868a2d27811b6814654a144232b081bcf7a5c",
+      "revision": 4,
+      "state": "complete",
+      "continuations": 0,
+      "maximumContinuations": 2,
+      "repairConsumed": 0,
+      "conditions": [],
+      "checkpoints": [
+        {
+          "kind": "review-check",
+          "inputSha256": "d39939bb95e045552747960f138868a2d27811b6814654a144232b081bcf7a5c",
+          "fingerprint": "d091e881595372c2321252951e73ce4588819f6e9bf3c7865f6c5e58d01c2ba5"
+        },
+        {
+          "kind": "retention-requested",
+          "inputSha256": "d39939bb95e045552747960f138868a2d27811b6814654a144232b081bcf7a5c",
+          "fingerprint": "d39939bb95e045552747960f138868a2d27811b6814654a144232b081bcf7a5c"
+        },
+        {
+          "kind": "retained-review",
+          "inputSha256": "d39939bb95e045552747960f138868a2d27811b6814654a144232b081bcf7a5c",
+          "fingerprint": "88b7578110ce703b283e41f89dc2b6af33b066f8017aa68715c30ecdcbc18a85"
+        }
+      ],
+      "blockedCode": null,
+      "recordSha256": "e85225e973d145aa813da1710026728cf0431f87308ee99aa4087f63b4c81efb"
     }
   },
   "publicationProjections": [
@@ -4249,6 +4295,140 @@
           }
         },
         "createdAt": "2026-11-04T01:43:17.299Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "b6317755-318a-424b-a3b5-750761d37d6d",
+        "type": "evidence-recorded",
+        "subject": {
+          "kind": "story",
+          "id": "google-cal",
+          "branch": "google-cal"
+        },
+        "phaseId": "specification",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "sflow-source-reviewer",
+        "authorityGroup": null,
+        "payload": {
+          "kind": "source-grounded-review",
+          "reportSha256": "eb139c47a2256262ea6bdc426ec0dec7e4a28b0282c8fb1864ce341c2a8c12ae",
+          "decision": null,
+          "reviewPacketSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-04T01:47:45.818Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "b6317755-318a-424b-a3b5-750761d37d6d",
+        "eventType": "evidence-recorded",
+        "capabilityId": "todoapp",
+        "subject": {
+          "aliases": [
+            "google-cal"
+          ],
+          "branch": "google-cal",
+          "canonicalBranch": "google-cal",
+          "createdAt": "2026-11-04T01:35:49.066Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "specification",
+          "generation": 1,
+          "phase": "specification",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 0,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 5,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 0,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "specification",
+              "status": "in_progress",
+              "generation": 1
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "google",
+          "updatedAt": "2026-11-04T01:47:46.694Z",
+          "workId": "google-cal",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "sflow-source-reviewer",
+        "authorityGroup": null,
+        "payload": {
+          "capabilityMapSha256": "8b165a854d72b38ffd26f9a79d2e3674f0fa52e5640011fc8f6e7ace10ea4d46",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
+          "lifecycleEventId": "b6317755-318a-424b-a3b5-750761d37d6d",
+          "lifecyclePayload": {
+            "decision": null,
+            "kind": "source-grounded-review",
+            "reportSha256": "eb139c47a2256262ea6bdc426ec0dec7e4a28b0282c8fb1864ce341c2a8c12ae",
+            "reviewPacketSha256": null
+          },
+          "templateSha256": "fbb7f5f29844d24836c6b918e2796940cbc21c24ae0a7aa252d4e1207588e2cb",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "b6317755-318a-424b-a3b5-750761d37d6d",
+            "type": "evidence-recorded",
+            "subject": {
+              "kind": "story",
+              "id": "google-cal",
+              "branch": "google-cal"
+            },
+            "phaseId": "specification",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "sflow-source-reviewer",
+            "authorityGroup": null,
+            "payload": {
+              "kind": "source-grounded-review",
+              "reportSha256": "eb139c47a2256262ea6bdc426ec0dec7e4a28b0282c8fb1864ce341c2a8c12ae",
+              "decision": null,
+              "reviewPacketSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-04T01:47:45.818Z"
+          }
+        },
+        "createdAt": "2026-11-04T01:47:45.822Z"
       }
     }
   ],
