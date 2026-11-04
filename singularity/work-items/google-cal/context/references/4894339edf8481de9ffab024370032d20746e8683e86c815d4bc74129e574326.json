@@ -1,0 +1,28 @@
+{
+  "artifact": {
+    "generation": 1,
+    "mediaType": "text/markdown",
+    "outputId": "document",
+    "path": "singularity/work-items/google-cal/artifacts/planning/plan.md",
+    "phaseId": "planning"
+  },
+  "createdAt": "2026-11-04T01:59:23.826Z",
+  "kind": "governed-reference",
+  "repository": {
+    "id": ".w-7451cf881f103b71344b6652",
+    "origin": "https://github.com/ashokraj2011/todoapp.git"
+  },
+  "revision": {
+    "bytes": 19882,
+    "commitSha": "44bc2bbfcac6a4ac8fe082fb6fb14db48b46b3ca",
+    "sha256": "5fa1dfec4b165402e89cdf05f4c918844a1feaece388241e8399f02b8652b7b2"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "branch": "google-cal",
+    "id": "google-cal",
+    "kind": "story",
+    "subjectRevision": 1
+  },
+  "visibility": "model"
+}
