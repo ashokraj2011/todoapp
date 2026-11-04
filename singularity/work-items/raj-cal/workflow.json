@@ -3343,7 +3343,7 @@
     "policySha256": "sha256:b0744aaabb1b525876a72ce5bb9009a4000292667febc49188027b0931ca7e8b"
   },
   "status": "in_progress",
-  "currentPhase": "planning",
+  "currentPhase": "implementation",
   "phaseOrder": [
     "specification",
     "planning",
@@ -3789,7 +3789,7 @@
       "label": "Planning",
       "order": 1,
       "defaultAgent": "architect",
-      "status": "awaiting_approval",
+      "status": "approved",
       "requiredArtifact": {
         "path": "artifacts/planning/plan.md",
         "kind": "design",
@@ -3863,8 +3863,8 @@
       "qualityCommands": [],
       "startedAt": "2026-11-04T05:20:16.220Z",
       "submittedAt": "2026-11-04T05:28:07.378Z",
-      "approvedAt": null,
-      "approvedBy": null,
+      "approvedAt": "2026-11-04T05:29:30.597Z",
+      "approvedBy": "ashokraj2011",
       "rejectedAt": null,
       "rejectedBy": null,
       "rejectionReason": null,
@@ -3958,7 +3958,109 @@
           "captureGap": "no-metered-session"
         }
       ],
-      "approvals": [],
+      "approvals": [
+        {
+          "decision": "approved",
+          "phase": "planning",
+          "at": "2026-11-04T05:29:30.597Z",
+          "actor": {
+            "name": "Ashok Raj",
+            "email": "88361104+ashokraj2011@users.noreply.github.com",
+            "login": "ashokraj2011",
+            "githubLookup": "resolved"
+          },
+          "agent": "architect",
+          "authorityGroup": "architecture-reviewers",
+          "identityAssurance": "configured-local",
+          "channel": "copilot-selection-receipt",
+          "generation": 1,
+          "artifactSha256": [
+            {
+              "path": "singularity/work-items/raj-cal/artifacts/planning/plan.md",
+              "sha256": "87f88cee0fd703f179b32fdff15786587b279a2111820f8eb029958295e2abad"
+            }
+          ],
+          "artifactSet": "spec-driven-planning",
+          "bundleSha256": "c9e69cdb19baecd113247664d10a0b8458043aa6a4e684ac8c754c21f096afb0",
+          "reviewPacketSha256": "9ddfca5ab4cc459f1f9211dd2a3caf978996e9d9af747cb6e357971a1ac05e10",
+          "evidenceCommit": "e8d0ace852d97504addaac71963e43c62efade81",
+          "artifactSetSha256": "e5b3bedbebdd6d3da29de5bce41c46ab9293572e8ab18f8539751a6d7e7cabde",
+          "architectureIntent": null,
+          "architectureDecision": null,
+          "actionContext": {
+            "phase": "planning",
+            "label": "Planning",
+            "generation": 1,
+            "submittedAt": "2026-11-04T05:28:07.378Z",
+            "artifacts": [
+              {
+                "path": "singularity/work-items/raj-cal/artifacts/planning/plan.md",
+                "sha256": "87f88cee0fd703f179b32fdff15786587b279a2111820f8eb029958295e2abad"
+              }
+            ],
+            "agentBriefs": [
+              {
+                "consumerPhase": "convergence",
+                "status": "ready",
+                "path": "singularity/work-items/raj-cal/context/briefs/planning-gen1-for-convergence.json",
+                "renderedPath": "singularity/work-items/raj-cal/context/briefs/planning-gen1-for-convergence.md",
+                "renderedSha256": "97a2e86118230e24ec9c812b275c8085beb564c675fdbb935570409c5a35f1ee",
+                "integritySha256": "ce220c217bab39eb841787cb0d6e5b14603e0913fb6e27a9efb52c4d5bf9662e",
+                "documentId": "agent-brief-planning-gen1-convergence",
+                "documentPath": "singularity/work-items/raj-cal/context/briefs/planning-gen1-for-convergence.md",
+                "documentSha256": "97a2e86118230e24ec9c812b275c8085beb564c675fdbb935570409c5a35f1ee"
+              },
+              {
+                "consumerPhase": "implementation",
+                "status": "ready",
+                "path": "singularity/work-items/raj-cal/context/briefs/planning-gen1-for-implementation.json",
+                "renderedPath": "singularity/work-items/raj-cal/context/briefs/planning-gen1-for-implementation.md",
+                "renderedSha256": "17953ef8187f5d6d12ed038ec0ebfb4143d954f00d37ad85241da1de866f08be",
+                "integritySha256": "5af35036b087e00988f3350fb014467c7f6b1603ddff9dea9cbd880197cd9f3a",
+                "documentId": "agent-brief-planning-gen1-implementation",
+                "documentPath": "singularity/work-items/raj-cal/context/briefs/planning-gen1-for-implementation.md",
+                "documentSha256": "17953ef8187f5d6d12ed038ec0ebfb4143d954f00d37ad85241da1de866f08be"
+              },
+              {
+                "consumerPhase": "verification",
+                "status": "ready",
+                "path": "singularity/work-items/raj-cal/context/briefs/planning-gen1-for-verification.json",
+                "renderedPath": "singularity/work-items/raj-cal/context/briefs/planning-gen1-for-verification.md",
+                "renderedSha256": "e5b2472b3ccfa62985b945008b8ee83acffc0eeaaa1208d66bbfcc9141f8f14f",
+                "integritySha256": "d78e985badeb3b76a9f6e8a6c82583577769284ea38d20ea7481f13389ef6ede",
+                "documentId": "agent-brief-planning-gen1-verification",
+                "documentPath": "singularity/work-items/raj-cal/context/briefs/planning-gen1-for-verification.md",
+                "documentSha256": "e5b2472b3ccfa62985b945008b8ee83acffc0eeaaa1208d66bbfcc9141f8f14f"
+              }
+            ],
+            "reviewPacketSha256": "9ddfca5ab4cc459f1f9211dd2a3caf978996e9d9af747cb6e357971a1ac05e10",
+            "submittedSourceCommit": "0619a485d71fe02f2d95575d8c4cddd181d7e84c",
+            "planId": "59d947d428f35b92c1c720e1"
+          },
+          "upstream": {
+            "sha256": "sha256:46b42c7b0fcf948a35ef3249becaada8af1b1de5b34f3ef15a9a41e95e263303",
+            "refs": [
+              {
+                "kind": "input",
+                "ref": "specification",
+                "sha256": "sha256:63a785ce9a9d2a5040a92866f4171ba4f1235a465f420ba29839dfed313fda4e",
+                "authoredSha256": "sha256:c1c415e05b134d759fcab700d9365383d9760989f41fadcf6ab13a98fb20eed1"
+              },
+              {
+                "kind": "documents",
+                "ref": "planning",
+                "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+              },
+              {
+                "kind": "decisions",
+                "ref": "story",
+                "sha256": "sha256:f254edd6e9be33bf348fe6fa2cdccdfdc5d41efb38f0dc7b890e192767f12c41"
+              }
+            ]
+          },
+          "selfApproval": true
+        }
+      ],
       "generationPublications": [
         {
           "generation": 1,
@@ -3981,12 +4083,14 @@
         {
           "path": "singularity/work-items/raj-cal/artifacts/planning/plan.md",
           "kind": "document",
-          "status": "pending",
+          "status": "approved",
           "exists": true,
-          "size": 20694,
-          "sha256": "87f88cee0fd703f179b32fdff15786587b279a2111820f8eb029958295e2abad",
+          "size": 25725,
+          "sha256": "5f3983b51efeb44843b4e374ebb5f4c47db113c93801c816e727e83aacfda640",
           "registeredAt": "2026-11-04T05:25:58.276Z",
-          "updatedAt": "2026-11-04T05:28:07.379Z"
+          "updatedAt": "2026-11-04T05:29:30.601Z",
+          "approvedAt": "2026-11-04T05:29:30.597Z",
+          "approvedBy": "ashokraj2011"
         }
       ],
       "checks": [],
@@ -4100,7 +4204,7 @@
       "label": "Implementation",
       "order": 2,
       "defaultAgent": "developer",
-      "status": "not_started",
+      "status": "in_progress",
       "requiredArtifact": {
         "path": "artifacts/implementation/implementation-summary.md",
         "kind": "implementation-summary",
@@ -4187,7 +4291,7 @@
         }
       },
       "qualityCommands": [],
-      "startedAt": null,
+      "startedAt": "2026-11-04T05:29:30.597Z",
       "submittedAt": null,
       "approvedAt": null,
       "approvedBy": null,
@@ -4699,6 +4803,22 @@
       "event": "phase_submitted",
       "phase": "planning",
       "detail": "1 artifacts"
+    },
+    {
+      "at": "2026-11-04T05:29:30.597Z",
+      "actor": "ashokraj2011",
+      "agent": "architect",
+      "event": "phase_self_approved",
+      "phase": "planning",
+      "detail": "threshold reached; advanced to implementation"
+    },
+    {
+      "at": "2026-11-04T05:29:30.613Z",
+      "actor": "system",
+      "agent": null,
+      "event": "work_interval_started",
+      "phase": "implementation",
+      "detail": "baseline 2a30f00e4c7f at e8d0ace852d9"
     }
   ],
   "measurement": {
@@ -5943,13 +6063,170 @@
         },
         "createdAt": "2026-11-04T05:28:06.663Z"
       }
+    },
+    {
+      "schemaVersion": 1,
+      "event": {
+        "schemaVersion": 1,
+        "eventId": "a8bd8468-1785-4a06-a0eb-8ccf25d93401",
+        "type": "phase-approved",
+        "subject": {
+          "kind": "story",
+          "id": "raj-cal",
+          "branch": "raj-cal"
+        },
+        "phaseId": "planning",
+        "generation": 1,
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "login": "ashokraj2011",
+          "githubLookup": "resolved"
+        },
+        "agent": "architect",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "decision": "approved",
+          "reviewPacketSha256": "9ddfca5ab4cc459f1f9211dd2a3caf978996e9d9af747cb6e357971a1ac05e10",
+          "evidenceCommit": "e8d0ace852d97504addaac71963e43c62efade81",
+          "artifactSetSha256": "e5b3bedbebdd6d3da29de5bce41c46ab9293572e8ab18f8539751a6d7e7cabde",
+          "witnessMappingsSha256": null
+        },
+        "sourceCommit": null,
+        "idempotencyKey": null,
+        "idempotencyHash": null,
+        "createdAt": "2026-11-04T05:29:30.305Z"
+      },
+      "ledgerIntent": {
+        "schemaVersion": 1,
+        "eventId": "a8bd8468-1785-4a06-a0eb-8ccf25d93401",
+        "eventType": "phase-approved",
+        "capabilityId": "todoapp",
+        "subject": {
+          "aliases": [
+            "raj-cal"
+          ],
+          "branch": "raj-cal",
+          "canonicalBranch": "raj-cal",
+          "createdAt": "2026-11-04T04:54:40.472Z",
+          "createdBy": "Ashok Raj",
+          "currentPhase": "implementation",
+          "generation": 1,
+          "phase": "planning",
+          "progress": {
+            "schemaVersion": 1,
+            "available": true,
+            "approved": 2,
+            "total": 6,
+            "statusCounts": {
+              "not_started": 3,
+              "in_progress": 1,
+              "awaiting_approval": 0,
+              "approved": 2,
+              "cancelled": 0
+            },
+            "current": {
+              "id": "implementation",
+              "status": "in_progress",
+              "generation": 0
+            },
+            "reason": null
+          },
+          "status": "in_progress",
+          "title": "rajappan cal",
+          "updatedAt": "2026-11-04T05:29:30.613Z",
+          "workId": "raj-cal",
+          "workType": "spec-driven-standard"
+        },
+        "actor": {
+          "name": "Ashok Raj",
+          "email": "88361104+ashokraj2011@users.noreply.github.com",
+          "githubLogin": "ashokraj2011",
+          "identityAssurance": "configured-local"
+        },
+        "agent": "architect",
+        "authorityGroup": "architecture-reviewers",
+        "payload": {
+          "capabilityMapSha256": "8b165a854d72b38ffd26f9a79d2e3674f0fa52e5640011fc8f6e7ace10ea4d46",
+          "capabilityPolicy": {
+            "protectedPaths": [],
+            "qualityCommands": [],
+            "requiredAuthorityGroups": [],
+            "requiredChecks": [],
+            "requiredWorldModelViews": []
+          },
+          "configPath": "singularity/workflow.yml",
+          "configSha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a",
+          "lifecycleEventId": "a8bd8468-1785-4a06-a0eb-8ccf25d93401",
+          "lifecyclePayload": {
+            "decision": "approved",
+            "reviewPacketSha256": "9ddfca5ab4cc459f1f9211dd2a3caf978996e9d9af747cb6e357971a1ac05e10",
+            "evidenceCommit": "e8d0ace852d97504addaac71963e43c62efade81",
+            "artifactSetSha256": "e5b3bedbebdd6d3da29de5bce41c46ab9293572e8ab18f8539751a6d7e7cabde",
+            "witnessMappingsSha256": null
+          },
+          "templateSha256": "502d705077ebbb399de79a9523b3cb2d377e17ba1fc05acbb43fd106a5c2fd84",
+          "lifecycleEvent": {
+            "schemaVersion": 1,
+            "eventId": "a8bd8468-1785-4a06-a0eb-8ccf25d93401",
+            "type": "phase-approved",
+            "subject": {
+              "kind": "story",
+              "id": "raj-cal",
+              "branch": "raj-cal"
+            },
+            "phaseId": "planning",
+            "generation": 1,
+            "actor": {
+              "name": "Ashok Raj",
+              "email": "88361104+ashokraj2011@users.noreply.github.com",
+              "login": "ashokraj2011",
+              "githubLookup": "resolved"
+            },
+            "agent": "architect",
+            "authorityGroup": "architecture-reviewers",
+            "payload": {
+              "decision": "approved",
+              "reviewPacketSha256": "9ddfca5ab4cc459f1f9211dd2a3caf978996e9d9af747cb6e357971a1ac05e10",
+              "evidenceCommit": "e8d0ace852d97504addaac71963e43c62efade81",
+              "artifactSetSha256": "e5b3bedbebdd6d3da29de5bce41c46ab9293572e8ab18f8539751a6d7e7cabde",
+              "witnessMappingsSha256": null
+            },
+            "sourceCommit": null,
+            "idempotencyKey": null,
+            "idempotencyHash": null,
+            "createdAt": "2026-11-04T05:29:30.305Z"
+          }
+        },
+        "createdAt": "2026-11-04T05:29:30.309Z"
+      }
     }
   ],
   "repairBudgets": {},
   "workIntervals": {
     "schemaVersion": 1,
-    "current": null,
-    "history": [],
+    "current": {
+      "intervalId": "INT-implementation-G1-001",
+      "phaseId": "implementation",
+      "generation": 1,
+      "baselineSha256": "2a30f00e4c7f2b5f7f4ac181e344ea05f897e026b05cd9ac5390c1f23b48e3ae",
+      "sourceBaseCommit": "e8d0ace852d97504addaac71963e43c62efade81",
+      "escalationTarget": null,
+      "path": "singularity/work-items/raj-cal/context/work-intervals/implementation-gen1-baseline.json",
+      "status": "open"
+    },
+    "history": [
+      {
+        "intervalId": "INT-implementation-G1-001",
+        "phaseId": "implementation",
+        "generation": 1,
+        "baselineSha256": "2a30f00e4c7f2b5f7f4ac181e344ea05f897e026b05cd9ac5390c1f23b48e3ae",
+        "sourceBaseCommit": "e8d0ace852d97504addaac71963e43c62efade81",
+        "escalationTarget": null,
+        "path": "singularity/work-items/raj-cal/context/work-intervals/implementation-gen1-baseline.json",
+        "status": "open"
+      }
+    ],
     "escalations": []
   },
   "scopeRevisions": [
