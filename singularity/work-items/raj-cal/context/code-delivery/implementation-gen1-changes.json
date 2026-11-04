@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "kind": "repository-change-set",
+  "subject": {
+    "workId": "raj-cal",
+    "phase": "implementation",
+    "generation": 1,
+    "generationIntentId": "362d4099-676c-479b-851c-8b7827eea34e"
+  },
+  "base": {
+    "commit": "e8d0ace852d97504addaac71963e43c62efade81",
+    "tree": "6f3ddfd9ca5891c095665304abca1fe8c7eb4224"
+  },
+  "target": {
+    "head": "99e5753b4810c93a65fa15241b58ba03898b9f6a",
+    "includesIndex": true,
+    "includesWorktree": true,
+    "includesUntracked": true,
+    "caseInsensitivePaths": true
+  },
+  "entries": [
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/raj-cal/approvals/planning.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": "23d18dc8091a8456a9ac4b61d56e4130866794cb",
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:7094704ec6c33eb7f2576b37d84262e8e7a18147e9dbccb84d996bf5159f68d3",
+        "bytes": 5108
+      },
+      "changeId": "sha256:e4e620c8fc634a3377781744b943502a7da314076207335760562bd1853e6608"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/raj-cal/approvals/planning/2026-11-04T05-29-30-597Z-approved.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": "28a54395eea4b5e0f1d8ebb2ba5a9d27b3553279",
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:a221f55a928f2adc2f64cb99223899b30c338bff0941546e4daf6a013cbe06b6",
+        "bytes": 4634
+      },
+      "changeId": "sha256:6297570e520fab7d625457ba6d6782a49e5058f941799d9843823c2dc455c754"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/raj-cal/artifacts/implementation/implementation-summary.md",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:a31ef18048883ccfd730e70c19e4a5bc77a5fbc0d066ab43cc68c9f0ea9cf347",
+        "bytes": 17590
+      },
+      "changeId": "sha256:616e2e449a97db3de496c447a212cc34e4252656690ee4c5247462e30b0088ea"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/raj-cal/context/code-delivery/tests/attempts/implementation/TA-0d2159f230f2ba24e318.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:d64d76d7ffbf9d632c6eccd9f5e831b4b49577d8a64879d1696d04c1dfca3158",
+        "bytes": 4590
+      },
+      "changeId": "sha256:f5ac0aee15f0cd346948e242c874849f0583fec49935327847d5afbe0f78c8ee"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/raj-cal/context/code-delivery/tests/raw/f52879d35f219992998d6e0c26b1b76b127618b4ce2d9c6d7bb85abcfed7d4d3.bin",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:f52879d35f219992998d6e0c26b1b76b127618b4ce2d9c6d7bb85abcfed7d4d3",
+        "bytes": 2444
+      },
+      "changeId": "sha256:92cccf0ab625053fb5a04f59fd3be471a1124736f015b54d701cd5622e1799de"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/raj-cal/context/generation-start/implementation-gen1.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:45b0321cd9327dc9a67572e05862a2bc0909cf7a9cc80e2d5d6d7cea7b612390",
+        "bytes": 1241
+      },
+      "changeId": "sha256:645d648b9a13a269b83cb350f996356f92fab5d0ee752318aa853673b5dca3eb"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/raj-cal/context/implementation-gen1.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:55c2f5290a48f52b9861567c8f258e9af3082ac4cf074402591b557a81316add",
+        "bytes": 13964
+      },
+      "changeId": "sha256:e5466b5299287f768b87ed8ac0c946b779b04194817a239860036ec369315226"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/raj-cal/context/inputs-implementation-gen1.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:ce1beba167d4e504805b2f88d29a6c974b6e93b85e341b2b2a8c577d291097f4",
+        "bytes": 4191
+      },
+      "changeId": "sha256:1eb79b81a551d10ab699b503df389c0b289a69bee99c6db50ee09c4b56b87339"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/raj-cal/context/ledger-intents/a8bd8468-1785-4a06-a0eb-8ccf25d93401.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": "6468079c3694e87308a04fabb34d5b4454320929",
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:b0c4438a923bc23455b45d3daa7ec5d75c4d428e291cb033bbe0a96a059162db",
+        "bytes": 2599
+      },
+      "changeId": "sha256:a90b65e6953be81b76a4727a4706478630aed41d0ace726010b86d08e4f1c57d"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/raj-cal/context/prompts/implementation-gen1.md",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:6f45dc6c967ea62c48099357a56698741282637d692ba893db2e796b37985c72",
+        "bytes": 34063
+      },
+      "changeId": "sha256:81728ee42b6004cc8875f29ce5063d23cc8c0753fa39e1563ea4b68b56ad0b62"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/raj-cal/context/work-intervals/implementation-gen1-baseline.json",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": "b6763d6ff9c394163fa012fa48101a628fc9b85a",
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:8256ae40f63a3cdf555e52e24f680583cb30b93ee1d2b4e454bdcb5ddd40ef6b",
+        "bytes": 1667
+      },
+      "changeId": "sha256:c406e1ceddb41d63b3d09ca84c291238c32893ac0a82c441b040f540f81a069e"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "singularity/work-items/raj-cal/evidence/calendar-dark-theme.png",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:94c08c59e4eda87745c0c6246b91c2decc771065fa9cc0e0887b763615f75e9f",
+        "bytes": 146368
+      },
+      "changeId": "sha256:54ecb7498d7484994ff93b7971e5b287e9e0581a36436edfb3851a8ee63df8d5"
+    },
+    {
+      "status": "added",
+      "similarity": null,
+      "oldPath": null,
+      "newPath": "src/App.test.jsx",
+      "oldMode": "000000",
+      "newMode": "100644",
+      "oldObject": null,
+      "newObject": null,
+      "untracked": true,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:1a5c0d54cb0b0878f54f9ebf5a432407a975277625e4119411d9b05984174321",
+        "bytes": 4413
+      },
+      "changeId": "sha256:6a4965f85106bfa8e69a1d51c849f017af85bf08f62097383a9623171a1e92ce"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "index.html",
+      "newPath": "index.html",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "576fe564e5590ff37d200b32fb080b9abdd3b4db",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:44871c43fe96780c324a5614d1bf9599315f416515030a479fe19784fbdb1d1f",
+        "bytes": 427
+      },
+      "changeId": "sha256:81448d47fefe3a22806f00640d4dcc0140cbf139e38330d82bcc59a4941d55ac"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "package-lock.json",
+      "newPath": "package-lock.json",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "46cfe6107d6f172a2516d8bec06ae3ce0a604eb7",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:f3256b16eeb8ea46b28bf18e1ce7b202bf4b5e3a48b45298db475924738ab87d",
+        "bytes": 123049
+      },
+      "changeId": "sha256:f00b6fb28196f936dad001a9b4017c859ad1fbaf5ce9f330816d4cfc45a2a730"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "package.json",
+      "newPath": "package.json",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "7118c5a581b08a80c7762b6c3995e2e2a30e5f3c",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:a2ea207d0f41b7483baa4577de120a41355628fdb03964729490b6c87f84154d",
+        "bytes": 765
+      },
+      "changeId": "sha256:d07b925178129ba9d159ac4a8b34f505dcf3dec319031ebcb5b0bd8c6a109875"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "singularity/work-items/raj-cal/STATUS.md",
+      "newPath": "singularity/work-items/raj-cal/STATUS.md",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "e07729cafca04f14ebeccf232874b1d830dafbda",
+      "newObject": "8d2a701e0aeadfc76e4aec6e9b5c1396eeef44f6",
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:160517e0cf80d72a347bf87a952db2ca357bde40aa4493590fd10d1ce71c1370",
+        "bytes": 2585
+      },
+      "changeId": "sha256:be434f369ca958675c6e126e61c425f6de97c5b5c16884316337f5b6a9b6ffda"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "singularity/work-items/raj-cal/artifacts/planning/plan.md",
+      "newPath": "singularity/work-items/raj-cal/artifacts/planning/plan.md",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "ed547cd78b1468ebc7a19dea00703f4a84e827ac",
+      "newObject": "25627a54a9370f3c9930b3000ff651edfd4ef7cc",
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:5f3983b51efeb44843b4e374ebb5f4c47db113c93801c816e727e83aacfda640",
+        "bytes": 25725
+      },
+      "changeId": "sha256:6a1a50629cbb16aba105630f9755b3ac23702c4facbfbde3d3af8722a3abdfbc"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "singularity/work-items/raj-cal/workflow.json",
+      "newPath": "singularity/work-items/raj-cal/workflow.json",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "86c1f71749271d58a20caf5d95eb8ddf4f93b735",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:fbfcdf9e0c4e176ceae8f64f2c95ed53113a21c7d9abcb089209f479188b850a",
+        "bytes": 246731
+      },
+      "changeId": "sha256:579cb9e58ca0bc2e7933673ce992bb2352c7faef15e0552de1e9221ea4276f41"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "src/App.css",
+      "newPath": "src/App.css",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "149ec7e8eebb443a8ec35cf6eaba1f1119cd4c1e",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:32dbfc57463caf26ba7e33bc5f8848d2c9620a8dab1fb4532f72f019094b5e97",
+        "bytes": 8183
+      },
+      "changeId": "sha256:cafdefd7d5feb70674b68d6d6c6e30b574d66cd650f59ec9632cee7813e7bd01"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "src/App.jsx",
+      "newPath": "src/App.jsx",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "c8baa0d07b1bac12fd3018728adca30ca01e8495",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:9d9f4304cf2e9239a3477becd577e8d9c0f8508240c04c4a6f89677fa98944a8",
+        "bytes": 8756
+      },
+      "changeId": "sha256:4c623970698852b15e23cd024f0768bf19d699e50b190adce85a4180e0cbaf4e"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "src/index.css",
+      "newPath": "src/index.css",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "2c84af069a9d5a22b28df0a263fcc7b4f4b5a5b9",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:ecfb5cba3207aec30ac7974826bac4ab4637cdbd83f7b19ed0bd85c3f0fb0798",
+        "bytes": 844
+      },
+      "changeId": "sha256:a319b1792ab477c2f30aa8c6f6eca3ede81ca9cd7ab97f443773abb104d1069d"
+    },
+    {
+      "status": "modified",
+      "similarity": null,
+      "oldPath": "vite.config.js",
+      "newPath": "vite.config.js",
+      "oldMode": "100644",
+      "newMode": "100644",
+      "oldObject": "8b0f57b91aeb45c54467e29f983a0893dc83c4d9",
+      "newObject": null,
+      "newContent": {
+        "kind": "regular-file",
+        "sha256": "sha256:1fd21805e182f2824364d3cfff9d5b3c0c86043d16964063da81c9ab5e666e21",
+        "bytes": 202
+      },
+      "changeId": "sha256:cb3e4a22c2ee96f441ea5aa7a522f425d5bdddfb1463d98e07ab1949383adde1"
+    }
+  ],
+  "digest": "sha256:75f2a5b5b5705bc0122ce9c26d8c3bc1df4b6e9b730f043a14bc8dc9d5f7233e"
+}

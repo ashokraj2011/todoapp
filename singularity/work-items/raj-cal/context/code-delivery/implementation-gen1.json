@@ -1,0 +1,721 @@
+{
+  "schemaVersion": 2,
+  "kind": "code-delivery",
+  "workId": "raj-cal",
+  "phase": "implementation",
+  "generation": 1,
+  "generationIntentId": "362d4099-676c-479b-851c-8b7827eea34e",
+  "changeSet": {
+    "path": "singularity/work-items/raj-cal/context/code-delivery/implementation-gen1-changes.json",
+    "digest": "sha256:75f2a5b5b5705bc0122ce9c26d8c3bc1df4b6e9b730f043a14bc8dc9d5f7233e",
+    "sourcePaths": [
+      "src/App.css",
+      "src/App.jsx",
+      "src/index.css"
+    ],
+    "deletedSourcePaths": [],
+    "configurationPaths": [
+      "package-lock.json",
+      "package.json",
+      "vite.config.js"
+    ],
+    "executableTestPaths": [
+      "src/App.test.jsx"
+    ],
+    "supportingTestPaths": []
+  },
+  "changeClassification": {
+    "schemaVersion": 1,
+    "inference": "path-policy",
+    "declaredOrigins": [
+      "copilot"
+    ],
+    "generatedRoots": [],
+    "counts": {
+      "build-configuration": 2,
+      "dependency-lock": 1,
+      "product-source": 4,
+      "test-source": 1
+    },
+    "entries": [
+      {
+        "changeId": "sha256:6a4965f85106bfa8e69a1d51c849f017af85bf08f62097383a9623171a1e92ce",
+        "status": "added",
+        "oldPath": null,
+        "newPath": "src/App.test.jsx",
+        "role": "test-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:81448d47fefe3a22806f00640d4dcc0140cbf139e38330d82bcc59a4941d55ac",
+        "status": "modified",
+        "oldPath": "index.html",
+        "newPath": "index.html",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:f00b6fb28196f936dad001a9b4017c859ad1fbaf5ce9f330816d4cfc45a2a730",
+        "status": "modified",
+        "oldPath": "package-lock.json",
+        "newPath": "package-lock.json",
+        "role": "dependency-lock",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:d07b925178129ba9d159ac4a8b34f505dcf3dec319031ebcb5b0bd8c6a109875",
+        "status": "modified",
+        "oldPath": "package.json",
+        "newPath": "package.json",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:cafdefd7d5feb70674b68d6d6c6e30b574d66cd650f59ec9632cee7813e7bd01",
+        "status": "modified",
+        "oldPath": "src/App.css",
+        "newPath": "src/App.css",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:4c623970698852b15e23cd024f0768bf19d699e50b190adce85a4180e0cbaf4e",
+        "status": "modified",
+        "oldPath": "src/App.jsx",
+        "newPath": "src/App.jsx",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:a319b1792ab477c2f30aa8c6f6eca3ede81ca9cd7ab97f443773abb104d1069d",
+        "status": "modified",
+        "oldPath": "src/index.css",
+        "newPath": "src/index.css",
+        "role": "product-source",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      },
+      {
+        "changeId": "sha256:cb3e4a22c2ee96f441ea5aa7a522f425d5bdddfb1463d98e07ab1949383adde1",
+        "status": "modified",
+        "oldPath": "vite.config.js",
+        "newPath": "vite.config.js",
+        "role": "build-configuration",
+        "generated": false,
+        "likelyOrigin": "authorship-declared",
+        "inference": "path-policy"
+      }
+    ]
+  },
+  "traceability": {
+    "required": [],
+    "bound": [
+      "RAJ-CAL:AC-001"
+    ],
+    "missing": [],
+    "ambiguous": [],
+    "bindings": [
+      {
+        "clauseId": "RAJ-CAL:AC-001",
+        "testSource": "src/App.test.jsx",
+        "bindingAssurance": "namespace-qualified"
+      }
+    ],
+    "witnesses": [
+      {
+        "clauseId": "RAJ-CAL:AC-001",
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "identity": {
+          "framework": "vitest",
+          "suitePath": [
+            "calendar experience"
+          ],
+          "name": "renders a complete calendar view ready for the separate visual review"
+        },
+        "logicalTestId": "sha256:93843bc086c2443dd5c06a2acebf03a85d1023be7212aeb670e51ce225801435",
+        "declarationSha256": "sha256:bbfc2b30b3ea44a3c48e119254bc01e92c8038913966754769a95d0f93eb5919",
+        "supportSha256": null,
+        "assertions": {
+          "count": 3,
+          "tautological": 0,
+          "negative": false,
+          "boundary": false,
+          "nullability": true,
+          "adequacy": "adequate",
+          "subjects": [
+            "async",
+            "getByRole",
+            "getByText",
+            "renderCalendar"
+          ]
+        },
+        "line": 89,
+        "parameters": null,
+        "skipped": false,
+        "exact": true,
+        "gaps": []
+      }
+    ],
+    "unattachedTags": [],
+    "adapterProfiles": [
+      {
+        "testSource": "src/App.test.jsx",
+        "profile": "vitest-static-v2",
+        "commandId": ".-node-tests",
+        "resultAdapter": "vitest-json",
+        "ceiling": "exact-local-observed"
+      }
+    ],
+    "sourceRequired": [
+      {
+        "clauseId": "RAJ-CAL:REQ-001",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-002",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-003",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-004",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-005",
+        "expectedPaths": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-006",
+        "expectedPaths": [
+          "src/App.css",
+          "src/index.css"
+        ]
+      }
+    ],
+    "sourceBindings": [
+      {
+        "clauseId": "RAJ-CAL:REQ-001",
+        "sourcePath": "src/App.jsx",
+        "line": 15,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-002",
+        "sourcePath": "src/App.jsx",
+        "line": 40,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-003",
+        "sourcePath": "src/App.jsx",
+        "line": 50,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-004",
+        "sourcePath": "src/App.jsx",
+        "line": 57,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-005",
+        "sourcePath": "src/App.jsx",
+        "line": 83,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-006",
+        "sourcePath": "src/App.css",
+        "line": 1,
+        "tag": "clause"
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-006",
+        "sourcePath": "src/index.css",
+        "line": 1,
+        "tag": "clause"
+      }
+    ]
+  },
+  "fulfillment": {
+    "obligations": [
+      {
+        "clauseId": "RAJ-CAL:AC-001",
+        "fulfillment": "evidence",
+        "paths": [
+          {
+            "path": "singularity/work-items/raj-cal/evidence/calendar-dark-theme.png",
+            "state": "present",
+            "sha256": "94c08c59e4eda87745c0c6246b91c2decc771065fa9cc0e0887b763615f75e9f"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationBindings": {
+    "bindings": [
+      {
+        "clauseId": "RAJ-CAL:REQ-001",
+        "explanation": {
+          "text": "Keep the three period choices bound to the calendar grid.",
+          "path": "src/App.jsx",
+          "line": 15
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 0,
+                "afterStart": 4,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 8,
+                "afterStart": 17,
+                "afterLines": 38
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 2,
+                "afterStart": 57,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 2,
+                "afterStart": 64,
+                "afterLines": 17
+              },
+              {
+                "beforeStart": 22,
+                "beforeLines": 0,
+                "afterStart": 83,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 24,
+                "beforeLines": 26,
+                "afterStart": 95,
+                "afterLines": 101
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-002",
+        "explanation": {
+          "text": "Move the displayed period and preserve safe month boundaries.",
+          "path": "src/App.jsx",
+          "line": 40
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 0,
+                "afterStart": 4,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 8,
+                "afterStart": 17,
+                "afterLines": 38
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 2,
+                "afterStart": 57,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 2,
+                "afterStart": 64,
+                "afterLines": 17
+              },
+              {
+                "beforeStart": 22,
+                "beforeLines": 0,
+                "afterStart": 83,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 24,
+                "beforeLines": 26,
+                "afterStart": 95,
+                "afterLines": 101
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-003",
+        "explanation": {
+          "text": "Events are created for the selected calendar date.",
+          "path": "src/App.jsx",
+          "line": 50
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 0,
+                "afterStart": 4,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 8,
+                "afterStart": 17,
+                "afterLines": 38
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 2,
+                "afterStart": 57,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 2,
+                "afterStart": 64,
+                "afterLines": 17
+              },
+              {
+                "beforeStart": 22,
+                "beforeLines": 0,
+                "afterStart": 83,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 24,
+                "beforeLines": 26,
+                "afterStart": 95,
+                "afterLines": 101
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-004",
+        "explanation": {
+          "text": "Stable event IDs keep edits scoped to one event.",
+          "path": "src/App.jsx",
+          "line": 57
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 0,
+                "afterStart": 4,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 8,
+                "afterStart": 17,
+                "afterLines": 38
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 2,
+                "afterStart": 57,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 2,
+                "afterStart": 64,
+                "afterLines": 17
+              },
+              {
+                "beforeStart": 22,
+                "beforeLines": 0,
+                "afterStart": 83,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 24,
+                "beforeLines": 26,
+                "afterStart": 95,
+                "afterLines": 101
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-005",
+        "explanation": {
+          "text": "Deletion removes only the selected event.",
+          "path": "src/App.jsx",
+          "line": 83
+        },
+        "regions": [
+          {
+            "path": "src/App.jsx",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 0,
+                "afterStart": 4,
+                "afterLines": 12
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 8,
+                "afterStart": 17,
+                "afterLines": 38
+              },
+              {
+                "beforeStart": 15,
+                "beforeLines": 2,
+                "afterStart": 57,
+                "afterLines": 5
+              },
+              {
+                "beforeStart": 19,
+                "beforeLines": 2,
+                "afterStart": 64,
+                "afterLines": 17
+              },
+              {
+                "beforeStart": 22,
+                "beforeLines": 0,
+                "afterStart": 83,
+                "afterLines": 11
+              },
+              {
+                "beforeStart": 24,
+                "beforeLines": 26,
+                "afterStart": 95,
+                "afterLines": 101
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "heuristic"
+          }
+        ]
+      },
+      {
+        "clauseId": "RAJ-CAL:REQ-006",
+        "explanation": {
+          "text": "Independent visual language: ink, plum, and warm paper tones.",
+          "path": "src/App.css",
+          "line": 1
+        },
+        "regions": [
+          {
+            "path": "src/App.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 1,
+                "beforeLines": 1,
+                "afterStart": 1,
+                "afterLines": 14
+              },
+              {
+                "beforeStart": 3,
+                "beforeLines": 1,
+                "afterStart": 16,
+                "afterLines": 7
+              },
+              {
+                "beforeStart": 5,
+                "beforeLines": 1,
+                "afterStart": 24,
+                "afterLines": 10
+              },
+              {
+                "beforeStart": 7,
+                "beforeLines": 3,
+                "afterStart": 35,
+                "afterLines": 14
+              },
+              {
+                "beforeStart": 11,
+                "beforeLines": 4,
+                "afterStart": 50,
+                "afterLines": 451
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          },
+          {
+            "path": "src/index.css",
+            "change": "modified",
+            "hunks": [
+              {
+                "beforeStart": 0,
+                "beforeLines": 0,
+                "afterStart": 1,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 2,
+                "beforeLines": 21,
+                "afterStart": 3,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 27,
+                "beforeLines": 24,
+                "afterStart": 10,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 53,
+                "beforeLines": 13,
+                "afterStart": 15,
+                "afterLines": 1
+              },
+              {
+                "beforeStart": 69,
+                "beforeLines": 26,
+                "afterStart": 19,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 95,
+                "beforeLines": 0,
+                "afterStart": 23,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 98,
+                "beforeLines": 6,
+                "afterStart": 28,
+                "afterLines": 3
+              },
+              {
+                "beforeStart": 106,
+                "beforeLines": 5,
+                "afterStart": 33,
+                "afterLines": 5
+              }
+            ],
+            "symbols": [],
+            "symbolAssurance": "unsupported-language"
+          }
+        ]
+      }
+    ],
+    "bindingsSha256": "sha256:924506c50de3dd792004ecc8434d1bf329e5b77bd45659ab32acd19e3ece79b6"
+  },
+  "excludedChanges": [
+    "index.html"
+  ],
+  "testExecutions": [],
+  "tree": {
+    "workingStateDigest": "sha256:ad7b27502dccbe4dab879bcfd6ef0c0732a4ce9d547134252e0d58347fea7e4e",
+    "generationCommit": null,
+    "generationTree": null
+  },
+  "model": {
+    "task": "code",
+    "required": true,
+    "authorshipProducer": "governed-agent",
+    "minimumAssurance": "unavailable",
+    "mappingRevision": null,
+    "provider": null,
+    "requestedModel": null,
+    "resolvedModel": null,
+    "assurance": "unavailable",
+    "invocationIds": [],
+    "host": null,
+    "observationSource": null,
+    "observationIntegrity": "unverified-local",
+    "observedAt": null,
+    "generation": null
+  },
+  "status": "pending-tests",
+  "capturedAt": "2026-11-04T05:35:17.184Z"
+}

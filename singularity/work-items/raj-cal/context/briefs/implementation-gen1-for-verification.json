@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "workId": "raj-cal",
+  "producer": {
+    "phase": "implementation",
+    "generation": 1
+  },
+  "consumer": {
+    "phase": "verification"
+  },
+  "source": {
+    "path": "singularity/work-items/raj-cal/artifacts/implementation/implementation-summary.md",
+    "sha256": "bc6132ed97240c357c0e02e36dbd9a56c7920dac96df54252f6baf507e50fe54",
+    "bytes": 19618
+  },
+  "policy": {
+    "projection": "approved-summary",
+    "preserve": [
+      "Changed components and decisions",
+      "Tests and operational notes"
+    ],
+    "maximumSummaryBytes": 24576,
+    "expansion": "hash-bound-reference",
+    "fallback": "block"
+  },
+  "policySha256": "9f2b941cb72cb442bfd2d97ed655fa573ebb6f53fe71468998372353bd0cc901",
+  "status": "ready",
+  "summary": {
+    "heading": "Agent brief"
+  },
+  "preserved": [
+    "Changed components and decisions",
+    "Tests and operational notes"
+  ],
+  "rendered": {
+    "path": "singularity/work-items/raj-cal/context/briefs/implementation-gen1-for-verification.md",
+    "sha256": "9210ef2d616b4649b61edbbe22b453b891081e7db4e0ebc4fd498edc89bd1180",
+    "bytes": 3000
+  },
+  "generatedAt": "2026-11-04T05:35:17.318Z",
+  "integritySha256": "0ec239d30b18bd8a1c5b38e7d8d4ee99680d741ad7682120c03e53b11c2d83bc"
+}

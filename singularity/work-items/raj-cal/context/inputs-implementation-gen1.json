@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "workId": "raj-cal",
+  "workType": "spec-driven-standard",
+  "phase": "implementation",
+  "generation": 1,
+  "mode": "enforce",
+  "recordedAt": "2026-11-04T05:35:17.158Z",
+  "renderedSha256": "5c39f66c6dd40c2fcde8a5c24207bfe5270baad9c77ff28cd546a659e37fc98a",
+  "warnings": [],
+  "inputs": [
+    {
+      "phase": "specification",
+      "path": "artifacts/specification/spec.md",
+      "repositoryPath": "singularity/work-items/raj-cal/artifacts/specification/spec.md",
+      "optional": false,
+      "maxBytes": null,
+      "status": "captured",
+      "producerStatus": "approved",
+      "producerGeneration": 1,
+      "approvedAt": "2026-11-04T05:20:16.220Z",
+      "approvedBy": "ashokraj2011",
+      "approvedSha256": "6afb633eb22478b659c28d734b151a8b423f3977dceb7c93b9b78826d147be37",
+      "sha256": "6afb633eb22478b659c28d734b151a8b423f3977dceb7c93b9b78826d147be37",
+      "bytes": 16966,
+      "source": {
+        "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md",
+        "rawSha256": "sha256:6afb633eb22478b659c28d734b151a8b423f3977dceb7c93b9b78826d147be37"
+      },
+      "representation": {
+        "kind": "summary",
+        "sha256": "sha256:7cbdbe90c23cac8619539d8550dd77a7cf3111170e3e5b38b02071a6e99c2606",
+        "bytes": 5059,
+        "complete": false,
+        "expansionHandle": "sfref:v1:story:raj-cal:432ea1ac6ac60f188df0edff17c25302836bcc6dbff4afa388e08fe8f602508a"
+      },
+      "injectedBytes": 5059,
+      "truncated": false,
+      "authoredBytes": 7212,
+      "managedBytesExcluded": 9754,
+      "projection": {
+        "kind": "approved-summary",
+        "preserve": [
+          "Actors",
+          "User scenarios",
+          "Failure and empty states",
+          "Permissions",
+          "Boundary conditions",
+          "Requirements",
+          "Non-functional requirements",
+          "Assumptions",
+          "Out of scope"
+        ],
+        "maximumSummaryBytes": 32768,
+        "expansion": "hash-bound-reference",
+        "fallback": "block",
+        "briefPath": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-implementation.md",
+        "briefSha256": "7cbdbe90c23cac8619539d8550dd77a7cf3111170e3e5b38b02071a6e99c2606",
+        "expansionHandle": "sfref:v1:story:raj-cal:432ea1ac6ac60f188df0edff17c25302836bcc6dbff4afa388e08fe8f602508a"
+      }
+    },
+    {
+      "phase": "planning",
+      "path": "artifacts/planning/plan.md",
+      "repositoryPath": "singularity/work-items/raj-cal/artifacts/planning/plan.md",
+      "optional": false,
+      "maxBytes": null,
+      "status": "captured",
+      "producerStatus": "approved",
+      "producerGeneration": 1,
+      "approvedAt": "2026-11-04T05:29:30.597Z",
+      "approvedBy": "ashokraj2011",
+      "approvedSha256": "5f3983b51efeb44843b4e374ebb5f4c47db113c93801c816e727e83aacfda640",
+      "sha256": "5f3983b51efeb44843b4e374ebb5f4c47db113c93801c816e727e83aacfda640",
+      "bytes": 25725,
+      "source": {
+        "path": "singularity/work-items/raj-cal/artifacts/planning/plan.md",
+        "rawSha256": "sha256:5f3983b51efeb44843b4e374ebb5f4c47db113c93801c816e727e83aacfda640"
+      },
+      "representation": {
+        "kind": "summary",
+        "sha256": "sha256:17953ef8187f5d6d12ed038ec0ebfb4143d954f00d37ad85241da1de866f08be",
+        "bytes": 5591,
+        "complete": false,
+        "expansionHandle": "sfref:v1:story:raj-cal:261163591845d6eee924d4f0e2abcde8c497a8ee7b4586d26bc560d2814fa74f"
+      },
+      "injectedBytes": 5591,
+      "truncated": false,
+      "authoredBytes": 10889,
+      "managedBytesExcluded": 14836,
+      "projection": {
+        "kind": "approved-summary",
+        "preserve": [
+          "Test strategy",
+          "Risks and rollback"
+        ],
+        "maximumSummaryBytes": 24576,
+        "expansion": "hash-bound-reference",
+        "fallback": "block",
+        "briefPath": "singularity/work-items/raj-cal/context/briefs/planning-gen1-for-implementation.md",
+        "briefSha256": "17953ef8187f5d6d12ed038ec0ebfb4143d954f00d37ad85241da1de866f08be",
+        "expansionHandle": "sfref:v1:story:raj-cal:261163591845d6eee924d4f0e2abcde8c497a8ee7b4586d26bc560d2814fa74f"
+      }
+    }
+  ]
+}

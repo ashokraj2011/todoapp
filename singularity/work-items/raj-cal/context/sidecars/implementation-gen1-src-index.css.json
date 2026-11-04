@@ -1,0 +1,46 @@
+{
+  "artifact": {
+    "bytes": 844,
+    "path": "src/index.css",
+    "role": "code",
+    "sha256": "ecfb5cba3207aec30ac7974826bac4ab4637cdbd83f7b19ed0bd85c3f0fb0798"
+  },
+  "configuration": {
+    "revision": "5af0f06caca0c277331cda9490849598996321d0",
+    "sha256": "941f398a5fec468916fc77322b77b18f3e9c7cb1423ce74d648a9e2906b74a2a"
+  },
+  "generation": 1,
+  "inputs": [
+    {
+      "kind": null,
+      "path": "artifacts/planning/plan.md",
+      "sha256": null
+    },
+    {
+      "kind": null,
+      "path": "artifacts/specification/spec.md",
+      "sha256": null
+    }
+  ],
+  "integritySha256": "43a4e0a805d5805047ed667d46cc68651ebc3814cd6c9dc60d226de8762437bc",
+  "phase": "implementation",
+  "producer": {
+    "actor": "88361104+ashokraj2011@users.noreply.github.com",
+    "agent": "developer",
+    "kind": "governed-agent"
+  },
+  "publication": {
+    "branch": "raj-cal",
+    "commit": null,
+    "publishedAt": "2026-11-04T05:35:17.184Z"
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "id": "raj-cal",
+    "kind": "story"
+  },
+  "template": {
+    "path": "singularity/work-items/raj-cal/config/wfa/blobs/sha256/2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54",
+    "sha256": "2d1d1dc1ab8e94760cda8df39cf07aef51ef7ce191d76218558d19a6ffcc1a54"
+  }
+}
