@@ -112,7 +112,13 @@
       {
         "clauseId": "GOOGLE-CAL:AC-001",
         "testSource": "tests/calendar.spec.js",
-        "bindingAssurance": "namespace-qualified"
+        "bindingAssurance": "namespace-qualified",
+        "testIdentity": null,
+        "moduleRoot": ".",
+        "commandId": "playwright-tests",
+        "executionAssurance": "module-executed",
+        "testcaseExecutionProven": false,
+        "assuranceNotice": "module executed; tagged test execution not independently proven"
       }
     ],
     "witnesses": [
@@ -422,11 +428,19 @@
     ],
     "bindingsSha256": "sha256:50def27f614019df2d3b9449d2c7b873be2ddd9b4c1e46785540af3c3f99a891"
   },
-  "testExecutions": [],
+  "testExecutions": [
+    {
+      "commandId": "playwright-tests",
+      "attemptId": "TA-b1c1d53c39182b610558",
+      "receiptPath": "singularity/work-items/google-cal/context/code-delivery/tests/attempts/implementation/TA-b1c1d53c39182b610558.json",
+      "receiptSha256": "597658a4f6a706478baffad7888cbddb9d1195616e9c1f1ce8da057469f8d44d",
+      "status": "passed"
+    }
+  ],
   "tree": {
     "workingStateDigest": "sha256:1509991d59f82b894c913542f00ba4030d174cfd37db242e1527c910a29c084e",
-    "generationCommit": null,
-    "generationTree": null
+    "generationCommit": "83a1f04705801b865687d93b9f0115b353212500",
+    "generationTree": "5e2b408cf465f49dc28f7eb1e4ea2a9addb9441b"
   },
   "model": {
     "task": "code",
@@ -445,6 +459,7 @@
     "observedAt": null,
     "generation": null
   },
-  "status": "pending-tests",
-  "capturedAt": "2026-11-04T02:15:48.324Z"
+  "status": "ready",
+  "capturedAt": "2026-11-04T02:15:48.324Z",
+  "validatedAt": "2026-11-04T02:54:38.442Z"
 }

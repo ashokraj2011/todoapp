@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 3,
+  "workId": "google-cal",
+  "epicId": null,
+  "planId": null,
+  "jiraIssueId": "google-cal",
+  "initialJiraKey": null,
+  "currentJiraKey": null,
+  "canonicalBranch": "google-cal",
+  "submittedBranch": "google-cal",
+  "submissionCommit": "83a1f04705801b865687d93b9f0115b353212500",
+  "sourceCommit": "83a1f04705801b865687d93b9f0115b353212500",
+  "sourceTreeSha256": "sha256:1509991d59f82b894c913542f00ba4030d174cfd37db242e1527c910a29c084e",
+  "phase": "implementation",
+  "generation": 1,
+  "authorship": {
+    "schemaVersion": 1,
+    "producer": "governed-agent",
+    "channel": "copilot-host",
+    "actor": {
+      "name": "Ashok Raj",
+      "email": "88361104+ashokraj2011@users.noreply.github.com",
+      "login": "ashokraj2011",
+      "githubLookup": "resolved"
+    },
+    "governedAgentContext": {
+      "agentId": "developer"
+    },
+    "kernelModel": {
+      "invoked": false,
+      "status": "exact",
+      "invocationIds": []
+    },
+    "externalAiUse": {
+      "value": "unknown",
+      "status": "unavailable"
+    },
+    "changeOrigins": [
+      "copilot"
+    ],
+    "source": {
+      "kind": "in-place",
+      "filename": "implementation-summary.md",
+      "mediaType": "text/markdown",
+      "sha256": "32e538aef0cbcb7afa85431f17b83e564515a153244dfd926ba580bb1c15e348",
+      "bytes": 2858
+    },
+    "generation": 1,
+    "publishedAt": "2026-11-04T02:15:48.324Z"
+  },
+  "artifacts": [
+    {
+      "path": "package-lock.json",
+      "kind": "configuration",
+      "sha256": "b3bf789cb26e2e4fc147dedc64092532bdda9b911edac68c1701e70584efde65",
+      "size": 91720
+    },
+    {
+      "path": "package.json",
+      "kind": "configuration",
+      "sha256": "e7b989c368867607580d8367d3926c8d7884ff8512cf4fcb72f56f3941f395f9",
+      "size": 674
+    },
+    {
+      "path": "playwright.config.js",
+      "kind": "code",
+      "sha256": "a427e710758ade385b63fa26f568e3b01c41df7c4f322bca9608809eb95521e9",
+      "size": 550
+    },
+    {
+      "path": "singularity/work-items/google-cal/artifacts/implementation/implementation-summary.md",
+      "kind": "document",
+      "sha256": "1b14bcc470637e275a5d350b63c04f0a60b0db0d89492112317a02062dacd5e8",
+      "size": 18041,
+      "reference": {
+        "handle": "sfref:v1:story:google-cal:9bc35bc40cf172fd7c053c604c52404e8ac317dae1eda5b24993ccf6091766c4",
+        "recordHash": "9bc35bc40cf172fd7c053c604c52404e8ac317dae1eda5b24993ccf6091766c4"
+      }
+    },
+    {
+      "path": "src/App.css",
+      "kind": "code",
+      "sha256": "d57244ad2ef95d3f0c1fd95bb38a5b081c96bcd1d88a7f94184ca490500c7b49",
+      "size": 6806
+    },
+    {
+      "path": "src/App.jsx",
+      "kind": "code",
+      "sha256": "85395ab8cb9413b9514103b7aac587bf99fc801a7b9d3ddf0e7ffa00d9f66f5b",
+      "size": 5664
+    },
+    {
+      "path": "tests/calendar.spec.js",
+      "kind": "test",
+      "sha256": "58bc4a6d877762d061ea028965f8def6a8ad4be3363f9b5eaa5bf8f40af4ba9c",
+      "size": 1487
+    }
+  ],
+  "references": [
+    {
+      "handle": "sfref:v1:story:google-cal:9bc35bc40cf172fd7c053c604c52404e8ac317dae1eda5b24993ccf6091766c4",
+      "recordHash": "9bc35bc40cf172fd7c053c604c52404e8ac317dae1eda5b24993ccf6091766c4",
+      "purpose": "review-evidence",
+      "required": true
+    }
+  ],
+  "agentBriefs": [
+    {
+      "consumerPhase": "convergence",
+      "status": "ready",
+      "path": "singularity/work-items/google-cal/context/briefs/implementation-gen1-for-convergence.json",
+      "renderedPath": "singularity/work-items/google-cal/context/briefs/implementation-gen1-for-convergence.md",
+      "sourceSha256": "a8d8eeb3686b12686d36d395f954f4c7664acbc3b5579ce3846fe251134538f7",
+      "sourceBytes": 17959,
+      "renderedSha256": "1de897e5e3cf58ce28657fe97d269fb32ad88814da132d03495d32cad96bd4a2",
+      "integritySha256": "a96701293d6b38b3e50c5137c643abab1f79e9316d0d4d082ac5150c55bf4624"
+    },
+    {
+      "consumerPhase": "verification",
+      "status": "ready",
+      "path": "singularity/work-items/google-cal/context/briefs/implementation-gen1-for-verification.json",
+      "renderedPath": "singularity/work-items/google-cal/context/briefs/implementation-gen1-for-verification.md",
+      "sourceSha256": "a8d8eeb3686b12686d36d395f954f4c7664acbc3b5579ce3846fe251134538f7",
+      "sourceBytes": 17959,
+      "renderedSha256": "223ff51e72f75a105e6e42179e50d3d06208fcd73fd02ebfecb69bceced51971",
+      "integritySha256": "f25a8fe67e71a7006e05886fc789250915ef0ac138cfb6bddeb728056bba9102"
+    }
+  ],
+  "checks": [
+    {
+      "id": "playwright-tests",
+      "command": "npm run test:e2e -- --reporter=json",
+      "kind": "test",
+      "requirement": "required",
+      "workingDirectory": ".",
+      "resultIsolated": true,
+      "externalModelPolicy": "never",
+      "timeoutMs": 1800000,
+      "sourceCommit": "83a1f04705801b865687d93b9f0115b353212500",
+      "sourceTreeSha256": "sha256:1509991d59f82b894c913542f00ba4030d174cfd37db242e1527c910a29c084e",
+      "testRuntime": {
+        "node": "v26.12.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "profile": {
+          "nodeOptions": []
+        },
+        "nodeOptionsSha256": "sha256:12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "sha256": "sha256:f15dcad9c80b6efa9c83161aec98ae14475b39f8c90cbe5c3c5f656cc23e1fb0"
+      },
+      "startedAt": "2026-11-04T02:54:36.538Z",
+      "completedAt": "2026-11-04T02:54:38.396Z",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "\n> todo-app@0.0.0 test:e2e\n> playwright test --reporter=json\n\n\nRunning 1 test using 1 worker\n·\n  1 passed (1.4s)\n",
+      "stderr": "",
+      "stdoutBytes": 114,
+      "stderrBytes": 0,
+      "stdoutTruncated": false,
+      "stderrTruncated": false
+    }
+  ],
+  "usage": [
+    {
+      "status": "unavailable",
+      "source": "copilot-otel-unavailable",
+      "provider": null,
+      "model": null,
+      "requestedModel": null,
+      "resolvedModel": null,
+      "resolvedModelAssurance": "unavailable",
+      "inputTokens": null,
+      "outputTokens": null,
+      "cachedInputTokens": null,
+      "cacheWriteInputTokens": null,
+      "totalTokens": null,
+      "providerCost": null,
+      "costStatus": "unavailable",
+      "spans": null,
+      "startedAt": "2026-11-04T02:15:48.324Z",
+      "completedAt": "2026-11-04T02:15:48.324Z",
+      "agent": "developer",
+      "generation": 1
+    }
+  ],
+  "approvals": [],
+  "visualAssurance": null,
+  "submissionEvidence": {
+    "architectureIntent": null,
+    "architectureDecision": null,
+    "codeDelivery": {
+      "path": "singularity/work-items/google-cal/context/code-delivery/implementation-gen1.json",
+      "sha256": "aad5d89fdb2aa6cc3efb7631884a3eb51e0b72c816836907ab7db8cfb8f30ed7",
+      "changeSetPath": "singularity/work-items/google-cal/context/code-delivery/implementation-gen1-changes.json",
+      "changeSetDigest": "sha256:1a3ff12b6e2e1fa374cf335b867932730a7f3077afd530e3f20e97cf0777b325",
+      "status": "ready",
+      "autoCandidate": null,
+      "autoCandidateVerification": null
+    },
+    "testExecutions": [
+      {
+        "commandId": "playwright-tests",
+        "path": "singularity/work-items/google-cal/context/code-delivery/tests/attempts/implementation/TA-b1c1d53c39182b610558.json",
+        "sha256": "597658a4f6a706478baffad7888cbddb9d1195616e9c1f1ce8da057469f8d44d",
+        "status": "passed"
+      }
+    ],
+    "claimMaps": [
+      {
+        "kind": "observed",
+        "generation": 1,
+        "path": "singularity/work-items/google-cal/context/claims/implementation-gen1-observed.json",
+        "sha256": "6f3c2845ea0cbd5e6942d0bbb1706bafccbc9128ddfd6034334ae9274011c48d"
+      }
+    ],
+    "checksSha256": "1d27080e731221351367fcd28d9b412a63dc2b6dd2f092f9f43e164d4ed26df2",
+    "artifactSetSha256": "2edc616e8d740a47a58e1be8644471f0e627c756050d2e724b8db1b65f01117e"
+  },
+  "witnessReview": {
+    "enrollment": {
+      "schemaVersion": 1,
+      "mode": "disabled",
+      "witnessedClauses": {
+        "enabled": false,
+        "profiles": []
+      },
+      "testcaseExact": {
+        "mode": "disabled",
+        "profile": null,
+        "requiredAssurance": "unavailable",
+        "policySha256": "sha256:12b50a34a1f03338377ecd76f44b20cbee83e7b91a0b07392ef08e3d8fd60800"
+      },
+      "claimMapContractVersion": 2,
+      "cab": null,
+      "sgos": null,
+      "rollout": {
+        "id": "wel-v0.2-observe",
+        "version": 1,
+        "enrollment": "new-story-only"
+      },
+      "configurationAuthority": {
+        "repository": "https://github.com/ashokraj2011/todoapp.git",
+        "branch": "sflow/config",
+        "commit": "d5429d82e15ef2b2156586b587045fe68d2fdd6a",
+        "projectionSha256": "dd661b7a039b236763685f57219f6060b4157f1fa5d415958b06c3249111b4b4"
+      }
+    },
+    "enrollmentClassification": "enrolled",
+    "enrollmentReason": null,
+    "clauseMappings": [
+      {
+        "mappingSha256": "sha256:a832104728c07861deb442636350d46c79b2197eea7396d26c687c81147b343a",
+        "clauseId": "GOOGLE-CAL:AC-001",
+        "witnessType": "test",
+        "executionProfile": "playwright-json-v1",
+        "logicalTestId": "sha256:360941a0e0bedfbfd23d9d5b50fb452ad8f680df57cc40375b1f3dc96ebc1c79",
+        "sourcePath": "tests/calendar.spec.js",
+        "sourceDeclarationSha256": "sha256:3f7e2c972b76f259d60e90a1d58a473ad1a804bf8ce3b52a5365d05239f5946a",
+        "supportSha256": null,
+        "clauseBodySha256": "sha256:9cc6703db2a7745f821b147cff24272bf64a17dbb17e612845ce9601a3dc9130",
+        "contractSha256": "sha256:5e36f96ce185e5abc696b41906ca557bda36e66e527b8d99f2247318232f0f9e",
+        "slot": null,
+        "test": "'calendar displays a month grid and supports adding and deleting an event' in tests/calendar.spec.js",
+        "reviewStatus": "unreviewed",
+        "decision": null,
+        "reason": null,
+        "expiresAt": null
+      }
+    ],
+    "testcaseObservations": []
+  },
+  "submittedAt": "2026-11-04T02:54:38.552Z",
+  "submittedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "status": "awaiting_review",
+  "packetSha256": "ffefd9d4d1fa7962d8a3dc407ccdb650b85e0a0db26f67eef7b760a183d29a7b"
+}

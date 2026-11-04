@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "kind": "work-reconciliation",
+  "workId": "google-cal",
+  "workType": "spec-driven-standard",
+  "intervalId": "INT-implementation-G1-001",
+  "phaseId": "implementation",
+  "generation": 1,
+  "baselineSha256": "6f6dcfeda5417d00017e22c92c936348766bdda1c372c57e6dfe1e9627eba807",
+  "baseline": {
+    "path": "singularity/work-items/google-cal/context/work-intervals/implementation-gen1-baseline.json",
+    "sha256": "6f6dcfeda5417d00017e22c92c936348766bdda1c372c57e6dfe1e9627eba807",
+    "verified": true,
+    "sourceBaseCommit": "0e1f748b8c9a84423c33c1076e5e500e8988872b"
+  },
+  "sourceBaseCommit": "0e1f748b8c9a84423c33c1076e5e500e8988872b",
+  "target": {
+    "branch": "google-cal",
+    "head": "83a1f04705801b865687d93b9f0115b353212500",
+    "includesWorktree": false,
+    "cleanApplicationTree": true,
+    "uncommittedApplicationPaths": []
+  },
+  "findings": [
+    {
+      "path": "package-lock.json",
+      "status": "present",
+      "sha256": "b3bf789cb26e2e4fc147dedc64092532bdda9b911edac68c1701e70584efde65",
+      "bytes": 91720,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "package.json",
+      "status": "present",
+      "sha256": "e7b989c368867607580d8367d3926c8d7884ff8512cf4fcb72f56f3941f395f9",
+      "bytes": 674,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "playwright.config.js",
+      "status": "present",
+      "sha256": "a427e710758ade385b63fa26f568e3b01c41df7c4f322bca9608809eb95521e9",
+      "bytes": 550,
+      "verdict": "unplanned",
+      "clauseIds": [],
+      "protected": false
+    },
+    {
+      "path": "src/App.css",
+      "status": "present",
+      "sha256": "d57244ad2ef95d3f0c1fd95bb38a5b081c96bcd1d88a7f94184ca490500c7b49",
+      "bytes": 6806,
+      "verdict": "planned",
+      "clauseIds": [
+        "GOOGLE-CAL:REQ-001"
+      ],
+      "protected": false
+    },
+    {
+      "path": "src/App.jsx",
+      "status": "present",
+      "sha256": "85395ab8cb9413b9514103b7aac587bf99fc801a7b9d3ddf0e7ffa00d9f66f5b",
+      "bytes": 5664,
+      "verdict": "planned",
+      "clauseIds": [
+        "GOOGLE-CAL:REQ-001",
+        "GOOGLE-CAL:REQ-002",
+        "GOOGLE-CAL:REQ-003"
+      ],
+      "protected": false
+    },
+    {
+      "path": "tests/calendar.spec.js",
+      "status": "present",
+      "sha256": "58bc4a6d877762d061ea028965f8def6a8ad4be3363f9b5eaa5bf8f40af4ba9c",
+      "bytes": 1487,
+      "verdict": "planned",
+      "clauseIds": [
+        "GOOGLE-CAL:AC-001",
+        "GOOGLE-CAL:REQ-001",
+        "GOOGLE-CAL:REQ-002",
+        "GOOGLE-CAL:REQ-003"
+      ],
+      "protected": false
+    }
+  ],
+  "summary": {
+    "changedPaths": 6,
+    "planned": 3,
+    "unplanned": 3,
+    "protected": 0
+  },
+  "decision": {
+    "status": "review",
+    "summaryStatus": "attention",
+    "eligibleForSubmission": true,
+    "reasons": [],
+    "escalationTarget": null
+  },
+  "reconciliationSha256": "2a4b6c33c5801a5e50a46d33f8746962731db5357074c2a4b3a9467e6013c8d0",
+  "reconciledAt": "2026-11-04T02:54:38.551Z",
+  "final": true,
+  "recordedAt": "2026-11-04T02:54:38.551Z",
+  "path": "singularity/work-items/google-cal/context/work-intervals/reconciliations/2a4b6c33c5801a5e50a46d33f8746962731db5357074c2a4b3a9467e6013c8d0.json"
+}

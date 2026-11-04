@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 2,
+  "kind": "observed",
+  "recordedAt": "2026-11-04T02:54:38.446Z",
+  "claims": {
+    "GOOGLE-CAL:AC-001": {
+      "observedPaths": [
+        "singularity/work-items/google-cal/evidence/calendar-month-grid.png"
+      ],
+      "testResults": [
+        "tests/calendar.spec.js"
+      ],
+      "commits": [
+        "83a1f04705801b865687d93b9f0115b353212500"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "GOOGLE-CAL:REQ-001": {
+      "observedPaths": [
+        "src/App.css",
+        "src/App.jsx"
+      ],
+      "testResults": [
+        "tests/calendar.spec.js"
+      ],
+      "commits": [
+        "83a1f04705801b865687d93b9f0115b353212500"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "GOOGLE-CAL:REQ-002": {
+      "observedPaths": [
+        "src/App.jsx"
+      ],
+      "testResults": [
+        "tests/calendar.spec.js"
+      ],
+      "commits": [
+        "83a1f04705801b865687d93b9f0115b353212500"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    },
+    "GOOGLE-CAL:REQ-003": {
+      "observedPaths": [
+        "src/App.jsx"
+      ],
+      "testResults": [
+        "tests/calendar.spec.js"
+      ],
+      "commits": [
+        "83a1f04705801b865687d93b9f0115b353212500"
+      ],
+      "verdict": "matched",
+      "deviation": null
+    }
+  },
+  "workId": "google-cal",
+  "phase": "implementation",
+  "generation": 1,
+  "source": {
+    "path": "singularity/work-items/google-cal/context/code-delivery/implementation-gen1.json",
+    "sha256": "aad5d89fdb2aa6cc3efb7631884a3eb51e0b72c816836907ab7db8cfb8f30ed7",
+    "changeSetDigest": "sha256:1a3ff12b6e2e1fa374cf335b867932730a7f3077afd530e3f20e97cf0777b325"
+  }
+}
