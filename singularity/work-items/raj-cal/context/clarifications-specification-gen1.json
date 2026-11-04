@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "workId": "raj-cal",
+  "phase": "specification",
+  "generation": 1,
+  "mode": "required",
+  "promptPath": "singularity/work-items/raj-cal/context/prompts/specification-gen1.md",
+  "promptSha256": "babdbc28473b43af36d2ee7e6521499aba3f0d5eb1de0f2c7efe99dc66965a0e",
+  "groundingRecordPath": "singularity/work-items/raj-cal/context/specification-gen1.json",
+  "groundingRecordSha256": "5284ed9fb9437d9b60d9646e6668056c739870dd633e1ffb8fcef7d00dc7986a",
+  "responses": [
+    {
+      "id": "Q-001",
+      "question": "Which calendar behaviors must be replicated?",
+      "answer": "Month, week, and day views; date navigation; event create, edit, and delete.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-002",
+      "question": "Is this a single-user calendar, or are accounts, multiple calendars, sharing, or permissions in scope?",
+      "answer": "Single-user.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-003",
+      "question": "Which theme did you mean?",
+      "answer": "Use an original dark-themed calendar design; do not clone Google Calendar's distinctive visual interface.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-004",
+      "question": "Does screenshot mean a reference image to match, a screenshot of the completed app for visual review, or both?",
+      "answer": "The attached Google Calendar screenshot is a functional reference for general calendar concepts, not a direct visual-match target. Provide a screenshot of the completed app for visual review.",
+      "status": "answered",
+      "blocking": false
+    },
+    {
+      "id": "Q-005",
+      "question": "Are any cases mandatory, such as all-day events, recurring events, time zones, or date boundaries?",
+      "answer": "No additional edge cases.",
+      "status": "answered",
+      "blocking": false
+    }
+  ],
+  "completed": true,
+  "recordedAt": "2026-11-04T05:08:20.005Z",
+  "recordedBy": {
+    "name": "Ashok Raj",
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "login": "ashokraj2011",
+    "githubLookup": "resolved"
+  },
+  "agent": "product-owner"
+}

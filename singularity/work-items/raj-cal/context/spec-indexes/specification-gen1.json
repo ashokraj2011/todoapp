@@ -1,0 +1,154 @@
+{
+  "clauses": [
+    {
+      "anchor": "[RAJ-CAL:REQ-001]",
+      "body": "The calendar UI shall provide Month, Week, and Day views. *(S1)*",
+      "bodySha256": "859c5b4ddadc5a4a4f6b41b642da7c4562495272d03efaf1e03fbd93678f582e",
+      "dependsOn": [],
+      "id": "RAJ-CAL:REQ-001",
+      "namespace": "RAJ-CAL",
+      "number": 1,
+      "source": {
+        "line": 227,
+        "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[RAJ-CAL:REQ-002]",
+      "body": "The calendar UI shall allow navigation between date periods, including returning to today. *(S1)*",
+      "bodySha256": "dddbbf06c3fd0ebdc1609c6b11c7a554327f211e80ac9975221a65bd9c427bd9",
+      "dependsOn": [],
+      "id": "RAJ-CAL:REQ-002",
+      "namespace": "RAJ-CAL",
+      "number": 2,
+      "source": {
+        "line": 228,
+        "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[RAJ-CAL:REQ-003]",
+      "body": "The single user shall be able to create an event, which then appears on its date in the calendar. *(S2)*",
+      "bodySha256": "cf86c42759471fbb701739bc1a816315d335993aa56bbf25463aea805fee9a0d",
+      "dependsOn": [],
+      "id": "RAJ-CAL:REQ-003",
+      "namespace": "RAJ-CAL",
+      "number": 3,
+      "source": {
+        "line": 229,
+        "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[RAJ-CAL:REQ-004]",
+      "body": "The single user shall be able to edit an event, with the updated event displayed in the calendar. *(S2)*",
+      "bodySha256": "9ffcfe3dcea11c0dfa94cd95f34f38c708abb842fe38989bf1620fa22093ca7b",
+      "dependsOn": [],
+      "id": "RAJ-CAL:REQ-004",
+      "namespace": "RAJ-CAL",
+      "number": 4,
+      "source": {
+        "line": 230,
+        "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[RAJ-CAL:REQ-005]",
+      "body": "The single user shall be able to delete an event, after which it is no longer displayed. *(S2)*",
+      "bodySha256": "6e190ac5731e3fe1160a21f933d71ae701c358b8df7ead8688f1a26e55a7668d",
+      "dependsOn": [],
+      "id": "RAJ-CAL:REQ-005",
+      "namespace": "RAJ-CAL",
+      "number": 5,
+      "source": {
+        "line": 231,
+        "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": null,
+        "methods": [
+          "test"
+        ]
+      }
+    },
+    {
+      "anchor": "[RAJ-CAL:REQ-006]",
+      "body": "The calendar UI shall use an original dark theme and shall not copy Google Calendar's distinctive visual interface or branding. *(S3)*",
+      "bodySha256": "d80422a2476133327aab84ad4552fb83e48f03ad07a9228d38d78535085d4d9f",
+      "dependsOn": [],
+      "id": "RAJ-CAL:REQ-006",
+      "namespace": "RAJ-CAL",
+      "number": 6,
+      "source": {
+        "line": 232,
+        "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md"
+      },
+      "type": "REQ",
+      "verification": {
+        "criterionId": "RAJ-CAL:AC-001",
+        "methods": [
+          "visual"
+        ]
+      }
+    },
+    {
+      "anchor": "[RAJ-CAL:AC-001]",
+      "body": "A screenshot of the completed calendar is provided for visual review of its original dark theme and calendar view; the attached Google Calendar screenshot is a functional reference, not a visual-match target. [scope:SRI-35efa5d9d09b] *(S3)*",
+      "bodySha256": "252a1ae75349888515ff43ab9fe482b9ed5aced772a90cf181a1d10ca400b725",
+      "dependsOn": [],
+      "id": "RAJ-CAL:AC-001",
+      "namespace": "RAJ-CAL",
+      "number": 1,
+      "source": {
+        "line": 236,
+        "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md"
+      },
+      "type": "AC",
+      "verification": {
+        "criterionId": "RAJ-CAL:AC-001",
+        "methods": [
+          "visual"
+        ]
+      }
+    }
+  ],
+  "generation": 1,
+  "indexSha256": "0b25cd2297861bc4c2550425330fe3a4ed813c4a296a83a007fb8845962f7007",
+  "phase": "specification",
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 11260,
+    "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md",
+    "sha256": "33858cecde70ccc10990f5f3819cd9983bba71944ee3fe46a78d47eb29e06751"
+  },
+  "workId": "raj-cal"
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "workId": "raj-cal",
+  "producer": {
+    "phase": "specification",
+    "generation": 1
+  },
+  "consumer": {
+    "phase": "convergence"
+  },
+  "source": {
+    "path": "singularity/work-items/raj-cal/artifacts/specification/spec.md",
+    "sha256": "33858cecde70ccc10990f5f3819cd9983bba71944ee3fe46a78d47eb29e06751",
+    "bytes": 11260
+  },
+  "policy": {
+    "projection": "approved-summary",
+    "preserve": [
+      "Actors",
+      "User scenarios",
+      "Failure and empty states",
+      "Permissions",
+      "Boundary conditions",
+      "Requirements",
+      "Non-functional requirements",
+      "Assumptions",
+      "Out of scope"
+    ],
+    "maximumSummaryBytes": 32768,
+    "expansion": "hash-bound-reference",
+    "fallback": "block"
+  },
+  "policySha256": "ad9f77ec2409a7c7e71d3a2e6e96018c815245c3c21845f78d811f212b7d1db7",
+  "status": "ready",
+  "summary": {
+    "heading": "Agent brief"
+  },
+  "preserved": [
+    "Actors",
+    "User scenarios",
+    "Failure and empty states",
+    "Permissions",
+    "Boundary conditions",
+    "Requirements",
+    "Non-functional requirements",
+    "Assumptions",
+    "Out of scope"
+  ],
+  "rendered": {
+    "path": "singularity/work-items/raj-cal/context/briefs/specification-gen1-for-convergence.md",
+    "sha256": "9102a2715d3294a224c60dacd137c975631ecc508864f920f0d48942f9007d87",
+    "bytes": 5056
+  },
+  "generatedAt": "2026-11-04T05:11:16.704Z",
+  "integritySha256": "88344617663d68922cf4d093fdecf26f3b89722175f2d3411080b86ce1e0f8be"
+}

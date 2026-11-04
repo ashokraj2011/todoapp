@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "kind": "generation-publication",
+  "workId": "raj-cal",
+  "phase": "specification",
+  "generation": 1,
+  "generationIntentId": null,
+  "generationStart": null,
+  "changeSet": {
+    "path": null,
+    "digest": null
+  },
+  "resultDigest": "sha256:e51c1ae42ae2b7624f977e0614b9edbb39811e4ae45936d2cb6486bbd8b5a117",
+  "architectureIntent": null,
+  "architectureDecision": null,
+  "baseline": {
+    "commit": "f57e1ad081ca44227f88143ad4a4c8caf62266fb",
+    "tree": "915dcd9e28f0a78476fd60150f8d73f6884b1682"
+  },
+  "transactionId": "b8cc6bf1-2c79-40c5-ae0d-492357a2c7af",
+  "eventId": "14945e80-5e93-428c-b99c-fc948616eb95",
+  "eventSha256": "sha256:74c73aa01c4d3b80086b9e6bc616ca7632c2b9ca2809808fed120645c9fa3971",
+  "commitBinding": {
+    "method": "containing-governed-transaction",
+    "commit": "$self",
+    "tree": "$self",
+    "parent": "f57e1ad081ca44227f88143ad4a4c8caf62266fb"
+  },
+  "publishedAt": "2026-11-04T05:11:16.677Z",
+  "recordSha256": "sha256:18ee92fd14579c2a97ff5e8d9e22b78409332f70be0d3b9131d6024a274e57d6"
+}
