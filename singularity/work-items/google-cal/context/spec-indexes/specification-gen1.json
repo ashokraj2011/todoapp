@@ -9,7 +9,7 @@
       "namespace": "GOOGLE-CAL",
       "number": 1,
       "source": {
-        "line": 207,
+        "line": 314,
         "path": "singularity/work-items/google-cal/artifacts/specification/spec.md"
       },
       "type": "REQ",
@@ -29,7 +29,7 @@
       "namespace": "GOOGLE-CAL",
       "number": 2,
       "source": {
-        "line": 208,
+        "line": 315,
         "path": "singularity/work-items/google-cal/artifacts/specification/spec.md"
       },
       "type": "REQ",
@@ -49,7 +49,7 @@
       "namespace": "GOOGLE-CAL",
       "number": 3,
       "source": {
-        "line": 209,
+        "line": 316,
         "path": "singularity/work-items/google-cal/artifacts/specification/spec.md"
       },
       "type": "REQ",
@@ -69,7 +69,7 @@
       "namespace": "GOOGLE-CAL",
       "number": 1,
       "source": {
-        "line": 213,
+        "line": 320,
         "path": "singularity/work-items/google-cal/artifacts/specification/spec.md"
       },
       "type": "AC",
@@ -82,13 +82,13 @@
     }
   ],
   "generation": 1,
-  "indexSha256": "6b999d28729ad0059f36f9ec88132d7a21a0d3dfabe1ed473d838ca6a832f148",
+  "indexSha256": "d90ba1cdbcfefc4d7b2f54301460205258e4d42f5fe2db31d94690fd69d01b0c",
   "phase": "specification",
   "schemaVersion": 1,
   "source": {
-    "bytes": 9578,
+    "bytes": 15326,
     "path": "singularity/work-items/google-cal/artifacts/specification/spec.md",
-    "sha256": "dc0e76815df061bfc7c37a1daa1026be92c9f57ad3701dda7447b1ece870cc56"
+    "sha256": "33ade576d2366d5fa925dde55c7c0e26aa60102b95e2c1c33223537d814fb43d"
   },
   "workId": "google-cal"
 }
