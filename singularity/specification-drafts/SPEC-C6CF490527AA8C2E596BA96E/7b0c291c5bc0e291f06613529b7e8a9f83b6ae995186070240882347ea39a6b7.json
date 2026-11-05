@@ -1,0 +1,23 @@
+{
+  "checkpointSha256": "sha256:7b0c291c5bc0e291f06613529b7e8a9f83b6ae995186070240882347ea39a6b7",
+  "contentSha256": "sha256:d87cd1c3c7148a595b2c6274320639a784c06c6d03595b32762176b10dbf4883",
+  "draft": {
+    "areas": [],
+    "basedOn": null,
+    "checklist": [],
+    "gaps": [],
+    "kind": null,
+    "research": [],
+    "spec": "# testg\n\n## Outcome\n\nn\n\n## Actors\n\n- TODO: who uses or is affected by this behaviour.\n\n## User scenarios\n\n1. TODO: one concrete scenario, start to finish.\n\n## Scope\n\nIn scope: TODO. Out of scope: TODO.\n\n## Requirements\n\nWHEN TODO, the TODO SHALL TODO. [SPEC-C6CF490527AA8C2E596BA96E:REQ-001]\n\n## Acceptance\n\nTODO: an observable result that proves REQ-001. [SPEC-C6CF490527AA8C2E596BA96E:AC-001]\n\n## Decisions and open questions\n\nTODO: state each decided or deferred gap here by its ID and its outcome.\n",
+    "title": "testg"
+  },
+  "previousCheckpointSha256": null,
+  "savedAt": "2026-11-05T10:24:44.638Z",
+  "savedBy": {
+    "email": "88361104+ashokraj2011@users.noreply.github.com",
+    "name": "Ashok Raj"
+  },
+  "schemaVersion": 1,
+  "sourceSnapshotSha256": "sha256:81084a5e471493acc08fe4bfff03396b84e94abd34c28b254c2d39cca27ca684",
+  "specId": "SPEC-C6CF490527AA8C2E596BA96E"
+}
